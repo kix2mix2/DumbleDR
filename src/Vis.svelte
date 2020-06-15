@@ -3,7 +3,9 @@
     import { scale, fly } from "svelte/transition"
     import { images, colorScale, bgScale, hover, data as D, pos_count, neg_count, vis_type } from "./stores.js";
     import * as d3 from "d3";
-    import { Delaunay } from "d3-delaunay";
+    import { Delaunay } from "d3-delaunay";import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
 
     import Name from "./Name.svelte";
     import Star from "./Star.svelte";
@@ -13,6 +15,8 @@
     export let height;
     export let margin;
     export let tooltip;
+    export let modal = false;
+    export let button = true;
     
     //let prog = 0;
 
@@ -72,11 +76,15 @@
     let is_zoomed = false;
     let open_dialog = false;
     let dialog;
+
+    function callbackFunction(event) {
+        open_dialog = false;
+    }
 </script>
 
-<div class="card" style="max-width: {width}px; background-color: {$bgScale(-data.pos_count + data.neg_count)};">
+<div class="card" style="background-color: {$bgScale(-data.pos_count + data.neg_count)};">
     {#if prog != 1}
-    <div id="progressbar" style="width: {width}px" out:fly>
+    <div id="progressbar" style="width: {width -10}px" out:fly>
         <div id="bar" style="width: {prog * 100}%;"></div>
     </div>
     {/if}
@@ -92,18 +100,21 @@
         }}>
             <span class="mdi mdi-magnify-scan"></span>
         </button>
+        {#if button}
         <button
             title="expand"
             on:click={() => {
                 console.log(open_dialog)
                 open_dialog = !open_dialog
-                dialog.showModal()
             }}
             >
             <span class="mdi"
                 class:mdi-arrow-expand={!open_dialog}
                 class:mdi-arrow-collapse={open_dialog}></span>
         </button>
+        {:else}
+            <button on:click={() => dispatch("close")}><span class="mdi mdi-close"></span> Close</button>
+        {/if}
     </small>
     <!-- <h5><Name string={data.name.slice(26).slice(0, -4)}></Name></h5> -->
     <svg 
@@ -179,53 +190,25 @@
         </g>
     </svg>
     <div style="text-align: center;">
-        <!-- <button 
-            on:click={() => {
-                pos_count.increment();
-                data.pos_count -= 1;
-            }} 
-            disabled={data.pos_count <= 0}>
-            <span class="mdi mdi-minus"></span>
-        </button>
-        <span class="mdi mdi-thumb-up"></span>
-        <span style="color: green;">{data.pos_count}</span>
-        <button
-            on:click={() => {
-                pos_count.decrement();
-                data.pos_count += 1;
-            }} 
-            disabled={$pos_count <= 0}>
-            <span class="mdi mdi-plus"></span>
-        </button>
-    
-        <button 
-            on:click={() => {
-                neg_count.increment();
-                data.neg_count -= 1;
-            }} 
-            disabled={data.neg_count <= 0}>
-            <span class="mdi mdi-minus"></span>
-        </button>
-        <span class="mdi mdi-thumb-down"></span>
-        <span style="color: orangered;">{data.neg_count}</span>
-        <button
-            on:click={() => {
-                neg_count.decrement();
-                data.neg_count += 1;
-            }} 
-            disabled={$neg_count <= 0}>
-            <span class="mdi mdi-plus"></span>
-        </button> -->
         <div style="text-align: left">  
             Rate:
-            <Star bind:count={data.pos_count}></Star>
+            <Star bind:count={data.pos_count} bind:bad={data.neg_count} max={6}></Star>
         </div>
     </div>
 
     <small style="position: absolute; bottom: 0px; right: 5px;">
         <button><span class="mdi mdi-comment-text-outline"></span></button>
     </small>
-    <!-- <dialog bind:this={dialog} open={open_dialog} transition:scale>
+
+    {#if open_dialog}
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <svelte:self on:close="{callbackFunction}" data={data} width={3*width} height={3*height} margin={3*margin} tooltip={tooltip} modal={false} button={false}></svelte:self>
+        </div>
+    </div>
+    {/if}
+
+    <!-- <div bind:this={dialog} class="modal" style="position: absolute; visibility: {open_dialog ? null : "hidden"}" transition:scale>
         <div>
             <svg 
                 width={width * 3} 
@@ -305,7 +288,7 @@
         <div>
             <button style="float: right; text-transform: uppercase;" on:click={() => open_dialog = false}><span class="mdi mdi-close"></span> Close</button>
         </div>
-    </dialog> -->
+    </div> -->
 </div>
 
 
@@ -357,5 +340,24 @@
         line-height: 5px;
         color: white;
         overflow: hidden;
+    }
+
+    .modal {
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+        /* Modal Content/Box */
+    .modal-content {
+        margin: auto 15%; /* 15% from the top and centered */
+        padding: 20px;
+         /* Could be more or less, depending on screen size */
     }
 </style>
