@@ -5,7 +5,8 @@
     import * as d3 from "d3";
     import { Delaunay } from "d3-delaunay";
 
-    import Name from "./Name.svelte"
+    import Name from "./Name.svelte";
+    import Star from "./Star.svelte";
 
     export let data;
     export let width;
@@ -178,7 +179,7 @@
         </g>
     </svg>
     <div style="text-align: center;">
-        <button 
+        <!-- <button 
             on:click={() => {
                 pos_count.increment();
                 data.pos_count -= 1;
@@ -214,9 +215,17 @@
             }} 
             disabled={$neg_count <= 0}>
             <span class="mdi mdi-plus"></span>
-        </button>
+        </button> -->
+        <div style="text-align: left">  
+            Rate:
+            <Star bind:count={data.pos_count}></Star>
+        </div>
     </div>
-    <dialog bind:this={dialog} open={open_dialog} transition:scale>
+
+    <small style="position: absolute; bottom: 0px; right: 5px;">
+        <button><span class="mdi mdi-comment-text-outline"></span></button>
+    </small>
+    <!-- <dialog bind:this={dialog} open={open_dialog} transition:scale>
         <div>
             <svg 
                 width={width * 3} 
@@ -296,7 +305,7 @@
         <div>
             <button style="float: right; text-transform: uppercase;" on:click={() => open_dialog = false}><span class="mdi mdi-close"></span> Close</button>
         </div>
-    </dialog>
+    </dialog> -->
 </div>
 
 

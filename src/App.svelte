@@ -64,7 +64,7 @@
     }
 
     console.log(settings)
-    timeline.push(welcome_block,  ...[0,1].map(() => dr_grid));
+    timeline.push(/* welcome_block, */ ...[0,1].map(() => dr_grid));
 
 
     onMount(() => {
@@ -153,8 +153,7 @@
         </div>
     {:else if step == "finish"}
         <div class='jspsych-display-element'>
-            <h2>THX!!</h2>
-            <p>Press any key to continue.</p> 
+            <h1><span class="mdi mdi-spin mdi-arm-flex"></span>THX!!<span class="mdi mdi-spin mdi-heart"></span></h1>
         </div>
     {/if}
 </main>
