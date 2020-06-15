@@ -1,0 +1,34 @@
+{
+    "settings": [
+        {
+            "name": "stanfordfaces",
+            "description": "Description.",
+            "paths":  [
+                "stanfordfaces_size50_call_GRP.csv",
+                "stanfordfaces_size50_call_ISM_n15.csv",
+                "stanfordfaces_size50_call_ISM_n2.csv",
+                "stanfordfaces_size50_call_ISM_n5.csv",
+                "stanfordfaces_size50_call_ISM_n7.csv",
+                "stanfordfaces_size50_call_MDS.csv",
+                "stanfordfaces_size50_call_PCA.csv",
+                "stanfordfaces_size50_call_SE_n7.csv",
+                "stanfordfaces_size50_call_TSNE_p100.csv",
+                "stanfordfaces_size50_call_TSNE_p10.csv",
+                "stanfordfaces_size50_call_TSNE_p30.csv",
+                "stanfordfaces_size50_call_TSNE_p5.csv",
+                "stanfordfaces_size50_call_UMAP_n15_d0.1.csv",
+                "stanfordfaces_size50_call_UMAP_n15_d0.5.csv",
+                "stanfordfaces_size50_call_UMAP_n15_d0.8.csv",
+                "stanfordfaces_size50_call_UMAP_n2_d0.1.csv",
+                "stanfordfaces_size50_call_UMAP_n2_d0.5.csv",
+                "stanfordfaces_size50_call_UMAP_n2_d0.8.csv",
+                "stanfordfaces_size50_call_UMAP_n5_d0.1.csv",
+                "stanfordfaces_size50_call_UMAP_n5_d0.5.csv",
+                "stanfordfaces_size50_call_UMAP_n5_d0.8.csv",
+                "stanfordfaces_size50_call_UMAP_n7_d0.1.csv",
+                "stanfordfaces_size50_call_UMAP_n7_d0.5.csv",
+                "stanfordfaces_size50_call_UMAP_n7_d0.8.csv"
+            ]
+        }
+    ]
+}
