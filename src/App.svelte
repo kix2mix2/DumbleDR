@@ -15,9 +15,13 @@
     import Trial from "./Trial.svelte";
 
     import "jspsych";
+    import "jspsych/plugins/jspsych-survey-multi-choice.js";
     import "jspsych/plugins/jspsych-html-keyboard-response";
     import "jspsych/plugins/jspsych-html-button-response";
-    import "jspsych/plugins/jspsych-form";
+    import "jspsych/plugins/jspsych-survey-text.js";
+
+    // import "jspsych/plugins/jspsych-survey-multi-select.js";
+    // import "./public/jspsych-survey-multi-choice.js";
 
     function clickToSubmit() {
 		alert("This is a test. Check Question #7 to see the effect.");
@@ -210,7 +214,7 @@
         stimulus: "<div class=\"text-block\"> \n" +
                 "\n" +
                 "<h1>User Interface</h1>\n" +
-                "<h3>Final Rule:</h3>\n" +
+                "<h3>Final thing:</h3>\n" +
                 "\n" +
                 "<p>We have also implemented an additional view where we plot each image as a point. The points are color coded by class labels. This is an auxiliery view you may use to consolite your opinion of the projection. We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
                  "<img class='instructions' src='./color_view.gif'>" +
@@ -232,24 +236,69 @@
         choices: ["Alright, let's start!"]
     };
 
-    var schema = {
-		form: {form_title: 'Test #1'}, // , ribbon_bg: "img/ribbon.jpg", layout_color: "grey-300", content_bg_color: "grey-100"},
-		"Question #1": {type: "short answer", correct: "Answer #1", required: true},
-		"Question #2": {type: "password"},
-		"Question #3": {type: "checkbox", labels: ["option1", "option2"], correctAnswers: ["value1", "value2"], values:["value1", "value2"]},
-		"Question #4": {type: "radio", labels: ["option1", "option2"], correctAnswers: ["option1"]},
-		"Question #5": {type: "range"},
-		"Question #6": {type: "dropdown"},
-		"Question #7": {type: "long answer", question_description: "Some random contents", id: "custom_id_1"},
-		"Question #8<p>Some random contents</p>": {type: "long answer", question_description: ""},
-		onSubmit: {label: "Submit", onclick: clickToSubmit}
-	};
+    var name = {
+    type: 'survey-text',
+    questions: [
+      {prompt: '<div class=\"text-block\">Type in here your name or email. <br> ' +
+                  'This is only so we can contact you in case we have questions about your answers. <br>' +
+                  'You may also just input a random name if you don\'t want to be contacted further.</div>' , columns: 100, required: true, name: 'Name'},
+    ],
+    randomize_question_order: false
+  };
 
-	var form_trial = {
-		type: 'form',
-		schema: schema
-	}
+    // var experience = {
+    //     type: 'survey-multi-choice',
+    //     questions: [
+    //       {
+    //         prompt: "What is the most recent academic degree you graduated from?",
+    //         options: ['High School', 'Bachelor','Master','PhD','Other'],
+    //         horizontal: true,
+    //         required: true,
+    //         name: 'degree'
+    //       },
+    //       {
+    //         prompt: "What is your experience with Machine Learning?",
+    //         options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+    //         horizontal: true,
+    //         required: true,
+    //         name: 'ML'
+    //       },
+    //       {
+    //         prompt: "What is your experience with information Visualization?",
+    //         options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+    //         horizontal: true,
+    //         required: true,
+    //         name: 'ML'
+    //       },
+    //             {
+    //         prompt: "What is your experience with dimensionality reduction?",
+    //         options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
+    //         horizontal: true,
+    //         required: true,
+    //         name: 'ML'
+    //       },
+    //       {
+    //         prompt: "Have you analysed scatterplots before?",
+    //         options: ["Never", "Yes, but only informally (in newspapers, media etc.)", "I made a scatterplot before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
+    //         horizontal: true,
+    //         required: true,
+    //         name: 'ML'
+    //       }
+    //     ]
+    // };
 
+    var page_1_options = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+    var page_2_options = ["Strongly Disagree", "Disagree", "Somewhat Disagree", "Neural", "Somewhat Agree", "Agree", "Strongly Agree"];
+
+    var multi_choice_block = {
+          type: 'survey-multi-choice',
+          questions: [{prompt: "I like vegetables", options: page_1_options, required:true,}, {prompt: "I like fruit", options: page_2_options, required: false}],
+      };
+
+    var multi_choice_block_horizontal = {
+          type: 'survey-multi-choice',
+          questions: [{prompt: "I like vegetables", options: page_1_options, required: true, horizontal: true,}, {prompt: "I like fruit", options: page_2_options, required: false, horizontal: false}],
+      };
 
     let step = null;
 
@@ -279,8 +328,10 @@
         }
     }
 
-    timeline.push(form_trial, welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,
-            ...[0,1].map(() => dr_grid));
+    // timeline.push(multi_choice_block, welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,
+    //         ...[0,1].map(() => dr_grid));
+
+    timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
 
 
     onMount(() => {
