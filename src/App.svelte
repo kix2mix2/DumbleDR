@@ -1,6 +1,7 @@
 <svelte:head>
     <link href="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.1.0/css/jspsych.min.css" rel="stylesheet" type="text/css">
     <link href="./build/style.css" rel="stylesheet" type="text/css">
+    <link href="./build/jspsych.css" rel="stylesheet" type="text/css">
 </svelte:head>
 
 <script>
@@ -15,19 +16,15 @@
     import Trial from "./Trial.svelte";
 
     import "jspsych";
-    import "jspsych/plugins/jspsych-survey-multi-choice.js";
+
     import "jspsych/plugins/jspsych-html-keyboard-response";
     import "jspsych/plugins/jspsych-html-button-response";
     import "jspsych/plugins/jspsych-survey-text.js";
 
     // import "jspsych/plugins/jspsych-survey-multi-select.js";
-    // import "./public/jspsych-survey-multi-choice.js";
+    import "./jspsych-survey-multi-choice.js";
 
-    function clickToSubmit() {
-		alert("This is a test. Check Question #7 to see the effect.");
-		document.getElementById("custom_id_1").value += "Customize actions when submit buttons is pressed.";
-		return {"Customized output": "Customize actions when submit buttons is pressed."};
-	}
+
 
     const paths = settings.settings[0].paths;
 
@@ -79,7 +76,8 @@
                 "\n" +
                 "                                </p>" +
                 "<p>Press start to begin.</p></div>",
-        choices: ['Start Study']
+        choices: ['Start Study'],
+        prompt: "<br><br>"
     };
 
     let consent = {
@@ -112,7 +110,8 @@
                 "                       By clicking 'I accept!', you are giving your informed consent to participate in this study. " +
                 "                    </p>\n" +
                 "                </div> <\div>",
-        choices: ['I accept!']
+        choices: ['I accept!'],
+        prompt: "<br><br>"
     };
 
     let instructions = {
@@ -140,7 +139,8 @@
                 "<p>In the next page we will explain the user interface of the study.</p>\n" +
                 "\n" +
                 "</div>",
-        choices: ['Continue']
+        choices: ['Continue'],
+        prompt: "<br><br>"
     }
 
     let interface_explain = {
@@ -164,7 +164,8 @@
                 // "\n" +
                 // "\n" +
                 "</div>",
-        choices: ['Rule 1 & 2']
+        choices: ['Rule 1 & 2'],
+        prompt: "<br><br>"
     };
 
     let rule_12 = {
@@ -179,7 +180,8 @@
                 "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should no be clusters), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment to any scatterplot, good or bad, by clicking the text box.</p>\n" +
                 "<img class='instructions' src='./rule_1.gif'>" +
                 "</div>",
-        choices: ['Rule 3']
+        choices: ['Rule 3'],
+        prompt: "<br><br>"
     };
 
 
@@ -193,7 +195,8 @@
                "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points.</p>\n" +
                 "<img class='instructions' src='./rule_3.gif'>" +
                 "</div>",
-        choices: ['Rule 4']
+        choices: ['Rule 4'],
+        prompt: "<br><br>"
     };
 
     let rule_sort = {
@@ -206,7 +209,8 @@
                "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
                  "<img class='instructions' src='./sort.gif'>" +
                 "</div>",
-        choices: ['Rule 5']
+        choices: ['Rule 5'],
+        prompt: "<br><br>"
     };
 
     let rule_color = {
@@ -219,7 +223,8 @@
                 "<p>We have also implemented an additional view where we plot each image as a point. The points are color coded by class labels. This is an auxiliery view you may use to consolite your opinion of the projection. We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
                  "<img class='instructions' src='./color_view.gif'>" +
                 "</div>",
-        choices: ['Continue']
+        choices: ['Continue'],
+        prompt: "<br><br>"
     };
 
     let time = {
@@ -233,7 +238,8 @@
                 "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>"+
 
                 "</div>",
-        choices: ["Alright, let's start!"]
+        choices: ["Alright, let's start!"],
+        prompt: "<br><br>"
     };
 
     var name = {
@@ -243,62 +249,52 @@
                   'This is only so we can contact you in case we have questions about your answers. <br>' +
                   'You may also just input a random name if you don\'t want to be contacted further.</div>' , columns: 100, required: true, name: 'Name'},
     ],
-    randomize_question_order: false
+    randomize_question_order: false,
+        prompt: "<br><br>"
   };
 
-    // var experience = {
-    //     type: 'survey-multi-choice',
-    //     questions: [
-    //       {
-    //         prompt: "What is the most recent academic degree you graduated from?",
-    //         options: ['High School', 'Bachelor','Master','PhD','Other'],
-    //         horizontal: true,
-    //         required: true,
-    //         name: 'degree'
-    //       },
-    //       {
-    //         prompt: "What is your experience with Machine Learning?",
-    //         options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
-    //         horizontal: true,
-    //         required: true,
-    //         name: 'ML'
-    //       },
-    //       {
-    //         prompt: "What is your experience with information Visualization?",
-    //         options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
-    //         horizontal: true,
-    //         required: true,
-    //         name: 'ML'
-    //       },
-    //             {
-    //         prompt: "What is your experience with dimensionality reduction?",
-    //         options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
-    //         horizontal: true,
-    //         required: true,
-    //         name: 'ML'
-    //       },
-    //       {
-    //         prompt: "Have you analysed scatterplots before?",
-    //         options: ["Never", "Yes, but only informally (in newspapers, media etc.)", "I made a scatterplot before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
-    //         horizontal: true,
-    //         required: true,
-    //         name: 'ML'
-    //       }
-    //     ]
-    // };
+    var experience = {
+        type: 'survey-multi-choice',
+        questions: [
+          {
+            prompt: "<div class='text-block'> <b>What is the most recent academic degree you graduated from? </b></div>",
+            options: ['High School', 'Bachelor','Master','PhD','Other'],
+            horizontal: true,
+            required: true,
+            name: 'degree'
+          },
+          {
+            prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
+            options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+            horizontal: true,
+            required: true,
+            name: 'ML'
+          },
+          {
+            prompt: "<div class='text-block'> <b>What is your experience with information Visualization?</b></div>",
+            options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+            horizontal: true,
+            required: true,
+            name: 'ML'
+          },
+                {
+            prompt: "<div class='text-block'> <b>What is your experience with dimensionality reduction?</b></div>",
+            options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
+            horizontal: true,
+            required: true,
+            name: 'ML'
+          },
+          {
+            prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
+            options: ["Never", "Yes, but only informally (in newspapers, media etc.)", "I made a scatterplot before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
+            horizontal: true,
+            required: true,
+            name: 'ML'
+          }
+        ]
+    };
 
-    var page_1_options = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
-    var page_2_options = ["Strongly Disagree", "Disagree", "Somewhat Disagree", "Neural", "Somewhat Agree", "Agree", "Strongly Agree"];
 
-    var multi_choice_block = {
-          type: 'survey-multi-choice',
-          questions: [{prompt: "I like vegetables", options: page_1_options, required:true,}, {prompt: "I like fruit", options: page_2_options, required: false}],
-      };
-
-    var multi_choice_block_horizontal = {
-          type: 'survey-multi-choice',
-          questions: [{prompt: "I like vegetables", options: page_1_options, required: true, horizontal: true,}, {prompt: "I like fruit", options: page_2_options, required: false, horizontal: false}],
-      };
 
     let step = null;
 
@@ -328,10 +324,10 @@
         }
     }
 
-    // timeline.push(multi_choice_block, welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,
-    //         ...[0,1].map(() => dr_grid));
+    timeline.push( welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,name, experience,
+            ...[0,1].map(() => dr_grid));
 
-    timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
+    // timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
 
 
     onMount(() => {
