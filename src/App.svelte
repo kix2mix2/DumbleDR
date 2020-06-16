@@ -275,29 +275,26 @@
             options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
             horizontal: true,
             required: true,
-            name: 'ML'
+            name: 'infovis'
           },
                 {
             prompt: "<div class='text-block'> <b>What is your experience with dimensionality reduction?</b></div>",
             options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
             horizontal: true,
             required: true,
-            name: 'ML'
+            name: 'dr'
           },
           {
             prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
             options: ["Never", "Yes, but only informally (in newspapers, media etc.)", "I made a scatterplot before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
             horizontal: true,
             required: true,
-            name: 'ML'
+            name: 'scatter'
           }
         ]
     };
 
-
-
     let step = null;
-
 
     let dr_grid = {
         type: "html-button-response",
@@ -309,7 +306,7 @@
             return "<p>You may hover over the points, or zoom in and out particular scatterplots.</p>" + "<p class='description'>" + sample1.description + "</p>"
         },
         //choices: jsPsych.ALL_KEYS,
-        choices: ['Continue'],
+        choices: ['Another Dataset','Finish Session'],
         // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
         on_finish: function(data) {
@@ -326,6 +323,70 @@
 
     timeline.push( welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,name, experience,
             ...[0,1].map(() => dr_grid));
+
+
+
+
+    var trial = {
+    type: 'html-button-response',
+    stimulus: 'Hello. This is in a loop. Press R to repeat this trial, or C to continue.',
+    choices: ['Another Dataset','Finish Session']
+  }
+
+    var counts = 0
+    var loop_node = {
+    timeline: [dr_grid],
+    loop_function: function(data){
+        console.log(data.values()[0].button_pressed);
+      if(data.values()[0].button_pressed == '0' && counts<10){
+          counts++;
+          console.log(counts);
+        return true;
+      } else {
+          step = "finish";
+        return false;
+      }
+    }
+  }
+
+    var debrief = {
+        type: 'survey-multi-choice',
+        questions: [
+          {
+            prompt: "<div class='text-block'> <b>How difficult was the task? </b></div>",
+            options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
+            horizontal: true,
+            required: true,
+            name: 'difficulty'
+          },
+          {
+            prompt: "<div class='text-block'> <b>Did the task become easier over time?</b></div>",
+            options: ['Yes', 'No', 'I don\'t know'],
+            horizontal: true,
+            required: true,
+            name: 'learning'
+          }
+          ,
+          {
+            prompt: "<div class='text-block'> <b>Did you experience different degree of difficulty based on the dataset?</b></div>",
+            options: ['Yes', 'No', 'I don\'t know'],
+            horizontal: true,
+            required: true,
+            name: 'learning'
+          }
+        ]
+    };
+
+    var comments = {
+    type: 'survey-text',
+    questions: [
+      {prompt: '<div class=\"text-block\">Do you have any other comments or feedback?.</div>' , columns: 100,rows: 5, required: true, name: 'Name'},
+    ],
+    randomize_question_order: false,
+        prompt: "<br><br>"
+  };
+
+
 
     // timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
 
@@ -347,12 +408,17 @@
             },
             show_progress_bar: true,
             auto_update_progress_bar: true,
-            timeline: timeline,
+            timeline: [welcome_block, consent,
+                instructions,interface_explain,rule_12,rule_3,
+                rule_sort,rule_color,time,name,
+                experience,
+                loop_node, debrief, comments],
             on_finish: function() {
                 // record proportion correct as unstructured data
                 console.log('yo yo');
                 step = "finish";
-                console.log(JSON.stringify(jsPsych.data.get().json(true)));
+                jsPsych.data.displayData();
+                // console.log(JSON.stringify(jsPsych.data.get().json(true)));
             },
         });
     })
