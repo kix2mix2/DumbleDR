@@ -23,7 +23,7 @@ function createData(n) {
             return D;
         }),
         load: (store, paths) => update(D => {
-            pos_count.set(10);
+            pos_count.set(15);
             neg_count.set(10);
             D.ready = false
             /* paths.then(res => {

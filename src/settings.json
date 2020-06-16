@@ -1,8 +1,8 @@
 {
     "settings": [
         {
-            "name": "stanfordfaces",
-            "description": "Description.",
+            "name": "Stanford Faces",
+            "description": "This dataset consists of photos of the same head taken from a different angle and with different lighting.",
             "paths":  [
                 "stanfordfaces_size50_call_GRP.csv",
                 "stanfordfaces_size50_call_ISM_n15.csv",

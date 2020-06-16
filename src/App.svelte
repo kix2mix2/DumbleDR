@@ -1,5 +1,6 @@
 <svelte:head>
     <link href="https://cdn.jsdelivr.net/gh/jspsych/jsPsych@6.1.0/css/jspsych.min.css" rel="stylesheet" type="text/css">
+    <link href="./build/style.css" rel="stylesheet" type="text/css">
 </svelte:head>
 
 <script>
@@ -16,6 +17,13 @@
     import "jspsych";
     import "jspsych/plugins/jspsych-html-keyboard-response";
     import "jspsych/plugins/jspsych-html-button-response";
+    import "jspsych/plugins/jspsych-form";
+
+    function clickToSubmit() {
+		alert("This is a test. Check Question #7 to see the effect.");
+		document.getElementById("custom_id_1").value += "Customize actions when submit buttons is pressed.";
+		return {"Customized output": "Customize actions when submit buttons is pressed."};
+	}
 
     const paths = settings.settings[0].paths;
 
@@ -32,10 +40,216 @@
     });
     
     let welcome_block = {
-        type: "html-keyboard-response",
-        stimulus: "Welcome to the experiment. Press any key to begin.",
-        choices: jsPsych.ALL_KEYS
+        type: "html-button-response",
+        stimulus: "<div class=\"text-block\">" +
+                "<h1>Call for participants</h1>\n" +
+                "\t\t\t\t\t\t\t    <p>\n" +
+                "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart is looking for online participants\n" +
+                "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
+                "                                 <p>\n" +
+                "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" +
+                "                                <p>\n" +
+                "                                    The study consists of:\n" +
+                "                                    <ul>\n" +
+                "                                        <li>informed consent agreement,</li>\n" +
+                "                                        <li>instructions for the task,</li>\n" +
+                "                                        <li>a pre-participation survey that will assess your experience with this type of task,</li>\n" +
+                "                                        <li>a series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result.</li>\n" +
+                "                                        <li>a post-trial survey, where we will ask you for feedback on the task.</li>\n" +
+                "                                    </ul>\n" +
+                "                                </p>\n" +
+                "\n" +
+                "                                <p>\n" +
+                "                                    The requirements are:\n" +
+                "                                    <ul>\n" +
+                "                                        <li> You are at least 18 years old.</li>\n" +
+                "                                        <li> You speak fluent English.</li>\n" +
+                "                                        <li> Your screen-size is at least 800x600 pixels.</li>\n" +
+                "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" +
+                "                                    </ul>\n" +
+                "\n" +
+                "                                </p>\n" +
+                "\n" +
+                "                                <p>\n" +
+                "                                    The task is estimated to take between 30 minutes and 1 hour.\n" +
+                "\n" +
+                "                                </p>" +
+                "<p>Press start to begin.</p></div>",
+        choices: ['Start Study']
     };
+
+    let consent = {
+        type: "html-button-response",
+        stimulus: "<div class=\"text-block\"><h1>We need your consent to proceed</h1>\n" +
+                "                <hr>\n" +
+                "                <div class=\"legal well\">\n" +
+                "                    <p> Dear prospective participant, </p>\n" +
+                "                    <p>\n" +
+                "                        We would like to invite you to participate in the following study within the scope of the\n" +
+                "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" +
+                "                     <p>\n" +
+                "                        In particular, we analyze the perception humans have of the results of various algorithms that seek to imitate human perception of similarity.\n" +
+                "                    </p>\n" +
+                "                    <p>\n" +
+                "                        In the current study, „Evaluation of Dimensionality Reduction\n" +
+                "                        Techniques for Image-based Data“, you will be required to analyse and select preferences\n" +
+                "                        for a series of visualizations of algorithms applied on image data.\n" +
+                "                    </p>\n" +
+                "                    <p>\n" +
+                "                        Detailed instructions will follow after this screen.\n" +
+                "                    </p>\n" +
+                "\n" +
+                "                    <p>\n" +
+                "                        <iframe src=\"./Consent.pdf\" style=\"width:80%; height:600px;\"\n" +
+                "                            frameborder=\"0\"></iframe>\n" +
+                "                    </p>\n" +
+                "\n" +
+                "                    <p>\n" +
+                "                       By clicking 'I accept!', you are giving your informed consent to participate in this study. " +
+                "                    </p>\n" +
+                "                </div> <\div>",
+        choices: ['I accept!']
+    };
+
+    let instructions = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>Dimensionality reduction on image-based datasets</h1>\n" +
+                "<p>\n" +
+                "This experiment aims at gathering data about what users consider to be “good” or “”bad/misleading” visualizations. \n" +
+                "More specifically we are interested in finding out user preferences regarding <b>projections of dimensionality reduction algorithms</b>. \n" +
+                "</p>\n" +
+                "<br>\n" +
+                "\n" +
+                "<h3>What is Dimensionality Reduction?</h3>\n" +
+                "<p>\n" +
+                "Dimensionality reduction (DR) refers to algorithms that reduce the number of dimensions (features) in a dataset, with minimal information loss. In this study, the dataset consists of images, and the DR projection result is a set of 2D coordinates, one for each image. This result can be visualized in a scatterplot, where each point represents an image from the dataset. Below you can see an example. \n" +
+                "</p>\n" +
+                "<img class='instructions' src='./dr_example.png'>\n" +
+                "<p>\n" +
+                "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plot close to each other. Different DR algorithms define similarity differently, and for this reason we have many different scatterplots with different DR results. \n" +
+                "</p>\n" +
+                "\n" +
+                "<p>In this study, we want you to analyse a group of scatterplots depicting these projections and decide which ones are good, and which ones are bad. <b>You do not need to have any additional knowledge about DR!</b></p>\n" +
+                "\n" +
+                "<p>In the next page we will explain the user interface of the study.</p>\n" +
+                "\n" +
+                "</div>",
+        choices: ['Continue']
+    }
+
+    let interface_explain = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>User Interface</h1>\n" +
+                "<p>\n" +
+                "We will rate your preferences on a dataset-by-dataset basis. Below you can see an example of what this dataset might be and how the interface looks like. In this case, the dataset consists of photographs of the same head captured from different angles. There are 8 scatterplots, each corresponding to a projection of a DR algorithm technique. \n" +
+                "</p>\n" +
+                "<br>\n" +
+                "<img class='instructions' src='./grid_example.png'>\n" +
+                "\n" +
+                "<h3>Think of this as a game with the following rules:</h3>\n" +
+                // "\n" +
+                // "<p>1. Your job is to distribute 15 hearts/points across the 8 projections. You do not need to distribute all the hearts. </p>\n" +
+                // "<p>2. Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should no be clusters), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment to any scatterplot, good or bad, by clicking the text box.</p>\n" +
+                // "<p>3. Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points.</p>\n" +
+                // "<p>4. After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
+                // "<p>5. We have also implemented an additional view where we plot each image as a point. The points are color coded by class labels. This is an auxiliery view you may use to consolite your opinion of the projection. We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
+                // "\n" +
+                // "\n" +
+                "</div>",
+        choices: ['Rule 1 & 2']
+    };
+
+    let rule_12 = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>User Interface</h1>\n" +
+                "<h3>Rule 1:</h3>\n" +
+                "\n" +
+                "<p>Your job is to distribute 15 hearts/points across the 8 projections. You do not need to distribute all the hearts. </p>\n" +
+                 "<h3>Rule 2:</h3>\n" +
+                "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should no be clusters), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment to any scatterplot, good or bad, by clicking the text box.</p>\n" +
+                "<img class='instructions' src='./rule_1.gif'>" +
+                "</div>",
+        choices: ['Rule 3']
+    };
+
+
+    let rule_3 = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>User Interface</h1>\n" +
+                "<h3>Rule 3:</h3>\n" +
+                "\n" +
+               "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points.</p>\n" +
+                "<img class='instructions' src='./rule_3.gif'>" +
+                "</div>",
+        choices: ['Rule 4']
+    };
+
+    let rule_sort = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>User Interface</h1>\n" +
+                "<h3>Rule 4:</h3>\n" +
+                "\n" +
+               "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
+                 "<img class='instructions' src='./sort.gif'>" +
+                "</div>",
+        choices: ['Rule 5']
+    };
+
+    let rule_color = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>User Interface</h1>\n" +
+                "<h3>Final Rule:</h3>\n" +
+                "\n" +
+                "<p>We have also implemented an additional view where we plot each image as a point. The points are color coded by class labels. This is an auxiliery view you may use to consolite your opinion of the projection. We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
+                 "<img class='instructions' src='./color_view.gif'>" +
+                "</div>",
+        choices: ['Continue']
+    };
+
+    let time = {
+        type:'html-button-response',
+        stimulus: "<div class=\"text-block\"> \n" +
+                "\n" +
+                "<h1>How long will this take?</h1>\n" +
+                "<p> In total we have 10 datasets, consisting of collections of photos. " +
+                "After each trial you will be asked if you want to continue.</p> " +
+                "<p>If you say no, you will be directed to the final debrief questionairre. </p>"+
+                "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>"+
+
+                "</div>",
+        choices: ["Alright, let's start!"]
+    };
+
+    var schema = {
+		form: {form_title: 'Test #1'}, // , ribbon_bg: "img/ribbon.jpg", layout_color: "grey-300", content_bg_color: "grey-100"},
+		"Question #1": {type: "short answer", correct: "Answer #1", required: true},
+		"Question #2": {type: "password"},
+		"Question #3": {type: "checkbox", labels: ["option1", "option2"], correctAnswers: ["value1", "value2"], values:["value1", "value2"]},
+		"Question #4": {type: "radio", labels: ["option1", "option2"], correctAnswers: ["option1"]},
+		"Question #5": {type: "range"},
+		"Question #6": {type: "dropdown"},
+		"Question #7": {type: "long answer", question_description: "Some random contents", id: "custom_id_1"},
+		"Question #8<p>Some random contents</p>": {type: "long answer", question_description: ""},
+		onSubmit: {label: "Submit", onclick: clickToSubmit}
+	};
+
+	var form_trial = {
+		type: 'form',
+		schema: schema
+	}
+
 
     let step = null;
 
@@ -65,7 +279,8 @@
         }
     }
 
-    timeline.push(/* welcome_block, */ ...[0,1].map(() => dr_grid));
+    timeline.push(form_trial, welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,
+            ...[0,1].map(() => dr_grid));
 
 
     onMount(() => {
@@ -133,6 +348,7 @@
             <h1><span class="mdi mdi-spin mdi-arm-flex"></span>THX!!<span class="mdi mdi-spin mdi-heart"></span></h1>
         </div>
     {/if}
+
 </main>
 
 <style>
@@ -257,5 +473,7 @@
     .jspsych-display-element {
         overflow: visible;
     }
+
+
 </style>
 

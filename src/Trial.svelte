@@ -13,7 +13,7 @@
     export let tooltip;
 
     $: classes = Array.from(new Set($projections[0].map(d => d.class)))
-    let available_points = new Array(10).fill(false)
+    let available_points = new Array(15).fill(false)
 
     function update(c) {
         available_points = available_points.map((_, i) => i < $pos_count);
