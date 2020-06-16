@@ -343,7 +343,7 @@
           console.log(counts);
         return true;
       } else {
-          step = "finish";
+          step = "debrief";
         return false;
       }
     }
@@ -417,7 +417,7 @@
                 // record proportion correct as unstructured data
                 console.log('yo yo');
                 step = "finish";
-                jsPsych.data.displayData();
+                // jsPsych.data.displayData();
                 // console.log(JSON.stringify(jsPsych.data.get().json(true)));
             },
         });
@@ -458,7 +458,14 @@
         </div>
     {:else if step == "finish"}
         <div class='jspsych-display-element'>
-            <h1><span class="mdi mdi-spin mdi-arm-flex"></span>THX!!<span class="mdi mdi-spin mdi-heart"></span></h1>
+            <iframe src="https://giphy.com/embed/AOrThUuuOoDCg" width="480" height="285" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg">via GIPHY</a></p>
+            <h1><span class="mdi mdi-spin mdi-arm-flex"></span>Lots of thanks!!<span class="mdi mdi-spin mdi-heart"></span></h1>
+        </div>
+
+
+    {:else if step == "debrief"}
+        <div class='jspsych-display-element'>
+
         </div>
     {/if}
 
