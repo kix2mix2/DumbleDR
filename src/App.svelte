@@ -41,16 +41,17 @@
 
 
     let dr_grid = {
-        type: "html-keyboard-response",
+        type: "html-button-response",
         stimulus: () => {
             const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
-            console.log(sample1)
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
-            data.load(data, sample)
-            step = "dr_grid"
+            data.load(data, sample);
+            step = "dr_grid";
             return "<p>You may hover over the points, or zoom in and out particular scatterplots.</p>" + "<p class='description'>" + sample1.description + "</p>"
         },
-        choices: jsPsych.ALL_KEYS,
+        //choices: jsPsych.ALL_KEYS,
+        choices: ['Continue'],
+        // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
         on_finish: function(data) {
             data.dataset = $projections.map(p => {
@@ -58,12 +59,12 @@
                     "name": p.name,
                     "pos": p.pos_count,
                     "neg": p.neg_count,
+                    "comment": p.comment,
                 }
             });
         }
     }
 
-    console.log(settings)
     timeline.push(/* welcome_block, */ ...[0,1].map(() => dr_grid));
 
 
@@ -85,35 +86,11 @@
             show_progress_bar: true,
             auto_update_progress_bar: true,
             timeline: timeline,
-            // record data to psiTurk after each trial
-            // on_data_update: function(data) {
-            //     psiturk.recordTrialData(data);
-            // },
             on_finish: function() {
                 // record proportion correct as unstructured data
                 console.log('yo yo');
-                step = "finish"
-
-                console.log(JSON.stringify(jsPsych.data.get().json(true)))
-                //jsPsych.data.displayData();
-                // psiturk.recordUnstructuredData("bonus", jsPsych.data.get()
-                //                                .filter([{stimulus_type: 'incongruent'},
-                //                                         {stimulus_type: 'congruent'},
-                //                                         {stimulus_type: 'unrelated'}])
-                //                                .select('correct')
-                //                                .mean()
-                //                                .toFixed(2));
-                // // save data
-                // psiturk.saveData({
-                //
-                //     success: function() {
-                //         console.log('yo yo');
-                //         // upon saving, add proportion correct as a bonus (see custom.py) and complete HIT
-                //         psiturk.computeBonus("compute_bonus", function () {
-                //             psiturk.completeHIT();
-                //         });
-                //     }
-                // });
+                step = "finish";
+                console.log(JSON.stringify(jsPsych.data.get().json(true)));
             },
         });
     })
@@ -145,7 +122,7 @@
             <div>
                 <Trial tooltip={tooltip}></Trial>  
             </div>
-            <p>Press any key to continue.</p>      
+<!--            <p>Press <key>Enter</key> to continue.</p>      -->
         {:else}
             <div class="loader"></div>
             <center>Loading...</center>
@@ -275,6 +252,10 @@
 
     .description {
         color: #333;
+    }
+
+    .jspsych-display-element {
+        overflow: visible;
     }
 </style>
 

@@ -5,6 +5,7 @@
     import * as d3 from "d3";
     import { Delaunay } from "d3-delaunay";import { createEventDispatcher } from 'svelte';
 
+
 	const dispatch = createEventDispatcher();
 
     import Name from "./Name.svelte";
@@ -15,7 +16,6 @@
     export let height;
     export let margin;
     export let tooltip;
-    export let modal = false;
     export let button = true;
     
     //let prog = 0;
@@ -80,6 +80,10 @@
     function callbackFunction(event) {
         open_dialog = false;
     }
+
+    $: big_size = Math.min(window.innerHeight, window.innerWidth) *.95 - 40; // -40 padding
+
+    let comment_menu;
 </script>
 
 <div class="card" style="background-color: {$bgScale(-data.pos_count + data.neg_count)};">
@@ -197,13 +201,33 @@
     </div>
 
     <small style="position: absolute; bottom: 0px; right: 5px;">
-        <button><span class="mdi mdi-comment-text-outline"></span></button>
+        <div class:active={comment_menu} class="dropdown" >
+            <button on:click={() => comment_menu = true}>
+                <span class="mdi mdi-comment-text-outline"></span>
+            </button>
+            <div class="comment dropdown-content">
+                Comments:
+                <button style="float:right;" on:click={() => comment_menu = false}><span class="mdi mdi-close" /></button>
+                <textarea 
+                    bind:value={data.comment} 
+                    on:key={(event) => event.preventDefault()} />
+            </div>
+            
+        </div>
     </small>
 
     {#if open_dialog}
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <svelte:self on:close="{callbackFunction}" data={data} width={3*width} height={3*height} margin={3*margin} tooltip={tooltip} modal={false} button={false}></svelte:self>
+        <div class="modal-content" style="width: fit-content;">
+            <svelte:self 
+                on:close="{callbackFunction}" 
+                bind:data={data} 
+                width={big_size} 
+                height={big_size} 
+                margin={margin} 
+                tooltip={tooltip} 
+                button={false}>
+            </svelte:self>
         </div>
     </div>
     {/if}
@@ -293,9 +317,6 @@
 
 
 <style>
-    div {
-        overflow-x: hidden;
-    }
 
     .card {
         position: relative;
@@ -349,15 +370,37 @@
         top: 0;
         width: 100%; /* Full width */
         height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
+        overflow: hidden; /* Enable scroll if needed */
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
 
         /* Modal Content/Box */
     .modal-content {
-        margin: auto 15%; /* 15% from the top and centered */
+        margin: auto;
         padding: 20px;
-         /* Could be more or less, depending on screen size */
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        overflow: visible !important;
+    }
+
+    .dropdown-content {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        background-color: white;
+        border: 1px solid lightgrey;
+        border-radius: 4px;
+        padding: 5px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
     }
 </style>

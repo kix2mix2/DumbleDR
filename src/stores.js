@@ -52,6 +52,7 @@ function createData(n) {
                 result.name = r.name
                 result.pos_count = 0;
                 result.neg_count = 0;
+                result.comment = "";
                 result.position = i;
                 return result
             })
