@@ -44892,7 +44892,7 @@ var app = (function () {
     const time_text = "<div class=\"text-block\"> \n" +
                     "\n" +
                     "<h1>How long will this take?</h1>\n" +
-                    "<p> In total we have 10 datasets, consisting of collections of photos. " +
+                    "<p> In total we have 12 datasets, consisting of collections of photos. " +
                     "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will depend on how many trials you do.</p> " +
                     "<p>If you say no, you will be directed to the final debriefing questionnaire. </p>"+
                     "<p>However, it would be really nice if you solved 5 or more! In any case, we promise beer and/or chocolate for your help! </p>" +
@@ -44910,7 +44910,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (257:0) {#if $hover}
+    // (278:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44929,16 +44929,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 264, 8, 9297);
+    			add_location(img, file$4, 285, 8, 10086);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 263, 4, 9263);
+    			add_location(div0, file$4, 284, 4, 10052);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 257, 0, 9041);
+    			add_location(div1, file$4, 278, 0, 9830);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44986,14 +44986,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(257:0) {#if $hover}",
+    		source: "(278:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (289:32) 
+    // (310:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -45001,7 +45001,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 289, 8, 10436);
+    			add_location(div, file$4, 310, 8, 11225);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45018,14 +45018,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(289:32) ",
+    		source: "(310:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (282:31) 
+    // (303:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -45058,17 +45058,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 283, 12, 9968);
+    			add_location(iframe, file$4, 304, 12, 10757);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 283, 206, 10162);
-    			add_location(p, file$4, 283, 203, 10159);
+    			add_location(a, file$4, 304, 206, 10951);
+    			add_location(p, file$4, 304, 203, 10948);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 284, 16, 10265);
+    			add_location(span0, file$4, 305, 16, 11054);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 284, 79, 10328);
-    			add_location(h1, file$4, 284, 12, 10261);
+    			add_location(span1, file$4, 305, 79, 11117);
+    			add_location(h1, file$4, 305, 12, 11050);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 282, 8, 9918);
+    			add_location(div, file$4, 303, 8, 10707);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45093,14 +45093,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(282:31) ",
+    		source: "(303:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:4) {#if step == "dr_grid"}
+    // (291:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45122,7 +45122,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 270, 8, 9538);
+    			add_location(div, file$4, 291, 8, 10327);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45173,14 +45173,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(270:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(291:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (277:8) {:else}
+    // (298:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45193,8 +45193,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 277, 12, 9782);
-    			add_location(center, file$4, 278, 12, 9821);
+    			add_location(div, file$4, 298, 12, 10571);
+    			add_location(center, file$4, 299, 12, 10610);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45215,14 +45215,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(277:8) {:else}",
+    		source: "(298:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:8) {#if $ready}
+    // (293:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45237,7 +45237,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 272, 12, 9609);
+    			add_location(div, file$4, 293, 12, 10398);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45268,7 +45268,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(272:8) {#if $ready}",
+    		source: "(293:8) {#if $ready}",
     		ctx
     	});
 
@@ -45330,13 +45330,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 252, 4, 8995);
+    			add_location(h2, file$4, 273, 4, 9784);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 251, 0, 8985);
+    			add_location(nav, file$4, 272, 0, 9774);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 268, 0, 9432);
+    			add_location(main, file$4, 289, 0, 10221);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45475,6 +45475,7 @@ var app = (function () {
     	validate_store(ready, "ready");
     	component_subscribe($$self, ready, $$value => $$invalidate(5, $ready = $$value));
     	const paths = settings$1.settings[0].paths;
+    	const userid = jsPsych.randomization.randomID();
     	let subject_id = jsPsych.randomization.randomID(15);
     	let condition_assignment = jsPsych.randomization.sampleWithoutReplacement(["conditionA", "conditionB", "conditionC"], 1)[0];
 
@@ -45521,7 +45522,7 @@ var app = (function () {
     		type: "survey-multi-choice",
     		questions: [
     			{
-    				prompt: "<div class='text-block'> <b>What is the most recent academic degree you graduated from? </b></div>",
+    				prompt: "<div class='text-block'> <b>What is the highest academic degree you graduated from? </b></div>",
     				options: ["High School", "Bachelor", "Master", "PhD", "Other"],
     				horizontal: true,
     				required: true,
@@ -45610,7 +45611,7 @@ var app = (function () {
     			return "<p class='description'>" + sample1.description + "</p>";
     		},
     		//choices: jsPsych.ALL_KEYS,
-    		choices: ["Another Dataset", "Finish Session"],
+    		choices: ["Rating complete!"],
     		// prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
     		timing_post_trial: 400,
     		on_finish(data) {
@@ -45622,17 +45623,46 @@ var app = (function () {
     					"comment": p.comment
     				};
     			});
+
+    			$$invalidate(0, step = "debrief");
     		}
+    	};
+
+    	let trial_feedback = {
+    		type: "survey-multi-choice",
+    		questions: [
+    			{
+    				prompt: "<div class='text-block'> <b>How difficult was this trial? </b></div>",
+    				options: [
+    					"Very Easy",
+    					"Easy",
+    					"Medium",
+    					"Hard",
+    					"Very difficult",
+    					"I was confused the entire time"
+    				],
+    				horizontal: true,
+    				required: true,
+    				name: "difficulty"
+    			}
+    		]
+    	};
+
+    	let cont = {
+    		type: "html-button-response",
+    		stimulus: "Another trial?",
+    		choices: ["Continue for more beer/chocolate!", "End experiment :("],
+    		prompt: "<br><br>"
     	};
 
     	var counts = 0;
 
     	var loop_node = {
-    		timeline: [dr_grid],
+    		timeline: [dr_grid, trial_feedback, cont],
     		loop_function(data) {
-    			console.log(data.values()[0].button_pressed);
+    			console.log(data.values()[2].button_pressed);
 
-    			if (data.values()[0].button_pressed == "0" && counts < 10) {
+    			if (data.values()[2].button_pressed === "0" && counts < 12) {
     				counts++;
     				console.log(counts);
     				return true;
@@ -45647,7 +45677,7 @@ var app = (function () {
     		type: "survey-multi-choice",
     		questions: [
     			{
-    				prompt: "<div class='text-block'> <b>How difficult was the task? </b></div>",
+    				prompt: "<div class='text-block'> <b>How difficult was the experiment as a whole? </b></div>",
     				options: [
     					"Very Easy",
     					"Easy",
@@ -45661,14 +45691,14 @@ var app = (function () {
     				name: "difficulty"
     			},
     			{
-    				prompt: "<div class='text-block'> <b>Did the task become easier over time?</b></div>",
+    				prompt: "<div class='text-block'> <b>Do you think you improved at doing the tasks over time?</b></div>",
     				options: ["Yes", "No", "I don't know"],
     				horizontal: true,
     				required: true,
     				name: "learning"
     			},
     			{
-    				prompt: "<div class='text-block'> <b>Did you experience different degree of difficulty based on the dataset?</b></div>",
+    				prompt: "<div class='text-block'> <b>Did you experience different degrees of difficulty based on the dataset?</b></div>",
     				options: ["Yes", "No", "I don't know"],
     				horizontal: true,
     				required: true,
@@ -45774,6 +45804,7 @@ var app = (function () {
     		consent_form,
     		time_text,
     		paths,
+    		userid,
     		rows,
     		cols,
     		subject_id,
@@ -45785,6 +45816,8 @@ var app = (function () {
     		experience,
     		step,
     		dr_grid,
+    		trial_feedback,
+    		cont,
     		counts,
     		loop_node,
     		debrief,
@@ -45807,6 +45840,8 @@ var app = (function () {
     		if ("experience" in $$props) experience = $$props.experience;
     		if ("step" in $$props) $$invalidate(0, step = $$props.step);
     		if ("dr_grid" in $$props) dr_grid = $$props.dr_grid;
+    		if ("trial_feedback" in $$props) trial_feedback = $$props.trial_feedback;
+    		if ("cont" in $$props) cont = $$props.cont;
     		if ("counts" in $$props) counts = $$props.counts;
     		if ("loop_node" in $$props) loop_node = $$props.loop_node;
     		if ("debrief" in $$props) debrief = $$props.debrief;

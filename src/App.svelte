@@ -24,9 +24,10 @@ import settings from "./settings.json";
 
     // import "jspsych/plugins/jspsych-survey-multi-select.js";
     import "./jspsych-survey-multi-choice.js";
-    import { dr_explain, ui, rule_1,rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
+import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
 
     const paths = settings.settings[0].paths;
+const userid = jsPsych.randomization.randomID();
 
     const rows = 2;
     const cols = 4;
@@ -136,7 +137,7 @@ import settings from "./settings.json";
             return "<p class='description'>" + sample1.description + "</p>"
         },
         //choices: jsPsych.ALL_KEYS,
-        choices: ['Another Dataset','Finish Session'],
+        choices: ['Rating complete!'],
         // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
         on_finish: function(data) {
@@ -148,24 +149,44 @@ import settings from "./settings.json";
                     "comment": p.comment,
                 }
             });
+            step = 'debrief'
         }
     };
 
+let trial_feedback = {
+    type: 'survey-multi-choice',
+    questions: [
+        {
+            prompt: "<div class='text-block'> <b>How difficult was this trial? </b></div>",
+            options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
+            horizontal: true,
+            required: true,
+            name: 'difficulty'
+        }
+    ]
+};
+
+let cont = {
+        type: "html-button-response",
+        stimulus: "Another trial?",
+        choices: ['Continue for more beer/chocolate!', 'End experiment :('],
+        prompt: "<br><br>"
+    };
 
 
-    var counts = 0;
+var counts = 0;
     var loop_node = {
-    timeline: [dr_grid],
-    loop_function: function(data){
-        console.log(data.values()[0].button_pressed);
-      if(data.values()[0].button_pressed == '0' && counts<10){
-          counts++;
-          console.log(counts);
-        return true;
-      } else {
-          step = "debrief";
-        return false;
-      }
+        timeline: [dr_grid, trial_feedback, cont],
+        loop_function: function (data) {
+            console.log(data.values()[2].button_pressed);
+            if (data.values()[2].button_pressed === '0' && counts < 12) {
+                  counts++;
+                  console.log(counts);
+                return true;
+              } else {
+                  step = "debrief";
+                return false;
+              }
     }
   }
 
@@ -173,14 +194,14 @@ import settings from "./settings.json";
         type: 'survey-multi-choice',
         questions: [
           {
-            prompt: "<div class='text-block'> <b>How difficult was the task? </b></div>",
+              prompt: "<div class='text-block'> <b>How difficult was the experiment as a whole? </b></div>",
             options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
             horizontal: true,
             required: true,
             name: 'difficulty'
           },
           {
-            prompt: "<div class='text-block'> <b>Did the task become easier over time?</b></div>",
+              prompt: "<div class='text-block'> <b>Do you think you improved at doing the tasks over time?</b></div>",
             options: ['Yes', 'No', 'I don\'t know'],
             horizontal: true,
             required: true,

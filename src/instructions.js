@@ -168,7 +168,7 @@ export const color = "<div class=\"text-block\"> \n" +
 export const time_text = "<div class=\"text-block\"> \n" +
                 "\n" +
                 "<h1>How long will this take?</h1>\n" +
-                "<p> In total we have 10 datasets, consisting of collections of photos. " +
+                "<p> In total we have 12 datasets, consisting of collections of photos. " +
                 "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will depend on how many trials you do.</p> " +
                 "<p>If you say no, you will be directed to the final debriefing questionnaire. </p>"+
                 "<p>However, it would be really nice if you solved 5 or more! In any case, we promise beer and/or chocolate for your help! </p>" +
@@ -179,3 +179,4 @@ export const time_text = "<div class=\"text-block\"> \n" +
 
                 "<p>Instructions are over, once you proceed you cannot return to them!</p>" +
                 "</div>";
+
