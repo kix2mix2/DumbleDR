@@ -1,8 +1,8 @@
 export const welcome = "<div class=\"text-block\">" +
                 "<h1>Call for participants</h1>\n" +
-                "<img src=\"./visus.png\" width = '200px'> <img src=\"./namur.jpg\" width = '200px'>"+
+                "<img src=\"./images/visus.png\" height = '100px'> <img src=\"./images/logo-precise.png\" height = '100px'>"+
                 "\t\t\t\t\t\t\t    <p>\n" +
-                "\t\t\t\t\t\t\t\t\tThe Visualization Research Center (VISUS) at the University of Stuttgart and the University of Namur are looking for participants for an\n" +
+                "\t\t\t\t\t\t\t\t\tThe <b>Visualization Research Center (VISUS)</b> at the University of Stuttgart and <b>Research Center on Information Systems Engineering (PReCISE)</b> from the University of Namur are looking for participants for an\n" +
                 "\t\t\t\t\t\t\t\t\tonline study on visualization and visual analysis. </p>\n" +
                 "                                 <p>\n" +
                 "                                    Given a series of datasets, we apply algorithms that find similarities in images.\n" +
@@ -81,7 +81,7 @@ export const dr_explain  = "<div class=\"text-block\"> \n" +
             "<p>\n" +
             "Dimensionality reduction (DR) refers to algorithms that reduce the number of dimensions (features) in a dataset, with minimal information loss. In this study, the dataset consists of images, and the DR projection result is a set of 2D coordinates, one for each image. This result can be visualized in a scatterplot, where each point represents an image from the dataset. Below you can see an example. \n" +
             "</p>\n" +
-            "<img class='instructions' src='./dr_example.png'>\n" +
+            "<img class='instructions' src='./images/dr_example.png'>\n" +
             "<p>\n" +
             "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plotted close to each other. Different DR algorithms define similarity differently and thereore produce different scatterplots. \n" +
             "</p>\n" +
@@ -100,7 +100,7 @@ export const ui = "<div class=\"text-block\"> \n" +
                 "We will rate your preferences on a dataset-by-dataset basis. Below you can see an example of what this dataset might be and what the interface looks like. In this case, the dataset consists of photographs of the same head captured from different angles. There are 8 scatterplots, each corresponding to a projection of a DR algorithm technique. \n" +
                 "</p>\n" +
                 "<br>\n" +
-                "<img class='instructions' src='./grid_example.png'>\n" +
+                "<img class='instructions' src='./images/grid_example.png'>\n" +
                 "\n" +
 
                 "</div>";
@@ -115,7 +115,7 @@ export const rule_1 = "<div class=\"text-block\"> \n" +
                  "<h3>Rule 2:</h3>\n" +
                 "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should be none), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment for any scatterplot, good or bad, by clicking the text box.</p>\n" +
                 "<video class = 'instructions' controls>\n" +
-                "  <source src=\"./rule_12.webm\" type=\"video/webm\">\n" +
+                "  <source src=\"./images/rule_12.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
                 "</video>" +
                 "</div>";
@@ -127,7 +127,7 @@ export const rule_3 = "<div class=\"text-block\"> \n" +
                 "\n" +
                "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points. If you want you may even leave a comment. </p>\n" +
                 "<video class = 'instructions' controls>\n" +
-                "  <source src=\"./rule_3.webm\" type=\"video/webm\">\n" +
+                "  <source src=\"./images/rule_3.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
                 "</video>" +
                 "</div>";
@@ -139,7 +139,7 @@ export const sort = "<div class=\"text-block\"> \n" +
                 "\n" +
                "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
                  "<video class = 'instructions' controls>\n" +
-                "  <source src=\"./sort.webm\" type=\"video/webm\">\n" +
+                "  <source src=\"./images/sort.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
                 "</video>" +
                 "</div>";
@@ -155,7 +155,7 @@ export const color = "<div class=\"text-block\"> \n" +
     "This is an auxiliary view you may use to consolidate your opinion of the projection. " +
     "You should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
                  "<video class = 'instructions' controls>\n" +
-                "  <source src=\"./color.webm\" type=\"video/webm\">\n" +
+                "  <source src=\"./images/color.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
                 "</video>" +
 
@@ -173,7 +173,7 @@ export const time_text = "<div class=\"text-block\"> \n" +
                 "<p>If you say no, you will be directed to the final debriefing questionnaire. </p>"+
                 "<p>However, it would be really nice if you solved 5 or more! In any case, we promise beer and/or chocolate for your help! </p>" +
                 "<video class = 'instructions' controls>\n" +
-                "  <source src=\"./next.webm\" type=\"video/webm\">\n" +
+                "  <source src=\"./images/next.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
                 "</video>" +
 

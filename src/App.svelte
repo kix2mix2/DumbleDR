@@ -11,7 +11,7 @@ import settings from "./settings.json";
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
 
-    import { data, hover, images, projections, ready } from "./stores.js";
+    import { dataset, data, hover, images, projections, ready } from "./stores.js";
     import Vis from "./Vis.svelte";
     import Trial from "./Trial.svelte";
 
@@ -126,9 +126,11 @@ import settings from "./settings.json";
         stimulus: () => {
             const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
-            data.load(data, sample);
-            step = "dr_grid";
+
             var dataset = sample1.name;
+            data.load(data, sample, dataset);
+            step = "dr_grid";
+
             return "<p class='description'>" + sample1.description + "</p>"
         },
         //choices: jsPsych.ALL_KEYS,

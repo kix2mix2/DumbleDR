@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte"
     import { scale, fly } from "svelte/transition"
-    import { images, colorScale, bgScale, hover, data as D, pos_count, neg_count, vis_type } from "./stores.js";
+    import { dataset, images, colorScale, bgScale, hover, data as D, pos_count, neg_count, vis_type } from "./stores.js";
     import * as d3 from "d3";
     import { Delaunay } from "d3-delaunay";import { createEventDispatcher } from 'svelte';
 
@@ -160,7 +160,7 @@
                     <image 
                         bind:this={image_elements[i]}
                         style="pointer-events: none;"
-                        href={`data/thumbnails/${point.img}.png`}
+                        href={`data/${dataset}/thumbnails/${point.img}.png`}
                         width=20 height=20 
                         filter={i == $hover ? "url(#matrix)" : null} 
                         title={point.class}

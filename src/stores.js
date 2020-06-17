@@ -13,7 +13,7 @@ function createCount(N) {
 }
 
 function createData(n) {
-    const D = {projections: [], images: [], hover: null};
+    const D = {projections: [], images: [], dataset: null, hover: null};
     
     const { subscribe, set, update } = writable(D);
     return {
@@ -22,20 +22,21 @@ function createData(n) {
             D.hover = i
             return D;
         }),
-        load: (store, paths) => update(D => {
+        load: (store, paths, dataset) => update(D => {
             pos_count.set(15);
             neg_count.set(10);
-            D.ready = false
+            D.ready = false;
+            D.dataset = dataset;
             /* paths.then(res => {
                 store.set_projections(res)
             }); */
             progress.reset();
-            Promise.all(paths.map(p => d3.csv(`data/flowers/human_sample/${p}`).then(async (r) => {
-                    progress.increment()
+            Promise.all(paths.map(p => d3.csv(`data/${dataset}/human_sample/${p}`).then(async (r) => {
+                    progress.increment();
                     return r
                 }
             ))).then(res => {
-                res.forEach((r, i) => r.name = paths[i])
+                res.forEach((r, i) => r.name = paths[i]);
                 store.set_projections(res)
             }); 
             return D;
@@ -88,9 +89,12 @@ export const images = derived(data, $data => $data.images);
 export const ready = derived(data, $data => $data.ready);
 export const projections = derived(data, $data => $data.projections || []);
 export const hover = derived(data, $data => $data.hover);
+export const dataset = derived(data, $data => $data.dataset);
+
 
 export let colorScale = readable(d3.scaleOrdinal(d3.schemeDark2));
 export let bgScale = readable(d3.scaleLinear().domain([-N, 0, N]).range(["green", "white", "orangered"]));
 
 export const vis_type = writable("image");
 export const progress = createCount(0);
+
