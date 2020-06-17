@@ -207,7 +207,7 @@
             </button>
             <div class="comment dropdown-content">
                 Comments:
-                <button style="float:right;" on:click={() => comment_menu = false}><span class="mdi mdi-close" /></button>
+                <button style="float:right;" on:click={() => comment_menu = false}><span class="mdi mdi-check" /></button>
                 <textarea 
                     bind:value={data.comment} 
                     on:key={(event) => event.preventDefault()} />

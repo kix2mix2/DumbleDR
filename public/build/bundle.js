@@ -22709,7 +22709,7 @@ var app = (function () {
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
     			add_location(span1, file$2, 205, 16, 7046);
     			add_location(button1, file$2, 204, 12, 6984);
-    			attr_dev(span2, "class", "mdi mdi-close");
+    			attr_dev(span2, "class", "mdi mdi-check");
     			add_location(span2, file$2, 209, 83, 7279);
     			set_style(button2, "float", "right");
     			add_location(button2, file$2, 209, 16, 7212);
@@ -44929,16 +44929,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 264, 8, 9327);
+    			add_location(img, file$4, 264, 8, 9297);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 263, 4, 9293);
+    			add_location(div0, file$4, 263, 4, 9263);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 257, 0, 9071);
+    			add_location(div1, file$4, 257, 0, 9041);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -45001,7 +45001,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 289, 8, 10466);
+    			add_location(div, file$4, 289, 8, 10436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45058,17 +45058,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 283, 12, 9998);
+    			add_location(iframe, file$4, 283, 12, 9968);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 283, 206, 10192);
-    			add_location(p, file$4, 283, 203, 10189);
+    			add_location(a, file$4, 283, 206, 10162);
+    			add_location(p, file$4, 283, 203, 10159);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 284, 16, 10295);
+    			add_location(span0, file$4, 284, 16, 10265);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 284, 79, 10358);
-    			add_location(h1, file$4, 284, 12, 10291);
+    			add_location(span1, file$4, 284, 79, 10328);
+    			add_location(h1, file$4, 284, 12, 10261);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 282, 8, 9948);
+    			add_location(div, file$4, 282, 8, 9918);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45122,7 +45122,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 270, 8, 9568);
+    			add_location(div, file$4, 270, 8, 9538);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45193,8 +45193,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 277, 12, 9812);
-    			add_location(center, file$4, 278, 12, 9851);
+    			add_location(div, file$4, 277, 12, 9782);
+    			add_location(center, file$4, 278, 12, 9821);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45237,7 +45237,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 272, 12, 9639);
+    			add_location(div, file$4, 272, 12, 9609);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45330,13 +45330,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 252, 4, 9025);
+    			add_location(h2, file$4, 252, 4, 8995);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 251, 0, 9015);
+    			add_location(nav, file$4, 251, 0, 8985);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 268, 0, 9462);
+    			add_location(main, file$4, 268, 0, 9432);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45727,7 +45727,7 @@ var app = (function () {
 
     				client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => results.insertOne({
     					owner_id: client.auth.user.id,
-    					result: JSON.parse(JSON.stringify(jsPsych.data.get().json(true)))
+    					result: jsPsych.data.get().values()
     				})).catch(err => {
     					console.error(err);
     				});
