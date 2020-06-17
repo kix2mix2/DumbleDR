@@ -5,13 +5,13 @@
 </svelte:head>
 
 <script>
-    import settings from "./settings.json";
+
+import settings from "./settings.json";
 
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
 
     import { data, hover, images, projections, ready } from "./stores.js";
-
     import Vis from "./Vis.svelte";
     import Trial from "./Trial.svelte";
 
@@ -59,7 +59,6 @@
         show_clickable_nav: true,
         show_page_number: true
     };
-
 
     var name = {
     type: 'survey-text',
@@ -129,6 +128,7 @@
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
             data.load(data, sample);
             step = "dr_grid";
+            var dataset = sample1.name;
             return "<p class='description'>" + sample1.description + "</p>"
         },
         //choices: jsPsych.ALL_KEYS,
@@ -145,7 +145,7 @@
                 }
             });
         }
-    }
+    };
 
 
 
@@ -224,8 +224,9 @@
             },
             show_progress_bar: true,
             auto_update_progress_bar: true,
-            timeline: [welcome_block, consent,
-                instructions, name, experience,
+            timeline: [welcome_block,
+                // consent,
+                // instructions, name, experience,
                 loop_node, debrief, comments],
             on_finish: function(D) {
                 // record proportion correct as unstructured data
@@ -257,7 +258,7 @@
     style="position: absolute; z-index: 10000; visibility: {$hover ? null : 'hidden'}; pointer-events: none" 
     bind:this={tooltip}>
     <div class="tooltiptext">
-        <img src="{`data/thumbnails/size50/${$images[$hover]}.png`}" alt="{$hover}" width="60px" height="60px" />
+        <img src="{`data/${dataset}/thumbnails/${$images[$hover]}.png`}" alt="{$hover}" width="60px" height="60px" />
     </div>
 </div>
 {/if}
