@@ -19997,7 +19997,7 @@ var app = (function () {
                     store.set_projections(res)
                 }); */
                 progress.reset();
-                Promise.all(paths.map(p => csv$1(`data/${dataset}/human_sample/${p}`).then(async (r) => {
+                Promise.all(paths.map(p => csv$1(`data/${dataset}/human_sample_mini/${p}`).then(async (r) => {
                         progress.increment();
                         return r
                     }
@@ -44838,7 +44838,7 @@ var app = (function () {
                     "<p>Your job is to distribute 15 hearts/points across the 8 projections. You do not need to distribute all the hearts. </p>\n" +
                      "<h3>Rule 2:</h3>\n" +
                     "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should be none), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment for any scatterplot, good or bad, by clicking the text box.</p>\n" +
-                    "<video class = 'instructions' controls>\n" +
+                    "<video class = 'instructions' controls  autoplay loop>\n" +
                     "  <source src=\"./images/rule_12.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
                     "</video>" +
@@ -44850,7 +44850,7 @@ var app = (function () {
                     "<h3>Rule 3:</h3>\n" +
                     "\n" +
                    "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points. If you want you may even leave a comment. </p>\n" +
-                    "<video class = 'instructions' controls>\n" +
+                    "<video class = 'instructions' controls autoplay loop>\n" +
                     "  <source src=\"./images/rule_3.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
                     "</video>" +
@@ -44862,7 +44862,7 @@ var app = (function () {
                     "<h3>Rule 4:</h3>\n" +
                     "\n" +
                    "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
-                     "<video class = 'instructions' controls>\n" +
+                     "<video class = 'instructions' controls autoplay loop>\n" +
                     "  <source src=\"./images/sort.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
                     "</video>" +
@@ -44878,7 +44878,7 @@ var app = (function () {
         "The points are color coded by class labels. " +
         "This is an auxiliary view you may use to consolidate your opinion of the projection. " +
         "You should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
-                     "<video class = 'instructions' controls>\n" +
+                     "<video class = 'instructions' controls autoplay loop>\n" +
                     "  <source src=\"./images/color.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
                     "</video>" +

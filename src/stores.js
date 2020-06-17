@@ -31,7 +31,7 @@ function createData(n) {
                 store.set_projections(res)
             }); */
             progress.reset();
-            Promise.all(paths.map(p => d3.csv(`data/${dataset}/human_sample/${p}`).then(async (r) => {
+            Promise.all(paths.map(p => d3.csv(`data/${dataset}/human_sample_mini/${p}`).then(async (r) => {
                     progress.increment();
                     return r
                 }
