@@ -82,6 +82,13 @@
             required: true,
             name: 'degree'
           },
+                {
+            prompt: "<div class='text-block'> <b>Where do you primarily work? </b></div>",
+            options: ['Research / Academia', 'Research / Other','Non-research related job','Student','None of the above','Prefer not to say'],
+            horizontal: true,
+            required: true,
+            name: 'job'
+          },
           {
             prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
             options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
@@ -90,14 +97,14 @@
             name: 'ML'
           },
           {
-            prompt: "<div class='text-block'> <b>What is your experience with information Visualization?</b></div>",
+            prompt: "<div class='text-block'> <b>What is your experience with Information Visualization?</b></div>",
             options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
             horizontal: true,
             required: true,
             name: 'infovis'
           },
                 {
-            prompt: "<div class='text-block'> <b>What is your experience with dimensionality reduction?</b></div>",
+            prompt: "<div class='text-block'> <b>What is your experience with Dimensionality Reduction?</b></div>",
             options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
             horizontal: true,
             required: true,
@@ -105,7 +112,7 @@
           },
           {
             prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
-            options: ["Never", "Yes, but only informally (in newspapers, media etc.)", "I made a scatterplot before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
+            options: ["Never", "Yes, but only informally (in newspapers, social media etc.)", "I made scatterplots before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
             horizontal: true,
             required: true,
             name: 'scatter'
@@ -204,8 +211,8 @@
         jsPsych.init({
             display_element: 'task',
             exclusions: {
-                min_width: 800,
-                min_height: 600
+                min_width: 700,
+                min_height: 400
             },
             on_trial_start: data => {
             },

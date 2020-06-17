@@ -44385,8 +44385,9 @@ var app = (function () {
 
     const welcome = "<div class=\"text-block\">" +
                     "<h1>Call for participants</h1>\n" +
+                    "<img src=\"visus.png\" width = '200px'> <img src=\"namur.jpg\" width = '200px'>"+
                     "\t\t\t\t\t\t\t    <p>\n" +
-                    "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart is looking for online participants\n" +
+                    "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart and Univeristy of Namur are looking for online participants\n" +
                     "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
                     "                                 <p>\n" +
                     "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" +
@@ -44568,7 +44569,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (238:0) {#if $hover}
+    // (245:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44587,16 +44588,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 245, 8, 8378);
+    			add_location(img, file$4, 252, 8, 8731);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 244, 4, 8344);
+    			add_location(div0, file$4, 251, 4, 8697);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 238, 0, 8122);
+    			add_location(div1, file$4, 245, 0, 8475);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44644,14 +44645,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(238:0) {#if $hover}",
+    		source: "(245:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:32) 
+    // (277:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44659,7 +44660,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 270, 8, 9512);
+    			add_location(div, file$4, 277, 8, 9865);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44676,14 +44677,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(270:32) ",
+    		source: "(277:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:31) 
+    // (270:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -44716,17 +44717,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 264, 12, 9044);
+    			add_location(iframe, file$4, 271, 12, 9397);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 264, 206, 9238);
-    			add_location(p, file$4, 264, 203, 9235);
+    			add_location(a, file$4, 271, 206, 9591);
+    			add_location(p, file$4, 271, 203, 9588);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 265, 16, 9341);
+    			add_location(span0, file$4, 272, 16, 9694);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 265, 79, 9404);
-    			add_location(h1, file$4, 265, 12, 9337);
+    			add_location(span1, file$4, 272, 79, 9757);
+    			add_location(h1, file$4, 272, 12, 9690);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 263, 8, 8994);
+    			add_location(div, file$4, 270, 8, 9347);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44751,14 +44752,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(263:31) ",
+    		source: "(270:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:4) {#if step == "dr_grid"}
+    // (258:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -44780,7 +44781,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 251, 8, 8614);
+    			add_location(div, file$4, 258, 8, 8967);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44831,14 +44832,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(251:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(258:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:8) {:else}
+    // (265:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -44851,8 +44852,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 258, 12, 8858);
-    			add_location(center, file$4, 259, 12, 8897);
+    			add_location(div, file$4, 265, 12, 9211);
+    			add_location(center, file$4, 266, 12, 9250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44873,14 +44874,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(258:8) {:else}",
+    		source: "(265:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (253:8) {#if $ready}
+    // (260:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -44895,7 +44896,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 253, 12, 8685);
+    			add_location(div, file$4, 260, 12, 9038);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44926,7 +44927,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(253:8) {#if $ready}",
+    		source: "(260:8) {#if $ready}",
     		ctx
     	});
 
@@ -44988,13 +44989,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 233, 4, 8076);
+    			add_location(h2, file$4, 240, 4, 8429);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 232, 0, 8066);
+    			add_location(nav, file$4, 239, 0, 8419);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 249, 0, 8508);
+    			add_location(main, file$4, 256, 0, 8861);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45183,6 +45184,20 @@ var app = (function () {
     				name: "degree"
     			},
     			{
+    				prompt: "<div class='text-block'> <b>Where do you primarily work? </b></div>",
+    				options: [
+    					"Research / Academia",
+    					"Research / Other",
+    					"Non-research related job",
+    					"Student",
+    					"None of the above",
+    					"Prefer not to say"
+    				],
+    				horizontal: true,
+    				required: true,
+    				name: "job"
+    			},
+    			{
     				prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
     				options: [
     					"Never heard of this",
@@ -45196,7 +45211,7 @@ var app = (function () {
     				name: "ML"
     			},
     			{
-    				prompt: "<div class='text-block'> <b>What is your experience with information Visualization?</b></div>",
+    				prompt: "<div class='text-block'> <b>What is your experience with Information Visualization?</b></div>",
     				options: [
     					"Never heard of this",
     					"I know the basics",
@@ -45209,7 +45224,7 @@ var app = (function () {
     				name: "infovis"
     			},
     			{
-    				prompt: "<div class='text-block'> <b>What is your experience with dimensionality reduction?</b></div>",
+    				prompt: "<div class='text-block'> <b>What is your experience with Dimensionality Reduction?</b></div>",
     				options: [
     					"Never heard of this",
     					"I know the basics",
@@ -45225,8 +45240,8 @@ var app = (function () {
     				prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
     				options: [
     					"Never",
-    					"Yes, but only informally (in newspapers, media etc.)",
-    					"I made a scatterplot before with my own data",
+    					"Yes, but only informally (in newspapers, social media etc.)",
+    					"I made scatterplots before with my own data",
     					"I'm an expert when it comes to scatterplots",
     					"Prefer not to say"
     				],
@@ -45336,7 +45351,7 @@ var app = (function () {
     		//jsPsych = window.jsPsych
     		jsPsych.init({
     			display_element: "task",
-    			exclusions: { min_width: 800, min_height: 600 },
+    			exclusions: { min_width: 700, min_height: 400 },
     			on_trial_start: data => {
     				
     			},
