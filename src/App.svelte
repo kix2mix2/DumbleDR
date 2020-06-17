@@ -24,7 +24,7 @@
 
     // import "jspsych/plugins/jspsych-survey-multi-select.js";
     import "./jspsych-survey-multi-choice.js";
-    import { dr_explain, ui, rule_1,rule_3, sort, color } from "./instructions.js";
+    import { dr_explain, ui, rule_1,rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
 
     const paths = settings.settings[0].paths;
 
@@ -41,107 +41,32 @@
     
     let welcome_block = {
         type: "html-button-response",
-        stimulus: "<div class=\"text-block\">" +
-                "<h1>Call for participants</h1>\n" +
-                "\t\t\t\t\t\t\t    <p>\n" +
-                "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart is looking for online participants\n" +
-                "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
-                "                                 <p>\n" +
-                "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" +
-                "                                <p>\n" +
-                "                                    The study consists of:\n" +
-                "                                    <ul>\n" +
-                "                                        <li>informed consent agreement,</li>\n" +
-                "                                        <li>instructions for the task,</li>\n" +
-                "                                        <li>a pre-participation survey that will assess your experience with this type of task,</li>\n" +
-                "                                        <li>a series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result.</li>\n" +
-                "                                        <li>a post-trial survey, where we will ask you for feedback on the task.</li>\n" +
-                "                                    </ul>\n" +
-                "                                </p>\n" +
-                "\n" +
-                "                                <p>\n" +
-                "                                    The requirements are:\n" +
-                "                                    <ul>\n" +
-                "                                        <li> You are at least 18 years old.</li>\n" +
-                "                                        <li> You speak fluent English.</li>\n" +
-                "                                        <li> Your screen-size is at least 800x600 pixels.</li>\n" +
-                "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" +
-                "                                    </ul>\n" +
-                "\n" +
-                "                                </p>\n" +
-                "\n" +
-                "                                <p>\n" +
-                "                                    The task is estimated to take between 30 minutes and 1 hour.\n" +
-                "\n" +
-                "                                </p>" +
-                "<p>Press start to begin.</p></div>",
+        stimulus: welcome,
         choices: ['Start Study'],
         prompt: "<br><br>"
     };
 
     let consent = {
         type: "html-button-response",
-        stimulus: "<div class=\"text-block\"><h1>We need your consent to proceed</h1>\n" +
-                "                <hr>\n" +
-                "                <div class=\"legal well\">\n" +
-                "                    <p> Dear prospective participant, </p>\n" +
-                "                    <p>\n" +
-                "                        We would like to invite you to participate in the following study within the scope of the\n" +
-                "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" +
-                "                     <p>\n" +
-                "                        In particular, we analyze the perception humans have of the results of various algorithms that seek to imitate human perception of similarity.\n" +
-                "                    </p>\n" +
-                "                    <p>\n" +
-                "                        In the current study, „Evaluation of Dimensionality Reduction\n" +
-                "                        Techniques for Image-based Data“, you will be required to analyse and select preferences\n" +
-                "                        for a series of visualizations of algorithms applied on image data.\n" +
-                "                    </p>\n" +
-                "                    <p>\n" +
-                "                        Detailed instructions will follow after this screen.\n" +
-                "                    </p>\n" +
-                "\n" +
-                "                    <p>\n" +
-                "                        <iframe src=\"./Consent.pdf\" style=\"width:80%; height:600px;\"\n" +
-                "                            frameborder=\"0\"></iframe>\n" +
-                "                    </p>\n" +
-                "\n" +
-                "                    <p>\n" +
-                "                       By clicking 'I accept!', you are giving your informed consent to participate in this study. " +
-                "                    </p>\n" +
-                "                </div> <\div>",
+        stimulus: consent_form,
         choices: ['I accept!'],
         prompt: "<br><br>"
     };
 
-
     let instructions = {
         type:'instructions',
-        pages: [dr_explain, ui, rule_1,rule_3, sort, color],
+        pages: [dr_explain, ui, rule_1,rule_3, sort, color, time_text],
         show_clickable_nav: true,
         show_page_number: true
     };
 
-    let time = {
-        type:'html-button-response',
-        stimulus: "<div class=\"text-block\"> \n" +
-                "\n" +
-                "<h1>How long will this take?</h1>\n" +
-                "<p> In total we have 10 datasets, consisting of collections of photos. " +
-                "After each trial you will be asked if you want to continue.</p> " +
-                "<p>If you say no, you will be directed to the final debrief questionairre. </p>"+
-                "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>"+
-
-                "</div>",
-        choices: ["Alright, let's start!"],
-        prompt: "<br><br>"
-    };
 
     var name = {
     type: 'survey-text',
     questions: [
       {prompt: '<div class=\"text-block\">Type in here your name or email. <br> ' +
                   'This is only so we can contact you in case we have questions about your answers. <br>' +
-                  'You may also just input a random name if you don\'t want to be contacted further.</div>' , columns: 100, required: true, name: 'Name'},
+                  'You may also leave the input field empty if you don\'t want to be contacted further.</div>' , columns: 100,  name: 'Name'},
     ],
     randomize_question_order: false,
         prompt: "<br><br>"
@@ -197,7 +122,7 @@
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
             data.load(data, sample);
             step = "dr_grid";
-            return "<p>You may hover over the points, or zoom in and out particular scatterplots.</p>" + "<p class='description'>" + sample1.description + "</p>"
+            return "<p class='description'>" + sample1.description + "</p>"
         },
         //choices: jsPsych.ALL_KEYS,
         choices: ['Another Dataset','Finish Session'],
@@ -272,9 +197,6 @@
 
 
 
-    // timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
-
-
     onMount(() => {
         //data.load(data, rows * cols);
         //jsPsych = window.jsPsych
@@ -293,7 +215,7 @@
             show_progress_bar: true,
             auto_update_progress_bar: true,
             timeline: [welcome_block, consent,
-                instructions,
+                instructions, name, experience,
                 loop_node, debrief, comments],
             on_finish: function() {
                 // record proportion correct as unstructured data

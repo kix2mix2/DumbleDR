@@ -44455,16 +44455,99 @@ var app = (function () {
                     "<h1>User Interface</h1>\n" +
                     "<h3>Final thing:</h3>\n" +
                     "\n" +
-                    "<p>We have also implemented an additional view where we plot each image as a point. The points are color coded by class labels. This is an auxiliery view you may use to consolite your opinion of the projection. We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
+                    "<p>We have also implemented an additional view where we plot each image as a point. " +
+        "The points are color coded by class labels. " +
+        "This is an auxiliery view you may use to consolite your opinion of the projection. " +
+        "We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
                      "<img class='instructions' src='./color_view.gif'>" +
+
+                    "</div>";
+
+
+    const welcome = "<div class=\"text-block\">" +
+                    "<h1>Call for participants</h1>\n" +
+                    "\t\t\t\t\t\t\t    <p>\n" +
+                    "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart is looking for online participants\n" +
+                    "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
+                    "                                 <p>\n" +
+                    "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" +
+                    "                                <p>\n" +
+                    "                                    The study consists of:\n" +
+                    "                                    <ul>\n" +
+                    "                                        <li>informed consent agreement,</li>\n" +
+                    "                                        <li>instructions for the task,</li>\n" +
+                    "                                        <li>a pre-participation survey that will assess your experience with this type of task,</li>\n" +
+                    "                                        <li>a series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result.</li>\n" +
+                    "                                        <li>a post-trial survey, where we will ask you for feedback on the task.</li>\n" +
+                    "                                    </ul>\n" +
+                    "                                </p>\n" +
+                    "\n" +
+                    "                                <p>\n" +
+                    "                                    The requirements are:\n" +
+                    "                                    <ul>\n" +
+                    "                                        <li> You are at least 18 years old.</li>\n" +
+                    "                                        <li> You speak fluent English.</li>\n" +
+                    "                                        <li> Your screen-size is at least 800x600 pixels.</li>\n" +
+                    "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" +
+                    "                                    </ul>\n" +
+                    "\n" +
+                    "                                </p>\n" +
+                    "\n" +
+                    "                                <p>\n" +
+                    "                                    The task is estimated to take between 30 minutes and 1 hour.\n" +
+                    "\n" +
+                    "                                </p>" +
+                    "<p>Press start to begin.</p></div>";
+
+
+
+    const consent_form = "<div class=\"text-block\"><h1>We need your consent to proceed</h1>\n" +
+                    "                <hr>\n" +
+                    "                <div class=\"legal well\">\n" +
+                    "                    <p> Dear prospective participant, </p>\n" +
+                    "                    <p>\n" +
+                    "                        We would like to invite you to participate in the following study within the scope of the\n" +
+                    "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" +
+                    "                     <p>\n" +
+                    "                        In particular, we analyze the perception humans have of the results of various algorithms that seek to imitate human perception of similarity.\n" +
+                    "                    </p>\n" +
+                    "                    <p>\n" +
+                    "                        In the current study, „Evaluation of Dimensionality Reduction\n" +
+                    "                        Techniques for Image-based Data“, you will be required to analyse and select preferences\n" +
+                    "                        for a series of visualizations of algorithms applied on image data.\n" +
+                    "                    </p>\n" +
+                    "                    <p>\n" +
+                    "                        Detailed instructions will follow after this screen.\n" +
+                    "                    </p>\n" +
+                    "\n" +
+                    "                    <p>\n" +
+                    "                        <iframe src=\"./Consent.pdf\" style=\"width:80%; height:600px;\"\n" +
+                    "                            frameborder=\"0\"></iframe>\n" +
+                    "                    </p>\n" +
+                    "\n" +
+                    "                    <p>\n" +
+                    "                       By clicking 'I accept!', you are giving your informed consent to participate in this study. " +
+                    "                    </p>\n" +
+                    "                </div> <\div>";
+
+
+    const time_text = "<div class=\"text-block\"> \n" +
+                    "\n" +
+                    "<h1>How long will this take?</h1>\n" +
+                    "<p> In total we have 10 datasets, consisting of collections of photos. " +
+                    "After each trial you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will vary depending on how many trials you will do.</p> " +
+                    "<p>If you say no, you will be directed to the final debrief questionairre. </p>"+
+                    "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>"+
+                    "<p>Instructions are over, once you proceed you cannot return to them!</p>" +
                     "</div>";
 
     /* src/App.svelte generated by Svelte v3.23.2 */
 
     const { console: console_1$1 } = globals;
+
     const file$4 = "src/App.svelte";
 
-    // (316:0) {#if $hover}
+    // (238:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44483,16 +44566,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 323, 8, 14160);
+    			add_location(img, file$4, 245, 8, 8378);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 322, 4, 14126);
+    			add_location(div0, file$4, 244, 4, 8344);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 316, 0, 13904);
+    			add_location(div1, file$4, 238, 0, 8122);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44540,14 +44623,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(316:0) {#if $hover}",
+    		source: "(238:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (348:32) 
+    // (270:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44555,7 +44638,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 348, 8, 15294);
+    			add_location(div, file$4, 270, 8, 9512);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44572,14 +44655,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(348:32) ",
+    		source: "(270:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (341:31) 
+    // (263:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -44612,17 +44695,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 342, 12, 14826);
+    			add_location(iframe, file$4, 264, 12, 9044);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 342, 206, 15020);
-    			add_location(p, file$4, 342, 203, 15017);
+    			add_location(a, file$4, 264, 206, 9238);
+    			add_location(p, file$4, 264, 203, 9235);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 343, 16, 15123);
+    			add_location(span0, file$4, 265, 16, 9341);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 343, 79, 15186);
-    			add_location(h1, file$4, 343, 12, 15119);
+    			add_location(span1, file$4, 265, 79, 9404);
+    			add_location(h1, file$4, 265, 12, 9337);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 341, 8, 14776);
+    			add_location(div, file$4, 263, 8, 8994);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44647,14 +44730,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(341:31) ",
+    		source: "(263:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:4) {#if step == "dr_grid"}
+    // (251:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -44676,7 +44759,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 329, 8, 14396);
+    			add_location(div, file$4, 251, 8, 8614);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44727,14 +44810,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(329:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(251:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:8) {:else}
+    // (258:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -44747,8 +44830,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 336, 12, 14640);
-    			add_location(center, file$4, 337, 12, 14679);
+    			add_location(div, file$4, 258, 12, 8858);
+    			add_location(center, file$4, 259, 12, 8897);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44769,14 +44852,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(336:8) {:else}",
+    		source: "(258:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:8) {#if $ready}
+    // (253:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -44791,7 +44874,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 331, 12, 14467);
+    			add_location(div, file$4, 253, 12, 8685);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44822,7 +44905,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(331:8) {#if $ready}",
+    		source: "(253:8) {#if $ready}",
     		ctx
     	});
 
@@ -44884,13 +44967,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 311, 4, 13858);
+    			add_location(h2, file$4, 233, 4, 8076);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 310, 0, 13848);
+    			add_location(nav, file$4, 232, 0, 8066);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 327, 0, 14290);
+    			add_location(main, file$4, 249, 0, 8508);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45036,39 +45119,31 @@ var app = (function () {
 
     	let welcome_block = {
     		type: "html-button-response",
-    		stimulus: "<div class=\"text-block\">" + "<h1>Call for participants</h1>\n" + "\t\t\t\t\t\t\t    <p>\n" + "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart is looking for online participants\n" + "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" + "                                 <p>\n" + "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" + "                                <p>\n" + "                                    The study consists of:\n" + "                                    <ul>\n" + "                                        <li>informed consent agreement,</li>\n" + "                                        <li>instructions for the task,</li>\n" + "                                        <li>a pre-participation survey that will assess your experience with this type of task,</li>\n" + "                                        <li>a series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result.</li>\n" + "                                        <li>a post-trial survey, where we will ask you for feedback on the task.</li>\n" + "                                    </ul>\n" + "                                </p>\n" + "\n" + "                                <p>\n" + "                                    The requirements are:\n" + "                                    <ul>\n" + "                                        <li> You are at least 18 years old.</li>\n" + "                                        <li> You speak fluent English.</li>\n" + "                                        <li> Your screen-size is at least 800x600 pixels.</li>\n" + "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" + "                                    </ul>\n" + "\n" + "                                </p>\n" + "\n" + "                                <p>\n" + "                                    The task is estimated to take between 30 minutes and 1 hour.\n" + "\n" + "                                </p>" + "<p>Press start to begin.</p></div>",
+    		stimulus: welcome,
     		choices: ["Start Study"],
     		prompt: "<br><br>"
     	};
 
     	let consent = {
     		type: "html-button-response",
-    		stimulus: "<div class=\"text-block\"><h1>We need your consent to proceed</h1>\n" + "                <hr>\n" + "                <div class=\"legal well\">\n" + "                    <p> Dear prospective participant, </p>\n" + "                    <p>\n" + "                        We would like to invite you to participate in the following study within the scope of the\n" + "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" + "                     <p>\n" + "                        In particular, we analyze the perception humans have of the results of various algorithms that seek to imitate human perception of similarity.\n" + "                    </p>\n" + "                    <p>\n" + "                        In the current study, „Evaluation of Dimensionality Reduction\n" + "                        Techniques for Image-based Data“, you will be required to analyse and select preferences\n" + "                        for a series of visualizations of algorithms applied on image data.\n" + "                    </p>\n" + "                    <p>\n" + "                        Detailed instructions will follow after this screen.\n" + "                    </p>\n" + "\n" + "                    <p>\n" + "                        <iframe src=\"./Consent.pdf\" style=\"width:80%; height:600px;\"\n" + "                            frameborder=\"0\"></iframe>\n" + "                    </p>\n" + "\n" + "                    <p>\n" + "                       By clicking 'I accept!', you are giving your informed consent to participate in this study. " + "                    </p>\n" + "                </div> <div>",
+    		stimulus: consent_form,
     		choices: ["I accept!"],
     		prompt: "<br><br>"
     	};
 
     	let instructions = {
     		type: "instructions",
-    		pages: [dr_explain, ui, rule_1, rule_3, sort, color$1],
+    		pages: [dr_explain, ui, rule_1, rule_3, sort, color$1, time_text],
     		show_clickable_nav: true,
     		show_page_number: true
-    	};
-
-    	let time = {
-    		type: "html-button-response",
-    		stimulus: "<div class=\"text-block\"> \n" + "\n" + "<h1>How long will this take?</h1>\n" + "<p> In total we have 10 datasets, consisting of collections of photos. " + "After each trial you will be asked if you want to continue.</p> " + "<p>If you say no, you will be directed to the final debrief questionairre. </p>" + "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>" + "</div>",
-    		choices: ["Alright, let's start!"],
-    		prompt: "<br><br>"
     	};
 
     	var name = {
     		type: "survey-text",
     		questions: [
     			{
-    				prompt: "<div class=\"text-block\">Type in here your name or email. <br> " + "This is only so we can contact you in case we have questions about your answers. <br>" + "You may also just input a random name if you don't want to be contacted further.</div>",
+    				prompt: "<div class=\"text-block\">Type in here your name or email. <br> " + "This is only so we can contact you in case we have questions about your answers. <br>" + "You may also leave the input field empty if you don't want to be contacted further.</div>",
     				columns: 100,
-    				required: true,
     				name: "Name"
     			}
     		],
@@ -45150,7 +45225,7 @@ var app = (function () {
     			const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
     			data.load(data, sample);
     			$$invalidate(0, step = "dr_grid");
-    			return "<p>You may hover over the points, or zoom in and out particular scatterplots.</p>" + "<p class='description'>" + sample1.description + "</p>";
+    			return "<p class='description'>" + sample1.description + "</p>";
     		},
     		//choices: jsPsych.ALL_KEYS,
     		choices: ["Another Dataset", "Finish Session"],
@@ -45235,7 +45310,6 @@ var app = (function () {
     		prompt: "<br><br>"
     	};
 
-    	// timeline.push(multi_choice_block, multi_choice_block_horizontal,dr_grid);
     	onMount(() => {
     		//data.load(data, rows * cols);
     		//jsPsych = window.jsPsych
@@ -45250,7 +45324,16 @@ var app = (function () {
     			},
     			show_progress_bar: true,
     			auto_update_progress_bar: true,
-    			timeline: [welcome_block, consent, instructions, loop_node, debrief, comments],
+    			timeline: [
+    				welcome_block,
+    				consent,
+    				instructions,
+    				name,
+    				experience,
+    				loop_node,
+    				debrief,
+    				comments
+    			],
     			on_finish() {
     				// record proportion correct as unstructured data
     				console.log("yo yo"); // jsPsych.data.displayData();
@@ -45296,6 +45379,9 @@ var app = (function () {
     		rule_3,
     		sort,
     		color: color$1,
+    		welcome,
+    		consent_form,
+    		time_text,
     		paths,
     		rows,
     		cols,
@@ -45304,7 +45390,6 @@ var app = (function () {
     		welcome_block,
     		consent,
     		instructions,
-    		time,
     		name,
     		experience,
     		step,
@@ -45326,7 +45411,6 @@ var app = (function () {
     		if ("welcome_block" in $$props) welcome_block = $$props.welcome_block;
     		if ("consent" in $$props) consent = $$props.consent;
     		if ("instructions" in $$props) instructions = $$props.instructions;
-    		if ("time" in $$props) time = $$props.time;
     		if ("name" in $$props) name = $$props.name;
     		if ("experience" in $$props) experience = $$props.experience;
     		if ("step" in $$props) $$invalidate(0, step = $$props.step);
