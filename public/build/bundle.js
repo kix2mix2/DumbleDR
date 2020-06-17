@@ -44893,13 +44893,10 @@ var app = (function () {
                     "\n" +
                     "<h1>How long will this take?</h1>\n" +
                     "<p> In total we have 12 datasets, consisting of collections of photos. " +
-                    "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will depend on how many trials you do.</p> " +
-                    "<p>If you say no, you will be directed to the final debriefing questionnaire. </p>"+
-                    "<p>However, it would be really nice if you solved 5 or more! In any case, we promise beer and/or chocolate for your help! </p>" +
-                    "<video class = 'instructions' controls>\n" +
-                    "  <source src=\"./images/next.webm\" type=\"video/webm\">\n" +
-                    "Your browser does not support the video tag. \n" +
-                    "</video>" +
+                    "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. If you choose the latter, you will be directed to the final debriefing questionnaire." +
+        "The time it takes for the study will depend on how many trials you do. <b>It took us about 40 minutes to rate all datasets.</b></p> " +
+                    "<p>It would be really nice if you solved at least 5! We promise beer and/or chocolate for your help! </p>" +
+
 
                     "<p>Instructions are over, once you proceed you cannot return to them!</p>" +
                     "</div>";
@@ -44910,7 +44907,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (278:0) {#if $hover}
+    // (276:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44929,16 +44926,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 285, 8, 10086);
+    			add_location(img, file$4, 283, 8, 9912);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 284, 4, 10052);
+    			add_location(div0, file$4, 282, 4, 9878);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 278, 0, 9830);
+    			add_location(div1, file$4, 276, 0, 9656);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44986,14 +44983,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(278:0) {#if $hover}",
+    		source: "(276:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (310:32) 
+    // (308:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -45001,7 +44998,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 310, 8, 11225);
+    			add_location(div, file$4, 308, 8, 11051);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45018,14 +45015,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(310:32) ",
+    		source: "(308:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:31) 
+    // (301:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -45058,17 +45055,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 304, 12, 10757);
+    			add_location(iframe, file$4, 302, 12, 10583);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 304, 206, 10951);
-    			add_location(p, file$4, 304, 203, 10948);
+    			add_location(a, file$4, 302, 206, 10777);
+    			add_location(p, file$4, 302, 203, 10774);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 305, 16, 11054);
+    			add_location(span0, file$4, 303, 16, 10880);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 305, 79, 11117);
-    			add_location(h1, file$4, 305, 12, 11050);
+    			add_location(span1, file$4, 303, 79, 10943);
+    			add_location(h1, file$4, 303, 12, 10876);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 303, 8, 10707);
+    			add_location(div, file$4, 301, 8, 10533);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45093,14 +45090,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(303:31) ",
+    		source: "(301:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (291:4) {#if step == "dr_grid"}
+    // (289:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45122,7 +45119,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 291, 8, 10327);
+    			add_location(div, file$4, 289, 8, 10153);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45173,14 +45170,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(291:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(289:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:8) {:else}
+    // (296:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45193,8 +45190,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 298, 12, 10571);
-    			add_location(center, file$4, 299, 12, 10610);
+    			add_location(div, file$4, 296, 12, 10397);
+    			add_location(center, file$4, 297, 12, 10436);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45215,14 +45212,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(298:8) {:else}",
+    		source: "(296:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:8) {#if $ready}
+    // (291:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45237,7 +45234,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 293, 12, 10398);
+    			add_location(div, file$4, 291, 12, 10224);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45268,7 +45265,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(293:8) {#if $ready}",
+    		source: "(291:8) {#if $ready}",
     		ctx
     	});
 
@@ -45330,13 +45327,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 273, 4, 9784);
+    			add_location(h2, file$4, 271, 4, 9610);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 272, 0, 9774);
+    			add_location(nav, file$4, 270, 0, 9600);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 289, 0, 10221);
+    			add_location(main, file$4, 287, 0, 10047);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45475,14 +45472,8 @@ var app = (function () {
     	validate_store(ready, "ready");
     	component_subscribe($$self, ready, $$value => $$invalidate(5, $ready = $$value));
     	const paths = settings$1.settings[0].paths;
-    	const userid = jsPsych.randomization.randomID();
     	let subject_id = jsPsych.randomization.randomID(15);
-    	let condition_assignment = jsPsych.randomization.sampleWithoutReplacement(["conditionA", "conditionB", "conditionC"], 1)[0];
-
-    	jsPsych.data.addProperties({
-    		subject: subject_id,
-    		condition: condition_assignment
-    	});
+    	jsPsych.data.addProperties({ subject: subject_id });
 
     	let welcome_block = {
     		type: "html-button-response",
@@ -45642,7 +45633,7 @@ var app = (function () {
     					"I was confused the entire time"
     				],
     				horizontal: true,
-    				required: true,
+    				required: false,
     				name: "difficulty"
     			}
     		]
@@ -45651,7 +45642,7 @@ var app = (function () {
     	let cont = {
     		type: "html-button-response",
     		stimulus: "Another trial?",
-    		choices: ["Continue for more beer/chocolate!", "End experiment :("],
+    		choices: ["Continue for more 🍻 & 🍬! 😍", "End experiment 😢😢😭"],
     		prompt: "<br><br>"
     	};
 
@@ -45761,6 +45752,8 @@ var app = (function () {
     				})).catch(err => {
     					console.error(err);
     				});
+
+    				jsPsych.data.displayData();
     			}
     		});
     	});
@@ -45804,11 +45797,9 @@ var app = (function () {
     		consent_form,
     		time_text,
     		paths,
-    		userid,
     		rows,
     		cols,
     		subject_id,
-    		condition_assignment,
     		welcome_block,
     		consent,
     		instructions,
@@ -45832,7 +45823,6 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("subject_id" in $$props) subject_id = $$props.subject_id;
-    		if ("condition_assignment" in $$props) condition_assignment = $$props.condition_assignment;
     		if ("welcome_block" in $$props) welcome_block = $$props.welcome_block;
     		if ("consent" in $$props) consent = $$props.consent;
     		if ("instructions" in $$props) instructions = $$props.instructions;

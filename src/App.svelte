@@ -27,17 +27,14 @@ import settings from "./settings.json";
 import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
 
     const paths = settings.settings[0].paths;
-const userid = jsPsych.randomization.randomID();
+
 
     const rows = 2;
     const cols = 4;
 
     let subject_id = jsPsych.randomization.randomID(15);
-    let condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
-
     jsPsych.data.addProperties({
-        subject: subject_id,
-        condition: condition_assignment
+        subject: subject_id
     });
     
     let welcome_block = {
@@ -160,7 +157,7 @@ let trial_feedback = {
             prompt: "<div class='text-block'> <b>How difficult was this trial? </b></div>",
             options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
             horizontal: true,
-            required: true,
+            required: false,
             name: 'difficulty'
         }
     ]
@@ -169,7 +166,7 @@ let trial_feedback = {
 let cont = {
         type: "html-button-response",
         stimulus: "Another trial?",
-        choices: ['Continue for more beer/chocolate!', 'End experiment :('],
+        choices: ['Continue for more 🍻 & 🍬! 😍', 'End experiment 😢😢😭'],
         prompt: "<br><br>"
     };
 
@@ -263,6 +260,7 @@ var counts = 0;
                     ).catch(err => {
                         console.error(err)
                     });
+                jsPsych.data.displayData();
             },
         });
     })
