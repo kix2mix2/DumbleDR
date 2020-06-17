@@ -128,6 +128,8 @@ import settings from "./settings.json";
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
 
             var dataset = sample1.name;
+
+            console.log(dataset);
             data.load(data, sample, dataset);
             step = "dr_grid";
 
@@ -260,7 +262,7 @@ import settings from "./settings.json";
     style="position: absolute; z-index: 10000; visibility: {$hover ? null : 'hidden'}; pointer-events: none" 
     bind:this={tooltip}>
     <div class="tooltiptext">
-        <img src="{`data/${dataset}/thumbnails/${$images[$hover]}.png`}" alt="{$hover}" width="60px" height="60px" />
+        <img src="{`data/${$dataset}/thumbnails/${$images[$hover]}.png`}" alt="{$hover}" width="60px" height="60px" />
     </div>
 </div>
 {/if}

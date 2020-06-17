@@ -21907,15 +21907,15 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[45] = list[i];
-    	child_ctx[47] = i;
+    	child_ctx[46] = list[i];
+    	child_ctx[48] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[45] = list[i];
-    	child_ctx[47] = i;
+    	child_ctx[46] = list[i];
+    	child_ctx[48] = i;
     	return child_ctx;
     }
 
@@ -22002,7 +22002,7 @@ var app = (function () {
     			append_dev(button_1, t);
 
     			if (!mounted) {
-    				dispose = listen_dev(button_1, "click", /*click_handler_2*/ ctx[25], false, false, false);
+    				dispose = listen_dev(button_1, "click", /*click_handler_2*/ ctx[26], false, false, false);
     				mounted = true;
     			}
     		},
@@ -22048,7 +22048,7 @@ var app = (function () {
     			append_dev(button_1, span);
 
     			if (!mounted) {
-    				dispose = listen_dev(button_1, "click", /*click_handler_1*/ ctx[24], false, false, false);
+    				dispose = listen_dev(button_1, "click", /*click_handler_1*/ ctx[25], false, false, false);
     				mounted = true;
     			}
     		},
@@ -22088,15 +22088,15 @@ var app = (function () {
     	let dispose;
 
     	function mouseenter_handler(...args) {
-    		return /*mouseenter_handler*/ ctx[26](/*i*/ ctx[47], ...args);
+    		return /*mouseenter_handler*/ ctx[27](/*i*/ ctx[48], ...args);
     	}
 
     	const block = {
     		c: function create() {
     			path = svg_element("path");
-    			attr_dev(path, "d", path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[47]).join("L")}Z`);
+    			attr_dev(path, "d", path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]).join("L")}Z`);
     			attr_dev(path, "fill", "transparent");
-    			attr_dev(path, "title", path_title_value = /*point*/ ctx[45].class);
+    			attr_dev(path, "title", path_title_value = /*point*/ ctx[46].class);
     			add_location(path, file$2, 140, 16, 4434);
     		},
     		m: function mount(target, anchor) {
@@ -22105,7 +22105,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(path, "mouseenter", mouseenter_handler, false, false, false),
-    					listen_dev(path, "mousemove", /*mousemove_handler*/ ctx[27], false, false, false)
+    					listen_dev(path, "mousemove", /*mousemove_handler*/ ctx[28], false, false, false)
     				];
 
     				mounted = true;
@@ -22114,11 +22114,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*voronoi*/ 16384 && path_d_value !== (path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[47]).join("L")}Z`)) {
+    			if (dirty[0] & /*voronoi*/ 16384 && path_d_value !== (path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]).join("L")}Z`)) {
     				attr_dev(path, "d", path_d_value);
     			}
 
-    			if (dirty[0] & /*data*/ 1 && path_title_value !== (path_title_value = /*point*/ ctx[45].class)) {
+    			if (dirty[0] & /*data*/ 1 && path_title_value !== (path_title_value = /*point*/ ctx[46].class)) {
     				attr_dev(path, "title", path_title_value);
     			}
     		},
@@ -22152,30 +22152,30 @@ var app = (function () {
     			circle = svg_element("circle");
     			attr_dev(circle, "cx", "10");
     			attr_dev(circle, "cy", "10");
-    			attr_dev(circle, "r", circle_r_value = /*$hover*/ ctx[18] == /*i*/ ctx[47] ? 5 : 3);
+    			attr_dev(circle, "r", circle_r_value = /*$hover*/ ctx[19] == /*i*/ ctx[48] ? 5 : 3);
 
-    			attr_dev(circle, "fill", circle_fill_value = /*$hover*/ ctx[18] == /*i*/ ctx[47]
-    			? /*$colorScale*/ ctx[19](/*point*/ ctx[45].class)
+    			attr_dev(circle, "fill", circle_fill_value = /*$hover*/ ctx[19] == /*i*/ ctx[48]
+    			? /*$colorScale*/ ctx[20](/*point*/ ctx[46].class)
     			: "none");
 
-    			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[19](/*point*/ ctx[45].class));
-    			add_location(circle, file$2, 169, 20, 5723);
+    			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[20](/*point*/ ctx[46].class));
+    			add_location(circle, file$2, 169, 20, 5724);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*$hover*/ 262144 && circle_r_value !== (circle_r_value = /*$hover*/ ctx[18] == /*i*/ ctx[47] ? 5 : 3)) {
+    			if (dirty[0] & /*$hover*/ 524288 && circle_r_value !== (circle_r_value = /*$hover*/ ctx[19] == /*i*/ ctx[48] ? 5 : 3)) {
     				attr_dev(circle, "r", circle_r_value);
     			}
 
-    			if (dirty[0] & /*$hover, $colorScale, data*/ 786433 && circle_fill_value !== (circle_fill_value = /*$hover*/ ctx[18] == /*i*/ ctx[47]
-    			? /*$colorScale*/ ctx[19](/*point*/ ctx[45].class)
+    			if (dirty[0] & /*$hover, $colorScale, data*/ 1572865 && circle_fill_value !== (circle_fill_value = /*$hover*/ ctx[19] == /*i*/ ctx[48]
+    			? /*$colorScale*/ ctx[20](/*point*/ ctx[46].class)
     			: "none")) {
     				attr_dev(circle, "fill", circle_fill_value);
     			}
 
-    			if (dirty[0] & /*$colorScale, data*/ 524289 && circle_stroke_value !== (circle_stroke_value = /*$colorScale*/ ctx[19](/*point*/ ctx[45].class))) {
+    			if (dirty[0] & /*$colorScale, data*/ 1048577 && circle_stroke_value !== (circle_stroke_value = /*$colorScale*/ ctx[20](/*point*/ ctx[46].class))) {
     				attr_dev(circle, "stroke", circle_stroke_value);
     			}
     		},
@@ -22201,23 +22201,23 @@ var app = (function () {
     	let image_href_value;
     	let image_filter_value;
     	let image_title_value;
-    	let i = /*i*/ ctx[47];
-    	const assign_image = () => /*image_binding*/ ctx[28](image, i);
-    	const unassign_image = () => /*image_binding*/ ctx[28](null, i);
+    	let i = /*i*/ ctx[48];
+    	const assign_image = () => /*image_binding*/ ctx[29](image, i);
+    	const unassign_image = () => /*image_binding*/ ctx[29](null, i);
 
     	const block = {
     		c: function create() {
     			image = svg_element("image");
     			set_style(image, "pointer-events", "none");
-    			attr_dev(image, "href", image_href_value = `data/${dataset}/thumbnails/${/*point*/ ctx[45].img}.png`);
+    			attr_dev(image, "href", image_href_value = `data/${/*$dataset*/ ctx[18]}/thumbnails/${/*point*/ ctx[46].img}.png`);
     			attr_dev(image, "width", "20");
     			attr_dev(image, "height", "20");
 
-    			attr_dev(image, "filter", image_filter_value = /*i*/ ctx[47] == /*$hover*/ ctx[18]
+    			attr_dev(image, "filter", image_filter_value = /*i*/ ctx[48] == /*$hover*/ ctx[19]
     			? "url(#matrix)"
     			: null);
 
-    			attr_dev(image, "title", image_title_value = /*point*/ ctx[45].class);
+    			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
     			add_location(image, file$2, 159, 20, 5248);
     		},
     		m: function mount(target, anchor) {
@@ -22227,23 +22227,23 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*data*/ 1 && image_href_value !== (image_href_value = `data/${dataset}/thumbnails/${/*point*/ ctx[45].img}.png`)) {
+    			if (dirty[0] & /*$dataset, data*/ 262145 && image_href_value !== (image_href_value = `data/${/*$dataset*/ ctx[18]}/thumbnails/${/*point*/ ctx[46].img}.png`)) {
     				attr_dev(image, "href", image_href_value);
     			}
 
-    			if (dirty[0] & /*$hover*/ 262144 && image_filter_value !== (image_filter_value = /*i*/ ctx[47] == /*$hover*/ ctx[18]
+    			if (dirty[0] & /*$hover*/ 524288 && image_filter_value !== (image_filter_value = /*i*/ ctx[48] == /*$hover*/ ctx[19]
     			? "url(#matrix)"
     			: null)) {
     				attr_dev(image, "filter", image_filter_value);
     			}
 
-    			if (dirty[0] & /*data*/ 1 && image_title_value !== (image_title_value = /*point*/ ctx[45].class)) {
+    			if (dirty[0] & /*data*/ 1 && image_title_value !== (image_title_value = /*point*/ ctx[46].class)) {
     				attr_dev(image, "title", image_title_value);
     			}
 
-    			if (i !== /*i*/ ctx[47]) {
+    			if (i !== /*i*/ ctx[48]) {
     				unassign_image();
-    				i = /*i*/ ctx[47];
+    				i = /*i*/ ctx[48];
     				assign_image();
     			}
     		},
@@ -22266,7 +22266,7 @@ var app = (function () {
 
     // (139:8) {#each data as point, i}
     function create_each_block_1(ctx) {
-    	let show_if = /*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[47]);
+    	let show_if = /*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]);
     	let g_1;
     	let g_1_transform_value;
     	let if_block0 = show_if && create_if_block_4(ctx);
@@ -22284,7 +22284,7 @@ var app = (function () {
     			if (if_block0) if_block0.c();
     			g_1 = svg_element("g");
     			if (if_block1) if_block1.c();
-    			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[45].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[45].y) - 10})`);
+    			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
     			add_location(g_1, file$2, 157, 12, 5117);
     		},
     		m: function mount(target, anchor) {
@@ -22293,7 +22293,7 @@ var app = (function () {
     			if (if_block1) if_block1.m(g_1, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*voronoi*/ 16384) show_if = /*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[47]);
+    			if (dirty[0] & /*voronoi*/ 16384) show_if = /*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]);
 
     			if (show_if) {
     				if (if_block0) {
@@ -22320,7 +22320,7 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty[0] & /*x, data, y*/ 12289 && g_1_transform_value !== (g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[45].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[45].y) - 10})`)) {
+    			if (dirty[0] & /*x, data, y*/ 12289 && g_1_transform_value !== (g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`)) {
     				attr_dev(g_1, "transform", g_1_transform_value);
     			}
     		},
@@ -22348,7 +22348,7 @@ var app = (function () {
     // (180:8) {#if $vis_type == "image"}
     function create_if_block_1(ctx) {
     	let each_1_anchor;
-    	let each_value = /*data*/ ctx[0].filter(/*func*/ ctx[29]);
+    	let each_value = /*data*/ ctx[0].filter(/*func*/ ctx[30]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -22372,8 +22372,8 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*x, data, $hover, y*/ 274433) {
-    				each_value = /*data*/ ctx[0].filter(/*func*/ ctx[29]);
+    			if (dirty[0] & /*x, data, $hover, y, $dataset*/ 798721) {
+    				each_value = /*data*/ ctx[0].filter(/*func*/ ctx[30]);
     				validate_each_argument(each_value);
     				let i;
 
@@ -22426,29 +22426,29 @@ var app = (function () {
     			g_1 = svg_element("g");
     			image = svg_element("image");
     			set_style(image, "pointer-events", "none");
-    			xlink_attr(image, "xlink:href", image_xlink_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`);
+    			xlink_attr(image, "xlink:href", image_xlink_href_value = `data/${/*$dataset*/ ctx[18]}/thumbnails/${/*point*/ ctx[46].img}.png`);
     			attr_dev(image, "width", "20");
     			attr_dev(image, "height", "20");
     			attr_dev(image, "filter", "url(#matrix)");
-    			attr_dev(image, "title", image_title_value = /*point*/ ctx[45].class);
-    			add_location(image, file$2, 182, 16, 6256);
-    			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[45].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[45].y) - 10})`);
-    			add_location(g_1, file$2, 181, 12, 6172);
+    			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
+    			add_location(image, file$2, 182, 16, 6257);
+    			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
+    			add_location(g_1, file$2, 181, 12, 6173);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g_1, anchor);
     			append_dev(g_1, image);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*data, $hover*/ 262145 && image_xlink_href_value !== (image_xlink_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`)) {
+    			if (dirty[0] & /*$dataset, data, $hover*/ 786433 && image_xlink_href_value !== (image_xlink_href_value = `data/${/*$dataset*/ ctx[18]}/thumbnails/${/*point*/ ctx[46].img}.png`)) {
     				xlink_attr(image, "xlink:href", image_xlink_href_value);
     			}
 
-    			if (dirty[0] & /*data, $hover*/ 262145 && image_title_value !== (image_title_value = /*point*/ ctx[45].class)) {
+    			if (dirty[0] & /*data, $hover*/ 524289 && image_title_value !== (image_title_value = /*point*/ ctx[46].class)) {
     				attr_dev(image, "title", image_title_value);
     			}
 
-    			if (dirty[0] & /*x, data, $hover, y*/ 274433 && g_1_transform_value !== (g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[45].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[45].y) - 10})`)) {
+    			if (dirty[0] & /*x, data, $hover, y*/ 536577 && g_1_transform_value !== (g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`)) {
     				attr_dev(g_1, "transform", g_1_transform_value);
     			}
     		},
@@ -22477,7 +22477,7 @@ var app = (function () {
     	let current;
 
     	function vis_data_binding(value) {
-    		/*vis_data_binding*/ ctx[37].call(null, value);
+    		/*vis_data_binding*/ ctx[38].call(null, value);
     	}
 
     	let vis_props = {
@@ -22494,7 +22494,7 @@ var app = (function () {
 
     	vis = new Vis({ props: vis_props, $$inline: true });
     	binding_callbacks.push(() => bind(vis, "data", vis_data_binding));
-    	vis.$on("close", /*callbackFunction*/ ctx[22]);
+    	vis.$on("close", /*callbackFunction*/ ctx[23]);
 
     	const block = {
     		c: function create() {
@@ -22503,10 +22503,10 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			attr_dev(div0, "class", "modal-content svelte-7t2ez2");
     			set_style(div0, "width", "fit-content");
-    			add_location(div0, file$2, 220, 8, 7572);
+    			add_location(div0, file$2, 220, 8, 7585);
     			attr_dev(div1, "id", "modal");
     			attr_dev(div1, "class", "modal svelte-7t2ez2");
-    			add_location(div1, file$2, 219, 4, 7533);
+    			add_location(div1, file$2, 219, 4, 7546);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22521,7 +22521,7 @@ var app = (function () {
     			if (dirty[0] & /*margin*/ 16) vis_changes.margin = /*margin*/ ctx[4];
     			if (dirty[0] & /*tooltip*/ 2) vis_changes.tooltip = /*tooltip*/ ctx[1];
 
-    			if (dirty[1] & /*$$scope*/ 262144) {
+    			if (dirty[1] & /*$$scope*/ 524288) {
     				vis_changes.$$scope = { dirty, ctx };
     			}
 
@@ -22617,11 +22617,11 @@ var app = (function () {
     	let if_block2 = /*$vis_type*/ ctx[17] == "image" && create_if_block_1(ctx);
 
     	function star_count_binding(value) {
-    		/*star_count_binding*/ ctx[32].call(null, value);
+    		/*star_count_binding*/ ctx[33].call(null, value);
     	}
 
     	function star_bad_binding(value) {
-    		/*star_bad_binding*/ ctx[33].call(null, value);
+    		/*star_bad_binding*/ ctx[34].call(null, value);
     	}
 
     	let star_props = { max: 4 };
@@ -22703,26 +22703,26 @@ var app = (function () {
     			attr_dev(svg, "class", "svelte-7t2ez2");
     			add_location(svg, file$2, 123, 4, 3893);
     			set_style(div0, "text-align", "left");
-    			add_location(div0, file$2, 196, 8, 6668);
+    			add_location(div0, file$2, 196, 8, 6681);
     			set_style(div1, "text-align", "center");
-    			add_location(div1, file$2, 195, 4, 6626);
+    			add_location(div1, file$2, 195, 4, 6639);
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
-    			add_location(span1, file$2, 205, 16, 7033);
-    			add_location(button1, file$2, 204, 12, 6971);
+    			add_location(span1, file$2, 205, 16, 7046);
+    			add_location(button1, file$2, 204, 12, 6984);
     			attr_dev(span2, "class", "mdi mdi-close");
-    			add_location(span2, file$2, 209, 83, 7266);
+    			add_location(span2, file$2, 209, 83, 7279);
     			set_style(button2, "float", "right");
-    			add_location(button2, file$2, 209, 16, 7199);
-    			add_location(textarea, file$2, 210, 16, 7322);
+    			add_location(button2, file$2, 209, 16, 7212);
+    			add_location(textarea, file$2, 210, 16, 7335);
     			attr_dev(div2, "class", "comment dropdown-content svelte-7t2ez2");
-    			add_location(div2, file$2, 207, 12, 7118);
+    			add_location(div2, file$2, 207, 12, 7131);
     			attr_dev(div3, "class", "dropdown svelte-7t2ez2");
     			toggle_class(div3, "active", /*comment_menu*/ ctx[9]);
-    			add_location(div3, file$2, 203, 8, 6907);
+    			add_location(div3, file$2, 203, 8, 6920);
     			set_style(small1, "position", "absolute");
     			set_style(small1, "bottom", "0px");
     			set_style(small1, "right", "5px");
-    			add_location(small1, file$2, 202, 4, 6838);
+    			add_location(small1, file$2, 202, 4, 6851);
     			attr_dev(div4, "class", "card svelte-7t2ez2");
     			set_style(div4, "background-color", /*$bgScale*/ ctx[16](-/*data*/ ctx[0].pos_count + /*data*/ ctx[0].neg_count));
     			add_location(div4, file$2, 88, 0, 2618);
@@ -22752,7 +22752,7 @@ var app = (function () {
 
     			append_dev(g_1, each_1_anchor);
     			if (if_block2) if_block2.m(g_1, null);
-    			/*g_1_binding*/ ctx[30](g_1);
+    			/*g_1_binding*/ ctx[31](g_1);
     			append_dev(div4, t3);
     			append_dev(div4, div1);
     			append_dev(div1, div0);
@@ -22777,11 +22777,11 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*click_handler*/ ctx[23], false, false, false),
-    					listen_dev(svg, "mouseleave", /*mouseleave_handler*/ ctx[31], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_3*/ ctx[34], false, false, false),
-    					listen_dev(button2, "click", /*click_handler_4*/ ctx[35], false, false, false),
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[36]),
+    					listen_dev(button0, "click", /*click_handler*/ ctx[24], false, false, false),
+    					listen_dev(svg, "mouseleave", /*mouseleave_handler*/ ctx[32], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_3*/ ctx[35], false, false, false),
+    					listen_dev(button2, "click", /*click_handler_4*/ ctx[36], false, false, false),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[37]),
     					listen_dev(textarea, "key", key_handler, false, false, false)
     				];
 
@@ -22828,7 +22828,7 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty[0] & /*x, data, y, $hover, image_elements, $vis_type, $colorScale, voronoi*/ 947201) {
+    			if (dirty[0] & /*x, data, y, $dataset, $hover, image_elements, $vis_type, $colorScale, voronoi*/ 1995777) {
     				each_value_1 = /*data*/ ctx[0];
     				validate_each_argument(each_value_1);
     				let i;
@@ -22943,7 +22943,7 @@ var app = (function () {
     			if_block1.d();
     			destroy_each(each_blocks, detaching);
     			if (if_block2) if_block2.d();
-    			/*g_1_binding*/ ctx[30](null);
+    			/*g_1_binding*/ ctx[31](null);
     			destroy_component(star);
     			if (if_block3) if_block3.d();
     			mounted = false;
@@ -22967,16 +22967,19 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let $bgScale;
     	let $vis_type;
+    	let $dataset;
     	let $hover;
     	let $colorScale;
     	validate_store(bgScale, "bgScale");
     	component_subscribe($$self, bgScale, $$value => $$invalidate(16, $bgScale = $$value));
     	validate_store(vis_type, "vis_type");
     	component_subscribe($$self, vis_type, $$value => $$invalidate(17, $vis_type = $$value));
+    	validate_store(dataset, "dataset");
+    	component_subscribe($$self, dataset, $$value => $$invalidate(18, $dataset = $$value));
     	validate_store(hover, "hover");
-    	component_subscribe($$self, hover, $$value => $$invalidate(18, $hover = $$value));
+    	component_subscribe($$self, hover, $$value => $$invalidate(19, $hover = $$value));
     	validate_store(colorScale, "colorScale");
-    	component_subscribe($$self, colorScale, $$value => $$invalidate(19, $colorScale = $$value));
+    	component_subscribe($$self, colorScale, $$value => $$invalidate(20, $colorScale = $$value));
     	const dispatch = createEventDispatcher();
     	let { data: data$1 } = $$props;
     	let { width } = $$props;
@@ -23158,6 +23161,7 @@ var app = (function () {
     		big_size,
     		$bgScale,
     		$vis_type,
+    		$dataset,
     		$hover,
     		$colorScale
     	});
@@ -23171,19 +23175,19 @@ var app = (function () {
     		if ("button" in $$props) $$invalidate(5, button = $$props.button);
     		if ("g" in $$props) $$invalidate(6, g = $$props.g);
     		if ("g2" in $$props) g2 = $$props.g2;
-    		if ("zoom" in $$props) $$invalidate(21, zoom$1 = $$props.zoom);
+    		if ("zoom" in $$props) $$invalidate(22, zoom$1 = $$props.zoom);
     		if ("is_zoomed" in $$props) $$invalidate(7, is_zoomed = $$props.is_zoomed);
     		if ("open_dialog" in $$props) $$invalidate(8, open_dialog = $$props.open_dialog);
     		if ("dialog" in $$props) dialog = $$props.dialog;
     		if ("comment_menu" in $$props) $$invalidate(9, comment_menu = $$props.comment_menu);
     		if ("image_elements" in $$props) $$invalidate(10, image_elements = $$props.image_elements);
-    		if ("image_promises" in $$props) $$invalidate(38, image_promises = $$props.image_promises);
+    		if ("image_promises" in $$props) $$invalidate(39, image_promises = $$props.image_promises);
     		if ("prog" in $$props) $$invalidate(11, prog = $$props.prog);
     		if ("x" in $$props) $$invalidate(12, x = $$props.x);
     		if ("y" in $$props) $$invalidate(13, y = $$props.y);
     		if ("voronoi" in $$props) $$invalidate(14, voronoi = $$props.voronoi);
-    		if ("x_domain" in $$props) $$invalidate(39, x_domain = $$props.x_domain);
-    		if ("y_domain" in $$props) $$invalidate(40, y_domain = $$props.y_domain);
+    		if ("x_domain" in $$props) $$invalidate(40, x_domain = $$props.x_domain);
+    		if ("y_domain" in $$props) $$invalidate(41, y_domain = $$props.y_domain);
     		if ("big_size" in $$props) $$invalidate(15, big_size = $$props.big_size);
     	};
 
@@ -23203,13 +23207,13 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty[0] & /*image_elements*/ 1024) {
-    			 $$invalidate(38, image_promises = image_elements.map((img, i) => {
+    			 $$invalidate(39, image_promises = image_elements.map((img, i) => {
     				if (!img) return "done";
-    				return img.decode().then(() => $$invalidate(38, image_promises[i] = "done", image_promises)).catch(() => $$invalidate(38, image_promises[i] = "done", image_promises));
+    				return img.decode().then(() => $$invalidate(39, image_promises[i] = "done", image_promises)).catch(() => $$invalidate(39, image_promises[i] = "done", image_promises));
     			}));
     		}
 
-    		if ($$self.$$.dirty[1] & /*image_promises*/ 128) {
+    		if ($$self.$$.dirty[1] & /*image_promises*/ 256) {
     			 $$invalidate(11, prog = image_promises.reduce((a, b) => a + (b == "done" ? 1 : 0), 0) / image_promises.length);
     		}
 
@@ -23226,14 +23230,14 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty[0] & /*data*/ 1) {
-    			 $$invalidate(39, [x_domain, y_domain] = domains(data$1), x_domain, ($$invalidate(40, y_domain), $$invalidate(0, data$1)));
+    			 $$invalidate(40, [x_domain, y_domain] = domains(data$1), x_domain, ($$invalidate(41, y_domain), $$invalidate(0, data$1)));
     		}
 
-    		if ($$self.$$.dirty[0] & /*x*/ 4096 | $$self.$$.dirty[1] & /*x_domain*/ 256) {
+    		if ($$self.$$.dirty[0] & /*x*/ 4096 | $$self.$$.dirty[1] & /*x_domain*/ 512) {
     			 x.domain(x_domain);
     		}
 
-    		if ($$self.$$.dirty[0] & /*y*/ 8192 | $$self.$$.dirty[1] & /*y_domain*/ 512) {
+    		if ($$self.$$.dirty[0] & /*y*/ 8192 | $$self.$$.dirty[1] & /*y_domain*/ 1024) {
     			 y.domain(y_domain);
     		}
     	};
@@ -23261,6 +23265,7 @@ var app = (function () {
     		big_size,
     		$bgScale,
     		$vis_type,
+    		$dataset,
     		$hover,
     		$colorScale,
     		dispatch,
@@ -44905,7 +44910,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (255:0) {#if $hover}
+    // (257:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44919,31 +44924,31 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			img = element("img");
-    			if (img.src !== (img_src_value = `data/${dataset}/thumbnails/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = `data/${/*$dataset*/ ctx[3]}/thumbnails/${/*$images*/ ctx[4][/*$hover*/ ctx[2]]}.png`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*$hover*/ ctx[2]);
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 262, 8, 9292);
+    			add_location(img, file$4, 264, 8, 9327);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 261, 4, 9258);
+    			add_location(div0, file$4, 263, 4, 9293);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 255, 0, 9036);
+    			add_location(div1, file$4, 257, 0, 9071);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
     			append_dev(div1, div0);
     			append_dev(div0, img);
-    			/*div1_binding*/ ctx[5](div1);
+    			/*div1_binding*/ ctx[6](div1);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*$images, $hover*/ 12 && img.src !== (img_src_value = `data/${dataset}/thumbnails/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) {
+    			if (!current || dirty & /*$dataset, $images, $hover*/ 28 && img.src !== (img_src_value = `data/${/*$dataset*/ ctx[3]}/thumbnails/${/*$images*/ ctx[4][/*$hover*/ ctx[2]]}.png`)) {
     				attr_dev(img, "src", img_src_value);
     			}
 
@@ -44972,7 +44977,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
-    			/*div1_binding*/ ctx[5](null);
+    			/*div1_binding*/ ctx[6](null);
     			if (detaching && div1_transition) div1_transition.end();
     		}
     	};
@@ -44981,14 +44986,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(255:0) {#if $hover}",
+    		source: "(257:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (287:32) 
+    // (289:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44996,7 +45001,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 287, 8, 10430);
+    			add_location(div, file$4, 289, 8, 10466);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45013,14 +45018,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(287:32) ",
+    		source: "(289:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (280:31) 
+    // (282:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -45053,17 +45058,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 281, 12, 9962);
+    			add_location(iframe, file$4, 283, 12, 9998);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 281, 206, 10156);
-    			add_location(p, file$4, 281, 203, 10153);
+    			add_location(a, file$4, 283, 206, 10192);
+    			add_location(p, file$4, 283, 203, 10189);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 282, 16, 10259);
+    			add_location(span0, file$4, 284, 16, 10295);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 282, 79, 10322);
-    			add_location(h1, file$4, 282, 12, 10255);
+    			add_location(span1, file$4, 284, 79, 10358);
+    			add_location(h1, file$4, 284, 12, 10291);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 280, 8, 9912);
+    			add_location(div, file$4, 282, 8, 9948);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45088,14 +45093,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(280:31) ",
+    		source: "(282:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (268:4) {#if step == "dr_grid"}
+    // (270:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45105,7 +45110,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type_1(ctx, dirty) {
-    		if (/*$ready*/ ctx[4]) return 0;
+    		if (/*$ready*/ ctx[5]) return 0;
     		return 1;
     	}
 
@@ -45117,7 +45122,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 268, 8, 9532);
+    			add_location(div, file$4, 270, 8, 9568);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45168,14 +45173,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(268:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(270:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (275:8) {:else}
+    // (277:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45188,8 +45193,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 275, 12, 9776);
-    			add_location(center, file$4, 276, 12, 9815);
+    			add_location(div, file$4, 277, 12, 9812);
+    			add_location(center, file$4, 278, 12, 9851);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45210,14 +45215,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(275:8) {:else}",
+    		source: "(277:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:8) {#if $ready}
+    // (272:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45232,7 +45237,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 270, 12, 9603);
+    			add_location(div, file$4, 272, 12, 9639);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45263,7 +45268,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(270:8) {#if $ready}",
+    		source: "(272:8) {#if $ready}",
     		ctx
     	});
 
@@ -45325,13 +45330,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 250, 4, 8990);
+    			add_location(h2, file$4, 252, 4, 9025);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 249, 0, 8980);
+    			add_location(nav, file$4, 251, 0, 9015);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 266, 0, 9426);
+    			add_location(main, file$4, 268, 0, 9462);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45456,16 +45461,19 @@ var app = (function () {
     function instance$4($$self, $$props, $$invalidate) {
     	let $projections;
     	let $hover;
+    	let $dataset;
     	let $images;
     	let $ready;
     	validate_store(projections, "projections");
-    	component_subscribe($$self, projections, $$value => $$invalidate(7, $projections = $$value));
+    	component_subscribe($$self, projections, $$value => $$invalidate(8, $projections = $$value));
     	validate_store(hover, "hover");
     	component_subscribe($$self, hover, $$value => $$invalidate(2, $hover = $$value));
+    	validate_store(dataset, "dataset");
+    	component_subscribe($$self, dataset, $$value => $$invalidate(3, $dataset = $$value));
     	validate_store(images, "images");
-    	component_subscribe($$self, images, $$value => $$invalidate(3, $images = $$value));
+    	component_subscribe($$self, images, $$value => $$invalidate(4, $images = $$value));
     	validate_store(ready, "ready");
-    	component_subscribe($$self, ready, $$value => $$invalidate(4, $ready = $$value));
+    	component_subscribe($$self, ready, $$value => $$invalidate(5, $ready = $$value));
     	const paths = settings$1.settings[0].paths;
     	let subject_id = jsPsych.randomization.randomID(15);
     	let condition_assignment = jsPsych.randomization.sampleWithoutReplacement(["conditionA", "conditionB", "conditionC"], 1)[0];
@@ -45596,6 +45604,7 @@ var app = (function () {
     			const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings$1.settings, 1)[0];
     			const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
     			var dataset = sample1.name;
+    			console.log(dataset);
     			data.load(data, sample, dataset);
     			$$invalidate(0, step = "dr_grid");
     			return "<p class='description'>" + sample1.description + "</p>";
@@ -45783,6 +45792,7 @@ var app = (function () {
     		tooltip,
     		$projections,
     		$hover,
+    		$dataset,
     		$images,
     		$ready
     	});
@@ -45808,7 +45818,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [step, tooltip, $hover, $images, $ready, div1_binding];
+    	return [step, tooltip, $hover, $dataset, $images, $ready, div1_binding];
     }
 
     class App extends SvelteComponentDev {

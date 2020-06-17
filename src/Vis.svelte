@@ -160,7 +160,7 @@
                     <image 
                         bind:this={image_elements[i]}
                         style="pointer-events: none;"
-                        href={`data/${dataset}/thumbnails/${point.img}.png`}
+                        href={`data/${$dataset}/thumbnails/${point.img}.png`}
                         width=20 height=20 
                         filter={i == $hover ? "url(#matrix)" : null} 
                         title={point.class}
@@ -182,7 +182,7 @@
             <g transform={`translate(${x(point.x) - 10}, ${y(point.y) - 10})`}>
                 <image 
                     style="pointer-events: none;"
-                    xlink:href={`data/thumbnails/${point.img}.png`}
+                    xlink:href={`data/${$dataset}/thumbnails/${point.img}.png`}
                     width=20 height=20 
                     filter="url(#matrix)"
                     title={point.class}
