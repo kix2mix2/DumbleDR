@@ -37,7 +37,7 @@
         {#if $vis_type == "circle"}
             <small style="display: flex; justify-content: center;">
                 {#each classes as c}
-                    <div transition:fade style="display: inline-block; padding: 0px .4rem;"><span style="color: {$colorScale(c)}">⚫</span> {c}</div>
+                    <div transition:fade style="display: inline-block; padding: 0px .4rem;"><span style="color: {$colorScale(c)}">•</span> {c}</div>
                 {/each}
             </small>
         {/if}
