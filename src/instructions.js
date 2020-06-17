@@ -1,6 +1,6 @@
 export const welcome = "<div class=\"text-block\">" +
                 "<h1>Call for participants</h1>\n" +
-                "<img src=\"visus.png\" width = '200px'> <img src=\"namur.jpg\" width = '200px'>"+
+                "<img src=\"./visus.png\" width = '200px'> <img src=\"./namur.jpg\" width = '200px'>"+
                 "\t\t\t\t\t\t\t    <p>\n" +
                 "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart and Univeristy of Namur are looking for online participants\n" +
                 "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
