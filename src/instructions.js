@@ -2,18 +2,19 @@ export const welcome = "<div class=\"text-block\">" +
                 "<h1>Call for participants</h1>\n" +
                 "<img src=\"./visus.png\" width = '200px'> <img src=\"./namur.jpg\" width = '200px'>"+
                 "\t\t\t\t\t\t\t    <p>\n" +
-                "\t\t\t\t\t\t\t\t\tThe VISUS Research Centre at University of Stuttgart and Univeristy of Namur are looking for online participants\n" +
+                "\t\t\t\t\t\t\t\t\tThe Visualization Research Center (VISUS) at University of Stuttgart and University of Namur are looking for online participants\n" +
                 "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
                 "                                 <p>\n" +
-                "                                    We are applying algorithms that find similarities in images on a series of datasets and want to find out whether humans find the results good or bad.</p>\n" +
+                "                                    Given a series of datasets, we apply algorithms that find similarities in images.\n" +
+    "We want to find out whether humans find the results good or bad.</p>\n" +
                 "                                <p>\n" +
                 "                                    The study consists of:\n" +
                 "                                    <ul>\n" +
-                "                                        <li>informed consent agreement,</li>\n" +
-                "                                        <li>instructions for the task,</li>\n" +
-                "                                        <li>a pre-participation survey that will assess your experience with this type of task,</li>\n" +
-                "                                        <li>a series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result.</li>\n" +
-                "                                        <li>a post-trial survey, where we will ask you for feedback on the task.</li>\n" +
+                "                                        <li>Informed consent agreement</li>\n" +
+                "                                        <li>Instructions for the task</li>\n" +
+                "                                        <li>A pre-participation survey that will assess your experience with this type of task</li>\n" +
+                "                                        <li>A series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result</li>\n" +
+                "                                        <li>A post-trial survey, where we will ask you for feedback on the task</li>\n" +
                 "                                    </ul>\n" +
                 "                                </p>\n" +
                 "\n" +
@@ -22,7 +23,7 @@ export const welcome = "<div class=\"text-block\">" +
                 "                                    <ul>\n" +
                 "                                        <li> You are at least 18 years old.</li>\n" +
                 "                                        <li> You speak fluent English.</li>\n" +
-                "                                        <li> Your screen-size is at least 800x600 pixels.</li>\n" +
+                "                                        <li> Your screen-size is at least 700x400 pixels.</li>\n" +
                 "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" +
                 "                                    </ul>\n" +
                 "\n" +
