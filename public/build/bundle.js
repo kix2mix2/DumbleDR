@@ -40656,9 +40656,9 @@ var app = (function () {
     			attr_dev(span1, "class", "mdi mdi-sort");
     			add_location(span1, file$3, 35, 52, 1433);
     			add_location(button, file$3, 35, 8, 1389);
-    			attr_dev(header, "class", "svelte-1kxnwxo");
+    			attr_dev(header, "class", "svelte-1ezfhin");
     			add_location(header, file$3, 25, 4, 769);
-    			attr_dev(div, "class", "vis_list svelte-1kxnwxo");
+    			attr_dev(div, "class", "vis_list svelte-1ezfhin");
     			add_location(div, file$3, 44, 4, 1849);
     			add_location(section, file$3, 24, 0, 755);
     		},
@@ -44175,17 +44175,17 @@ var app = (function () {
     			attr_dev(img, "alt", /*$hover*/ ctx[2]);
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
-    			attr_dev(img, "class", "svelte-x87z44");
-    			add_location(img, file$4, 441, 8, 22029);
-    			attr_dev(div0, "class", "tooltiptext svelte-x87z44");
-    			add_location(div0, file$4, 440, 4, 21995);
+    			attr_dev(img, "class", "svelte-1u0cnvp");
+    			add_location(img, file$4, 441, 8, 22020);
+    			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
+    			add_location(div0, file$4, 440, 4, 21986);
     			attr_dev(div1, "id", "tooltip");
-    			attr_dev(div1, "class", "tooltip svelte-x87z44");
+    			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 434, 0, 21773);
+    			add_location(div1, file$4, 434, 0, 21764);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44247,8 +44247,8 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-    			add_location(div, file$4, 466, 8, 23110);
+    			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
+    			add_location(div, file$4, 466, 8, 23154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44303,17 +44303,19 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "class", "giphy-embed");
     			iframe.allowFullscreen = true;
-    			add_location(iframe, file$4, 460, 12, 22695);
+    			set_style(iframe, "margin", "auto");
+    			attr_dev(iframe, "title", "Dumbledore is pleased!");
+    			add_location(iframe, file$4, 460, 12, 22686);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 460, 153, 22836);
-    			add_location(p, file$4, 460, 150, 22833);
+    			add_location(a, file$4, 460, 206, 22880);
+    			add_location(p, file$4, 460, 203, 22877);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 461, 16, 22939);
+    			add_location(span0, file$4, 461, 16, 22983);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 461, 79, 23002);
-    			add_location(h1, file$4, 461, 12, 22935);
-    			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-    			add_location(div, file$4, 459, 8, 22645);
+    			add_location(span1, file$4, 461, 79, 23046);
+    			add_location(h1, file$4, 461, 12, 22979);
+    			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
+    			add_location(div, file$4, 459, 8, 22636);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44366,8 +44368,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-    			add_location(div, file$4, 447, 8, 22265);
+    			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
+    			add_location(div, file$4, 447, 8, 22256);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44437,9 +44439,9 @@ var app = (function () {
     			t0 = space();
     			center = element("center");
     			center.textContent = "Loading...";
-    			attr_dev(div, "class", "loader svelte-x87z44");
-    			add_location(div, file$4, 454, 12, 22509);
-    			add_location(center, file$4, 455, 12, 22548);
+    			attr_dev(div, "class", "loader svelte-1u0cnvp");
+    			add_location(div, file$4, 454, 12, 22500);
+    			add_location(center, file$4, 455, 12, 22539);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44482,7 +44484,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial_1.$$.fragment);
-    			add_location(div, file$4, 449, 12, 22336);
+    			add_location(div, file$4, 449, 12, 22327);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44574,14 +44576,14 @@ var app = (function () {
     			attr_dev(link2, "rel", "stylesheet");
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
-    			attr_dev(h2, "class", "svelte-x87z44");
-    			add_location(h2, file$4, 429, 4, 21727);
-    			attr_dev(nav, "class", "svelte-x87z44");
-    			add_location(nav, file$4, 428, 0, 21717);
+    			attr_dev(h2, "class", "svelte-1u0cnvp");
+    			add_location(h2, file$4, 429, 4, 21718);
+    			attr_dev(nav, "class", "svelte-1u0cnvp");
+    			add_location(nav, file$4, 428, 0, 21708);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
-    			attr_dev(main, "class", "svelte-x87z44");
-    			add_location(main, file$4, 445, 0, 22159);
+    			attr_dev(main, "class", "svelte-1u0cnvp");
+    			add_location(main, file$4, 445, 0, 22150);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -44994,7 +44996,6 @@ var app = (function () {
     			show_progress_bar: true,
     			auto_update_progress_bar: true,
     			timeline: [
-    				dr_grid,
     				welcome_block,
     				consent,
     				instructions,

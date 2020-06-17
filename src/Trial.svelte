@@ -72,6 +72,8 @@
     header {
         border-top: 1px solid lightgrey;
         border-bottom: 1px solid lightgrey;
+        padding: 0.8rem 0px;
+        margin-top: 0.8rem;
     }
 
 

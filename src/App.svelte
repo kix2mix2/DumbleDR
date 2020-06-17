@@ -408,7 +408,7 @@
             },
             show_progress_bar: true,
             auto_update_progress_bar: true,
-            timeline: [dr_grid, welcome_block, consent,
+            timeline: [welcome_block, consent,
                 instructions,interface_explain,rule_12,rule_3,
                 rule_sort,rule_color,time,name,
                 experience,
@@ -458,7 +458,7 @@
         </div>
     {:else if step == "finish"}
         <div class='jspsych-display-element'>
-            <iframe src="https://giphy.com/embed/AOrThUuuOoDCg" width="480" height="285" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg">via GIPHY</a></p>
+            <iframe src="https://giphy.com/embed/AOrThUuuOoDCg" width="480" height="285" frameBorder="0" class="giphy-embed" allowFullScreen style="margin: auto;" title="Dumbledore is pleased!"></iframe><p><a href="https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg">via GIPHY</a></p>
             <h1><span class="mdi mdi-spin mdi-arm-flex"></span>Lots of thanks!!<span class="mdi mdi-spin mdi-heart"></span></h1>
         </div>
 
@@ -476,6 +476,16 @@
         padding: 0;
         font-family: "Inter", sans-serif !important;
         position: relative;
+    }
+
+    :global(label) {
+        display: initial;
+        padding-left: .4em;
+    }
+
+    :global(p.survey-multi-choice) {
+        float: left;
+        margin: 0px 1em 0px 0px;
     }
 
     nav {
@@ -594,6 +604,6 @@
         overflow: visible;
     }
 
-
+    
 </style>
 
