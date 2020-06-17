@@ -75,7 +75,7 @@ import settings from "./settings.json";
         type: 'survey-multi-choice',
         questions: [
           {
-            prompt: "<div class='text-block'> <b>What is the most recent academic degree you graduated from? </b></div>",
+            prompt: "<div class='text-block'> <b>What is the highest academic degree you graduated from? </b></div>",
             options: ['High School', 'Bachelor','Master','PhD','Other'],
             horizontal: true,
             required: true,
@@ -188,7 +188,7 @@ import settings from "./settings.json";
           }
           ,
           {
-            prompt: "<div class='text-block'> <b>Did you experience different degree of difficulty based on the dataset?</b></div>",
+            prompt: "<div class='text-block'> <b>Did you experience different degrees of difficulty based on the dataset?</b></div>",
             options: ['Yes', 'No', 'I don\'t know'],
             horizontal: true,
             required: true,
