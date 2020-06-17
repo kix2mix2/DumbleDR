@@ -238,7 +238,7 @@ import settings from "./settings.json";
                 step = "finish";
                 client.auth.loginWithCredential(new stitch.AnonymousCredential())
                     .then(user =>
-                        results.insertOne({owner_id: client.auth.user.id, result: JSON.parse(JSON.stringify(jsPsych.data.get().json(true)))})
+                        results.insertOne({owner_id: client.auth.user.id, result: jsPsych.data.get().values()})
                     ).catch(err => {
                         console.error(err)
                     });
