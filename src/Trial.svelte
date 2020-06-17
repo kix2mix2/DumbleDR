@@ -35,9 +35,9 @@
         <br>
         <button on:click={() => data.sort_by_pos()}><span class="mdi mdi-sort"></span> Sort</button>
         {#if $vis_type == "circle"}
-            <small>
+            <small style="display: flex; justify-content: center;">
                 {#each classes as c}
-                    <div transition:fade><span style="color: {$colorScale(c)}">•</span> {c}</div>
+                    <div transition:fade style="display: inline-block; padding: 0px .4rem;"><span style="color: {$colorScale(c)}">⚫</span> {c}</div>
                 {/each}
             </small>
         {/if}

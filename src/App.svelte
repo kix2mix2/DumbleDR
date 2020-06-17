@@ -321,7 +321,7 @@
         }
     }
 
-    timeline.push( welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,name, experience,
+    timeline.push(welcome_block, consent,instructions,interface_explain,rule_12,rule_3,rule_sort,rule_color,time,name, experience,
             ...[0,1].map(() => dr_grid));
 
 
@@ -408,7 +408,7 @@
             },
             show_progress_bar: true,
             auto_update_progress_bar: true,
-            timeline: [welcome_block, consent,
+            timeline: [dr_grid, welcome_block, consent,
                 instructions,interface_explain,rule_12,rule_3,
                 rule_sort,rule_color,time,name,
                 experience,
