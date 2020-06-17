@@ -40263,11 +40263,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-<<<<<<< HEAD
     			set_style(small, "display", "flex");
     			set_style(small, "justify-content", "center");
-=======
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     			add_location(small, file$3, 37, 12, 1530);
     		},
     		m: function mount(target, anchor) {
@@ -40358,7 +40355,6 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			span = element("span");
-<<<<<<< HEAD
     			t0 = text("⚫");
     			t1 = space();
     			t2 = text(t2_value);
@@ -40367,14 +40363,6 @@ var app = (function () {
     			set_style(div, "display", "inline-block");
     			set_style(div, "padding", "0px .4rem");
     			add_location(div, file$3, 39, 20, 1643);
-=======
-    			t0 = text("•");
-    			t1 = space();
-    			t2 = text(t2_value);
-    			set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[19]));
-    			add_location(span, file$3, 39, 41, 1616);
-    			add_location(div, file$3, 39, 20, 1595);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40532,11 +40520,7 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			t = space();
     			set_style(div, "margin", "0px");
-<<<<<<< HEAD
     			add_location(div, file$3, 47, 12, 1950);
-=======
-    			add_location(div, file$3, 47, 12, 1851);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -40675,11 +40659,7 @@ var app = (function () {
     			attr_dev(header, "class", "svelte-1kxnwxo");
     			add_location(header, file$3, 25, 4, 769);
     			attr_dev(div, "class", "vis_list svelte-1kxnwxo");
-<<<<<<< HEAD
     			add_location(div, file$3, 44, 4, 1849);
-=======
-    			add_location(div, file$3, 44, 4, 1750);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     			add_location(section, file$3, 24, 0, 755);
     		},
     		l: function claim(nodes) {
@@ -44006,170 +43986,6 @@ var app = (function () {
 
 
     jsPsych.plugins['survey-multi-choice'] = (function() {
-<<<<<<< HEAD
-        var plugin = {};
-      
-        plugin.info = {
-          name: 'survey-multi-choice',
-          description: '',
-          parameters: {
-            questions: {
-              type: jsPsych.plugins.parameterType.COMPLEX,
-              array: true,
-              pretty_name: 'Questions',
-              nested: {
-                prompt: {type: jsPsych.plugins.parameterType.STRING,
-                           pretty_name: 'Prompt',
-                           default: undefined,
-                           description: 'The strings that will be associated with a group of options.'},
-                options: {type: jsPsych.plugins.parameterType.STRING,
-                           pretty_name: 'Options',
-                           array: true,
-                           default: undefined,
-                           description: 'Displays options for an individual question.'},
-                required: {type: jsPsych.plugins.parameterType.BOOL,
-                           pretty_name: 'Required',
-                           default: false,
-                           description: 'Subject will be required to pick an option for each question.'},
-                horizontal: {type: jsPsych.plugins.parameterType.BOOL,
-                              pretty_name: 'Horizontal',
-                              default: false,
-                              description: 'If true, then questions are centered and options are displayed horizontally.'},
-              }
-            },
-            preamble: {
-              type: jsPsych.plugins.parameterType.STRING,
-              pretty_name: 'Preamble',
-              default: null,
-              description: 'HTML formatted string to display at the top of the page above all the questions.'
-            },
-            button_label: {
-              type: jsPsych.plugins.parameterType.STRING,
-              pretty_name: 'Button label',
-              default:  'Continue',
-              description: 'Label of the button.'
-            }
-          }
-        };
-        plugin.trial = function(display_element, trial) {
-          var plugin_id_name = "jspsych-survey-multi-choice";
-          var plugin_id_selector = '#' + plugin_id_name;
-          let separator = '-';
-          var _join = function( /*args*/ ) {
-            var arr = Array.prototype.slice.call(arguments, _join.length);
-            return arr.join(separator);
-          };
-      
-          // inject CSS for trial
-          display_element.innerHTML = '<style id="jspsych-survey-multi-choice-css"></style>';
-          var cssstr = ".jspsych-survey-multi-choice-question { margin-top: 2em; margin-bottom: 2em; text-align: left; }"+
-            ".jspsych-survey-multi-choice-text span.required {color: darkred;}"+
-            ".jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-text {  text-align: center;}"+
-            ".jspsych-survey-multi-choice-option { line-height: 2; }"+
-            ".jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {  display: inline-block;  margin-left: 1em;  margin-right: 1em;  vertical-align: top;}"+
-            "label.jspsych-survey-multi-choice-text input[type='radio'] {margin-right: 1em;}";
-      
-          display_element.querySelector('#jspsych-survey-multi-choice-css').innerHTML = cssstr;
-      
-          // form element
-          var trial_form_id = _join(plugin_id_name, "form");
-          display_element.innerHTML += '<form id="'+trial_form_id+'"></form>';
-          var trial_form = display_element.querySelector("#" + trial_form_id);
-          // show preamble text
-          var preamble_id_name = _join(plugin_id_name, 'preamble');
-          if(trial.preamble !== null){
-            trial_form.innerHTML += '<div id="'+preamble_id_name+'" class="'+preamble_id_name+'">'+trial.preamble+'</div>';
-          }
-          // add multiple-choice questions
-          for (var i = 0; i < trial.questions.length; i++) {
-              // create question container
-              var question_classes = [_join(plugin_id_name, 'question')];
-              if (trial.questions[i].horizontal) {
-                question_classes.push(_join(plugin_id_name, 'horizontal'));
-              }
-      
-              trial_form.innerHTML += '<div id="'+_join(plugin_id_name, i)+'" class="'+question_classes.join(' ')+'"></div>';
-      
-              var question_selector = _join(plugin_id_selector, i);
-      
-              // add question text
-              display_element.querySelector(question_selector).innerHTML += '<p class="' + plugin_id_name + '-text survey-multi-choice">' + trial.questions[i].prompt + '</p>';
-      
-            // create option radio buttons
-            for (var j = 0; j < trial.questions[i].options.length; j++) {
-              var option_id_name = _join(plugin_id_name, "option", i, j);
-      
-              // add radio button container
-              display_element.querySelector(question_selector).innerHTML += '<div id="'+option_id_name+'" class="'+_join(plugin_id_name, 'option')+'"></div>';
-      
-              // add label and question text
-              var form = document.getElementById(option_id_name);
-              var input_name = _join(plugin_id_name, 'response', i);
-              var input_id = _join(plugin_id_name, 'response', i, j);
-              var label = document.createElement('label');
-              label.setAttribute('class', plugin_id_name+'-text');
-              label.innerHTML = trial.questions[i].options[j];
-              label.setAttribute('for', input_id);
-      
-              // create radio button
-              var input = document.createElement('input');
-              input.setAttribute('type', "radio");
-              input.setAttribute('name', input_name);
-              input.setAttribute('id', input_id);
-              input.setAttribute('value', trial.questions[i].options[j]);
-              form.appendChild(label);
-              form.insertBefore(input, label);
-            }
-      
-            if (trial.questions[i].required) {
-              // add "question required" asterisk
-              display_element.querySelector(question_selector + " p").innerHTML += "<span class='required'>*</span>";
-      
-              // add required property
-              display_element.querySelector(question_selector + " input[type=radio]").required = true;
-            }
-          }
-          // add submit button
-          trial_form.innerHTML += '<input type="submit" id="'+plugin_id_name+'-next" class="'+plugin_id_name+' jspsych-btn"' + (trial.button_label ? ' value="'+trial.button_label + '"': '') + '></input>';
-          trial_form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            var matches = display_element.querySelectorAll("div." + plugin_id_name + "-question");
-            // measure response time
-            var endTime = (new Date()).getTime();
-            var response_time = endTime - startTime;
-      
-            // create object to hold responses
-            var question_data = {};
-            var matches = display_element.querySelectorAll("div." + plugin_id_name + "-question");
-            for(var i=0; i<matches.length; i++){
-              let match = matches[i];
-              var id = "Q" + i;
-              if(match.querySelector("input[type=radio]:checked") !== null){
-                var val = match.querySelector("input[type=radio]:checked").value;
-              } else {
-                var val = "";
-              }
-              var obje = {};
-              obje[id] = val;
-              Object.assign(question_data, obje);
-            }
-            // save data
-            var trial_data = {
-              "rt": response_time,
-              "responses": JSON.stringify(question_data)
-            };
-            display_element.innerHTML = '';
-      
-            // next trial
-            jsPsych.finishTrial(trial_data);
-          });
-      
-          var startTime = (new Date()).getTime();
-        };
-      
-        return plugin;
-      })();
-=======
       var plugin = {};
 
       plugin.info = {
@@ -44334,7 +44150,6 @@ var app = (function () {
 
       return plugin;
     })();
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
 
     /* src/App.svelte generated by Svelte v3.23.2 */
 
@@ -44361,26 +44176,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-x87z44");
-<<<<<<< HEAD
     			add_location(img, file$4, 441, 8, 22029);
     			attr_dev(div0, "class", "tooltiptext svelte-x87z44");
     			add_location(div0, file$4, 440, 4, 21995);
-=======
-    			add_location(img, file$4, 441, 8, 22021);
-    			attr_dev(div0, "class", "tooltiptext svelte-x87z44");
-    			add_location(div0, file$4, 440, 4, 21987);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-x87z44");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-<<<<<<< HEAD
     			add_location(div1, file$4, 434, 0, 21773);
-=======
-    			add_location(div1, file$4, 434, 0, 21765);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44443,11 +44248,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-<<<<<<< HEAD
     			add_location(div, file$4, 466, 8, 23110);
-=======
-    			add_location(div, file$4, 466, 8, 23102);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44502,7 +44303,6 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			attr_dev(iframe, "class", "giphy-embed");
     			iframe.allowFullscreen = true;
-<<<<<<< HEAD
     			add_location(iframe, file$4, 460, 12, 22695);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
     			add_location(a, file$4, 460, 153, 22836);
@@ -44514,19 +44314,6 @@ var app = (function () {
     			add_location(h1, file$4, 461, 12, 22935);
     			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
     			add_location(div, file$4, 459, 8, 22645);
-=======
-    			add_location(iframe, file$4, 460, 12, 22687);
-    			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 460, 153, 22828);
-    			add_location(p, file$4, 460, 150, 22825);
-    			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 461, 16, 22931);
-    			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 461, 79, 22994);
-    			add_location(h1, file$4, 461, 12, 22927);
-    			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-    			add_location(div, file$4, 459, 8, 22637);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44580,11 +44367,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-x87z44");
-<<<<<<< HEAD
     			add_location(div, file$4, 447, 8, 22265);
-=======
-    			add_location(div, file$4, 447, 8, 22257);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44655,13 +44438,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-x87z44");
-<<<<<<< HEAD
     			add_location(div, file$4, 454, 12, 22509);
     			add_location(center, file$4, 455, 12, 22548);
-=======
-    			add_location(div, file$4, 454, 12, 22501);
-    			add_location(center, file$4, 455, 12, 22540);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44704,11 +44482,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial_1.$$.fragment);
-<<<<<<< HEAD
     			add_location(div, file$4, 449, 12, 22336);
-=======
-    			add_location(div, file$4, 449, 12, 22328);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44801,7 +44575,6 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-x87z44");
-<<<<<<< HEAD
     			add_location(h2, file$4, 429, 4, 21727);
     			attr_dev(nav, "class", "svelte-x87z44");
     			add_location(nav, file$4, 428, 0, 21717);
@@ -44809,15 +44582,6 @@ var app = (function () {
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-x87z44");
     			add_location(main, file$4, 445, 0, 22159);
-=======
-    			add_location(h2, file$4, 429, 4, 21719);
-    			attr_dev(nav, "class", "svelte-x87z44");
-    			add_location(nav, file$4, 428, 0, 21709);
-    			attr_dev(main, "id", "task");
-    			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
-    			attr_dev(main, "class", "svelte-x87z44");
-    			add_location(main, file$4, 445, 0, 22151);
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45230,10 +44994,7 @@ var app = (function () {
     			show_progress_bar: true,
     			auto_update_progress_bar: true,
     			timeline: [
-<<<<<<< HEAD
     				dr_grid,
-=======
->>>>>>> cd750ef55bebcb6946bef2028934b33da227b0e4
     				welcome_block,
     				consent,
     				instructions,
