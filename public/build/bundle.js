@@ -881,33 +881,363 @@ var app = (function () {
 
     var settings = [
     	{
-    		name: "Stanford Faces",
-    		description: "This dataset consists of photos of the same head taken from a different angle and with different lighting.",
+    		name: "MNIST",
+    		description: "Dataset of handwritten digits",
     		paths: [
-    			"stanfordfaces_size50_call_GRP.csv",
-    			"stanfordfaces_size50_call_ISM_n15.csv",
-    			"stanfordfaces_size50_call_ISM_n2.csv",
-    			"stanfordfaces_size50_call_ISM_n5.csv",
-    			"stanfordfaces_size50_call_ISM_n7.csv",
-    			"stanfordfaces_size50_call_MDS.csv",
-    			"stanfordfaces_size50_call_PCA.csv",
-    			"stanfordfaces_size50_call_SE_n7.csv",
-    			"stanfordfaces_size50_call_TSNE_p100.csv",
-    			"stanfordfaces_size50_call_TSNE_p10.csv",
-    			"stanfordfaces_size50_call_TSNE_p30.csv",
-    			"stanfordfaces_size50_call_TSNE_p5.csv",
+    			"MNIST_size28_c6_ISM_n5.csv",
+    			"MNIST_size28_c6_GRP.csv",
+    			"MNIST_size28_c6_UMAP_n2_d0.1.csv",
+    			"MNIST_size28_c6_UMAP_n15_d0.1.csv",
+    			"MNIST_size28_c6_TSNE_p30.csv",
+    			"MNIST_size28_c6_ISM_n7.csv",
+    			"MNIST_size28_c6_UMAP_n7_d0.8.csv",
+    			"MNIST_size28_c6_UMAP_n15_d0.5.csv",
+    			"MNIST_size28_c6_ISM_n2.csv",
+    			"MNIST_size28_c6_UMAP_n2_d0.5.csv",
+    			"MNIST_size28_c6_MDS.csv",
+    			"MNIST_size28_c6_PCA.csv",
+    			"MNIST_size28_c6_UMAP_n5_d0.5.csv",
+    			"MNIST_size28_c6_ISM_n15.csv",
+    			"MNIST_size28_c6_UMAP_n5_d0.1.csv",
+    			"MNIST_size28_c6_TSNE_p100.csv",
+    			"MNIST_size28_c6_TSNE_p5.csv",
+    			"MNIST_size28_c6_UMAP_n5_d0.8.csv",
+    			"MNIST_size28_c6_SE_n7.csv",
+    			"MNIST_size28_c6_UMAP_n2_d0.8.csv",
+    			"MNIST_size28_c6_TSNE_p10.csv",
+    			"MNIST_size28_c6_UMAP_n15_d0.8.csv",
+    			"MNIST_size28_c6_UMAP_n7_d0.1.csv",
+    			"MNIST_size28_c6_UMAP_n7_d0.5.csv"
+    		]
+    	},
+    	{
+    		name: "fashionmnist",
+    		description: "Dataset of 28x28 photos of fashion items (shoes, shirts etc.)",
+    		paths: [
+    			"fashionmnist_size50_c6_UMAP_n15_d0.1.csv",
+    			"fashionmnist_size50_c6_UMAP_n5_d0.5.csv",
+    			"fashionmnist_size50_c6_TSNE_p5.csv",
+    			"fashionmnist_size50_c6_ISM_n2.csv",
+    			"fashionmnist_size50_c6_ISM_n5.csv",
+    			"fashionmnist_size50_c6_UMAP_n5_d0.1.csv",
+    			"fashionmnist_size50_c6_ISM_n7.csv",
+    			"fashionmnist_size50_c6_UMAP_n15_d0.5.csv",
+    			"fashionmnist_size50_c6_UMAP_n7_d0.8.csv",
+    			"fashionmnist_size50_c6_UMAP_n2_d0.1.csv",
+    			"fashionmnist_size50_c6_UMAP_n2_d0.5.csv",
+    			"fashionmnist_size50_c6_TSNE_p30.csv",
+    			"fashionmnist_size50_c6_SE_n7.csv",
+    			"fashionmnist_size50_c6_UMAP_n7_d0.1.csv",
+    			"fashionmnist_size50_c6_UMAP_n2_d0.8.csv",
+    			"fashionmnist_size50_c6_PCA.csv",
+    			"fashionmnist_size50_c6_UMAP_n7_d0.5.csv",
+    			"fashionmnist_size50_c6_TSNE_p10.csv",
+    			"fashionmnist_size50_c6_UMAP_n15_d0.8.csv",
+    			"fashionmnist_size50_c6_ISM_n15.csv",
+    			"fashionmnist_size50_c6_GRP.csv",
+    			"fashionmnist_size50_c6_MDS.csv",
+    			"fashionmnist_size50_c6_TSNE_p100.csv",
+    			"fashionmnist_size50_c6_UMAP_n5_d0.8.csv"
+    		]
+    	},
+    	{
+    		name: "oxford_buildings",
+    		description: "Dataset of photos of buildings in Oxford takes by tourists.",
+    		paths: [
+    			"oxford_buildings_size200_c6_UMAP_n15_d0.8.csv",
+    			"oxford_buildings_size200_c6_SE_n7.csv",
+    			"oxford_buildings_size200_c6_UMAP_n5_d0.8.csv",
+    			"oxford_buildings_size200_c6_TSNE_p10.csv",
+    			"oxford_buildings_size200_c6_ISM_n2.csv",
+    			"oxford_buildings_size200_c6_UMAP_n7_d0.5.csv",
+    			"oxford_buildings_size200_c6_TSNE_p5.csv",
+    			"oxford_buildings_size200_c6_UMAP_n7_d0.1.csv",
+    			"oxford_buildings_size200_c6_ISM_n5.csv",
+    			"oxford_buildings_size200_c6_ISM_n7.csv",
+    			"oxford_buildings_size200_c6_UMAP_n2_d0.8.csv",
+    			"oxford_buildings_size200_c6_GRP.csv",
+    			"oxford_buildings_size200_c6_UMAP_n2_d0.5.csv",
+    			"oxford_buildings_size200_c6_TSNE_p100.csv",
+    			"oxford_buildings_size200_c6_ISM_n15.csv",
+    			"oxford_buildings_size200_c6_UMAP_n7_d0.8.csv",
+    			"oxford_buildings_size200_c6_MDS.csv",
+    			"oxford_buildings_size200_c6_UMAP_n2_d0.1.csv",
+    			"oxford_buildings_size200_c6_UMAP_n15_d0.1.csv",
+    			"oxford_buildings_size200_c6_PCA.csv",
+    			"oxford_buildings_size200_c6_TSNE_p30.csv",
+    			"oxford_buildings_size200_c6_UMAP_n5_d0.1.csv",
+    			"oxford_buildings_size200_c6_UMAP_n5_d0.5.csv",
+    			"oxford_buildings_size200_c6_UMAP_n15_d0.5.csv"
+    		]
+    	},
+    	{
+    		name: "flowers",
+    		description: "Dataset of photos of different types of flowes.",
+    		paths: [
+    			"flowers_size200_c6_TSNE_p10.csv",
+    			"flowers_size200_c6_UMAP_n2_d0.8.csv",
+    			"flowers_size200_c6_UMAP_n15_d0.5.csv",
+    			"flowers_size200_c6_TSNE_p5.csv",
+    			"flowers_size200_c6_UMAP_n7_d0.1.csv",
+    			"flowers_size200_c6_SE_n7.csv",
+    			"flowers_size200_c6_UMAP_n7_d0.5.csv",
+    			"flowers_size200_c6_UMAP_n15_d0.1.csv",
+    			"flowers_size200_c6_TSNE_p100.csv",
+    			"flowers_size200_c6_UMAP_n5_d0.8.csv",
+    			"flowers_size200_c6_GRP.csv",
+    			"flowers_size200_c6_UMAP_n5_d0.5.csv",
+    			"flowers_size200_c6_UMAP_n5_d0.1.csv",
+    			"flowers_size200_c6_MDS.csv",
+    			"flowers_size200_c6_TSNE_p30.csv",
+    			"flowers_size200_c6_PCA.csv",
+    			"flowers_size200_c6_UMAP_n2_d0.1.csv",
+    			"flowers_size200_c6_ISM_n15.csv",
+    			"flowers_size200_c6_ISM_n2.csv",
+    			"flowers_size200_c6_UMAP_n7_d0.8.csv",
+    			"flowers_size200_c6_ISM_n7.csv",
+    			"flowers_size200_c6_UMAP_n15_d0.8.csv",
+    			"flowers_size200_c6_UMAP_n2_d0.5.csv",
+    			"flowers_size200_c6_ISM_n5.csv"
+    		]
+    	},
+    	{
+    		name: "paintings",
+    		description: "Dataset of publicly available paintings on the website Art UK. The labels in this data correspond to objects in the picture.  ",
+    		paths: [
+    			"paintings_size50_c10_UMAP_n15_d0.5.csv",
+    			"paintings_size50_c10_SE_n7.csv",
+    			"paintings_size50_c10_UMAP_n5_d0.8.csv",
+    			"paintings_size50_c10_TSNE_p5.csv",
+    			"paintings_size50_c10_UMAP_n15_d0.1.csv",
+    			"paintings_size50_c10_ISM_n2.csv",
+    			"paintings_size50_c10_TSNE_p30.csv",
+    			"paintings_size50_c10_UMAP_n7_d0.5.csv",
+    			"paintings_size50_c10_ISM_n5.csv",
+    			"paintings_size50_c10_UMAP_n7_d0.1.csv",
+    			"paintings_size50_c10_TSNE_p100.csv",
+    			"paintings_size50_c10_ISM_n7.csv",
+    			"paintings_size50_c10_UMAP_n2_d0.8.csv",
+    			"paintings_size50_c10_UMAP_n2_d0.5.csv",
+    			"paintings_size50_c10_PCA.csv",
+    			"paintings_size50_c10_TSNE_p10.csv",
+    			"paintings_size50_c10_UMAP_n7_d0.8.csv",
+    			"paintings_size50_c10_UMAP_n2_d0.1.csv",
+    			"paintings_size50_c10_GRP.csv",
+    			"paintings_size50_c10_UMAP_n5_d0.1.csv",
+    			"paintings_size50_c10_UMAP_n5_d0.5.csv",
+    			"paintings_size50_c10_ISM_n15.csv",
+    			"paintings_size50_c10_MDS.csv",
+    			"paintings_size50_c10_UMAP_n15_d0.8.csv"
+    		]
+    	},
+    	{
+    		name: "yalefaces",
+    		description: "Dataset of 14 different people expressing various emotions.",
+    		paths: [
+    			"yalefaces_size200_call_MDS.csv",
+    			"yalefaces_size200_call_UMAP_n5_d0.5.csv",
+    			"yalefaces_size200_call_UMAP_n15_d0.8.csv",
+    			"yalefaces_size200_call_GRP.csv",
+    			"yalefaces_size200_call_UMAP_n5_d0.1.csv",
+    			"yalefaces_size200_call_SE_n7.csv",
+    			"yalefaces_size200_call_UMAP_n7_d0.8.csv",
+    			"yalefaces_size200_call_TSNE_p5.csv",
+    			"yalefaces_size200_call_TSNE_p10.csv",
+    			"yalefaces_size200_call_UMAP_n2_d0.1.csv",
+    			"yalefaces_size200_call_UMAP_n2_d0.5.csv",
+    			"yalefaces_size200_call_PCA.csv",
+    			"yalefaces_size200_call_ISM_n15.csv",
+    			"yalefaces_size200_call_UMAP_n7_d0.1.csv",
+    			"yalefaces_size200_call_UMAP_n2_d0.8.csv",
+    			"yalefaces_size200_call_TSNE_p30.csv",
+    			"yalefaces_size200_call_TSNE_p100.csv",
+    			"yalefaces_size200_call_UMAP_n7_d0.5.csv",
+    			"yalefaces_size200_call_UMAP_n15_d0.5.csv",
+    			"yalefaces_size200_call_ISM_n2.csv",
+    			"yalefaces_size200_call_UMAP_n15_d0.1.csv",
+    			"yalefaces_size200_call_ISM_n7.csv",
+    			"yalefaces_size200_call_ISM_n5.csv",
+    			"yalefaces_size200_call_UMAP_n5_d0.8.csv"
+    		]
+    	},
+    	{
+    		name: "stanfordfaces",
+    		description: "Dataset of a 3D head photographed from different angles and with different lighting conditions.",
+    		paths: [
+    			"stanfordfaces_size50_call_UMAP_n5_d0.5.csv",
     			"stanfordfaces_size50_call_UMAP_n15_d0.1.csv",
     			"stanfordfaces_size50_call_UMAP_n15_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n15_d0.8.csv",
+    			"stanfordfaces_size50_call_UMAP_n5_d0.1.csv",
+    			"stanfordfaces_size50_call_UMAP_n7_d0.8.csv",
+    			"stanfordfaces_size50_call_TSNE_p30.csv",
     			"stanfordfaces_size50_call_UMAP_n2_d0.1.csv",
     			"stanfordfaces_size50_call_UMAP_n2_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n2_d0.8.csv",
-    			"stanfordfaces_size50_call_UMAP_n5_d0.1.csv",
-    			"stanfordfaces_size50_call_UMAP_n5_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n5_d0.8.csv",
+    			"stanfordfaces_size50_call_TSNE_p100.csv",
+    			"stanfordfaces_size50_call_TSNE_p5.csv",
+    			"stanfordfaces_size50_call_SE_n7.csv",
     			"stanfordfaces_size50_call_UMAP_n7_d0.1.csv",
+    			"stanfordfaces_size50_call_ISM_n2.csv",
+    			"stanfordfaces_size50_call_TSNE_p10.csv",
+    			"stanfordfaces_size50_call_UMAP_n2_d0.8.csv",
+    			"stanfordfaces_size50_call_ISM_n7.csv",
     			"stanfordfaces_size50_call_UMAP_n7_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n7_d0.8.csv"
+    			"stanfordfaces_size50_call_ISM_n15.csv",
+    			"stanfordfaces_size50_call_ISM_n5.csv",
+    			"stanfordfaces_size50_call_PCA.csv",
+    			"stanfordfaces_size50_call_MDS.csv",
+    			"stanfordfaces_size50_call_UMAP_n15_d0.8.csv",
+    			"stanfordfaces_size50_call_GRP.csv",
+    			"stanfordfaces_size50_call_UMAP_n5_d0.8.csv"
+    		]
+    	},
+    	{
+    		name: "Caltech_vehicles",
+    		description: "Photos of vehicles.",
+    		paths: [
+    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.5.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.5.csv",
+    			"Caltech_vehicles_size200_c6_TSNE_p30.csv",
+    			"Caltech_vehicles_size200_c6_TSNE_p100.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.8.csv",
+    			"Caltech_vehicles_size200_c6_PCA.csv",
+    			"Caltech_vehicles_size200_c6_TSNE_p5.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.1.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.1.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.1.csv",
+    			"Caltech_vehicles_size200_c6_MDS.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.5.csv",
+    			"Caltech_vehicles_size200_c6_GRP.csv",
+    			"Caltech_vehicles_size200_c6_ISM_n2.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.8.csv",
+    			"Caltech_vehicles_size200_c6_ISM_n5.csv",
+    			"Caltech_vehicles_size200_c6_ISM_n7.csv",
+    			"Caltech_vehicles_size200_c6_TSNE_p10.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.5.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.1.csv",
+    			"Caltech_vehicles_size200_c6_ISM_n15.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.8.csv",
+    			"Caltech_vehicles_size200_c6_SE_n7.csv",
+    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.8.csv"
+    		]
+    	},
+    	{
+    		name: "Caltech_plants",
+    		description: "Photos of plants.",
+    		paths: [
+    			"Caltech_plants_size200_c6_ISM_n5.csv",
+    			"Caltech_plants_size200_c6_TSNE_p10.csv",
+    			"Caltech_plants_size200_c6_UMAP_n5_d0.1.csv",
+    			"Caltech_plants_size200_c6_ISM_n7.csv",
+    			"Caltech_plants_size200_c6_ISM_n2.csv",
+    			"Caltech_plants_size200_c6_UMAP_n5_d0.5.csv",
+    			"Caltech_plants_size200_c6_UMAP_n2_d0.5.csv",
+    			"Caltech_plants_size200_c6_TSNE_p5.csv",
+    			"Caltech_plants_size200_c6_UMAP_n15_d0.5.csv",
+    			"Caltech_plants_size200_c6_UMAP_n15_d0.1.csv",
+    			"Caltech_plants_size200_c6_UMAP_n7_d0.8.csv",
+    			"Caltech_plants_size200_c6_UMAP_n2_d0.1.csv",
+    			"Caltech_plants_size200_c6_MDS.csv",
+    			"Caltech_plants_size200_c6_UMAP_n7_d0.5.csv",
+    			"Caltech_plants_size200_c6_ISM_n15.csv",
+    			"Caltech_plants_size200_c6_UMAP_n15_d0.8.csv",
+    			"Caltech_plants_size200_c6_UMAP_n7_d0.1.csv",
+    			"Caltech_plants_size200_c6_GRP.csv",
+    			"Caltech_plants_size200_c6_UMAP_n2_d0.8.csv",
+    			"Caltech_plants_size200_c6_TSNE_p30.csv",
+    			"Caltech_plants_size200_c6_UMAP_n5_d0.8.csv",
+    			"Caltech_plants_size200_c6_TSNE_p100.csv",
+    			"Caltech_plants_size200_c6_PCA.csv",
+    			"Caltech_plants_size200_c6_SE_n7.csv"
+    		]
+    	},
+    	{
+    		name: "paris_buildings",
+    		description: "Dataset of photos of buildings in Paris takes by tourists.",
+    		paths: [
+    			"paris_buildings_size50_c6_UMAP_n5_d0.8.csv",
+    			"paris_buildings_size50_c6_ISM_n15.csv",
+    			"paris_buildings_size50_c6_GRP.csv",
+    			"paris_buildings_size50_c6_MDS.csv",
+    			"paris_buildings_size50_c6_ISM_n2.csv",
+    			"paris_buildings_size50_c6_SE_n7.csv",
+    			"paris_buildings_size50_c6_UMAP_n7_d0.5.csv",
+    			"paris_buildings_size50_c6_PCA.csv",
+    			"paris_buildings_size50_c6_TSNE_p100.csv",
+    			"paris_buildings_size50_c6_UMAP_n2_d0.8.csv",
+    			"paris_buildings_size50_c6_UMAP_n15_d0.8.csv",
+    			"paris_buildings_size50_c6_ISM_n5.csv",
+    			"paris_buildings_size50_c6_ISM_n7.csv",
+    			"paris_buildings_size50_c6_UMAP_n7_d0.1.csv",
+    			"paris_buildings_size50_c6_TSNE_p30.csv",
+    			"paris_buildings_size50_c6_UMAP_n15_d0.5.csv",
+    			"paris_buildings_size50_c6_UMAP_n2_d0.5.csv",
+    			"paris_buildings_size50_c6_UMAP_n15_d0.1.csv",
+    			"paris_buildings_size50_c6_UMAP_n2_d0.1.csv",
+    			"paris_buildings_size50_c6_TSNE_p10.csv",
+    			"paris_buildings_size50_c6_UMAP_n7_d0.8.csv",
+    			"paris_buildings_size50_c6_UMAP_n5_d0.1.csv",
+    			"paris_buildings_size50_c6_TSNE_p5.csv",
+    			"paris_buildings_size50_c6_UMAP_n5_d0.5.csv"
+    		]
+    	},
+    	{
+    		name: "coil-100",
+    		description: "Dataset of various objects photographed from different angles.",
+    		paths: [
+    			"coil-100_size50_c6_UMAP_n2_d0.5.csv",
+    			"coil-100_size50_c6_GRP.csv",
+    			"coil-100_size50_c6_UMAP_n7_d0.8.csv",
+    			"coil-100_size50_c6_MDS.csv",
+    			"coil-100_size50_c6_UMAP_n2_d0.1.csv",
+    			"coil-100_size50_c6_TSNE_p10.csv",
+    			"coil-100_size50_c6_TSNE_p5.csv",
+    			"coil-100_size50_c6_UMAP_n5_d0.1.csv",
+    			"coil-100_size50_c6_PCA.csv",
+    			"coil-100_size50_c6_UMAP_n15_d0.8.csv",
+    			"coil-100_size50_c6_UMAP_n5_d0.5.csv",
+    			"coil-100_size50_c6_ISM_n2.csv",
+    			"coil-100_size50_c6_ISM_n15.csv",
+    			"coil-100_size50_c6_TSNE_p30.csv",
+    			"coil-100_size50_c6_UMAP_n5_d0.8.csv",
+    			"coil-100_size50_c6_TSNE_p100.csv",
+    			"coil-100_size50_c6_UMAP_n15_d0.1.csv",
+    			"coil-100_size50_c6_ISM_n5.csv",
+    			"coil-100_size50_c6_UMAP_n15_d0.5.csv",
+    			"coil-100_size50_c6_ISM_n7.csv",
+    			"coil-100_size50_c6_UMAP_n7_d0.5.csv",
+    			"coil-100_size50_c6_UMAP_n7_d0.1.csv",
+    			"coil-100_size50_c6_UMAP_n2_d0.8.csv",
+    			"coil-100_size50_c6_SE_n7.csv"
+    		]
+    	},
+    	{
+    		name: "Caltech_instruments",
+    		description: "Photos of instruments.",
+    		paths: [
+    			"Caltech_instruments_size200_c6_UMAP_n7_d0.5.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n7_d0.1.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n2_d0.8.csv",
+    			"Caltech_instruments_size200_c6_TSNE_p30.csv",
+    			"Caltech_instruments_size200_c6_ISM_n5.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n5_d0.8.csv",
+    			"Caltech_instruments_size200_c6_ISM_n7.csv",
+    			"Caltech_instruments_size200_c6_ISM_n2.csv",
+    			"Caltech_instruments_size200_c6_TSNE_p5.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n15_d0.8.csv",
+    			"Caltech_instruments_size200_c6_SE_n7.csv",
+    			"Caltech_instruments_size200_c6_MDS.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n15_d0.5.csv",
+    			"Caltech_instruments_size200_c6_TSNE_p10.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n5_d0.1.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n5_d0.5.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n15_d0.1.csv",
+    			"Caltech_instruments_size200_c6_ISM_n15.csv",
+    			"Caltech_instruments_size200_c6_GRP.csv",
+    			"Caltech_instruments_size200_c6_TSNE_p100.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n2_d0.5.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n7_d0.8.csv",
+    			"Caltech_instruments_size200_c6_UMAP_n2_d0.1.csv",
+    			"Caltech_instruments_size200_c6_PCA.csv"
     		]
     	}
     ];
@@ -19666,7 +19996,7 @@ var app = (function () {
                     store.set_projections(res)
                 }); */
                 progress.reset();
-                Promise.all(paths.map(p => csv$1(`data/dr/${p}`).then(async (r) => {
+                Promise.all(paths.map(p => csv$1(`data/flowers/human_sample/${p}`).then(async (r) => {
                         progress.increment();
                         return r
                     }
@@ -21826,7 +22156,7 @@ var app = (function () {
     			: "none");
 
     			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[19](/*point*/ ctx[45].class));
-    			add_location(circle, file$2, 169, 20, 5710);
+    			add_location(circle, file$2, 169, 20, 5703);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -21876,7 +22206,7 @@ var app = (function () {
     		c: function create() {
     			image = svg_element("image");
     			set_style(image, "pointer-events", "none");
-    			attr_dev(image, "href", image_href_value = `data/thumbnails/size50/${/*point*/ ctx[45].img}.png`);
+    			attr_dev(image, "href", image_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`);
     			attr_dev(image, "width", "20");
     			attr_dev(image, "height", "20");
 
@@ -21894,7 +22224,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*data*/ 1 && image_href_value !== (image_href_value = `data/thumbnails/size50/${/*point*/ ctx[45].img}.png`)) {
+    			if (dirty[0] & /*data*/ 1 && image_href_value !== (image_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`)) {
     				attr_dev(image, "href", image_href_value);
     			}
 
@@ -22093,21 +22423,21 @@ var app = (function () {
     			g_1 = svg_element("g");
     			image = svg_element("image");
     			set_style(image, "pointer-events", "none");
-    			xlink_attr(image, "xlink:href", image_xlink_href_value = `data/thumbnails/size50/${/*point*/ ctx[45].img}.png`);
+    			xlink_attr(image, "xlink:href", image_xlink_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`);
     			attr_dev(image, "width", "20");
     			attr_dev(image, "height", "20");
     			attr_dev(image, "filter", "url(#matrix)");
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[45].class);
-    			add_location(image, file$2, 182, 16, 6243);
+    			add_location(image, file$2, 182, 16, 6236);
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[45].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[45].y) - 10})`);
-    			add_location(g_1, file$2, 181, 12, 6159);
+    			add_location(g_1, file$2, 181, 12, 6152);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g_1, anchor);
     			append_dev(g_1, image);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*data, $hover*/ 262145 && image_xlink_href_value !== (image_xlink_href_value = `data/thumbnails/size50/${/*point*/ ctx[45].img}.png`)) {
+    			if (dirty[0] & /*data, $hover*/ 262145 && image_xlink_href_value !== (image_xlink_href_value = `data/thumbnails/${/*point*/ ctx[45].img}.png`)) {
     				xlink_attr(image, "xlink:href", image_xlink_href_value);
     			}
 
@@ -22170,10 +22500,10 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			attr_dev(div0, "class", "modal-content svelte-7t2ez2");
     			set_style(div0, "width", "fit-content");
-    			add_location(div0, file$2, 220, 8, 7566);
+    			add_location(div0, file$2, 220, 8, 7552);
     			attr_dev(div1, "id", "modal");
     			attr_dev(div1, "class", "modal svelte-7t2ez2");
-    			add_location(div1, file$2, 219, 4, 7527);
+    			add_location(div1, file$2, 219, 4, 7513);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22370,26 +22700,26 @@ var app = (function () {
     			attr_dev(svg, "class", "svelte-7t2ez2");
     			add_location(svg, file$2, 123, 4, 3884);
     			set_style(div0, "text-align", "left");
-    			add_location(div0, file$2, 196, 8, 6662);
+    			add_location(div0, file$2, 196, 8, 6648);
     			set_style(div1, "text-align", "center");
-    			add_location(div1, file$2, 195, 4, 6620);
+    			add_location(div1, file$2, 195, 4, 6606);
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
-    			add_location(span1, file$2, 205, 16, 7027);
-    			add_location(button1, file$2, 204, 12, 6965);
+    			add_location(span1, file$2, 205, 16, 7013);
+    			add_location(button1, file$2, 204, 12, 6951);
     			attr_dev(span2, "class", "mdi mdi-close");
-    			add_location(span2, file$2, 209, 83, 7260);
+    			add_location(span2, file$2, 209, 83, 7246);
     			set_style(button2, "float", "right");
-    			add_location(button2, file$2, 209, 16, 7193);
-    			add_location(textarea, file$2, 210, 16, 7316);
+    			add_location(button2, file$2, 209, 16, 7179);
+    			add_location(textarea, file$2, 210, 16, 7302);
     			attr_dev(div2, "class", "comment dropdown-content svelte-7t2ez2");
-    			add_location(div2, file$2, 207, 12, 7112);
+    			add_location(div2, file$2, 207, 12, 7098);
     			attr_dev(div3, "class", "dropdown svelte-7t2ez2");
     			toggle_class(div3, "active", /*comment_menu*/ ctx[9]);
-    			add_location(div3, file$2, 203, 8, 6901);
+    			add_location(div3, file$2, 203, 8, 6887);
     			set_style(small1, "position", "absolute");
     			set_style(small1, "bottom", "0px");
     			set_style(small1, "right", "5px");
-    			add_location(small1, file$2, 202, 4, 6832);
+    			add_location(small1, file$2, 202, 4, 6818);
     			attr_dev(div4, "class", "card svelte-7t2ez2");
     			set_style(div4, "background-color", /*$bgScale*/ ctx[16](-/*data*/ ctx[0].pos_count + /*data*/ ctx[0].neg_count));
     			add_location(div4, file$2, 88, 0, 2609);
@@ -44387,18 +44717,18 @@ var app = (function () {
                     "<h1>Call for participants</h1>\n" +
                     "<img src=\"./visus.png\" width = '200px'> <img src=\"./namur.jpg\" width = '200px'>"+
                     "\t\t\t\t\t\t\t    <p>\n" +
-                    "\t\t\t\t\t\t\t\t\tThe Visualization Research Center (VISUS) at University of Stuttgart and University of Namur are looking for online participants\n" +
-                    "\t\t\t\t\t\t\t\t\tfor a visualization and analysis study. </p>\n" +
+                    "\t\t\t\t\t\t\t\t\tThe Visualization Research Center (VISUS) at the University of Stuttgart and the University of Namur are looking for participants for an\n" +
+                    "\t\t\t\t\t\t\t\t\tonline study on visualization and visual analysis. </p>\n" +
                     "                                 <p>\n" +
                     "                                    Given a series of datasets, we apply algorithms that find similarities in images.\n" +
-        "We want to find out whether humans find the results good or bad.</p>\n" +
+        "We want to find out whether humans consider the resulting visualizations to be good or bad.</p>\n" +
                     "                                <p>\n" +
                     "                                    The study consists of:\n" +
                     "                                    <ul>\n" +
                     "                                        <li>Informed consent agreement</li>\n" +
                     "                                        <li>Instructions for the task</li>\n" +
                     "                                        <li>A pre-participation survey that will assess your experience with this type of task</li>\n" +
-                    "                                        <li>A series of trials where you are asked to analyse some scatterplots depicting the results of some Machine Learning algorithms and choose the best result</li>\n" +
+                    "                                        <li>A series of trials where you are asked to analyse scatterplots depicting the results of some Machine Learning algorithms and choose the best result</li>\n" +
                     "                                        <li>A post-trial survey, where we will ask you for feedback on the task</li>\n" +
                     "                                    </ul>\n" +
                     "                                </p>\n" +
@@ -44406,19 +44736,19 @@ var app = (function () {
                     "                                <p>\n" +
                     "                                    The requirements are:\n" +
                     "                                    <ul>\n" +
-                    "                                        <li> You are at least 18 years old.</li>\n" +
-                    "                                        <li> You speak fluent English.</li>\n" +
-                    "                                        <li> Your screen-size is at least 700x400 pixels.</li>\n" +
-                    "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them).</li>\n" +
+                    "                                        <li> You are at least 18 years old</li>\n" +
+                    "                                        <li> You speak fluent English</li>\n" +
+                    "                                        <li> Your screen-size is at least 700x400 pixels</li>\n" +
+                    "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them)</li>\n" +
                     "                                    </ul>\n" +
                     "\n" +
                     "                                </p>\n" +
                     "\n" +
                     "                                <p>\n" +
-                    "                                    The task is estimated to take between 30 minutes and 1 hour.\n" +
+                    "                                    The task takes between about 30 to 60 minutes.\n" +
                     "\n" +
                     "                                </p>" +
-        "<p>The study only works in <b>Chrome</b> or <b>Firefox</b>.</p>" +
+        "<p>The study only works in <b>Google Chrome</b> and <b>Mozilla Firefox</b>.</p>" +
                     "<p>Press start to begin.</p></div>";
 
 
@@ -44426,12 +44756,12 @@ var app = (function () {
     const consent_form = "<div class=\"text-block\"><h1>We need your consent to proceed</h1>\n" +
                     "                <hr>\n" +
                     "                <div class=\"legal well\">\n" +
-                    "                    <p> Dear prospective participant, </p>\n" +
+                    "                    <p>Dear prospective participant, </p>\n" +
                     "                    <p>\n" +
                     "                        We would like to invite you to participate in the following study within the scope of the\n" +
                     "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" +
                     "                     <p>\n" +
-                    "                        In particular, we analyze the perception humans have of the results of various algorithms that seek to imitate human perception of similarity.\n" +
+                    "                        In particular, we analyze the human perception of the results from various algorithms that seek to imitate human perception of similarity.\n" +
                     "                    </p>\n" +
                     "                    <p>\n" +
                     "                        In the current study, „Evaluation of Dimensionality Reduction\n" +
@@ -44455,9 +44785,9 @@ var app = (function () {
 
     const dr_explain  = "<div class=\"text-block\"> \n" +
                 "\n" +
-                "<h1>Dimensionality reduction on image-based datasets</h1>\n" +
+                "<h1>Dimensionality Reduction on Image-based Datasets</h1>\n" +
                 "<p>\n" +
-                "This experiment aims at gathering data about what users consider to be “good” or “”bad/misleading” visualizations. \n" +
+                "This experiment aims at gathering data about what users consider to be “good” or ”bad/misleading” visualizations. \n" +
                 "More specifically we are interested in finding out user preferences regarding <b>projections of dimensionality reduction algorithms</b>. \n" +
                 "</p>\n" +
                 "<br>\n" +
@@ -44468,12 +44798,12 @@ var app = (function () {
                 "</p>\n" +
                 "<img class='instructions' src='./dr_example.png'>\n" +
                 "<p>\n" +
-                "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plot close to each other. Different DR algorithms define similarity differently, and for this reason we have many different scatterplots with different DR results. \n" +
+                "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plotted close to each other. Different DR algorithms define similarity differently and thereore produce different scatterplots. \n" +
                 "</p>\n" +
                 "\n" +
-                "<p>In this study, we want you to analyse a group of scatterplots depicting these projections and decide which ones are good, and which ones are bad. <b>You do not need to have any additional knowledge about DR!</b></p>\n" +
+                "<p>In this study, we want you to analyse a group of scatterplots depicting these projections and decide which ones are good and which are bad. <b>You do not need to have any additional knowledge about DR!</b></p>\n" +
                 "\n" +
-                "<p>In the next page we will explain the user interface of the study.</p>\n" +
+                "<p>On the next page we will explain the user interface of the study.</p>\n" +
                 "\n" +
                 "</div>";
 
@@ -44482,22 +44812,23 @@ var app = (function () {
                     "\n" +
                     "<h1>User Interface</h1>\n" +
                     "<p>\n" +
-                    "We will rate your preferences on a dataset-by-dataset basis. Below you can see an example of what this dataset might be and how the interface looks like. In this case, the dataset consists of photographs of the same head captured from different angles. There are 8 scatterplots, each corresponding to a projection of a DR algorithm technique. \n" +
+                    "We will rate your preferences on a dataset-by-dataset basis. Below you can see an example of what this dataset might be and what the interface looks like. In this case, the dataset consists of photographs of the same head captured from different angles. There are 8 scatterplots, each corresponding to a projection of a DR algorithm technique. \n" +
                     "</p>\n" +
                     "<br>\n" +
                     "<img class='instructions' src='./grid_example.png'>\n" +
                     "\n" +
-                    "<h3>Think of this as a game with the following rules:</h3>\n" +
+
                     "</div>";
 
     const rule_1 = "<div class=\"text-block\"> \n" +
                     "\n" +
                     "<h1>User Interface</h1>\n" +
+                    "<h3>Think of this as a game with the following rules:</h3>\n" +
                     "<h3>Rule 1:</h3>\n" +
                     "\n" +
                     "<p>Your job is to distribute 15 hearts/points across the 8 projections. You do not need to distribute all the hearts. </p>\n" +
                      "<h3>Rule 2:</h3>\n" +
-                    "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should no be clusters), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment to any scatterplot, good or bad, by clicking the text box.</p>\n" +
+                    "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should be none), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment for any scatterplot, good or bad, by clicking the text box.</p>\n" +
                     "<video class = 'instructions' controls>\n" +
                     "  <source src=\"./rule_12.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
@@ -44534,10 +44865,10 @@ var app = (function () {
                     "<h1>User Interface</h1>\n" +
                     "<h3>Final thing:</h3>\n" +
                     "\n" +
-                    "<p>We have also implemented an additional view where we plot each image as a point. " +
+                    "<p>We also implemented an additional view where we plot each image as a point. " +
         "The points are color coded by class labels. " +
-        "This is an auxiliery view you may use to consolite your opinion of the projection. " +
-        "We do however advise you should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
+        "This is an auxiliary view you may use to consolidate your opinion of the projection. " +
+        "You should make your decision based on the image view, as class labels might not always make sense. </p>\n" +
                      "<video class = 'instructions' controls>\n" +
                     "  <source src=\"./color.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
@@ -44553,9 +44884,9 @@ var app = (function () {
                     "\n" +
                     "<h1>How long will this take?</h1>\n" +
                     "<p> In total we have 10 datasets, consisting of collections of photos. " +
-                    "After each trial you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will vary depending on how many trials you will do.</p> " +
-                    "<p>If you say no, you will be directed to the final debrief questionairre. </p>"+
-                    "<p>However, it would be really nice if you solve 5 or more! in any case, we promise beer and/or chocolate for your help! </p>" +
+                    "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. Therefore, the time it takes for the study will depend on how many trials you do.</p> " +
+                    "<p>If you say no, you will be directed to the final debriefing questionnaire. </p>"+
+                    "<p>However, it would be really nice if you solved 5 or more! In any case, we promise beer and/or chocolate for your help! </p>" +
                     "<video class = 'instructions' controls>\n" +
                     "  <source src=\"./next.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
@@ -44570,7 +44901,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (245:0) {#if $hover}
+    // (246:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44584,21 +44915,21 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			img = element("img");
-    			if (img.src !== (img_src_value = `data/thumbnails/size50/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) attr_dev(img, "src", img_src_value);
+    			if (img.src !== (img_src_value = `data/${dataset}/thumbnails/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*$hover*/ ctx[2]);
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 252, 8, 8731);
+    			add_location(img, file$4, 253, 8, 8786);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 251, 4, 8697);
+    			add_location(div0, file$4, 252, 4, 8752);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 245, 0, 8475);
+    			add_location(div1, file$4, 246, 0, 8530);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44608,7 +44939,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*$images, $hover*/ 12 && img.src !== (img_src_value = `data/thumbnails/size50/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) {
+    			if (!current || dirty & /*$images, $hover*/ 12 && img.src !== (img_src_value = `data/${dataset}/thumbnails/${/*$images*/ ctx[3][/*$hover*/ ctx[2]]}.png`)) {
     				attr_dev(img, "src", img_src_value);
     			}
 
@@ -44646,14 +44977,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(245:0) {#if $hover}",
+    		source: "(246:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (277:32) 
+    // (278:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44661,7 +44992,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 277, 8, 9865);
+    			add_location(div, file$4, 278, 8, 9924);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44678,14 +45009,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(277:32) ",
+    		source: "(278:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (270:31) 
+    // (271:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -44718,17 +45049,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 271, 12, 9397);
+    			add_location(iframe, file$4, 272, 12, 9456);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 271, 206, 9591);
-    			add_location(p, file$4, 271, 203, 9588);
+    			add_location(a, file$4, 272, 206, 9650);
+    			add_location(p, file$4, 272, 203, 9647);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 272, 16, 9694);
+    			add_location(span0, file$4, 273, 16, 9753);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 272, 79, 9757);
-    			add_location(h1, file$4, 272, 12, 9690);
+    			add_location(span1, file$4, 273, 79, 9816);
+    			add_location(h1, file$4, 273, 12, 9749);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 270, 8, 9347);
+    			add_location(div, file$4, 271, 8, 9406);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44753,14 +45084,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(270:31) ",
+    		source: "(271:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:4) {#if step == "dr_grid"}
+    // (259:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -44782,7 +45113,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 258, 8, 8967);
+    			add_location(div, file$4, 259, 8, 9026);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44833,14 +45164,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(258:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(259:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (265:8) {:else}
+    // (266:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -44853,8 +45184,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 265, 12, 9211);
-    			add_location(center, file$4, 266, 12, 9250);
+    			add_location(div, file$4, 266, 12, 9270);
+    			add_location(center, file$4, 267, 12, 9309);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44875,14 +45206,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(265:8) {:else}",
+    		source: "(266:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (260:8) {#if $ready}
+    // (261:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -44897,7 +45228,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 260, 12, 9038);
+    			add_location(div, file$4, 261, 12, 9097);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44928,7 +45259,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(260:8) {#if $ready}",
+    		source: "(261:8) {#if $ready}",
     		ctx
     	});
 
@@ -44990,13 +45321,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 240, 4, 8429);
+    			add_location(h2, file$4, 241, 4, 8484);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 239, 0, 8419);
+    			add_location(nav, file$4, 240, 0, 8474);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 256, 0, 8861);
+    			add_location(main, file$4, 257, 0, 8920);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45262,6 +45593,7 @@ var app = (function () {
     			const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
     			data.load(data, sample);
     			$$invalidate(0, step = "dr_grid");
+    			var dataset = sample1.name;
     			return "<p class='description'>" + sample1.description + "</p>";
     		},
     		//choices: jsPsych.ALL_KEYS,
@@ -45363,21 +45695,19 @@ var app = (function () {
     			auto_update_progress_bar: true,
     			timeline: [
     				welcome_block,
-    				consent,
-    				instructions,
-    				name,
-    				experience,
+    				// consent,
+    				// instructions, name, experience,
     				loop_node,
     				debrief,
     				comments
     			],
     			on_finish() {
     				// record proportion correct as unstructured data
-    				console.log("yo yo"); // jsPsych.data.displayData();
-    				// console.log(JSON.stringify(jsPsych.data.get().json(true)));
+    				console.log("yo yo"); // console.log(JSON.stringify(jsPsych.data.get().json(true)));
 
     				$$invalidate(0, step = "finish");
-    			}, // jsPsych.data.displayData();
+    				jsPsych.data.displayData();
+    			}, // console.log(JSON.stringify(jsPsych.data.get().json(true)));
     			
     		});
     	});
