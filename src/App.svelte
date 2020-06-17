@@ -207,6 +207,9 @@
     onMount(() => {
         //data.load(data, rows * cols);
         //jsPsych = window.jsPsych
+        const client = stitch.Stitch.initializeDefaultAppClient('dumbledr-qfkje');
+        const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db("dumbledr");
+        const results = db.collection("results");
 
         jsPsych.init({
             display_element: 'task',
@@ -224,12 +227,16 @@
             timeline: [welcome_block, consent,
                 instructions, name, experience,
                 loop_node, debrief, comments],
-            on_finish: function() {
+            on_finish: function(D) {
                 // record proportion correct as unstructured data
-                console.log('yo yo');
+                console.log('yo yo', D);
                 step = "finish";
-                // jsPsych.data.displayData();
-                // console.log(JSON.stringify(jsPsych.data.get().json(true)));
+                client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                    .then(user =>
+                        results.insertOne({owner_id: client.auth.user.id, result: JSON.parse(JSON.stringify(jsPsych.data.get().json(true)))})
+                    ).catch(err => {
+                        console.error(err)
+                    });
             },
         });
     })
