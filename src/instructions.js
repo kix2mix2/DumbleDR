@@ -30,7 +30,7 @@ export const welcome = "<div class=\"text-block\">" +
                 "                                </p>\n" +
                 "\n" +
                 "                                <p>\n" +
-                "                                    The task takes between about 30 to 60 minutes.\n" +
+                "                                    The task takes between 30 and 60 minutes.\n" +
                 "\n" +
                 "                                </p>" +
     "<p>The study only works in <b>Google Chrome</b> and <b>Mozilla Firefox</b>.</p>" +
@@ -126,6 +126,7 @@ export const rule_3 = "<div class=\"text-block\"> \n" +
                 "<h3>Rule 3:</h3>\n" +
                 "\n" +
                "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points. If you want you may even leave a comment. </p>\n" +
+                "<p><b>We highly recommend you to use this feature!</b></p>"+
                 "<video class = 'instructions' controls autoplay loop>\n" +
                 "  <source src=\"./images/rule_3.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +

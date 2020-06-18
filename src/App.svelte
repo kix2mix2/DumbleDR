@@ -81,7 +81,7 @@ import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time
           },
                 {
             prompt: "<div class='text-block'> <b>Where do you primarily work? </b></div>",
-            options: ['Research / Academia', 'Research / Other','Non-research related job','Student','None of the above','Prefer not to say'],
+            options: ['Research / Academia', 'Research / Other','Analysis/STEM work', 'Student','None of the above','Prefer not to say'],
             horizontal: true,
             required: true,
             name: 'job'
@@ -138,12 +138,15 @@ import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time
         // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
         on_finish: function(data) {
+
             data.dataset = $projections.map(p => {
                 return {
                     "name": p.name,
                     "pos": p.pos_count,
                     "neg": p.neg_count,
                     "comment": p.comment,
+                    "position": p.position,
+
                 }
             });
             step = 'debrief'
@@ -165,7 +168,7 @@ let trial_feedback = {
 
 let cont = {
         type: "html-button-response",
-        stimulus: "Another trial?",
+        stimulus: "Another trial? <br> *The experiment will end after 12 trials, regardless of the choice. ",
         choices: ['Continue for more 🍻 & 🍬! 😍', 'End experiment 😢😢😭'],
         prompt: "<br><br>"
     };

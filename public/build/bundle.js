@@ -44754,7 +44754,7 @@ var app = (function () {
                     "                                </p>\n" +
                     "\n" +
                     "                                <p>\n" +
-                    "                                    The task takes between about 30 to 60 minutes.\n" +
+                    "                                    The task takes between 30 and 60 minutes.\n" +
                     "\n" +
                     "                                </p>" +
         "<p>The study only works in <b>Google Chrome</b> and <b>Mozilla Firefox</b>.</p>" +
@@ -44850,6 +44850,7 @@ var app = (function () {
                     "<h3>Rule 3:</h3>\n" +
                     "\n" +
                    "<p>Each scatterplot can be enlarged for better analysis! You can also zoom in and hover over the points. If you want you may even leave a comment. </p>\n" +
+                    "<p><b>We highly recommend you to use this feature!</b></p>"+
                     "<video class = 'instructions' controls autoplay loop>\n" +
                     "  <source src=\"./images/rule_3.webm\" type=\"video/webm\">\n" +
                     "Your browser does not support the video tag. \n" +
@@ -44907,7 +44908,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (276:0) {#if $hover}
+    // (279:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44926,16 +44927,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 283, 8, 9912);
+    			add_location(img, file$4, 286, 8, 10027);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 282, 4, 9878);
+    			add_location(div0, file$4, 285, 4, 9993);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 276, 0, 9656);
+    			add_location(div1, file$4, 279, 0, 9771);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44983,14 +44984,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(276:0) {#if $hover}",
+    		source: "(279:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:32) 
+    // (311:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44998,7 +44999,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 308, 8, 11051);
+    			add_location(div, file$4, 311, 8, 11166);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45015,14 +45016,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(308:32) ",
+    		source: "(311:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:31) 
+    // (304:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -45055,17 +45056,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 302, 12, 10583);
+    			add_location(iframe, file$4, 305, 12, 10698);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 302, 206, 10777);
-    			add_location(p, file$4, 302, 203, 10774);
+    			add_location(a, file$4, 305, 206, 10892);
+    			add_location(p, file$4, 305, 203, 10889);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 303, 16, 10880);
+    			add_location(span0, file$4, 306, 16, 10995);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 303, 79, 10943);
-    			add_location(h1, file$4, 303, 12, 10876);
+    			add_location(span1, file$4, 306, 79, 11058);
+    			add_location(h1, file$4, 306, 12, 10991);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 301, 8, 10533);
+    			add_location(div, file$4, 304, 8, 10648);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45090,14 +45091,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(301:31) ",
+    		source: "(304:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (289:4) {#if step == "dr_grid"}
+    // (292:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45119,7 +45120,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 289, 8, 10153);
+    			add_location(div, file$4, 292, 8, 10268);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45170,14 +45171,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(289:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(292:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (296:8) {:else}
+    // (299:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45190,8 +45191,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 296, 12, 10397);
-    			add_location(center, file$4, 297, 12, 10436);
+    			add_location(div, file$4, 299, 12, 10512);
+    			add_location(center, file$4, 300, 12, 10551);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45212,14 +45213,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(296:8) {:else}",
+    		source: "(299:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (291:8) {#if $ready}
+    // (294:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45234,7 +45235,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 291, 12, 10224);
+    			add_location(div, file$4, 294, 12, 10339);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45265,7 +45266,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(291:8) {#if $ready}",
+    		source: "(294:8) {#if $ready}",
     		ctx
     	});
 
@@ -45327,13 +45328,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 271, 4, 9610);
+    			add_location(h2, file$4, 274, 4, 9725);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 270, 0, 9600);
+    			add_location(nav, file$4, 273, 0, 9715);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 287, 0, 10047);
+    			add_location(main, file$4, 290, 0, 10162);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45524,7 +45525,7 @@ var app = (function () {
     				options: [
     					"Research / Academia",
     					"Research / Other",
-    					"Non-research related job",
+    					"Analysis/STEM work",
     					"Student",
     					"None of the above",
     					"Prefer not to say"
@@ -45611,7 +45612,8 @@ var app = (function () {
     					"name": p.name,
     					"pos": p.pos_count,
     					"neg": p.neg_count,
-    					"comment": p.comment
+    					"comment": p.comment,
+    					"position": p.position
     				};
     			});
 
@@ -45641,7 +45643,7 @@ var app = (function () {
 
     	let cont = {
     		type: "html-button-response",
-    		stimulus: "Another trial?",
+    		stimulus: "Another trial? <br> *The experiment will end after 12 trials, regardless of the choice. ",
     		choices: ["Continue for more 🍻 & 🍬! 😍", "End experiment 😢😢😭"],
     		prompt: "<br><br>"
     	};
