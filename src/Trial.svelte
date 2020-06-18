@@ -25,7 +25,13 @@
 <section>
     <header>
         <span>show datapoints as: </span>
-        <form on:change={() => console.log('yo', $vis_type) }>
+        <form on:change={() => {
+            console.log('yo', $vis_type);
+            if($vis_type =='circle'){
+                $color_time.push(performance.now())
+            }
+            else{ $image_time.push(performance.now()) }
+        }}>
                 <input type="radio" bind:group={$vis_type} value="image"> Image
                 <input type="radio" bind:group={$vis_type} value="circle"> Circles
 

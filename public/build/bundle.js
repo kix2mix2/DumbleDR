@@ -21634,8 +21634,8 @@ var app = (function () {
     			span = element("span");
     			t = text(" Close");
     			attr_dev(span, "class", "mdi mdi-close");
-    			add_location(span, file$2, 120, 55, 3812);
-    			add_location(button_1, file$2, 120, 12, 3769);
+    			add_location(span, file$2, 120, 55, 3810);
+    			add_location(button_1, file$2, 120, 12, 3767);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button_1, anchor);
@@ -21680,9 +21680,9 @@ var app = (function () {
     			attr_dev(span, "class", "mdi");
     			toggle_class(span, "mdi-arrow-expand", !/*open_dialog*/ ctx[8]);
     			toggle_class(span, "mdi-arrow-collapse", /*open_dialog*/ ctx[8]);
-    			add_location(span, file$2, 115, 12, 3588);
+    			add_location(span, file$2, 115, 12, 3586);
     			attr_dev(button_1, "title", "expand");
-    			add_location(button_1, file$2, 108, 8, 3379);
+    			add_location(button_1, file$2, 108, 8, 3378);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button_1, anchor);
@@ -21738,7 +21738,7 @@ var app = (function () {
     			attr_dev(path, "d", path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]).join("L")}Z`);
     			attr_dev(path, "fill", "transparent");
     			attr_dev(path, "title", path_title_value = /*point*/ ctx[46].class);
-    			add_location(path, file$2, 141, 16, 4513);
+    			add_location(path, file$2, 141, 16, 4511);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -21800,7 +21800,7 @@ var app = (function () {
     			: "none");
 
     			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[20](/*point*/ ctx[46].class));
-    			add_location(circle, file$2, 170, 20, 5803);
+    			add_location(circle, file$2, 170, 20, 5801);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -21859,7 +21859,7 @@ var app = (function () {
     			: null);
 
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 160, 20, 5327);
+    			add_location(image, file$2, 160, 20, 5325);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, image, anchor);
@@ -21926,7 +21926,7 @@ var app = (function () {
     			g_1 = svg_element("g");
     			if (if_block1) if_block1.c();
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 158, 12, 5196);
+    			add_location(g_1, file$2, 158, 12, 5194);
     		},
     		m: function mount(target, anchor) {
     			if (if_block0) if_block0.m(target, anchor);
@@ -22072,9 +22072,9 @@ var app = (function () {
     			attr_dev(image, "height", "20");
     			attr_dev(image, "filter", "url(#matrix)");
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 183, 16, 6336);
+    			add_location(image, file$2, 183, 16, 6334);
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 182, 12, 6252);
+    			add_location(g_1, file$2, 182, 12, 6250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g_1, anchor);
@@ -22144,10 +22144,10 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			attr_dev(div0, "class", "modal-content svelte-7t2ez2");
     			set_style(div0, "width", "fit-content");
-    			add_location(div0, file$2, 221, 8, 7664);
+    			add_location(div0, file$2, 221, 8, 7662);
     			attr_dev(div1, "id", "modal");
     			attr_dev(div1, "class", "modal svelte-7t2ez2");
-    			add_location(div1, file$2, 220, 4, 7625);
+    			add_location(div1, file$2, 220, 4, 7623);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22323,7 +22323,7 @@ var app = (function () {
     			t9 = space();
     			if (if_block3) if_block3.c();
     			attr_dev(span0, "class", "mdi mdi-magnify-scan");
-    			add_location(span0, file$2, 105, 12, 3289);
+    			add_location(span0, file$2, 105, 12, 3288);
     			button0.disabled = button0_disabled_value = !/*is_zoomed*/ ctx[7];
     			attr_dev(button0, "title", "reset zoom");
     			add_location(button0, file$2, 95, 8, 2944);
@@ -22334,36 +22334,36 @@ var app = (function () {
     			attr_dev(feColorMatrix, "type", "matrix");
     			attr_dev(feColorMatrix, "in", "SourceGraphic");
     			attr_dev(feColorMatrix, "values", "0.1 0 0 0 0\n                            0 0.8 0 0 0\n                            0 0 1.7 0 0\n                            0 0 0 1 0 ");
-    			add_location(feColorMatrix, file$2, 131, 16, 4148);
+    			add_location(feColorMatrix, file$2, 131, 16, 4146);
     			attr_dev(filter, "id", "matrix");
-    			add_location(filter, file$2, 130, 12, 4111);
-    			add_location(defs, file$2, 129, 8, 4092);
-    			add_location(g_1, file$2, 138, 8, 4405);
+    			add_location(filter, file$2, 130, 12, 4109);
+    			add_location(defs, file$2, 129, 8, 4090);
+    			add_location(g_1, file$2, 138, 8, 4403);
     			attr_dev(svg, "width", /*width*/ ctx[2]);
     			attr_dev(svg, "height", /*height*/ ctx[3]);
     			attr_dev(svg, "class", "svelte-7t2ez2");
-    			add_location(svg, file$2, 124, 4, 3972);
+    			add_location(svg, file$2, 124, 4, 3970);
     			set_style(div0, "text-align", "left");
-    			add_location(div0, file$2, 197, 8, 6760);
+    			add_location(div0, file$2, 197, 8, 6758);
     			set_style(div1, "text-align", "center");
-    			add_location(div1, file$2, 196, 4, 6718);
+    			add_location(div1, file$2, 196, 4, 6716);
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
-    			add_location(span1, file$2, 206, 16, 7125);
-    			add_location(button1, file$2, 205, 12, 7063);
+    			add_location(span1, file$2, 206, 16, 7123);
+    			add_location(button1, file$2, 205, 12, 7061);
     			attr_dev(span2, "class", "mdi mdi-check");
-    			add_location(span2, file$2, 210, 83, 7358);
+    			add_location(span2, file$2, 210, 83, 7356);
     			set_style(button2, "float", "right");
-    			add_location(button2, file$2, 210, 16, 7291);
-    			add_location(textarea, file$2, 211, 16, 7414);
+    			add_location(button2, file$2, 210, 16, 7289);
+    			add_location(textarea, file$2, 211, 16, 7412);
     			attr_dev(div2, "class", "comment dropdown-content svelte-7t2ez2");
-    			add_location(div2, file$2, 208, 12, 7210);
+    			add_location(div2, file$2, 208, 12, 7208);
     			attr_dev(div3, "class", "dropdown svelte-7t2ez2");
     			toggle_class(div3, "active", /*comment_menu*/ ctx[9]);
-    			add_location(div3, file$2, 204, 8, 6999);
+    			add_location(div3, file$2, 204, 8, 6997);
     			set_style(small1, "position", "absolute");
     			set_style(small1, "bottom", "0px");
     			set_style(small1, "right", "5px");
-    			add_location(small1, file$2, 203, 4, 6930);
+    			add_location(small1, file$2, 203, 4, 6928);
     			attr_dev(div4, "class", "card svelte-7t2ez2");
     			set_style(div4, "background-color", /*$bgScale*/ ctx[16](-/*data*/ ctx[0].pos_count + /*data*/ ctx[0].neg_count));
     			add_location(div4, file$2, 88, 0, 2618);
@@ -40165,24 +40165,24 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
-    	child_ctx[19] = i;
+    	child_ctx[19] = list[i];
+    	child_ctx[21] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[20] = list[i];
+    	child_ctx[22] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[23] = list[i];
+    	child_ctx[25] = list[i];
     	return child_ctx;
     }
 
-    // (35:26) {#each available_points as a}
+    // (41:26) {#each available_points as a}
     function create_each_block_2(ctx) {
     	let span;
 
@@ -40190,20 +40190,20 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			attr_dev(span, "class", "mdi");
-    			toggle_class(span, "mdi-heart", /*a*/ ctx[23]);
-    			toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[23]);
-    			add_location(span, file$3, 35, 12, 1393);
+    			toggle_class(span, "mdi-heart", /*a*/ ctx[25]);
+    			toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[25]);
+    			add_location(span, file$3, 41, 12, 1577);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*available_points*/ 2) {
-    				toggle_class(span, "mdi-heart", /*a*/ ctx[23]);
+    				toggle_class(span, "mdi-heart", /*a*/ ctx[25]);
     			}
 
     			if (dirty & /*available_points*/ 2) {
-    				toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[23]);
+    				toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[25]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -40215,14 +40215,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(35:26) {#each available_points as a}",
+    		source: "(41:26) {#each available_points as a}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:8) {#if $vis_type == "circle"}
+    // (48:8) {#if $vis_type == "circle"}
     function create_if_block_1$1(ctx) {
     	let small;
     	let current;
@@ -40248,7 +40248,7 @@ var app = (function () {
 
     			set_style(small, "display", "flex");
     			set_style(small, "justify-content", "center");
-    			add_location(small, file$3, 43, 12, 1671);
+    			add_location(small, file$3, 49, 12, 1855);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, small, anchor);
@@ -40260,7 +40260,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*classes, $colorScale*/ 36) {
+    			if (dirty & /*classes, $colorScale*/ 132) {
     				each_value_1 = /*classes*/ ctx[2];
     				validate_each_argument(each_value_1);
     				let i;
@@ -40316,20 +40316,20 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(42:8) {#if $vis_type == \\\"circle\\\"}",
+    		source: "(48:8) {#if $vis_type == \\\"circle\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:16) {#each classes as c}
+    // (51:16) {#each classes as c}
     function create_each_block_1$1(ctx) {
     	let div;
     	let span;
     	let t0;
     	let t1;
-    	let t2_value = /*c*/ ctx[20] + "";
+    	let t2_value = /*c*/ ctx[22] + "";
     	let t2;
     	let div_transition;
     	let current;
@@ -40341,11 +40341,11 @@ var app = (function () {
     			t0 = text("•");
     			t1 = space();
     			t2 = text(t2_value);
-    			set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[20]));
-    			add_location(span, file$3, 45, 92, 1856);
+    			set_style(span, "color", /*$colorScale*/ ctx[7](/*c*/ ctx[22]));
+    			add_location(span, file$3, 51, 92, 2040);
     			set_style(div, "display", "inline-block");
     			set_style(div, "padding", "0px .4rem");
-    			add_location(div, file$3, 45, 20, 1784);
+    			add_location(div, file$3, 51, 20, 1968);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40356,11 +40356,11 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*$colorScale, classes*/ 36) {
-    				set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[20]));
+    			if (!current || dirty & /*$colorScale, classes*/ 132) {
+    				set_style(span, "color", /*$colorScale*/ ctx[7](/*c*/ ctx[22]));
     			}
 
-    			if ((!current || dirty & /*classes*/ 4) && t2_value !== (t2_value = /*c*/ ctx[20] + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*classes*/ 4) && t2_value !== (t2_value = /*c*/ ctx[22] + "")) set_data_dev(t2, t2_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -40387,14 +40387,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(45:16) {#each classes as c}",
+    		source: "(51:16) {#each classes as c}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:8) {#if $ready}
+    // (58:8) {#if $ready}
     function create_if_block$3(ctx) {
     	let each_blocks = [];
     	let each_1_lookup = new Map();
@@ -40402,7 +40402,7 @@ var app = (function () {
     	let current;
     	let each_value = /*$projections*/ ctx[3];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*p*/ ctx[17];
+    	const get_key = ctx => /*p*/ ctx[19];
     	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -40428,7 +40428,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*tooltip, $projections, width, height, margin*/ 905) {
+    			if (dirty & /*tooltip, $projections, width, height, margin*/ 3593) {
     				const each_value = /*$projections*/ ctx[3];
     				validate_each_argument(each_value);
     				group_outros();
@@ -40468,14 +40468,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(52:8) {#if $ready}",
+    		source: "(58:8) {#if $ready}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:12) {#each $projections as p, i (p)}
+    // (59:12) {#each $projections as p, i (p)}
     function create_each_block$3(key_1, ctx) {
     	let div;
     	let vis;
@@ -40487,10 +40487,10 @@ var app = (function () {
     	vis = new Vis({
     			props: {
     				tooltip: /*tooltip*/ ctx[0],
-    				data: /*p*/ ctx[17],
-    				width: /*width*/ ctx[7],
-    				height: /*height*/ ctx[8],
-    				margin: /*margin*/ ctx[9]
+    				data: /*p*/ ctx[19],
+    				width: /*width*/ ctx[9],
+    				height: /*height*/ ctx[10],
+    				margin: /*margin*/ ctx[11]
     			},
     			$$inline: true
     		});
@@ -40503,7 +40503,7 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			t = space();
     			set_style(div, "margin", "0px");
-    			add_location(div, file$3, 53, 12, 2091);
+    			add_location(div, file$3, 59, 12, 2275);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -40515,9 +40515,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const vis_changes = {};
     			if (dirty & /*tooltip*/ 1) vis_changes.tooltip = /*tooltip*/ ctx[0];
-    			if (dirty & /*$projections*/ 8) vis_changes.data = /*p*/ ctx[17];
+    			if (dirty & /*$projections*/ 8) vis_changes.data = /*p*/ ctx[19];
 
-    			if (dirty & /*$$scope*/ 67108864) {
+    			if (dirty & /*$$scope*/ 268435456) {
     				vis_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40553,7 +40553,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(53:12) {#each $projections as p, i (p)}",
+    		source: "(59:12) {#each $projections as p, i (p)}",
     		ctx
     	});
 
@@ -40592,7 +40592,7 @@ var app = (function () {
     	}
 
     	let if_block0 = /*$vis_type*/ ctx[4] == "circle" && create_if_block_1$1(ctx);
-    	let if_block1 = /*$ready*/ ctx[6] && create_if_block$3(ctx);
+    	let if_block1 = /*$ready*/ ctx[8] && create_if_block$3(ctx);
 
     	const block = {
     		c: function create() {
@@ -40627,22 +40627,22 @@ var app = (function () {
     			attr_dev(input0, "type", "radio");
     			input0.__value = "image";
     			input0.value = input0.__value;
-    			/*$$binding_groups*/ ctx[11][0].push(input0);
-    			add_location(input0, file$3, 28, 16, 923);
+    			/*$$binding_groups*/ ctx[13][0].push(input0);
+    			add_location(input0, file$3, 34, 16, 1107);
     			attr_dev(input1, "type", "radio");
     			input1.__value = "circle";
     			input1.value = input1.__value;
-    			/*$$binding_groups*/ ctx[11][0].push(input1);
-    			add_location(input1, file$3, 29, 16, 1003);
+    			/*$$binding_groups*/ ctx[13][0].push(input1);
+    			add_location(input1, file$3, 35, 16, 1187);
     			add_location(form, file$3, 27, 8, 852);
-    			add_location(br, file$3, 37, 8, 1492);
+    			add_location(br, file$3, 43, 8, 1676);
     			attr_dev(span1, "class", "mdi mdi-sort");
-    			add_location(span1, file$3, 40, 11, 1573);
-    			add_location(button, file$3, 38, 8, 1505);
+    			add_location(span1, file$3, 46, 11, 1757);
+    			add_location(button, file$3, 44, 8, 1689);
     			attr_dev(header, "class", "svelte-1ezfhin");
     			add_location(header, file$3, 25, 4, 793);
     			attr_dev(div, "class", "vis_list svelte-1ezfhin");
-    			add_location(div, file$3, 50, 4, 1990);
+    			add_location(div, file$3, 56, 4, 2174);
     			add_location(section, file$3, 24, 0, 779);
     		},
     		l: function claim(nodes) {
@@ -40681,10 +40681,10 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "change", /*input0_change_handler*/ ctx[10]),
-    					listen_dev(input1, "change", /*input1_change_handler*/ ctx[12]),
-    					listen_dev(form, "change", /*change_handler*/ ctx[13], false, false, false),
-    					listen_dev(button, "click", /*click_handler*/ ctx[14], false, false, false)
+    					listen_dev(input0, "change", /*input0_change_handler*/ ctx[12]),
+    					listen_dev(input1, "change", /*input1_change_handler*/ ctx[14]),
+    					listen_dev(form, "change", /*change_handler*/ ctx[15], false, false, false),
+    					listen_dev(button, "click", /*click_handler*/ ctx[16], false, false, false)
     				];
 
     				mounted = true;
@@ -40746,11 +40746,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (/*$ready*/ ctx[6]) {
+    			if (/*$ready*/ ctx[8]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*$ready*/ 64) {
+    					if (dirty & /*$ready*/ 256) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -40782,8 +40782,8 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(section);
-    			/*$$binding_groups*/ ctx[11][0].splice(/*$$binding_groups*/ ctx[11][0].indexOf(input0), 1);
-    			/*$$binding_groups*/ ctx[11][0].splice(/*$$binding_groups*/ ctx[11][0].indexOf(input1), 1);
+    			/*$$binding_groups*/ ctx[13][0].splice(/*$$binding_groups*/ ctx[13][0].indexOf(input0), 1);
+    			/*$$binding_groups*/ ctx[13][0].splice(/*$$binding_groups*/ ctx[13][0].indexOf(input1), 1);
     			destroy_each(each_blocks, detaching);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
@@ -40807,18 +40807,24 @@ var app = (function () {
     	let $projections;
     	let $pos_count;
     	let $vis_type;
+    	let $color_time;
+    	let $image_time;
     	let $colorScale;
     	let $ready;
     	validate_store(projections, "projections");
     	component_subscribe($$self, projections, $$value => $$invalidate(3, $projections = $$value));
     	validate_store(pos_count, "pos_count");
-    	component_subscribe($$self, pos_count, $$value => $$invalidate(15, $pos_count = $$value));
+    	component_subscribe($$self, pos_count, $$value => $$invalidate(17, $pos_count = $$value));
     	validate_store(vis_type, "vis_type");
     	component_subscribe($$self, vis_type, $$value => $$invalidate(4, $vis_type = $$value));
+    	validate_store(color_time, "color_time");
+    	component_subscribe($$self, color_time, $$value => $$invalidate(5, $color_time = $$value));
+    	validate_store(image_time, "image_time");
+    	component_subscribe($$self, image_time, $$value => $$invalidate(6, $image_time = $$value));
     	validate_store(colorScale, "colorScale");
-    	component_subscribe($$self, colorScale, $$value => $$invalidate(5, $colorScale = $$value));
+    	component_subscribe($$self, colorScale, $$value => $$invalidate(7, $colorScale = $$value));
     	validate_store(ready, "ready");
-    	component_subscribe($$self, ready, $$value => $$invalidate(6, $ready = $$value));
+    	component_subscribe($$self, ready, $$value => $$invalidate(8, $ready = $$value));
     	let width = 250;
     	let height = 250;
     	let margin = 20;
@@ -40849,7 +40855,15 @@ var app = (function () {
     		vis_type.set($vis_type);
     	}
 
-    	const change_handler = () => console.log("yo", $vis_type);
+    	const change_handler = () => {
+    		console.log("yo", $vis_type);
+
+    		if ($vis_type == "circle") {
+    			$color_time.push(performance.now());
+    		} else {
+    			$image_time.push(performance.now());
+    		}
+    	};
 
     	const click_handler = () => {
     		data.sort_by_pos();
@@ -40889,14 +40903,16 @@ var app = (function () {
     		$projections,
     		$pos_count,
     		$vis_type,
+    		$color_time,
+    		$image_time,
     		$colorScale,
     		$ready
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("width" in $$props) $$invalidate(7, width = $$props.width);
-    		if ("height" in $$props) $$invalidate(8, height = $$props.height);
-    		if ("margin" in $$props) $$invalidate(9, margin = $$props.margin);
+    		if ("width" in $$props) $$invalidate(9, width = $$props.width);
+    		if ("height" in $$props) $$invalidate(10, height = $$props.height);
+    		if ("margin" in $$props) $$invalidate(11, margin = $$props.margin);
     		if ("tooltip" in $$props) $$invalidate(0, tooltip = $$props.tooltip);
     		if ("available_points" in $$props) $$invalidate(1, available_points = $$props.available_points);
     		if ("classes" in $$props) $$invalidate(2, classes = $$props.classes);
@@ -40913,7 +40929,7 @@ var app = (function () {
     			 $$invalidate(2, classes = Array.from(new Set($projections[0].map(d => d.class))));
     		}
 
-    		if ($$self.$$.dirty & /*$pos_count*/ 32768) {
+    		if ($$self.$$.dirty & /*$pos_count*/ 131072) {
     			 update();
     		}
     	};
@@ -40924,6 +40940,8 @@ var app = (function () {
     		classes,
     		$projections,
     		$vis_type,
+    		$color_time,
+    		$image_time,
     		$colorScale,
     		$ready,
     		width,
