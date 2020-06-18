@@ -289,8 +289,8 @@
             show_progress_bar: true,
             auto_update_progress_bar: true,
             timeline: [welcome_block,
-                // consent,
-                // instructions, name, experience,
+                consent,
+                instructions, name, experience,
                 loop_node, debrief, comments],
             on_finish: function(D) {
                 // record proportion correct as unstructured data
@@ -302,8 +302,8 @@
                     ).catch(err => {
                         console.error(err)
                     });
-                jsPsych.data.displayData();
-                console.log(jsPsych.data.get().values());
+                // jsPsych.data.displayData();
+                // console.log(jsPsych.data.get().values());
             },
         });
     });
