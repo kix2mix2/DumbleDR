@@ -11,7 +11,7 @@ import settings from "./settings.json";
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
 
-    import { dataset, data, hover, images, projections, ready } from "./stores.js";
+    import { sort_time, dataset, data, hover, images, projections, ready } from "./stores.js";
     import Vis from "./Vis.svelte";
     import Trial from "./Trial.svelte";
 
@@ -137,15 +137,19 @@ import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time
         choices: ['Rating complete!'],
         // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
-        on_finish: function(data) {
+        on_finish: function(dd) {
 
-            data.dataset = $projections.map(p => {
+            console.log(sort_time);
+            dd.sort_time = sort_time;
+            dd.dataset = $projections.map(p => {
+
                 return {
                     "name": p.name,
                     "pos": p.pos_count,
                     "neg": p.neg_count,
                     "comment": p.comment,
                     "position": p.position,
+                    "click_enlarge": p.click_enlarge,
 
                 }
             });
@@ -168,8 +172,8 @@ let trial_feedback = {
 
 let cont = {
         type: "html-button-response",
-        stimulus: "Another trial? <br> *The experiment will end after 12 trials, regardless of the choice. ",
-        choices: ['Continue for more 🍻 & 🍬! 😍', 'End experiment 😢😢😭'],
+        stimulus: "Another round? <br> *The experiment will end after 12 rounds, regardless of the choice. ",
+        choices: ['Continue for more <img src="./images/beer.svg" alt="beer" height="15px"> & <img src="./images/candy.svg" alt="candy" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
     };
 
@@ -264,9 +268,10 @@ var counts = 0;
                         console.error(err)
                     });
                 jsPsych.data.displayData();
+                console.log(jsPsych.data.get().values());
             },
         });
-    })
+    });
 
     let tooltip
 </script>
