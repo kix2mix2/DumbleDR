@@ -11,7 +11,7 @@
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
 
-    import { dataset, data, hover, images, projections, ready } from "./stores.js";
+    import { sort_time, dataset, data, hover, images, projections, ready } from "./stores.js";
     import Vis from "./Vis.svelte";
     import Trial from "./Trial.svelte";
 
@@ -176,13 +176,14 @@
                 settings_collection.updateOne({}, {$set: update});
             }
 
-            data.dataset = $projections.map(p => {
+        data.dataset = $projections.map(p => {
                 return {
                     "name": p.name,
                     "pos": p.pos_count,
                     "neg": p.neg_count,
                     "comment": p.comment,
                     "position": p.position,
+                    "click_enlarge": p.click_enlarge,
                 }
             });
             step = 'debrief'
@@ -204,8 +205,8 @@
 
     let cont = {
         type: "html-button-response",
-        stimulus: "Another trial? <br> *The experiment will end after 12 trials, regardless of the choice. ",
-        choices: ['Continue for more 🍻 & 🍬! 😍', 'End experiment 😢😢😭'],
+        stimulus: "Another round? <br> *The experiment will end after 12 rounds, regardless of the choice. ",
+        choices: ['Continue for more <img src="./images/beer.svg" alt="beer" height="15px"> & <img src="./images/candy.svg" alt="candy" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
     };
 
@@ -298,9 +299,10 @@
                         console.error(err)
                     });
                 jsPsych.data.displayData();
+                console.log(jsPsych.data.get().values());
             },
         });
-    })
+    });
 
     let tooltip
 </script>

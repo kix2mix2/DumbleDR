@@ -13,7 +13,7 @@ function createCount(N) {
 }
 
 function createData(n) {
-    const D = {projections: [], images: [], dataset: null, hover: null};
+    const D = {projections: [], images: [], dataset: null, hover: null, sort_time: []};
     
     const { subscribe, set, update } = writable(D);
     return {
@@ -27,6 +27,7 @@ function createData(n) {
             neg_count.set(10);
             D.ready = false;
             D.dataset = dataset;
+            D.sort_time = [];
             /* paths.then(res => {
                 store.set_projections(res)
             }); */
@@ -52,10 +53,11 @@ function createData(n) {
                         "img": d.filename,
                     }
                 })
-                result.name = r.name
+                result.name = r.name;
                 result.pos_count = 0;
                 result.neg_count = 0;
                 result.comment = "";
+                result.click_enlarge = [performance.now()];
                 result.position = i;
                 return result
             })
@@ -72,7 +74,7 @@ function createData(n) {
             D.projections.forEach((d, i) => d.position = new_positions[i]); */
             //console.log(D.projections)
             const newD = D.projections.sort((a, b) => d3.descending(a.pos_count - a.neg_count, b.pos_count - b.neg_count));
-
+            D.sort_time.push(performance.now());
             //if (!d3.zip(newD.map(d => d.name), D.projections.map(d => d.name)).map(([a, b]) => a == b).reduce((a, b) => a && b))
             D.projections = newD;
             return D;
@@ -90,6 +92,9 @@ export const ready = derived(data, $data => $data.ready);
 export const projections = derived(data, $data => $data.projections || []);
 export const hover = derived(data, $data => $data.hover);
 export const dataset = derived(data, $data => $data.dataset);
+
+export const sort_time = derived(data, $data => $data.sort_time);
+
 
 
 export let colorScale = readable(d3.scaleOrdinal(d3.schemeDark2));

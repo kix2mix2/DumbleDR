@@ -33,7 +33,9 @@
             <span class="mdi" class:mdi-heart={a} class:mdi-heart-outline={!a}></span>
         {/each}
         <br>
-        <button on:click={() => data.sort_by_pos()}><span class="mdi mdi-sort"></span> Sort</button>
+        <button on:click={() => {
+            data.sort_by_pos()
+        }}><span class="mdi mdi-sort"></span> Sort</button>
         {#if $vis_type == "circle"}
             <small style="display: flex; justify-content: center;">
                 {#each classes as c}
