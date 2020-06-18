@@ -21630,8 +21630,8 @@ var app = (function () {
     			span = element("span");
     			t = text(" Close");
     			attr_dev(span, "class", "mdi mdi-close");
-    			add_location(span, file$2, 122, 55, 3877);
-    			add_location(button_1, file$2, 122, 12, 3834);
+    			add_location(span, file$2, 122, 55, 3868);
+    			add_location(button_1, file$2, 122, 12, 3825);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button_1, anchor);
@@ -21676,9 +21676,9 @@ var app = (function () {
     			attr_dev(span, "class", "mdi");
     			toggle_class(span, "mdi-arrow-expand", !/*open_dialog*/ ctx[8]);
     			toggle_class(span, "mdi-arrow-collapse", /*open_dialog*/ ctx[8]);
-    			add_location(span, file$2, 117, 12, 3653);
+    			add_location(span, file$2, 117, 12, 3644);
     			attr_dev(button_1, "title", "expand");
-    			add_location(button_1, file$2, 108, 8, 3382);
+    			add_location(button_1, file$2, 108, 8, 3379);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button_1, anchor);
@@ -21734,7 +21734,7 @@ var app = (function () {
     			attr_dev(path, "d", path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]).join("L")}Z`);
     			attr_dev(path, "fill", "transparent");
     			attr_dev(path, "title", path_title_value = /*point*/ ctx[46].class);
-    			add_location(path, file$2, 143, 16, 4578);
+    			add_location(path, file$2, 143, 16, 4569);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -21796,7 +21796,7 @@ var app = (function () {
     			: "none");
 
     			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[20](/*point*/ ctx[46].class));
-    			add_location(circle, file$2, 172, 20, 5868);
+    			add_location(circle, file$2, 172, 20, 5859);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -21855,7 +21855,7 @@ var app = (function () {
     			: null);
 
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 162, 20, 5392);
+    			add_location(image, file$2, 162, 20, 5383);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, image, anchor);
@@ -21922,7 +21922,7 @@ var app = (function () {
     			g_1 = svg_element("g");
     			if (if_block1) if_block1.c();
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 160, 12, 5261);
+    			add_location(g_1, file$2, 160, 12, 5252);
     		},
     		m: function mount(target, anchor) {
     			if (if_block0) if_block0.m(target, anchor);
@@ -22068,9 +22068,9 @@ var app = (function () {
     			attr_dev(image, "height", "20");
     			attr_dev(image, "filter", "url(#matrix)");
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 185, 16, 6401);
+    			add_location(image, file$2, 185, 16, 6392);
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 184, 12, 6317);
+    			add_location(g_1, file$2, 184, 12, 6308);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g_1, anchor);
@@ -22140,10 +22140,10 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			attr_dev(div0, "class", "modal-content svelte-7t2ez2");
     			set_style(div0, "width", "fit-content");
-    			add_location(div0, file$2, 223, 8, 7729);
+    			add_location(div0, file$2, 223, 8, 7720);
     			attr_dev(div1, "id", "modal");
     			attr_dev(div1, "class", "modal svelte-7t2ez2");
-    			add_location(div1, file$2, 222, 4, 7690);
+    			add_location(div1, file$2, 222, 4, 7681);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22319,7 +22319,7 @@ var app = (function () {
     			t9 = space();
     			if (if_block3) if_block3.c();
     			attr_dev(span0, "class", "mdi mdi-magnify-scan");
-    			add_location(span0, file$2, 105, 12, 3292);
+    			add_location(span0, file$2, 105, 12, 3289);
     			button0.disabled = button0_disabled_value = !/*is_zoomed*/ ctx[7];
     			attr_dev(button0, "title", "reset zoom");
     			add_location(button0, file$2, 95, 8, 2944);
@@ -22330,36 +22330,36 @@ var app = (function () {
     			attr_dev(feColorMatrix, "type", "matrix");
     			attr_dev(feColorMatrix, "in", "SourceGraphic");
     			attr_dev(feColorMatrix, "values", "0.1 0 0 0 0\n                            0 0.8 0 0 0\n                            0 0 1.7 0 0\n                            0 0 0 1 0 ");
-    			add_location(feColorMatrix, file$2, 133, 16, 4213);
+    			add_location(feColorMatrix, file$2, 133, 16, 4204);
     			attr_dev(filter, "id", "matrix");
-    			add_location(filter, file$2, 132, 12, 4176);
-    			add_location(defs, file$2, 131, 8, 4157);
-    			add_location(g_1, file$2, 140, 8, 4470);
+    			add_location(filter, file$2, 132, 12, 4167);
+    			add_location(defs, file$2, 131, 8, 4148);
+    			add_location(g_1, file$2, 140, 8, 4461);
     			attr_dev(svg, "width", /*width*/ ctx[2]);
     			attr_dev(svg, "height", /*height*/ ctx[3]);
     			attr_dev(svg, "class", "svelte-7t2ez2");
-    			add_location(svg, file$2, 126, 4, 4037);
+    			add_location(svg, file$2, 126, 4, 4028);
     			set_style(div0, "text-align", "left");
-    			add_location(div0, file$2, 199, 8, 6825);
+    			add_location(div0, file$2, 199, 8, 6816);
     			set_style(div1, "text-align", "center");
-    			add_location(div1, file$2, 198, 4, 6783);
+    			add_location(div1, file$2, 198, 4, 6774);
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
-    			add_location(span1, file$2, 208, 16, 7190);
-    			add_location(button1, file$2, 207, 12, 7128);
+    			add_location(span1, file$2, 208, 16, 7181);
+    			add_location(button1, file$2, 207, 12, 7119);
     			attr_dev(span2, "class", "mdi mdi-check");
-    			add_location(span2, file$2, 212, 83, 7423);
+    			add_location(span2, file$2, 212, 83, 7414);
     			set_style(button2, "float", "right");
-    			add_location(button2, file$2, 212, 16, 7356);
-    			add_location(textarea, file$2, 213, 16, 7479);
+    			add_location(button2, file$2, 212, 16, 7347);
+    			add_location(textarea, file$2, 213, 16, 7470);
     			attr_dev(div2, "class", "comment dropdown-content svelte-7t2ez2");
-    			add_location(div2, file$2, 210, 12, 7275);
+    			add_location(div2, file$2, 210, 12, 7266);
     			attr_dev(div3, "class", "dropdown svelte-7t2ez2");
     			toggle_class(div3, "active", /*comment_menu*/ ctx[9]);
-    			add_location(div3, file$2, 206, 8, 7064);
+    			add_location(div3, file$2, 206, 8, 7055);
     			set_style(small1, "position", "absolute");
     			set_style(small1, "bottom", "0px");
     			set_style(small1, "right", "5px");
-    			add_location(small1, file$2, 205, 4, 6995);
+    			add_location(small1, file$2, 205, 4, 6986);
     			attr_dev(div4, "class", "card svelte-7t2ez2");
     			set_style(div4, "background-color", /*$bgScale*/ ctx[16](-/*data*/ ctx[0].pos_count + /*data*/ ctx[0].neg_count));
     			add_location(div4, file$2, 88, 0, 2618);
@@ -22677,13 +22677,14 @@ var app = (function () {
     	validate_slots("Vis", $$slots, []);
 
     	const click_handler = () => {
-    		// data.click_enlarge.push(performance.now());
+    		data$1.click_enlarge.push(performance.now());
     		select(g).transition().duration(350).call(zoom$1.transform, identity$a);
     	};
 
     	const click_handler_1 = () => {
     		//                console.log(performance.now());-->
-    		//                data.click_enlarge.push(performance.now())-->
+    		data$1.click_enlarge.push(performance.now());
+
     		$$invalidate(8, open_dialog = !open_dialog);
     	};
 

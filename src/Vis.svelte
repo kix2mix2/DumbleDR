@@ -97,7 +97,7 @@
             disabled={!is_zoomed}
             title="reset zoom"
             on:click={() => {
-                // data.click_enlarge.push(performance.now());
+                data.click_enlarge.push(performance.now());
                 d3.select(g)
                     .transition()
                     .duration(350)
@@ -110,7 +110,7 @@
             title="expand"
             on:click={() => {
 <!--                console.log(performance.now());-->
-<!--                data.click_enlarge.push(performance.now())-->
+                data.click_enlarge.push(performance.now());
 
                 open_dialog = !open_dialog
             }}
