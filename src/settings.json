@@ -2,7 +2,9 @@
  "settings": [
   {
    "name": "MNIST",
+   "count": 0,
    "description": "Dataset of handwritten digits",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "MNIST_size28_c6_ISM_n5.csv",
     "MNIST_size28_c6_GRP.csv",
@@ -33,6 +35,8 @@
   {
    "name": "fashionmnist",
    "description": "Dataset of 28x28 photos of fashion items (shoes, shirts etc.)",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+   "count": 0,
    "paths": [
     "fashionmnist_size50_c6_UMAP_n15_d0.1.csv",
     "fashionmnist_size50_c6_UMAP_n5_d0.5.csv",
@@ -62,7 +66,9 @@
   },
   {
    "name": "oxford_buildings",
+   "count": 0,
    "description": "Dataset of photos of buildings in Oxford takes by tourists.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "oxford_buildings_size200_c6_UMAP_n15_d0.8.csv",
     "oxford_buildings_size200_c6_SE_n7.csv",
@@ -92,7 +98,9 @@
   },
   {
    "name": "flowers",
+   "count": 0,
    "description": "Dataset of photos of different types of flowes.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "flowers_size200_c6_TSNE_p10.csv",
     "flowers_size200_c6_UMAP_n2_d0.8.csv",
@@ -122,7 +130,9 @@
   },
   {
    "name": "paintings",
+   "count": 0,
    "description": "Dataset of publicly available paintings on the website Art UK. The labels in this data correspond to objects in the picture.  ",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "paintings_size50_c10_UMAP_n15_d0.5.csv",
     "paintings_size50_c10_SE_n7.csv",
@@ -152,7 +162,9 @@
   },
   {
    "name": "yalefaces",
+   "count": 0,
    "description": "Dataset of 14 different people expressing various emotions.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "yalefaces_size200_call_MDS.csv",
     "yalefaces_size200_call_UMAP_n5_d0.5.csv",
@@ -182,7 +194,9 @@
   },
   {
    "name": "stanfordfaces",
+   "count": 0,
    "description": "Dataset of a 3D head photographed from different angles and with different lighting conditions.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "stanfordfaces_size50_call_UMAP_n5_d0.5.csv",
     "stanfordfaces_size50_call_UMAP_n15_d0.1.csv",
@@ -212,7 +226,9 @@
   },
   {
    "name": "Caltech_vehicles",
+   "count": 0,
    "description": "Photos of vehicles.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "Caltech_vehicles_size200_c6_UMAP_n15_d0.5.csv",
     "Caltech_vehicles_size200_c6_UMAP_n2_d0.5.csv",
@@ -242,7 +258,9 @@
   },
   {
    "name": "Caltech_plants",
+   "count": 0,
    "description": "Photos of plants.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "Caltech_plants_size200_c6_ISM_n5.csv",
     "Caltech_plants_size200_c6_TSNE_p10.csv",
@@ -272,7 +290,9 @@
   },
   {
    "name": "paris_buildings",
+   "count": 0,
    "description": "Dataset of photos of buildings in Paris takes by tourists.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "paris_buildings_size50_c6_UMAP_n5_d0.8.csv",
     "paris_buildings_size50_c6_ISM_n15.csv",
@@ -302,7 +322,9 @@
   },
   {
    "name": "coil-100",
+   "count": 0,
    "description": "Dataset of various objects photographed from different angles.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "coil-100_size50_c6_UMAP_n2_d0.5.csv",
     "coil-100_size50_c6_GRP.csv",
@@ -332,7 +354,9 @@
   },
   {
    "name": "Caltech_instruments",
+   "count": 0,
    "description": "Photos of instruments.",
+   "weights": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
    "paths": [
     "Caltech_instruments_size200_c6_UMAP_n7_d0.5.csv",
     "Caltech_instruments_size200_c6_UMAP_n7_d0.1.csv",

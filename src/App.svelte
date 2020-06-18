@@ -6,7 +6,7 @@
 
 <script>
 
-import settings from "./settings.json";
+    //import settings from "./settings.json";
 
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
@@ -16,18 +16,18 @@ import settings from "./settings.json";
     import Trial from "./Trial.svelte";
 
     import "jspsych";
-
     import "jspsych/plugins/jspsych-html-keyboard-response";
     import "jspsych/plugins/jspsych-html-button-response";
     import "jspsych/plugins/jspsych-survey-text.js";
     import "jspsych/plugins/jspsych-instructions.js"
-
-    // import "jspsych/plugins/jspsych-survey-multi-select.js";
     import "./jspsych-survey-multi-choice.js";
-import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
 
-    const paths = settings.settings[0].paths;
+    import WeightedList from "js-weighted-list";
+    //console.log(WeightedList)
 
+    import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time_text} from "./instructions.js";
+
+    //const paths = settings.settings[0].paths;
 
     const rows = 2;
     const cols = 4;
@@ -59,85 +59,122 @@ import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time
     };
 
     var name = {
-    type: 'survey-text',
-    questions: [
-      {prompt: '<div class=\"text-block\">Type in here your name or email. <br> ' +
-                  'This is only so we can contact you in case we have questions about your answers. <br>' +
-                  'You may also leave the input field empty if you don\'t want to be contacted further.</div>' , columns: 100,  name: 'Name'},
-    ],
-    randomize_question_order: false,
+        type: 'survey-text',
+        questions: [
+            {
+                prompt: '<div class=\"text-block\">Type in here your name or email. <br> ' +
+                    'This is only so we can contact you in case we have questions about your answers. <br>' +
+                    'You may also leave the input field empty if you don\'t want to be contacted further.</div>', 
+                columns: 100,  
+                name: 'Name'
+            },
+        ],
+        randomize_question_order: false,
         prompt: "<br><br>"
-  };
+    };
 
     var experience = {
         type: 'survey-multi-choice',
         questions: [
-          {
-            prompt: "<div class='text-block'> <b>What is the highest academic degree you graduated from? </b></div>",
-            options: ['High School', 'Bachelor','Master','PhD','Other'],
-            horizontal: true,
-            required: true,
-            name: 'degree'
-          },
-                {
-            prompt: "<div class='text-block'> <b>Where do you primarily work? </b></div>",
-            options: ['Research / Academia', 'Research / Other','Analysis/STEM work', 'Student','None of the above','Prefer not to say'],
-            horizontal: true,
-            required: true,
-            name: 'job'
-          },
-          {
-            prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
-            options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
-            horizontal: true,
-            required: true,
-            name: 'ML'
-          },
-          {
-            prompt: "<div class='text-block'> <b>What is your experience with Information Visualization?</b></div>",
-            options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
-            horizontal: true,
-            required: true,
-            name: 'infovis'
-          },
-                {
-            prompt: "<div class='text-block'> <b>What is your experience with Dimensionality Reduction?</b></div>",
-            options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
-            horizontal: true,
-            required: true,
-            name: 'dr'
-          },
-          {
-            prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
-            options: ["Never", "Yes, but only informally (in newspapers, social media etc.)", "I made scatterplots before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
-            horizontal: true,
-            required: true,
-            name: 'scatter'
-          }
+            {
+                prompt: "<div class='text-block'> <b>What is the highest academic degree you graduated from? </b></div>",
+                options: ['High School', 'Bachelor','Master','PhD','Other'],
+                horizontal: true,
+                required: true,
+                name: 'degree'
+            },
+            {
+                prompt: "<div class='text-block'> <b>Where do you primarily work? </b></div>",
+                options: ['Research / Academia', 'Research / Other','Analysis/STEM work', 'Student','None of the above','Prefer not to say'],
+                horizontal: true,
+                required: true,
+                name: 'job'
+            },
+            {
+                prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
+                options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+                horizontal: true,
+                required: true,
+                name: 'ML'
+            },
+            {
+                prompt: "<div class='text-block'> <b>What is your experience with Information Visualization?</b></div>",
+                options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+                horizontal: true,
+                required: true,
+                name: 'infovis'
+            },
+            {
+                prompt: "<div class='text-block'> <b>What is your experience with Dimensionality Reduction?</b></div>",
+                options: ["Never heard of this", "I know the basics", "I use it in my work", "I propose/research DR techniques", "Prefer not to say"],
+                horizontal: true,
+                required: true,
+                name: 'dr'
+            },
+            {
+                prompt: "<div class='text-block'> <b>Have you analysed scatterplots before?</b></div>",
+                options: ["Never", "Yes, but only informally (in newspapers, social media etc.)", "I made scatterplots before with my own data", "I'm an expert when it comes to scatterplots", "Prefer not to say"],
+                horizontal: true,
+                required: true,
+                name: 'scatter'
+            }
         ]
     };
 
     let step = null;
 
+
+
+    const client = stitch.Stitch.initializeDefaultAppClient('dumbledr-qfkje');
+    const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db("dumbledr");
+    const results = db.collection("results");
+    const settings_collection = db.collection("settings");
+
+    let settings = settings_collection.findOne({}).then(d => settings = d.settings);
+    $: console.log(settings)
+
+
+    let choosen_dataset;
+    let choosen_projections;
+
     let dr_grid = {
         type: "html-button-response",
         stimulus: () => {
-            const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
+
+
+            /* const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
             const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
+ */
+
+            /* const sample1 = c.weighted(settings,);
+            const sample =  */
+
+            const wl1 = new WeightedList(settings.map((s, i) => [i, 1 / s.dataset_weight, s]));
+            choosen_dataset = wl1.peek()[0];
+            const sample1 = choosen_dataset.data;
+
+            const wl = new WeightedList(sample1.paths.map((s, i) => [i, 1 / sample1.path_weights[i], s]));
+            choosen_projections = wl.peek(rows * cols);
+            const sample = choosen_projections.map(d => d.data);
 
             var dataset = sample1.name;
-
-            console.log(dataset);
             data.load(data, sample, dataset);
             step = "dr_grid";
 
             return "<p class='description'>" + sample1.description + "</p>"
         },
-        //choices: jsPsych.ALL_KEYS,
         choices: ['Rating complete!'],
-        // prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
         timing_post_trial: 400,
         on_finish: function(data) {
+            let update = {}
+            update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
+            settings_collection.updateOne({}, {$set: update});
+            
+            for (let i = 0, n = choosen_projections.length; i < n; ++i) {
+                update = {}
+                update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
+                settings_collection.updateOne({}, {$set: update});
+            }
 
             data.dataset = $projections.map(p => {
                 return {
@@ -146,27 +183,26 @@ import {dr_explain, ui, rule_1, rule_3, sort, color, welcome, consent_form, time
                     "neg": p.neg_count,
                     "comment": p.comment,
                     "position": p.position,
-
                 }
             });
             step = 'debrief'
         }
     };
 
-let trial_feedback = {
-    type: 'survey-multi-choice',
-    questions: [
-        {
-            prompt: "<div class='text-block'> <b>How difficult was this trial? </b></div>",
-            options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
-            horizontal: true,
-            required: false,
-            name: 'difficulty'
-        }
-    ]
-};
+    let trial_feedback = {
+        type: 'survey-multi-choice',
+        questions: [
+            {
+                prompt: "<div class='text-block'> <b>How difficult was this trial? </b></div>",
+                options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
+                horizontal: true,
+                required: false,
+                name: 'difficulty'
+            }
+        ]
+    };
 
-let cont = {
+    let cont = {
         type: "html-button-response",
         stimulus: "Another trial? <br> *The experiment will end after 12 trials, regardless of the choice. ",
         choices: ['Continue for more 🍻 & 🍬! 😍', 'End experiment 😢😢😭'],
@@ -174,68 +210,66 @@ let cont = {
     };
 
 
-var counts = 0;
+    var counts = 0;
     var loop_node = {
         timeline: [dr_grid, trial_feedback, cont],
         loop_function: function (data) {
-            console.log(data.values()[2].button_pressed);
-            if (data.values()[2].button_pressed === '0' && counts < 12) {
-                  counts++;
-                  console.log(counts);
-                return true;
-              } else {
-                  step = "debrief";
-                return false;
-              }
+                //console.log(data.values()[2].button_pressed);
+                if (data.values()[2].button_pressed === '0' && counts < 12) {
+                    counts++;
+                    //console.log(counts);
+                    return true;
+                } else {
+                    step = "debrief";
+                    return false;
+                }
+            }
     }
-  }
 
     var debrief = {
         type: 'survey-multi-choice',
         questions: [
-          {
-              prompt: "<div class='text-block'> <b>How difficult was the experiment as a whole? </b></div>",
-            options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
-            horizontal: true,
-            required: true,
-            name: 'difficulty'
-          },
-          {
-              prompt: "<div class='text-block'> <b>Do you think you improved at doing the tasks over time?</b></div>",
-            options: ['Yes', 'No', 'I don\'t know'],
-            horizontal: true,
-            required: true,
-            name: 'learning'
-          }
-          ,
-          {
-            prompt: "<div class='text-block'> <b>Did you experience different degrees of difficulty based on the dataset?</b></div>",
-            options: ['Yes', 'No', 'I don\'t know'],
-            horizontal: true,
-            required: true,
-            name: 'learning'
-          }
+            {
+                prompt: "<div class='text-block'> <b>How difficult was the experiment as a whole? </b></div>",
+                options: ['Very Easy', 'Easy', 'Medium', 'Hard', 'Very difficult', 'I was confused the entire time'],
+                horizontal: true,
+                required: true,
+                name: 'difficulty'
+            },
+            {
+                prompt: "<div class='text-block'> <b>Do you think you improved at doing the tasks over time?</b></div>",
+                options: ['Yes', 'No', 'I don\'t know'],
+                horizontal: true,
+                required: true,
+                name: 'learning'
+            },
+            {
+                prompt: "<div class='text-block'> <b>Did you experience different degrees of difficulty based on the dataset?</b></div>",
+                options: ['Yes', 'No', 'I don\'t know'],
+                horizontal: true,
+                required: true,
+                name: 'learning'
+            }
         ]
     };
 
     var comments = {
-    type: 'survey-text',
-    questions: [
-      {prompt: '<div class=\"text-block\">Do you have any other comments or feedback?.</div>' , columns: 100,rows: 5, required: true, name: 'Name'},
-    ],
-    randomize_question_order: false,
+        type: 'survey-text',
+        questions: [
+            {
+                prompt: '<div class=\"text-block\">Do you have any other comments or feedback?.</div>', 
+                columns: 80,
+                rows: 5, 
+                required: true, 
+                name: 'Name'
+            },
+        ],
+        randomize_question_order: false,
         prompt: "<br><br>"
-  };
-
+    };
 
 
     onMount(() => {
-        //data.load(data, rows * cols);
-        //jsPsych = window.jsPsych
-        const client = stitch.Stitch.initializeDefaultAppClient('dumbledr-qfkje');
-        const db = client.getServiceClient(stitch.RemoteMongoClient.factory, 'mongodb-atlas').db("dumbledr");
-        const results = db.collection("results");
-
         jsPsych.init({
             display_element: 'task',
             exclusions: {
@@ -245,7 +279,7 @@ var counts = 0;
             on_trial_start: data => {
             },
             on_interaction_data_update: data => {
-                console.log(JSON.stringify(data))
+                //console.log(JSON.stringify(data))
             },
             show_progress_bar: true,
             auto_update_progress_bar: true,

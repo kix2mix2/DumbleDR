@@ -879,372 +879,6 @@ var app = (function () {
         $inject_state() { }
     }
 
-    var settings = [
-    	{
-    		name: "MNIST",
-    		description: "Dataset of handwritten digits",
-    		paths: [
-    			"MNIST_size28_c6_ISM_n5.csv",
-    			"MNIST_size28_c6_GRP.csv",
-    			"MNIST_size28_c6_UMAP_n2_d0.1.csv",
-    			"MNIST_size28_c6_UMAP_n15_d0.1.csv",
-    			"MNIST_size28_c6_TSNE_p30.csv",
-    			"MNIST_size28_c6_ISM_n7.csv",
-    			"MNIST_size28_c6_UMAP_n7_d0.8.csv",
-    			"MNIST_size28_c6_UMAP_n15_d0.5.csv",
-    			"MNIST_size28_c6_ISM_n2.csv",
-    			"MNIST_size28_c6_UMAP_n2_d0.5.csv",
-    			"MNIST_size28_c6_MDS.csv",
-    			"MNIST_size28_c6_PCA.csv",
-    			"MNIST_size28_c6_UMAP_n5_d0.5.csv",
-    			"MNIST_size28_c6_ISM_n15.csv",
-    			"MNIST_size28_c6_UMAP_n5_d0.1.csv",
-    			"MNIST_size28_c6_TSNE_p100.csv",
-    			"MNIST_size28_c6_TSNE_p5.csv",
-    			"MNIST_size28_c6_UMAP_n5_d0.8.csv",
-    			"MNIST_size28_c6_SE_n7.csv",
-    			"MNIST_size28_c6_UMAP_n2_d0.8.csv",
-    			"MNIST_size28_c6_TSNE_p10.csv",
-    			"MNIST_size28_c6_UMAP_n15_d0.8.csv",
-    			"MNIST_size28_c6_UMAP_n7_d0.1.csv",
-    			"MNIST_size28_c6_UMAP_n7_d0.5.csv"
-    		]
-    	},
-    	{
-    		name: "fashionmnist",
-    		description: "Dataset of 28x28 photos of fashion items (shoes, shirts etc.)",
-    		paths: [
-    			"fashionmnist_size50_c6_UMAP_n15_d0.1.csv",
-    			"fashionmnist_size50_c6_UMAP_n5_d0.5.csv",
-    			"fashionmnist_size50_c6_TSNE_p5.csv",
-    			"fashionmnist_size50_c6_ISM_n2.csv",
-    			"fashionmnist_size50_c6_ISM_n5.csv",
-    			"fashionmnist_size50_c6_UMAP_n5_d0.1.csv",
-    			"fashionmnist_size50_c6_ISM_n7.csv",
-    			"fashionmnist_size50_c6_UMAP_n15_d0.5.csv",
-    			"fashionmnist_size50_c6_UMAP_n7_d0.8.csv",
-    			"fashionmnist_size50_c6_UMAP_n2_d0.1.csv",
-    			"fashionmnist_size50_c6_UMAP_n2_d0.5.csv",
-    			"fashionmnist_size50_c6_TSNE_p30.csv",
-    			"fashionmnist_size50_c6_SE_n7.csv",
-    			"fashionmnist_size50_c6_UMAP_n7_d0.1.csv",
-    			"fashionmnist_size50_c6_UMAP_n2_d0.8.csv",
-    			"fashionmnist_size50_c6_PCA.csv",
-    			"fashionmnist_size50_c6_UMAP_n7_d0.5.csv",
-    			"fashionmnist_size50_c6_TSNE_p10.csv",
-    			"fashionmnist_size50_c6_UMAP_n15_d0.8.csv",
-    			"fashionmnist_size50_c6_ISM_n15.csv",
-    			"fashionmnist_size50_c6_GRP.csv",
-    			"fashionmnist_size50_c6_MDS.csv",
-    			"fashionmnist_size50_c6_TSNE_p100.csv",
-    			"fashionmnist_size50_c6_UMAP_n5_d0.8.csv"
-    		]
-    	},
-    	{
-    		name: "oxford_buildings",
-    		description: "Dataset of photos of buildings in Oxford takes by tourists.",
-    		paths: [
-    			"oxford_buildings_size200_c6_UMAP_n15_d0.8.csv",
-    			"oxford_buildings_size200_c6_SE_n7.csv",
-    			"oxford_buildings_size200_c6_UMAP_n5_d0.8.csv",
-    			"oxford_buildings_size200_c6_TSNE_p10.csv",
-    			"oxford_buildings_size200_c6_ISM_n2.csv",
-    			"oxford_buildings_size200_c6_UMAP_n7_d0.5.csv",
-    			"oxford_buildings_size200_c6_TSNE_p5.csv",
-    			"oxford_buildings_size200_c6_UMAP_n7_d0.1.csv",
-    			"oxford_buildings_size200_c6_ISM_n5.csv",
-    			"oxford_buildings_size200_c6_ISM_n7.csv",
-    			"oxford_buildings_size200_c6_UMAP_n2_d0.8.csv",
-    			"oxford_buildings_size200_c6_GRP.csv",
-    			"oxford_buildings_size200_c6_UMAP_n2_d0.5.csv",
-    			"oxford_buildings_size200_c6_TSNE_p100.csv",
-    			"oxford_buildings_size200_c6_ISM_n15.csv",
-    			"oxford_buildings_size200_c6_UMAP_n7_d0.8.csv",
-    			"oxford_buildings_size200_c6_MDS.csv",
-    			"oxford_buildings_size200_c6_UMAP_n2_d0.1.csv",
-    			"oxford_buildings_size200_c6_UMAP_n15_d0.1.csv",
-    			"oxford_buildings_size200_c6_PCA.csv",
-    			"oxford_buildings_size200_c6_TSNE_p30.csv",
-    			"oxford_buildings_size200_c6_UMAP_n5_d0.1.csv",
-    			"oxford_buildings_size200_c6_UMAP_n5_d0.5.csv",
-    			"oxford_buildings_size200_c6_UMAP_n15_d0.5.csv"
-    		]
-    	},
-    	{
-    		name: "flowers",
-    		description: "Dataset of photos of different types of flowes.",
-    		paths: [
-    			"flowers_size200_c6_TSNE_p10.csv",
-    			"flowers_size200_c6_UMAP_n2_d0.8.csv",
-    			"flowers_size200_c6_UMAP_n15_d0.5.csv",
-    			"flowers_size200_c6_TSNE_p5.csv",
-    			"flowers_size200_c6_UMAP_n7_d0.1.csv",
-    			"flowers_size200_c6_SE_n7.csv",
-    			"flowers_size200_c6_UMAP_n7_d0.5.csv",
-    			"flowers_size200_c6_UMAP_n15_d0.1.csv",
-    			"flowers_size200_c6_TSNE_p100.csv",
-    			"flowers_size200_c6_UMAP_n5_d0.8.csv",
-    			"flowers_size200_c6_GRP.csv",
-    			"flowers_size200_c6_UMAP_n5_d0.5.csv",
-    			"flowers_size200_c6_UMAP_n5_d0.1.csv",
-    			"flowers_size200_c6_MDS.csv",
-    			"flowers_size200_c6_TSNE_p30.csv",
-    			"flowers_size200_c6_PCA.csv",
-    			"flowers_size200_c6_UMAP_n2_d0.1.csv",
-    			"flowers_size200_c6_ISM_n15.csv",
-    			"flowers_size200_c6_ISM_n2.csv",
-    			"flowers_size200_c6_UMAP_n7_d0.8.csv",
-    			"flowers_size200_c6_ISM_n7.csv",
-    			"flowers_size200_c6_UMAP_n15_d0.8.csv",
-    			"flowers_size200_c6_UMAP_n2_d0.5.csv",
-    			"flowers_size200_c6_ISM_n5.csv"
-    		]
-    	},
-    	{
-    		name: "paintings",
-    		description: "Dataset of publicly available paintings on the website Art UK. The labels in this data correspond to objects in the picture.  ",
-    		paths: [
-    			"paintings_size50_c10_UMAP_n15_d0.5.csv",
-    			"paintings_size50_c10_SE_n7.csv",
-    			"paintings_size50_c10_UMAP_n5_d0.8.csv",
-    			"paintings_size50_c10_TSNE_p5.csv",
-    			"paintings_size50_c10_UMAP_n15_d0.1.csv",
-    			"paintings_size50_c10_ISM_n2.csv",
-    			"paintings_size50_c10_TSNE_p30.csv",
-    			"paintings_size50_c10_UMAP_n7_d0.5.csv",
-    			"paintings_size50_c10_ISM_n5.csv",
-    			"paintings_size50_c10_UMAP_n7_d0.1.csv",
-    			"paintings_size50_c10_TSNE_p100.csv",
-    			"paintings_size50_c10_ISM_n7.csv",
-    			"paintings_size50_c10_UMAP_n2_d0.8.csv",
-    			"paintings_size50_c10_UMAP_n2_d0.5.csv",
-    			"paintings_size50_c10_PCA.csv",
-    			"paintings_size50_c10_TSNE_p10.csv",
-    			"paintings_size50_c10_UMAP_n7_d0.8.csv",
-    			"paintings_size50_c10_UMAP_n2_d0.1.csv",
-    			"paintings_size50_c10_GRP.csv",
-    			"paintings_size50_c10_UMAP_n5_d0.1.csv",
-    			"paintings_size50_c10_UMAP_n5_d0.5.csv",
-    			"paintings_size50_c10_ISM_n15.csv",
-    			"paintings_size50_c10_MDS.csv",
-    			"paintings_size50_c10_UMAP_n15_d0.8.csv"
-    		]
-    	},
-    	{
-    		name: "yalefaces",
-    		description: "Dataset of 14 different people expressing various emotions.",
-    		paths: [
-    			"yalefaces_size200_call_MDS.csv",
-    			"yalefaces_size200_call_UMAP_n5_d0.5.csv",
-    			"yalefaces_size200_call_UMAP_n15_d0.8.csv",
-    			"yalefaces_size200_call_GRP.csv",
-    			"yalefaces_size200_call_UMAP_n5_d0.1.csv",
-    			"yalefaces_size200_call_SE_n7.csv",
-    			"yalefaces_size200_call_UMAP_n7_d0.8.csv",
-    			"yalefaces_size200_call_TSNE_p5.csv",
-    			"yalefaces_size200_call_TSNE_p10.csv",
-    			"yalefaces_size200_call_UMAP_n2_d0.1.csv",
-    			"yalefaces_size200_call_UMAP_n2_d0.5.csv",
-    			"yalefaces_size200_call_PCA.csv",
-    			"yalefaces_size200_call_ISM_n15.csv",
-    			"yalefaces_size200_call_UMAP_n7_d0.1.csv",
-    			"yalefaces_size200_call_UMAP_n2_d0.8.csv",
-    			"yalefaces_size200_call_TSNE_p30.csv",
-    			"yalefaces_size200_call_TSNE_p100.csv",
-    			"yalefaces_size200_call_UMAP_n7_d0.5.csv",
-    			"yalefaces_size200_call_UMAP_n15_d0.5.csv",
-    			"yalefaces_size200_call_ISM_n2.csv",
-    			"yalefaces_size200_call_UMAP_n15_d0.1.csv",
-    			"yalefaces_size200_call_ISM_n7.csv",
-    			"yalefaces_size200_call_ISM_n5.csv",
-    			"yalefaces_size200_call_UMAP_n5_d0.8.csv"
-    		]
-    	},
-    	{
-    		name: "stanfordfaces",
-    		description: "Dataset of a 3D head photographed from different angles and with different lighting conditions.",
-    		paths: [
-    			"stanfordfaces_size50_call_UMAP_n5_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n15_d0.1.csv",
-    			"stanfordfaces_size50_call_UMAP_n15_d0.5.csv",
-    			"stanfordfaces_size50_call_UMAP_n5_d0.1.csv",
-    			"stanfordfaces_size50_call_UMAP_n7_d0.8.csv",
-    			"stanfordfaces_size50_call_TSNE_p30.csv",
-    			"stanfordfaces_size50_call_UMAP_n2_d0.1.csv",
-    			"stanfordfaces_size50_call_UMAP_n2_d0.5.csv",
-    			"stanfordfaces_size50_call_TSNE_p100.csv",
-    			"stanfordfaces_size50_call_TSNE_p5.csv",
-    			"stanfordfaces_size50_call_SE_n7.csv",
-    			"stanfordfaces_size50_call_UMAP_n7_d0.1.csv",
-    			"stanfordfaces_size50_call_ISM_n2.csv",
-    			"stanfordfaces_size50_call_TSNE_p10.csv",
-    			"stanfordfaces_size50_call_UMAP_n2_d0.8.csv",
-    			"stanfordfaces_size50_call_ISM_n7.csv",
-    			"stanfordfaces_size50_call_UMAP_n7_d0.5.csv",
-    			"stanfordfaces_size50_call_ISM_n15.csv",
-    			"stanfordfaces_size50_call_ISM_n5.csv",
-    			"stanfordfaces_size50_call_PCA.csv",
-    			"stanfordfaces_size50_call_MDS.csv",
-    			"stanfordfaces_size50_call_UMAP_n15_d0.8.csv",
-    			"stanfordfaces_size50_call_GRP.csv",
-    			"stanfordfaces_size50_call_UMAP_n5_d0.8.csv"
-    		]
-    	},
-    	{
-    		name: "Caltech_vehicles",
-    		description: "Photos of vehicles.",
-    		paths: [
-    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.5.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.5.csv",
-    			"Caltech_vehicles_size200_c6_TSNE_p30.csv",
-    			"Caltech_vehicles_size200_c6_TSNE_p100.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.8.csv",
-    			"Caltech_vehicles_size200_c6_PCA.csv",
-    			"Caltech_vehicles_size200_c6_TSNE_p5.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.1.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.1.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.1.csv",
-    			"Caltech_vehicles_size200_c6_MDS.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.5.csv",
-    			"Caltech_vehicles_size200_c6_GRP.csv",
-    			"Caltech_vehicles_size200_c6_ISM_n2.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n5_d0.8.csv",
-    			"Caltech_vehicles_size200_c6_ISM_n5.csv",
-    			"Caltech_vehicles_size200_c6_ISM_n7.csv",
-    			"Caltech_vehicles_size200_c6_TSNE_p10.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.5.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n7_d0.1.csv",
-    			"Caltech_vehicles_size200_c6_ISM_n15.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n2_d0.8.csv",
-    			"Caltech_vehicles_size200_c6_SE_n7.csv",
-    			"Caltech_vehicles_size200_c6_UMAP_n15_d0.8.csv"
-    		]
-    	},
-    	{
-    		name: "Caltech_plants",
-    		description: "Photos of plants.",
-    		paths: [
-    			"Caltech_plants_size200_c6_ISM_n5.csv",
-    			"Caltech_plants_size200_c6_TSNE_p10.csv",
-    			"Caltech_plants_size200_c6_UMAP_n5_d0.1.csv",
-    			"Caltech_plants_size200_c6_ISM_n7.csv",
-    			"Caltech_plants_size200_c6_ISM_n2.csv",
-    			"Caltech_plants_size200_c6_UMAP_n5_d0.5.csv",
-    			"Caltech_plants_size200_c6_UMAP_n2_d0.5.csv",
-    			"Caltech_plants_size200_c6_TSNE_p5.csv",
-    			"Caltech_plants_size200_c6_UMAP_n15_d0.5.csv",
-    			"Caltech_plants_size200_c6_UMAP_n15_d0.1.csv",
-    			"Caltech_plants_size200_c6_UMAP_n7_d0.8.csv",
-    			"Caltech_plants_size200_c6_UMAP_n2_d0.1.csv",
-    			"Caltech_plants_size200_c6_MDS.csv",
-    			"Caltech_plants_size200_c6_UMAP_n7_d0.5.csv",
-    			"Caltech_plants_size200_c6_ISM_n15.csv",
-    			"Caltech_plants_size200_c6_UMAP_n15_d0.8.csv",
-    			"Caltech_plants_size200_c6_UMAP_n7_d0.1.csv",
-    			"Caltech_plants_size200_c6_GRP.csv",
-    			"Caltech_plants_size200_c6_UMAP_n2_d0.8.csv",
-    			"Caltech_plants_size200_c6_TSNE_p30.csv",
-    			"Caltech_plants_size200_c6_UMAP_n5_d0.8.csv",
-    			"Caltech_plants_size200_c6_TSNE_p100.csv",
-    			"Caltech_plants_size200_c6_PCA.csv",
-    			"Caltech_plants_size200_c6_SE_n7.csv"
-    		]
-    	},
-    	{
-    		name: "paris_buildings",
-    		description: "Dataset of photos of buildings in Paris takes by tourists.",
-    		paths: [
-    			"paris_buildings_size50_c6_UMAP_n5_d0.8.csv",
-    			"paris_buildings_size50_c6_ISM_n15.csv",
-    			"paris_buildings_size50_c6_GRP.csv",
-    			"paris_buildings_size50_c6_MDS.csv",
-    			"paris_buildings_size50_c6_ISM_n2.csv",
-    			"paris_buildings_size50_c6_SE_n7.csv",
-    			"paris_buildings_size50_c6_UMAP_n7_d0.5.csv",
-    			"paris_buildings_size50_c6_PCA.csv",
-    			"paris_buildings_size50_c6_TSNE_p100.csv",
-    			"paris_buildings_size50_c6_UMAP_n2_d0.8.csv",
-    			"paris_buildings_size50_c6_UMAP_n15_d0.8.csv",
-    			"paris_buildings_size50_c6_ISM_n5.csv",
-    			"paris_buildings_size50_c6_ISM_n7.csv",
-    			"paris_buildings_size50_c6_UMAP_n7_d0.1.csv",
-    			"paris_buildings_size50_c6_TSNE_p30.csv",
-    			"paris_buildings_size50_c6_UMAP_n15_d0.5.csv",
-    			"paris_buildings_size50_c6_UMAP_n2_d0.5.csv",
-    			"paris_buildings_size50_c6_UMAP_n15_d0.1.csv",
-    			"paris_buildings_size50_c6_UMAP_n2_d0.1.csv",
-    			"paris_buildings_size50_c6_TSNE_p10.csv",
-    			"paris_buildings_size50_c6_UMAP_n7_d0.8.csv",
-    			"paris_buildings_size50_c6_UMAP_n5_d0.1.csv",
-    			"paris_buildings_size50_c6_TSNE_p5.csv",
-    			"paris_buildings_size50_c6_UMAP_n5_d0.5.csv"
-    		]
-    	},
-    	{
-    		name: "coil-100",
-    		description: "Dataset of various objects photographed from different angles.",
-    		paths: [
-    			"coil-100_size50_c6_UMAP_n2_d0.5.csv",
-    			"coil-100_size50_c6_GRP.csv",
-    			"coil-100_size50_c6_UMAP_n7_d0.8.csv",
-    			"coil-100_size50_c6_MDS.csv",
-    			"coil-100_size50_c6_UMAP_n2_d0.1.csv",
-    			"coil-100_size50_c6_TSNE_p10.csv",
-    			"coil-100_size50_c6_TSNE_p5.csv",
-    			"coil-100_size50_c6_UMAP_n5_d0.1.csv",
-    			"coil-100_size50_c6_PCA.csv",
-    			"coil-100_size50_c6_UMAP_n15_d0.8.csv",
-    			"coil-100_size50_c6_UMAP_n5_d0.5.csv",
-    			"coil-100_size50_c6_ISM_n2.csv",
-    			"coil-100_size50_c6_ISM_n15.csv",
-    			"coil-100_size50_c6_TSNE_p30.csv",
-    			"coil-100_size50_c6_UMAP_n5_d0.8.csv",
-    			"coil-100_size50_c6_TSNE_p100.csv",
-    			"coil-100_size50_c6_UMAP_n15_d0.1.csv",
-    			"coil-100_size50_c6_ISM_n5.csv",
-    			"coil-100_size50_c6_UMAP_n15_d0.5.csv",
-    			"coil-100_size50_c6_ISM_n7.csv",
-    			"coil-100_size50_c6_UMAP_n7_d0.5.csv",
-    			"coil-100_size50_c6_UMAP_n7_d0.1.csv",
-    			"coil-100_size50_c6_UMAP_n2_d0.8.csv",
-    			"coil-100_size50_c6_SE_n7.csv"
-    		]
-    	},
-    	{
-    		name: "Caltech_instruments",
-    		description: "Photos of instruments.",
-    		paths: [
-    			"Caltech_instruments_size200_c6_UMAP_n7_d0.5.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n7_d0.1.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n2_d0.8.csv",
-    			"Caltech_instruments_size200_c6_TSNE_p30.csv",
-    			"Caltech_instruments_size200_c6_ISM_n5.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n5_d0.8.csv",
-    			"Caltech_instruments_size200_c6_ISM_n7.csv",
-    			"Caltech_instruments_size200_c6_ISM_n2.csv",
-    			"Caltech_instruments_size200_c6_TSNE_p5.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n15_d0.8.csv",
-    			"Caltech_instruments_size200_c6_SE_n7.csv",
-    			"Caltech_instruments_size200_c6_MDS.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n15_d0.5.csv",
-    			"Caltech_instruments_size200_c6_TSNE_p10.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n5_d0.1.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n5_d0.5.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n15_d0.1.csv",
-    			"Caltech_instruments_size200_c6_ISM_n15.csv",
-    			"Caltech_instruments_size200_c6_GRP.csv",
-    			"Caltech_instruments_size200_c6_TSNE_p100.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n2_d0.5.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n7_d0.8.csv",
-    			"Caltech_instruments_size200_c6_UMAP_n2_d0.1.csv",
-    			"Caltech_instruments_size200_c6_PCA.csv"
-    		]
-    	}
-    ];
-    var settings$1 = {
-    	settings: settings
-    };
-
     function cubicOut(t) {
         const f = t - 1.0;
         return f * f * f + 1.0;
@@ -44722,6 +44356,250 @@ var app = (function () {
       return plugin;
     })();
 
+    /**
+     * js-weighted-list.js
+     *
+     * version 0.2
+     *
+     * This file is licensed under the MIT License, please see MIT-LICENSE.txt for details.
+     *
+     * https://github.com/timgilbert/js-weighted-list is its home.
+     */
+
+    var jsWeightedList = (function() {
+
+      function _WeightedList(initial) {
+        this.weights = {};
+        this.data = {};
+        this.length = 0;
+        this.hasData = false;
+
+        initial = typeof initial !== 'undefined' ? initial : [];
+
+        if (Array.isArray(initial)) {
+          for (var i = 0; i < initial.length; i++) {
+            //var item = initial[i];
+            //this.push(item[0], item[1], item[2]);
+            this.push(initial[i]);
+          }
+        } else {
+          throw new Error('Unknown object "' + initial.toString() + '" passed to ' +
+                          'WeightedList constructor! (Expected array or nothing)');
+        }
+      }
+
+      _WeightedList.prototype = {
+        /**
+         * Add a single item to the list.  The parameter passed in represents a single
+         * key, with a weight and optionally some data attached.
+         *
+         * The parameter to this function can either be a 2-3 element array of
+         * [k, w, d] for key, weight and data (data is optional) or an object with the
+         * values {'key': k, 'weight': w, 'data': d} where d is optional.
+         */
+        push: function(element) {
+          var key, weight, data;
+
+          if (Array.isArray(element)) {
+            key = element[0], weight = element[1], data = element[2];
+            if (typeof key === 'undefined') {
+              // Eg, wl.push([])
+              throw new Error('In WeightedList.push([ ... ]), need at least two elements');
+            } else if (typeof weight === 'undefined') {
+              // I suppose we could default to 1 here, but the API is already too forgiving
+              throw new Error('In array passed to WeightedList.push([ ... ]), second ' +
+                              'element is undefined!');
+            }
+          } else if (typeof element === 'object') {
+            // We expect {"key": "zombies", "weight": 10, "data": {"fast": true}}
+            key = element.key, weight = element.weight, data = element.data;
+            if (typeof key === 'undefined') {
+              throw new Error("In WeightedList.push({ ... }), no {'key': 'xyzzy'} pair found");
+            } else if (typeof weight === 'undefined') {
+              // I suppose we could default to 1 here, but the API is already too forgiving
+              throw new Error('In array passed to WeightedList.push({ ... }), no ' +
+                              "{'weight': 42} pair found");
+            }
+        } else {
+            // else what the heck were you trying to give me?
+            throw new Error('WeightedList.push() passed unknown type "' + typeof element +
+                            '", expected [key, weight] or {"key": k, "weight": w}');
+          }
+          return this._push_values(key, weight, data);
+
+        },
+        /**
+         * Add an item to the list
+         * @access private
+         * @param {String} key the key under which this item is stored
+         * @param {number} weight the weight to assign to this key
+         * @param {?Object} data any optional data associated wth this key
+         */
+        _push_values: function(key, weight, data) {
+          //console.debug('k:', key, 'w:', weight, 'd:', data);
+
+          if (this.weights[key]) {
+            throw new Error('');
+          }
+          if (typeof weight !== typeof 1) {
+            throw new Error('Weight must be numeric (got ' + weight.toString() + ')');
+          }
+          if (weight <= 0)  {
+            throw new Error('Weight must be >= 0 (got ' + weight + ')');
+          }
+
+          this.weights[key] = weight;
+
+          if (typeof data !== 'undefined') {
+            this.hasData = true;
+            this.data[key] = data;
+          }
+          this.length++;
+        },
+
+        /**
+         * Add the given weight to the list item with the given key.  Note that if
+         * the key does not already exist, this operation will silently create it.
+         *
+         * @todo might be nice to have a version of this that would throw an error
+         *       on an unknown key.
+         */
+        addWeight: function(key, weight) {
+          this.weights[key] += weight;
+        },
+
+        /**
+         * Select n random elements (without replacement), default 1.
+         * If andRemove is true (default false), remove the elements
+         * from the list.  (This is what the pop() method does.)
+         */
+        peek: function(n, andRemove) {
+          if (typeof n === 'undefined') {
+            n = 1;
+          }
+          andRemove = !!andRemove;
+
+          if (this.length - n < 0) {
+            throw new Error('Stack underflow! Tried to retrieve ' + n +
+                            ' element' + (n === 1 ? '' : 's') +
+                            ' from a list of ' + this.length);
+          }
+
+          var heap = this._buildWeightedHeap();
+          //console.debug('heap:', heap);
+          var result = [];
+
+          for (var i = 0; i < n; i++) {
+            var key = heap.pop();
+            //console.debug('k:', key);
+            if (this.hasData) {
+              result.push({key: key, data: this.data[key]});
+            } else {
+              result.push(key);
+            }
+            if (andRemove) {
+              delete this.weights[key];
+              delete this.data[key];
+              this.length--;
+            }
+          }
+          return result;
+        },
+
+        /**
+         * Return the entire list in a random order (note that this does not mutate the list)
+         */
+        shuffle: function() {
+          return this.peek(this.length);
+        },
+
+        /**
+         *
+         */
+        pop: function(n) {
+          return this.peek(n, true);
+        },
+
+        /**
+         * Build a WeightedHeap instance based on the data we've got
+         */
+        _buildWeightedHeap: function() {
+          var items = [];
+          for (var key in this.weights) if (this.weights.hasOwnProperty(key)) {
+            items.push([key, this.weights[key]]);
+          }
+          //console.log('items',items);
+          return new _WeightedHeap(items);
+        }
+      };
+
+      /**
+       * This is a javascript implementation of the algorithm described by
+       * Jason Orendorff here: http://stackoverflow.com/a/2149533/87990
+       */
+      function _HeapNode(weight, value, total) {
+        this.weight = weight;
+        this.value = value;
+        this.total = total;  // Total weight of this node and its children
+      }
+      /**
+       * Note, we're using a heap structure here for its tree properties, not as a
+       * classic binary heap. A node heap[i] has children at heap[i<<1] and at
+       * heap[(i<<1)+1]. Its parent is at h[i>>1]. Heap[0] is vacant.
+       */
+      function _WeightedHeap(items) {
+        this.heap = [null];   // Math is easier to read if we index array from 1
+
+        // First put everything on the heap
+        for (var i = 0; i < items.length; i++) {
+          var weight = items[i][1];
+          var value = items[i][0];
+          this.heap.push(new _HeapNode(weight, value, weight));
+        }
+        // Now go through the heap and add each node's weight to its parent
+        for (i = this.heap.length - 1; i > 1; i--) {
+          this.heap[i>>1].total += this.heap[i].total;
+        }
+        //console.debug('_Wh heap', this.heap);
+      }
+
+      _WeightedHeap.prototype = {
+        pop: function() {
+          // Start with a random amount of gas
+          var gas = this.heap[1].total * Math.random();
+
+          // Start driving at the root node
+          var i = 1;
+
+          // While we have enough gas to keep going past i:
+          while (gas > this.heap[i].weight) {
+            gas -= this.heap[i].weight;     // Drive past i
+            i <<= 1;                        // Move to first child
+            if (gas > this.heap[i].total) {
+              gas -= this.heap[i].total;    // Drive past first child and its descendants
+              i++;                          // Move on to second child
+            }
+          }
+          // Out of gas - i is our selected node.
+          var value = this.heap[i].value;
+          var selectedWeight = this.heap[i].weight;
+
+          this.heap[i].weight = 0;          // Make sure i isn't chosen again
+          while (i > 0) {
+            // Remove the weight from its parent's total
+            this.heap[i].total -= selectedWeight;
+            i >>= 1;  // Move to the next parent
+          }
+          return value;
+        }
+      };
+
+      //  NB: another binary heap implementation is at
+      // http://eloquentjavascript.net/appendix2.html
+
+      return _WeightedList;
+    })();
+
     const welcome = "<div class=\"text-block\">" +
                     "<h1>Call for participants</h1>\n" +
                     "<img src=\"./images/visus.png\" height = '100px'> <img src=\"./images/logo-precise.png\" height = '100px'>"+
@@ -44908,7 +44786,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (279:0) {#if $hover}
+    // (313:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44927,16 +44805,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 286, 8, 10027);
+    			add_location(img, file$4, 320, 8, 11574);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 285, 4, 9993);
+    			add_location(div0, file$4, 319, 4, 11540);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 279, 0, 9771);
+    			add_location(div1, file$4, 313, 0, 11318);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44984,14 +44862,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(279:0) {#if $hover}",
+    		source: "(313:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:32) 
+    // (345:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44999,7 +44877,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 311, 8, 11166);
+    			add_location(div, file$4, 345, 8, 12713);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45016,14 +44894,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(311:32) ",
+    		source: "(345:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:31) 
+    // (338:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -45056,17 +44934,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 305, 12, 10698);
+    			add_location(iframe, file$4, 339, 12, 12245);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 305, 206, 10892);
-    			add_location(p, file$4, 305, 203, 10889);
+    			add_location(a, file$4, 339, 206, 12439);
+    			add_location(p, file$4, 339, 203, 12436);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 306, 16, 10995);
+    			add_location(span0, file$4, 340, 16, 12542);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 306, 79, 11058);
-    			add_location(h1, file$4, 306, 12, 10991);
+    			add_location(span1, file$4, 340, 79, 12605);
+    			add_location(h1, file$4, 340, 12, 12538);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 304, 8, 10648);
+    			add_location(div, file$4, 338, 8, 12195);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45091,14 +44969,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(304:31) ",
+    		source: "(338:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (292:4) {#if step == "dr_grid"}
+    // (326:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45120,7 +44998,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 292, 8, 10268);
+    			add_location(div, file$4, 326, 8, 11815);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45171,14 +45049,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(292:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(326:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (299:8) {:else}
+    // (333:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45191,8 +45069,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 299, 12, 10512);
-    			add_location(center, file$4, 300, 12, 10551);
+    			add_location(div, file$4, 333, 12, 12059);
+    			add_location(center, file$4, 334, 12, 12098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45213,14 +45091,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(299:8) {:else}",
+    		source: "(333:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (294:8) {#if $ready}
+    // (328:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45235,7 +45113,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 294, 12, 10339);
+    			add_location(div, file$4, 328, 12, 11886);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45266,7 +45144,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(294:8) {#if $ready}",
+    		source: "(328:8) {#if $ready}",
     		ctx
     	});
 
@@ -45328,13 +45206,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 274, 4, 9725);
+    			add_location(h2, file$4, 308, 4, 11272);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 273, 0, 9715);
+    			add_location(nav, file$4, 307, 0, 11262);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 290, 0, 10162);
+    			add_location(main, file$4, 324, 0, 11709);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45463,7 +45341,7 @@ var app = (function () {
     	let $images;
     	let $ready;
     	validate_store(projections, "projections");
-    	component_subscribe($$self, projections, $$value => $$invalidate(8, $projections = $$value));
+    	component_subscribe($$self, projections, $$value => $$invalidate(11, $projections = $$value));
     	validate_store(hover, "hover");
     	component_subscribe($$self, hover, $$value => $$invalidate(2, $hover = $$value));
     	validate_store(dataset, "dataset");
@@ -45472,7 +45350,6 @@ var app = (function () {
     	component_subscribe($$self, images, $$value => $$invalidate(4, $images = $$value));
     	validate_store(ready, "ready");
     	component_subscribe($$self, ready, $$value => $$invalidate(5, $ready = $$value));
-    	const paths = settings$1.settings[0].paths;
     	let subject_id = jsPsych.randomization.randomID(15);
     	jsPsych.data.addProperties({ subject: subject_id });
 
@@ -45590,23 +45467,47 @@ var app = (function () {
     	};
 
     	let step = null;
+    	const client = stitch.Stitch.initializeDefaultAppClient("dumbledr-qfkje");
+    	const db = client.getServiceClient(stitch.RemoteMongoClient.factory, "mongodb-atlas").db("dumbledr");
+    	const results = db.collection("results");
+    	const settings_collection = db.collection("settings");
+    	let settings = settings_collection.findOne({}).then(d => $$invalidate(7, settings = d.settings));
+    	let choosen_dataset;
+    	let choosen_projections;
 
     	let dr_grid = {
     		type: "html-button-response",
     		stimulus: () => {
-    			const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings$1.settings, 1)[0];
-    			const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
+    			/* const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
+    const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
+     */
+    			/* const sample1 = c.weighted(settings,);
+    const sample =  */
+    			const wl1 = new jsWeightedList(settings.map((s, i) => [i, 1 / s.dataset_weight, s]));
+
+    			choosen_dataset = wl1.peek()[0];
+    			const sample1 = choosen_dataset.data;
+    			const wl = new jsWeightedList(sample1.paths.map((s, i) => [i, 1 / sample1.path_weights[i], s]));
+    			choosen_projections = wl.peek(rows * cols);
+    			const sample = choosen_projections.map(d => d.data);
     			var dataset = sample1.name;
-    			console.log(dataset);
     			data.load(data, sample, dataset);
     			$$invalidate(0, step = "dr_grid");
     			return "<p class='description'>" + sample1.description + "</p>";
     		},
-    		//choices: jsPsych.ALL_KEYS,
     		choices: ["Rating complete!"],
-    		// prompt: 'You may hover over the points, or zoom in and out particular scatterplots. Click continue when you are finished!',
     		timing_post_trial: 400,
     		on_finish(data) {
+    			let update = {};
+    			update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
+    			settings_collection.updateOne({}, { $set: update });
+
+    			for (let i = 0, n = choosen_projections.length; i < n; ++i) {
+    				update = {};
+    				update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
+    				settings_collection.updateOne({}, { $set: update });
+    			}
+
     			data.dataset = $projections.map(p => {
     				return {
     					"name": p.name,
@@ -45653,11 +45554,11 @@ var app = (function () {
     	var loop_node = {
     		timeline: [dr_grid, trial_feedback, cont],
     		loop_function(data) {
-    			console.log(data.values()[2].button_pressed);
-
+    			//console.log(data.values()[2].button_pressed);
     			if (data.values()[2].button_pressed === "0" && counts < 12) {
     				counts++;
-    				console.log(counts);
+
+    				//console.log(counts);
     				return true;
     			} else {
     				$$invalidate(0, step = "debrief");
@@ -45705,7 +45606,7 @@ var app = (function () {
     		questions: [
     			{
     				prompt: "<div class=\"text-block\">Do you have any other comments or feedback?.</div>",
-    				columns: 100,
+    				columns: 80,
     				rows: 5,
     				required: true,
     				name: "Name"
@@ -45716,13 +45617,6 @@ var app = (function () {
     	};
 
     	onMount(() => {
-    		//data.load(data, rows * cols);
-    		//jsPsych = window.jsPsych
-    		const client = stitch.Stitch.initializeDefaultAppClient("dumbledr-qfkje");
-
-    		const db = client.getServiceClient(stitch.RemoteMongoClient.factory, "mongodb-atlas").db("dumbledr");
-    		const results = db.collection("results");
-
     		jsPsych.init({
     			display_element: "task",
     			exclusions: { min_width: 700, min_height: 400 },
@@ -45730,8 +45624,8 @@ var app = (function () {
     				
     			},
     			on_interaction_data_update: data => {
-    				console.log(JSON.stringify(data));
-    			},
+    				
+    			}, //console.log(JSON.stringify(data))
     			show_progress_bar: true,
     			auto_update_progress_bar: true,
     			timeline: [
@@ -45778,7 +45672,6 @@ var app = (function () {
     	}
 
     	$$self.$capture_state = () => ({
-    		settings: settings$1,
     		onMount,
     		scale,
     		dataset,
@@ -45789,6 +45682,7 @@ var app = (function () {
     		ready,
     		Vis,
     		Trial,
+    		WeightedList: jsWeightedList,
     		dr_explain,
     		ui,
     		rule_1,
@@ -45798,7 +45692,6 @@ var app = (function () {
     		welcome,
     		consent_form,
     		time_text,
-    		paths,
     		rows,
     		cols,
     		subject_id,
@@ -45808,6 +45701,13 @@ var app = (function () {
     		name,
     		experience,
     		step,
+    		client,
+    		db,
+    		results,
+    		settings_collection,
+    		settings,
+    		choosen_dataset,
+    		choosen_projections,
     		dr_grid,
     		trial_feedback,
     		cont,
@@ -45831,6 +45731,9 @@ var app = (function () {
     		if ("name" in $$props) name = $$props.name;
     		if ("experience" in $$props) experience = $$props.experience;
     		if ("step" in $$props) $$invalidate(0, step = $$props.step);
+    		if ("settings" in $$props) $$invalidate(7, settings = $$props.settings);
+    		if ("choosen_dataset" in $$props) choosen_dataset = $$props.choosen_dataset;
+    		if ("choosen_projections" in $$props) choosen_projections = $$props.choosen_projections;
     		if ("dr_grid" in $$props) dr_grid = $$props.dr_grid;
     		if ("trial_feedback" in $$props) trial_feedback = $$props.trial_feedback;
     		if ("cont" in $$props) cont = $$props.cont;
@@ -45844,6 +45747,12 @@ var app = (function () {
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*settings*/ 128) {
+    			 console.log(settings);
+    		}
+    	};
 
     	return [step, tooltip, $hover, $dataset, $images, $ready, div1_binding];
     }
