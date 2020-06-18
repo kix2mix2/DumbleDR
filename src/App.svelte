@@ -310,8 +310,11 @@
 </script>
 
 <nav>
-    <h2>DumbleDR</h2>
-    
+    <h2 style="display: inline-block;">DumbleDR</h2>
+    <div style="float:right; padding: .5rem;">
+        <img src="./images/visus.png" height="48px" alt="visus" />
+        <img src="./images/logo-precise.png" height="48px" alt="precise" />
+    </div>
 </nav>
   
 {#if $hover}
