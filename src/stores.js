@@ -13,7 +13,7 @@ function createCount(N) {
 }
 
 function createData(n) {
-    const D = {projections: [], images: [], dataset: null, hover: null, sort_time: []};
+    const D = {projections: [], images: [], dataset: null, hover: null, sort_time: [], color_time:[], image_time:[]};
     
     const { subscribe, set, update } = writable(D);
     return {
@@ -28,6 +28,8 @@ function createData(n) {
             D.ready = false;
             D.dataset = dataset;
             D.sort_time = [];
+            D.color_time = [];
+            D.image_time = [];
             /* paths.then(res => {
                 store.set_projections(res)
             }); */
@@ -94,6 +96,8 @@ export const hover = derived(data, $data => $data.hover);
 export const dataset = derived(data, $data => $data.dataset);
 
 export const sort_time = derived(data, $data => $data.sort_time);
+export const color_time = derived(data, $data => $data.color_time);
+export const image_time = derived(data, $data => $data.image_time);
 
 
 

@@ -11,7 +11,7 @@
 	import { onMount } from 'svelte';
     import { scale } from "svelte/transition";
 
-    import { sort_time, dataset, data, hover, images, projections, ready } from "./stores.js";
+    import { color_time, image_time, sort_time, dataset, data, hover, images, projections, ready } from "./stores.js";
     import Vis from "./Vis.svelte";
     import Trial from "./Trial.svelte";
 
@@ -175,8 +175,10 @@
                 update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
                 settings_collection.updateOne({}, {$set: update});
             }
-
-        data.dataset = $projections.map(p => {
+            data.sort_time = $sort_time;
+            data.color_time = $color_time;
+            data.image_time = $image_time;
+            data.dataset = $projections.map(p => {
                 return {
                     "name": p.name,
                     "pos": p.pos_count,

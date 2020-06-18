@@ -19613,7 +19613,7 @@ var app = (function () {
     }
 
     function createData(n) {
-        const D = {projections: [], images: [], dataset: null, hover: null, sort_time: []};
+        const D = {projections: [], images: [], dataset: null, hover: null, sort_time: [], color_time:[], image_time:[]};
         
         const { subscribe, set, update } = writable(D);
         return {
@@ -19628,6 +19628,8 @@ var app = (function () {
                 D.ready = false;
                 D.dataset = dataset;
                 D.sort_time = [];
+                D.color_time = [];
+                D.image_time = [];
                 /* paths.then(res => {
                     store.set_projections(res)
                 }); */
@@ -19694,6 +19696,8 @@ var app = (function () {
     const dataset = derived(data, $data => $data.dataset);
 
     const sort_time = derived(data, $data => $data.sort_time);
+    const color_time = derived(data, $data => $data.color_time);
+    const image_time = derived(data, $data => $data.image_time);
 
 
 
@@ -21616,7 +21620,7 @@ var app = (function () {
     	return block;
     }
 
-    // (122:8) {:else}
+    // (120:8) {:else}
     function create_else_block(ctx) {
     	let button_1;
     	let span;
@@ -21630,8 +21634,8 @@ var app = (function () {
     			span = element("span");
     			t = text(" Close");
     			attr_dev(span, "class", "mdi mdi-close");
-    			add_location(span, file$2, 122, 55, 3868);
-    			add_location(button_1, file$2, 122, 12, 3825);
+    			add_location(span, file$2, 120, 55, 3812);
+    			add_location(button_1, file$2, 120, 12, 3769);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button_1, anchor);
@@ -21655,7 +21659,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(122:8) {:else}",
+    		source: "(120:8) {:else}",
     		ctx
     	});
 
@@ -21676,7 +21680,7 @@ var app = (function () {
     			attr_dev(span, "class", "mdi");
     			toggle_class(span, "mdi-arrow-expand", !/*open_dialog*/ ctx[8]);
     			toggle_class(span, "mdi-arrow-collapse", /*open_dialog*/ ctx[8]);
-    			add_location(span, file$2, 117, 12, 3644);
+    			add_location(span, file$2, 115, 12, 3588);
     			attr_dev(button_1, "title", "expand");
     			add_location(button_1, file$2, 108, 8, 3379);
     		},
@@ -21716,7 +21720,7 @@ var app = (function () {
     	return block;
     }
 
-    // (143:12) {#if voronoi.cellPolygon(i)}
+    // (141:12) {#if voronoi.cellPolygon(i)}
     function create_if_block_4(ctx) {
     	let path;
     	let path_d_value;
@@ -21734,7 +21738,7 @@ var app = (function () {
     			attr_dev(path, "d", path_d_value = `M${/*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]).join("L")}Z`);
     			attr_dev(path, "fill", "transparent");
     			attr_dev(path, "title", path_title_value = /*point*/ ctx[46].class);
-    			add_location(path, file$2, 143, 16, 4569);
+    			add_location(path, file$2, 141, 16, 4513);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -21770,14 +21774,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(143:12) {#if voronoi.cellPolygon(i)}",
+    		source: "(141:12) {#if voronoi.cellPolygon(i)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:48) 
+    // (170:48) 
     function create_if_block_3(ctx) {
     	let circle;
     	let circle_r_value;
@@ -21796,7 +21800,7 @@ var app = (function () {
     			: "none");
 
     			attr_dev(circle, "stroke", circle_stroke_value = /*$colorScale*/ ctx[20](/*point*/ ctx[46].class));
-    			add_location(circle, file$2, 172, 20, 5859);
+    			add_location(circle, file$2, 170, 20, 5803);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -21825,14 +21829,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(172:48) ",
+    		source: "(170:48) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (162:16) {#if $vis_type == "image"}
+    // (160:16) {#if $vis_type == "image"}
     function create_if_block_2(ctx) {
     	let image;
     	let image_href_value;
@@ -21855,7 +21859,7 @@ var app = (function () {
     			: null);
 
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 162, 20, 5383);
+    			add_location(image, file$2, 160, 20, 5327);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, image, anchor);
@@ -21894,14 +21898,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(162:16) {#if $vis_type == \\\"image\\\"}",
+    		source: "(160:16) {#if $vis_type == \\\"image\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (142:8) {#each data as point, i}
+    // (140:8) {#each data as point, i}
     function create_each_block_1(ctx) {
     	let show_if = /*voronoi*/ ctx[14].cellPolygon(/*i*/ ctx[48]);
     	let g_1;
@@ -21922,7 +21926,7 @@ var app = (function () {
     			g_1 = svg_element("g");
     			if (if_block1) if_block1.c();
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 160, 12, 5252);
+    			add_location(g_1, file$2, 158, 12, 5196);
     		},
     		m: function mount(target, anchor) {
     			if (if_block0) if_block0.m(target, anchor);
@@ -21975,14 +21979,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(142:8) {#each data as point, i}",
+    		source: "(140:8) {#each data as point, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (183:8) {#if $vis_type == "image"}
+    // (181:8) {#if $vis_type == "image"}
     function create_if_block_1(ctx) {
     	let each_1_anchor;
     	let each_value = /*data*/ ctx[0].filter(/*func*/ ctx[30]);
@@ -22043,14 +22047,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(183:8) {#if $vis_type == \\\"image\\\"}",
+    		source: "(181:8) {#if $vis_type == \\\"image\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (184:8) {#each data.filter((d, i) => $hover == i) as point, i}
+    // (182:8) {#each data.filter((d, i) => $hover == i) as point, i}
     function create_each_block$2(ctx) {
     	let g_1;
     	let image;
@@ -22068,9 +22072,9 @@ var app = (function () {
     			attr_dev(image, "height", "20");
     			attr_dev(image, "filter", "url(#matrix)");
     			attr_dev(image, "title", image_title_value = /*point*/ ctx[46].class);
-    			add_location(image, file$2, 185, 16, 6392);
+    			add_location(image, file$2, 183, 16, 6336);
     			attr_dev(g_1, "transform", g_1_transform_value = `translate(${/*x*/ ctx[12](/*point*/ ctx[46].x) - 10}, ${/*y*/ ctx[13](/*point*/ ctx[46].y) - 10})`);
-    			add_location(g_1, file$2, 184, 12, 6308);
+    			add_location(g_1, file$2, 182, 12, 6252);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g_1, anchor);
@@ -22098,14 +22102,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(184:8) {#each data.filter((d, i) => $hover == i) as point, i}",
+    		source: "(182:8) {#each data.filter((d, i) => $hover == i) as point, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (222:4) {#if open_dialog}
+    // (220:4) {#if open_dialog}
     function create_if_block$2(ctx) {
     	let div1;
     	let div0;
@@ -22140,10 +22144,10 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			attr_dev(div0, "class", "modal-content svelte-7t2ez2");
     			set_style(div0, "width", "fit-content");
-    			add_location(div0, file$2, 223, 8, 7720);
+    			add_location(div0, file$2, 221, 8, 7664);
     			attr_dev(div1, "id", "modal");
     			attr_dev(div1, "class", "modal svelte-7t2ez2");
-    			add_location(div1, file$2, 222, 4, 7681);
+    			add_location(div1, file$2, 220, 4, 7625);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -22189,7 +22193,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(222:4) {#if open_dialog}",
+    		source: "(220:4) {#if open_dialog}",
     		ctx
     	});
 
@@ -22330,36 +22334,36 @@ var app = (function () {
     			attr_dev(feColorMatrix, "type", "matrix");
     			attr_dev(feColorMatrix, "in", "SourceGraphic");
     			attr_dev(feColorMatrix, "values", "0.1 0 0 0 0\n                            0 0.8 0 0 0\n                            0 0 1.7 0 0\n                            0 0 0 1 0 ");
-    			add_location(feColorMatrix, file$2, 133, 16, 4204);
+    			add_location(feColorMatrix, file$2, 131, 16, 4148);
     			attr_dev(filter, "id", "matrix");
-    			add_location(filter, file$2, 132, 12, 4167);
-    			add_location(defs, file$2, 131, 8, 4148);
-    			add_location(g_1, file$2, 140, 8, 4461);
+    			add_location(filter, file$2, 130, 12, 4111);
+    			add_location(defs, file$2, 129, 8, 4092);
+    			add_location(g_1, file$2, 138, 8, 4405);
     			attr_dev(svg, "width", /*width*/ ctx[2]);
     			attr_dev(svg, "height", /*height*/ ctx[3]);
     			attr_dev(svg, "class", "svelte-7t2ez2");
-    			add_location(svg, file$2, 126, 4, 4028);
+    			add_location(svg, file$2, 124, 4, 3972);
     			set_style(div0, "text-align", "left");
-    			add_location(div0, file$2, 199, 8, 6816);
+    			add_location(div0, file$2, 197, 8, 6760);
     			set_style(div1, "text-align", "center");
-    			add_location(div1, file$2, 198, 4, 6774);
+    			add_location(div1, file$2, 196, 4, 6718);
     			attr_dev(span1, "class", "mdi mdi-comment-text-outline");
-    			add_location(span1, file$2, 208, 16, 7181);
-    			add_location(button1, file$2, 207, 12, 7119);
+    			add_location(span1, file$2, 206, 16, 7125);
+    			add_location(button1, file$2, 205, 12, 7063);
     			attr_dev(span2, "class", "mdi mdi-check");
-    			add_location(span2, file$2, 212, 83, 7414);
+    			add_location(span2, file$2, 210, 83, 7358);
     			set_style(button2, "float", "right");
-    			add_location(button2, file$2, 212, 16, 7347);
-    			add_location(textarea, file$2, 213, 16, 7470);
+    			add_location(button2, file$2, 210, 16, 7291);
+    			add_location(textarea, file$2, 211, 16, 7414);
     			attr_dev(div2, "class", "comment dropdown-content svelte-7t2ez2");
-    			add_location(div2, file$2, 210, 12, 7266);
+    			add_location(div2, file$2, 208, 12, 7210);
     			attr_dev(div3, "class", "dropdown svelte-7t2ez2");
     			toggle_class(div3, "active", /*comment_menu*/ ctx[9]);
-    			add_location(div3, file$2, 206, 8, 7055);
+    			add_location(div3, file$2, 204, 8, 6999);
     			set_style(small1, "position", "absolute");
     			set_style(small1, "bottom", "0px");
     			set_style(small1, "right", "5px");
-    			add_location(small1, file$2, 205, 4, 6986);
+    			add_location(small1, file$2, 203, 4, 6930);
     			attr_dev(div4, "class", "card svelte-7t2ez2");
     			set_style(div4, "background-color", /*$bgScale*/ ctx[16](-/*data*/ ctx[0].pos_count + /*data*/ ctx[0].neg_count));
     			add_location(div4, file$2, 88, 0, 2618);
@@ -22682,9 +22686,7 @@ var app = (function () {
     	};
 
     	const click_handler_1 = () => {
-    		//                console.log(performance.now());-->
     		data$1.click_enlarge.push(performance.now());
-
     		$$invalidate(8, open_dialog = !open_dialog);
     	};
 
@@ -40157,28 +40159,30 @@ var app = (function () {
     }
 
     /* src/Trial.svelte generated by Svelte v3.23.2 */
+
+    const { console: console_1 } = globals;
     const file$3 = "src/Trial.svelte";
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
-    	child_ctx[18] = i;
+    	child_ctx[17] = list[i];
+    	child_ctx[19] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[19] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[22] = list[i];
+    	child_ctx[23] = list[i];
     	return child_ctx;
     }
 
-    // (32:26) {#each available_points as a}
+    // (35:26) {#each available_points as a}
     function create_each_block_2(ctx) {
     	let span;
 
@@ -40186,20 +40190,20 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			attr_dev(span, "class", "mdi");
-    			toggle_class(span, "mdi-heart", /*a*/ ctx[22]);
-    			toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[22]);
-    			add_location(span, file$3, 32, 12, 1277);
+    			toggle_class(span, "mdi-heart", /*a*/ ctx[23]);
+    			toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[23]);
+    			add_location(span, file$3, 35, 12, 1393);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*available_points*/ 2) {
-    				toggle_class(span, "mdi-heart", /*a*/ ctx[22]);
+    				toggle_class(span, "mdi-heart", /*a*/ ctx[23]);
     			}
 
     			if (dirty & /*available_points*/ 2) {
-    				toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[22]);
+    				toggle_class(span, "mdi-heart-outline", !/*a*/ ctx[23]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -40211,14 +40215,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(32:26) {#each available_points as a}",
+    		source: "(35:26) {#each available_points as a}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:8) {#if $vis_type == "circle"}
+    // (42:8) {#if $vis_type == "circle"}
     function create_if_block_1$1(ctx) {
     	let small;
     	let current;
@@ -40244,7 +40248,7 @@ var app = (function () {
 
     			set_style(small, "display", "flex");
     			set_style(small, "justify-content", "center");
-    			add_location(small, file$3, 39, 12, 1554);
+    			add_location(small, file$3, 43, 12, 1671);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, small, anchor);
@@ -40312,20 +40316,20 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(39:8) {#if $vis_type == \\\"circle\\\"}",
+    		source: "(42:8) {#if $vis_type == \\\"circle\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:16) {#each classes as c}
+    // (45:16) {#each classes as c}
     function create_each_block_1$1(ctx) {
     	let div;
     	let span;
     	let t0;
     	let t1;
-    	let t2_value = /*c*/ ctx[19] + "";
+    	let t2_value = /*c*/ ctx[20] + "";
     	let t2;
     	let div_transition;
     	let current;
@@ -40337,11 +40341,11 @@ var app = (function () {
     			t0 = text("•");
     			t1 = space();
     			t2 = text(t2_value);
-    			set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[19]));
-    			add_location(span, file$3, 41, 92, 1739);
+    			set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[20]));
+    			add_location(span, file$3, 45, 92, 1856);
     			set_style(div, "display", "inline-block");
     			set_style(div, "padding", "0px .4rem");
-    			add_location(div, file$3, 41, 20, 1667);
+    			add_location(div, file$3, 45, 20, 1784);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40353,10 +40357,10 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (!current || dirty & /*$colorScale, classes*/ 36) {
-    				set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[19]));
+    				set_style(span, "color", /*$colorScale*/ ctx[5](/*c*/ ctx[20]));
     			}
 
-    			if ((!current || dirty & /*classes*/ 4) && t2_value !== (t2_value = /*c*/ ctx[19] + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*classes*/ 4) && t2_value !== (t2_value = /*c*/ ctx[20] + "")) set_data_dev(t2, t2_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -40383,14 +40387,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(41:16) {#each classes as c}",
+    		source: "(45:16) {#each classes as c}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:8) {#if $ready}
+    // (52:8) {#if $ready}
     function create_if_block$3(ctx) {
     	let each_blocks = [];
     	let each_1_lookup = new Map();
@@ -40398,7 +40402,7 @@ var app = (function () {
     	let current;
     	let each_value = /*$projections*/ ctx[3];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*p*/ ctx[16];
+    	const get_key = ctx => /*p*/ ctx[17];
     	validate_each_keys(ctx, each_value, get_each_context$3, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -40464,14 +40468,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(48:8) {#if $ready}",
+    		source: "(52:8) {#if $ready}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:12) {#each $projections as p, i (p)}
+    // (53:12) {#each $projections as p, i (p)}
     function create_each_block$3(key_1, ctx) {
     	let div;
     	let vis;
@@ -40483,7 +40487,7 @@ var app = (function () {
     	vis = new Vis({
     			props: {
     				tooltip: /*tooltip*/ ctx[0],
-    				data: /*p*/ ctx[16],
+    				data: /*p*/ ctx[17],
     				width: /*width*/ ctx[7],
     				height: /*height*/ ctx[8],
     				margin: /*margin*/ ctx[9]
@@ -40499,7 +40503,7 @@ var app = (function () {
     			create_component(vis.$$.fragment);
     			t = space();
     			set_style(div, "margin", "0px");
-    			add_location(div, file$3, 49, 12, 1974);
+    			add_location(div, file$3, 53, 12, 2091);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -40511,9 +40515,9 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const vis_changes = {};
     			if (dirty & /*tooltip*/ 1) vis_changes.tooltip = /*tooltip*/ ctx[0];
-    			if (dirty & /*$projections*/ 8) vis_changes.data = /*p*/ ctx[16];
+    			if (dirty & /*$projections*/ 8) vis_changes.data = /*p*/ ctx[17];
 
-    			if (dirty & /*$$scope*/ 33554432) {
+    			if (dirty & /*$$scope*/ 67108864) {
     				vis_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40549,7 +40553,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(49:12) {#each $projections as p, i (p)}",
+    		source: "(53:12) {#each $projections as p, i (p)}",
     		ctx
     	});
 
@@ -40561,14 +40565,14 @@ var app = (function () {
     	let header;
     	let span0;
     	let t1;
+    	let form;
     	let input0;
     	let t2;
     	let input1;
     	let t3;
-    	let br0;
     	let t4;
     	let t5;
-    	let br1;
+    	let br;
     	let t6;
     	let button;
     	let span1;
@@ -40597,11 +40601,11 @@ var app = (function () {
     			span0 = element("span");
     			span0.textContent = "show datapoints as:";
     			t1 = space();
+    			form = element("form");
     			input0 = element("input");
-    			t2 = text(" Image\n        ");
+    			t2 = text(" Image\n                ");
     			input1 = element("input");
     			t3 = text(" Circles");
-    			br0 = element("br");
     			t4 = text("\n        \n        available points: ");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -40609,7 +40613,7 @@ var app = (function () {
     			}
 
     			t5 = space();
-    			br1 = element("br");
+    			br = element("br");
     			t6 = space();
     			button = element("button");
     			span1 = element("span");
@@ -40619,27 +40623,27 @@ var app = (function () {
     			t9 = space();
     			div = element("div");
     			if (if_block1) if_block1.c();
-    			add_location(span0, file$3, 26, 8, 786);
+    			add_location(span0, file$3, 26, 8, 810);
     			attr_dev(input0, "type", "radio");
     			input0.__value = "image";
     			input0.value = input0.__value;
     			/*$$binding_groups*/ ctx[11][0].push(input0);
-    			add_location(input0, file$3, 27, 8, 828);
+    			add_location(input0, file$3, 28, 16, 923);
     			attr_dev(input1, "type", "radio");
     			input1.__value = "circle";
     			input1.value = input1.__value;
     			/*$$binding_groups*/ ctx[11][0].push(input1);
-    			add_location(input1, file$3, 28, 8, 900);
-    			add_location(br0, file$3, 28, 74, 966);
-    			add_location(br1, file$3, 34, 8, 1376);
+    			add_location(input1, file$3, 29, 16, 1003);
+    			add_location(form, file$3, 27, 8, 852);
+    			add_location(br, file$3, 37, 8, 1492);
     			attr_dev(span1, "class", "mdi mdi-sort");
-    			add_location(span1, file$3, 37, 11, 1457);
-    			add_location(button, file$3, 35, 8, 1389);
+    			add_location(span1, file$3, 40, 11, 1573);
+    			add_location(button, file$3, 38, 8, 1505);
     			attr_dev(header, "class", "svelte-1ezfhin");
-    			add_location(header, file$3, 25, 4, 769);
+    			add_location(header, file$3, 25, 4, 793);
     			attr_dev(div, "class", "vis_list svelte-1ezfhin");
-    			add_location(div, file$3, 46, 4, 1873);
-    			add_location(section, file$3, 24, 0, 755);
+    			add_location(div, file$3, 50, 4, 1990);
+    			add_location(section, file$3, 24, 0, 779);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -40649,13 +40653,13 @@ var app = (function () {
     			append_dev(section, header);
     			append_dev(header, span0);
     			append_dev(header, t1);
-    			append_dev(header, input0);
+    			append_dev(header, form);
+    			append_dev(form, input0);
     			input0.checked = input0.__value === /*$vis_type*/ ctx[4];
-    			append_dev(header, t2);
-    			append_dev(header, input1);
+    			append_dev(form, t2);
+    			append_dev(form, input1);
     			input1.checked = input1.__value === /*$vis_type*/ ctx[4];
-    			append_dev(header, t3);
-    			append_dev(header, br0);
+    			append_dev(form, t3);
     			append_dev(header, t4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -40663,7 +40667,7 @@ var app = (function () {
     			}
 
     			append_dev(header, t5);
-    			append_dev(header, br1);
+    			append_dev(header, br);
     			append_dev(header, t6);
     			append_dev(header, button);
     			append_dev(button, span1);
@@ -40679,7 +40683,8 @@ var app = (function () {
     				dispose = [
     					listen_dev(input0, "change", /*input0_change_handler*/ ctx[10]),
     					listen_dev(input1, "change", /*input1_change_handler*/ ctx[12]),
-    					listen_dev(button, "click", /*click_handler*/ ctx[13], false, false, false)
+    					listen_dev(form, "change", /*change_handler*/ ctx[13], false, false, false),
+    					listen_dev(button, "click", /*click_handler*/ ctx[14], false, false, false)
     				];
 
     				mounted = true;
@@ -40807,7 +40812,7 @@ var app = (function () {
     	validate_store(projections, "projections");
     	component_subscribe($$self, projections, $$value => $$invalidate(3, $projections = $$value));
     	validate_store(pos_count, "pos_count");
-    	component_subscribe($$self, pos_count, $$value => $$invalidate(14, $pos_count = $$value));
+    	component_subscribe($$self, pos_count, $$value => $$invalidate(15, $pos_count = $$value));
     	validate_store(vis_type, "vis_type");
     	component_subscribe($$self, vis_type, $$value => $$invalidate(4, $vis_type = $$value));
     	validate_store(colorScale, "colorScale");
@@ -40827,7 +40832,7 @@ var app = (function () {
     	const writable_props = ["tooltip"];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Trial> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<Trial> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -40844,6 +40849,8 @@ var app = (function () {
     		vis_type.set($vis_type);
     	}
 
+    	const change_handler = () => console.log("yo", $vis_type);
+
     	const click_handler = () => {
     		data.sort_by_pos();
     	};
@@ -40853,6 +40860,8 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => ({
+    		color_time,
+    		image_time,
     		projections,
     		data,
     		pos_count,
@@ -40904,7 +40913,7 @@ var app = (function () {
     			 $$invalidate(2, classes = Array.from(new Set($projections[0].map(d => d.class))));
     		}
 
-    		if ($$self.$$.dirty & /*$pos_count*/ 16384) {
+    		if ($$self.$$.dirty & /*$pos_count*/ 32768) {
     			 update();
     		}
     	};
@@ -40923,6 +40932,7 @@ var app = (function () {
     		input0_change_handler,
     		$$binding_groups,
     		input1_change_handler,
+    		change_handler,
     		click_handler
     	];
     }
@@ -40943,7 +40953,7 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*tooltip*/ ctx[0] === undefined && !("tooltip" in props)) {
-    			console.warn("<Trial> was created without expected prop 'tooltip'");
+    			console_1.warn("<Trial> was created without expected prop 'tooltip'");
     		}
     	}
 
@@ -44790,11 +44800,11 @@ var app = (function () {
 
     /* src/App.svelte generated by Svelte v3.23.2 */
 
-    const { console: console_1 } = globals;
+    const { console: console_1$1 } = globals;
 
     const file$4 = "src/App.svelte";
 
-    // (315:0) {#if $hover}
+    // (317:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44813,16 +44823,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 322, 8, 11950);
+    			add_location(img, file$4, 324, 8, 12104);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 321, 4, 11916);
+    			add_location(div0, file$4, 323, 4, 12070);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 315, 0, 11694);
+    			add_location(div1, file$4, 317, 0, 11848);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44870,14 +44880,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(315:0) {#if $hover}",
+    		source: "(317:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (347:32) 
+    // (349:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44885,7 +44895,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 347, 8, 13089);
+    			add_location(div, file$4, 349, 8, 13243);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44902,14 +44912,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(347:32) ",
+    		source: "(349:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:31) 
+    // (342:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -44942,17 +44952,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 341, 12, 12621);
+    			add_location(iframe, file$4, 343, 12, 12775);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 341, 206, 12815);
-    			add_location(p, file$4, 341, 203, 12812);
+    			add_location(a, file$4, 343, 206, 12969);
+    			add_location(p, file$4, 343, 203, 12966);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 342, 16, 12918);
+    			add_location(span0, file$4, 344, 16, 13072);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 342, 79, 12981);
-    			add_location(h1, file$4, 342, 12, 12914);
+    			add_location(span1, file$4, 344, 79, 13135);
+    			add_location(h1, file$4, 344, 12, 13068);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 340, 8, 12571);
+    			add_location(div, file$4, 342, 8, 12725);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44977,14 +44987,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(340:31) ",
+    		source: "(342:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (328:4) {#if step == "dr_grid"}
+    // (330:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45006,7 +45016,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 328, 8, 12191);
+    			add_location(div, file$4, 330, 8, 12345);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45057,14 +45067,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(328:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(330:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:8) {:else}
+    // (337:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45077,8 +45087,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 335, 12, 12435);
-    			add_location(center, file$4, 336, 12, 12474);
+    			add_location(div, file$4, 337, 12, 12589);
+    			add_location(center, file$4, 338, 12, 12628);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45099,14 +45109,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(335:8) {:else}",
+    		source: "(337:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (330:8) {#if $ready}
+    // (332:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45121,7 +45131,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 330, 12, 12262);
+    			add_location(div, file$4, 332, 12, 12416);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45152,7 +45162,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(330:8) {#if $ready}",
+    		source: "(332:8) {#if $ready}",
     		ctx
     	});
 
@@ -45214,13 +45224,13 @@ var app = (function () {
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 310, 4, 11648);
+    			add_location(h2, file$4, 312, 4, 11802);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 309, 0, 11638);
+    			add_location(nav, file$4, 311, 0, 11792);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 326, 0, 12085);
+    			add_location(main, file$4, 328, 0, 12239);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45343,13 +45353,22 @@ var app = (function () {
     const cols = 4;
 
     function instance$4($$self, $$props, $$invalidate) {
+    	let $sort_time;
+    	let $color_time;
+    	let $image_time;
     	let $projections;
     	let $hover;
     	let $dataset;
     	let $images;
     	let $ready;
+    	validate_store(sort_time, "sort_time");
+    	component_subscribe($$self, sort_time, $$value => $$invalidate(11, $sort_time = $$value));
+    	validate_store(color_time, "color_time");
+    	component_subscribe($$self, color_time, $$value => $$invalidate(12, $color_time = $$value));
+    	validate_store(image_time, "image_time");
+    	component_subscribe($$self, image_time, $$value => $$invalidate(13, $image_time = $$value));
     	validate_store(projections, "projections");
-    	component_subscribe($$self, projections, $$value => $$invalidate(11, $projections = $$value));
+    	component_subscribe($$self, projections, $$value => $$invalidate(14, $projections = $$value));
     	validate_store(hover, "hover");
     	component_subscribe($$self, hover, $$value => $$invalidate(2, $hover = $$value));
     	validate_store(dataset, "dataset");
@@ -45516,6 +45535,10 @@ var app = (function () {
     				settings_collection.updateOne({}, { $set: update });
     			}
 
+    			data.sort_time = $sort_time;
+    			data.color_time = $color_time;
+    			data.image_time = $image_time;
+
     			data.dataset = $projections.map(p => {
     				return {
     					"name": p.name,
@@ -45671,7 +45694,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<App> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -45687,6 +45710,8 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		onMount,
     		scale,
+    		color_time,
+    		image_time,
     		sort_time,
     		dataset,
     		data,
@@ -45730,6 +45755,9 @@ var app = (function () {
     		debrief,
     		comments,
     		tooltip,
+    		$sort_time,
+    		$color_time,
+    		$image_time,
     		$projections,
     		$hover,
     		$dataset,

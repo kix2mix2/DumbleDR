@@ -109,9 +109,7 @@
         <button
             title="expand"
             on:click={() => {
-<!--                console.log(performance.now());-->
                 data.click_enlarge.push(performance.now());
-
                 open_dialog = !open_dialog
             }}
             >

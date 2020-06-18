@@ -1,5 +1,5 @@
 <script>
-    import { projections, data, pos_count, neg_count, hover, images, vis_type, ready, progress, colorScale } from "./stores.js";
+    import { color_time, image_time, projections, data, pos_count, neg_count, hover, images, vis_type, ready, progress, colorScale } from "./stores.js";
     import { debounce } from "lodash";
 	import { flip } from 'svelte/animate';
     import { quintOut } from 'svelte/easing';
@@ -25,8 +25,11 @@
 <section>
     <header>
         <span>show datapoints as: </span>
-        <input type="radio" bind:group={$vis_type} value="image"> Image
-        <input type="radio" bind:group={$vis_type} value="circle"> Circles<br>
+        <form on:change={() => console.log('yo', $vis_type) }>
+                <input type="radio" bind:group={$vis_type} value="image"> Image
+                <input type="radio" bind:group={$vis_type} value="circle"> Circles
+
+        </form>
         <!-- <span>available points: </span><span class="mdi mdi-thumb-up"></span><span style="color: green;">{$pos_count}</span>
         <span class="mdi mdi-thumb-down"></span><span style="color: orangered;">{$neg_count}</span><br> -->
         available points: {#each available_points as a}
@@ -37,6 +40,7 @@
             data.sort_by_pos()
         }}><span class="mdi mdi-sort"></span> Sort</button>
         {#if $vis_type == "circle"}
+
             <small style="display: flex; justify-content: center;">
                 {#each classes as c}
                     <div transition:fade style="display: inline-block; padding: 0px .4rem;"><span style="color: {$colorScale(c)}">•</span> {c}</div>
