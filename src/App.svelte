@@ -35,6 +35,7 @@
     let subject_id = jsPsych.randomization.randomID(15);
     jsPsych.data.addProperties({
         subject: subject_id
+
     });
     
     let welcome_block = {
@@ -178,6 +179,7 @@
             data.sort_time = $sort_time;
             data.color_time = $color_time;
             data.image_time = $image_time;
+            data.finish_time = performance.now();
             data.dataset = $projections.map(p => {
                 return {
                     "name": p.name,

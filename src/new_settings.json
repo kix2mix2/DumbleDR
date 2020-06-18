@@ -2,7 +2,7 @@
   "settings": [
     {
       "name": "Caltech_instruments",
-      "description": "",
+      "description": "Photos of instruments",
       "paths": [
         "Caltech_instruments_size200_c6_UMAP_n2_d0.5.csv",
         "Caltech_instruments_size200_c6_UMAP_n2_d0.1.csv",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Caltech_plants",
-      "description": "",
+      "description": "Photos of plants",
       "paths": [
         "Caltech_plants_size200_c6_ISM_n2.csv",
         "Caltech_plants_size200_c6_UMAP_n2_d0.1.csv",
@@ -102,7 +102,7 @@
     },
     {
       "name": "stanfordfaces",
-      "description": "",
+      "description": "Dataset of a 3D head photographed from different angles and with different lighting conditions.",
       "paths": [
         "stanfordfaces_size50_call_TSNE_p30.csv",
         "stanfordfaces_size50_call_UMAP_n5_d0.1.csv",
@@ -156,7 +156,7 @@
     },
     {
       "name": "Caltech_vehicles",
-      "description": "",
+      "description": "Photos of vehicles",
       "paths": [
         "Caltech_vehicles_size200_c6_UMAP_n2_d0.5.csv",
         "Caltech_vehicles_size200_c6_GRP.csv",
@@ -200,7 +200,7 @@
     },
     {
       "name": "MNIST",
-      "description": "",
+      "description": "Handwritten digits",
       "paths": [
         "MNIST_size28_c6_SE_n7.csv",
         "MNIST_size28_c6_ISM_n5.csv",
@@ -250,7 +250,7 @@
     },
     {
       "name": "paintings",
-      "description": "",
+      "description": "Paintings publicly available on Art UK.",
       "paths": [
         "paintings_size50_c10_TSNE_p10.csv",
         "paintings_size50_c10_MDS.csv",
@@ -300,7 +300,7 @@
     },
     {
       "name": "flowers",
-      "description": "",
+      "description": "Photos of flowers",
       "paths": [
         "flowers_size200_c6_PCA.csv",
         "flowers_size200_c6_GRP.csv",
@@ -346,7 +346,7 @@
     },
     {
       "name": "coil-100",
-      "description": "",
+      "description": "Dataset of various objects photographed from different angles.",
       "paths": [
         "coil-100_size50_c6_UMAP_n5_d0.8.csv",
         "coil-100_size50_c6_UMAP_n2_d0.1.csv",
@@ -402,7 +402,7 @@
     },
     {
       "name": "yalefaces",
-      "description": "",
+      "description": "Dataset of 14 different people expressing various emotions.",
       "paths": [
         "yalefaces_size200_call_UMAP_n5_d0.1.csv",
         "yalefaces_size200_call_TSNE_p10.csv",
@@ -460,7 +460,7 @@
     },
     {
       "name": "oxford_buildings",
-      "description": "",
+      "description": "Photos of buildings in Oxford taken by tourists.",
       "paths": [
         "oxford_buildings_size200_c6_UMAP_n15_d0.1.csv",
         "oxford_buildings_size200_c6_TSNE_p10.csv",
@@ -504,7 +504,7 @@
     },
     {
       "name": "fashionmnist",
-      "description": "",
+      "description": "Dataset of 28x28 photos of fashion items (shoes, shirts etc.)",
       "paths": [
         "fashionmnist_size50_c6_UMAP_n2_d0.1.csv",
         "fashionmnist_size50_c6_ISM_n2.csv",
@@ -548,7 +548,7 @@
     },
     {
       "name": "paris_buildings",
-      "description": "",
+      "description": "Photos of buildings in Paris taken by tourists.",
       "paths": [
         "paris_buildings_size50_c6_GRP.csv",
         "paris_buildings_size50_c6_TSNE_p100.csv",
