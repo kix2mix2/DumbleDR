@@ -132,6 +132,7 @@
     const settings_collection = db.collection("settings");
 
     let settings = settings_collection.findOne({}).then(d => settings = d.settings);
+    console.log(settings);
     $: console.log(settings)
 
 
@@ -141,14 +142,6 @@
     let dr_grid = {
         type: "html-button-response",
         stimulus: () => {
-
-
-            /* const sample1 = jsPsych.randomization.sampleWithoutReplacement(settings.settings, 1)[0];
-            const sample = jsPsych.randomization.sampleWithoutReplacement(sample1.paths, rows * cols);
- */
-
-            /* const sample1 = c.weighted(settings,);
-            const sample =  */
 
             const wl1 = new WeightedList(settings.map((s, i) => [i, 1 / s.dataset_weight, s]));
             choosen_dataset = wl1.peek()[0];
