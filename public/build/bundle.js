@@ -44822,7 +44822,7 @@ var app = (function () {
 
     const file$4 = "src/App.svelte";
 
-    // (326:0) {#if $hover}
+    // (331:0) {#if $hover}
     function create_if_block_4$1(ctx) {
     	let div1;
     	let div0;
@@ -44841,16 +44841,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 333, 8, 12733);
+    			add_location(img, file$4, 338, 8, 12896);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 332, 4, 12699);
+    			add_location(div0, file$4, 337, 4, 12862);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 326, 0, 12477);
+    			add_location(div1, file$4, 331, 0, 12640);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44898,14 +44898,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(326:0) {#if $hover}",
+    		source: "(331:0) {#if $hover}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (358:32) 
+    // (363:32) 
     function create_if_block_3$1(ctx) {
     	let div;
 
@@ -44913,7 +44913,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 358, 8, 13872);
+    			add_location(div, file$4, 363, 8, 14035);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44930,14 +44930,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(358:32) ",
+    		source: "(363:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (351:31) 
+    // (356:31) 
     function create_if_block_2$1(ctx) {
     	let div;
     	let iframe;
@@ -44970,17 +44970,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 352, 12, 13404);
+    			add_location(iframe, file$4, 357, 12, 13567);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 352, 206, 13598);
-    			add_location(p, file$4, 352, 203, 13595);
+    			add_location(a, file$4, 357, 206, 13761);
+    			add_location(p, file$4, 357, 203, 13758);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 353, 16, 13701);
+    			add_location(span0, file$4, 358, 16, 13864);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 353, 79, 13764);
-    			add_location(h1, file$4, 353, 12, 13697);
+    			add_location(span1, file$4, 358, 79, 13927);
+    			add_location(h1, file$4, 358, 12, 13860);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 351, 8, 13354);
+    			add_location(div, file$4, 356, 8, 13517);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45005,14 +45005,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(351:31) ",
+    		source: "(356:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (339:4) {#if step == "dr_grid"}
+    // (344:4) {#if step == "dr_grid"}
     function create_if_block$4(ctx) {
     	let div;
     	let current_block_type_index;
@@ -45034,7 +45034,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 339, 8, 12974);
+    			add_location(div, file$4, 344, 8, 13137);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45085,14 +45085,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(339:4) {#if step == \\\"dr_grid\\\"}",
+    		source: "(344:4) {#if step == \\\"dr_grid\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (346:8) {:else}
+    // (351:8) {:else}
     function create_else_block$1(ctx) {
     	let div;
     	let t0;
@@ -45105,8 +45105,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 346, 12, 13218);
-    			add_location(center, file$4, 347, 12, 13257);
+    			add_location(div, file$4, 351, 12, 13381);
+    			add_location(center, file$4, 352, 12, 13420);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45127,14 +45127,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(346:8) {:else}",
+    		source: "(351:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (341:8) {#if $ready}
+    // (346:8) {#if $ready}
     function create_if_block_1$2(ctx) {
     	let div;
     	let trial;
@@ -45149,7 +45149,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 341, 12, 13045);
+    			add_location(div, file$4, 346, 12, 13208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45180,7 +45180,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(341:8) {#if $ready}",
+    		source: "(346:8) {#if $ready}",
     		ctx
     	});
 
@@ -45260,27 +45260,27 @@ var app = (function () {
     			if (img0.src !== (img0_src_value = "./images/favicon.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "height", "24px");
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$4, 318, 39, 12183);
+    			add_location(img0, file$4, 323, 39, 12346);
     			set_style(h2, "display", "inline-block");
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 318, 4, 12148);
+    			add_location(h2, file$4, 323, 4, 12311);
     			if (img1.src !== (img1_src_value = "./images/visus.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "height", "48px");
     			attr_dev(img1, "alt", "visus");
-    			add_location(img1, file$4, 320, 8, 12308);
+    			add_location(img1, file$4, 325, 8, 12471);
     			if (img2.src !== (img2_src_value = "./images/logo-precise.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "height", "48px");
     			attr_dev(img2, "alt", "precise");
-    			add_location(img2, file$4, 321, 8, 12375);
+    			add_location(img2, file$4, 326, 8, 12538);
     			set_style(div, "float", "right");
     			set_style(div, "padding", ".5rem");
-    			add_location(div, file$4, 319, 4, 12257);
+    			add_location(div, file$4, 324, 4, 12420);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 317, 0, 12138);
+    			add_location(nav, file$4, 322, 0, 12301);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 337, 0, 12868);
+    			add_location(main, file$4, 342, 0, 13031);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45581,13 +45581,14 @@ var app = (function () {
     			let update = {};
     			update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
     			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update }, { upsert: true })).catch(err => console.error(err));
+    			update = {};
 
     			for (let i = 0, n = choosen_projections.length; i < n; ++i) {
-    				update = {};
-    				update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
-    				client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update }, { upsert: true })).catch(err => console.error(err));
+    				update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = 1;
     			}
 
+    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $inc: update }, { upsert: true })).catch(err => console.error(err));
+    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.findOne({})).catch(err => console.error(err)).then(d => $$invalidate(7, settings = d.settings));
     			data.sort_time = $sort_time;
     			data.color_time = $color_time;
     			data.image_time = $image_time;

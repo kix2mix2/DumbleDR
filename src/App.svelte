@@ -172,14 +172,13 @@
                     .then(user => settings_collection.updateOne({}, {$set: update}, { upsert : true }))
                     .catch(err => console.error(err));
 
+            update = {}
             for (let i = 0, n = choosen_projections.length; i < n; ++i) {
-                update = {}
-                update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
-                client.auth.loginWithCredential(new stitch.AnonymousCredential())
-                    .then(user => settings_collection.updateOne({}, {$set: update}, { upsert : true }))
-                    .catch(err => console.error(err));
-                
+                update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = 1;                
             }
+            client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                .then(user => settings_collection.updateOne({}, {$inc: update}, { upsert : true }))
+                .catch(err => console.error(err));
 
             client.auth.loginWithCredential(new stitch.AnonymousCredential())
                 .then(user => settings_collection.findOne({}))
