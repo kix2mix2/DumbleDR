@@ -131,7 +131,13 @@
     const results = db.collection("results");
     const settings_collection = db.collection("settings");
 
-    let settings = settings_collection.findOne({}).then(d => settings = d.settings);
+    let settings// = settings_collection.findOne({}).then(d => settings = d.settings);
+
+    client.auth.loginWithCredential(new stitch.AnonymousCredential())
+        .then(user => settings_collection.findOne({}))
+        .catch(err => console.error(err))
+        .then(d => settings = d.settings);
+
     console.log(settings);
     $: console.log(settings)
 
@@ -162,12 +168,17 @@
         on_finish: function(data) {
             let update = {}
             update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
-            settings_collection.updateOne({}, {$set: update});
-            
+            client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                    .then(user => settings_collection.updateOne({}, {$set: update}))
+                    .catch(err => console.error(err));
+
             for (let i = 0, n = choosen_projections.length; i < n; ++i) {
                 update = {}
                 update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
-                settings_collection.updateOne({}, {$set: update});
+                client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                    .then(user => settings_collection.updateOne({}, {$set: update}))
+                    .catch(err => console.error(err));
+                
             }
             data.sort_time = $sort_time;
             data.color_time = $color_time;
