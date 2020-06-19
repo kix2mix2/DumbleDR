@@ -169,17 +169,23 @@
             let update = {}
             update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
             client.auth.loginWithCredential(new stitch.AnonymousCredential())
-                    .then(user => settings_collection.updateOne({}, {$set: update}))
+                    .then(user => settings_collection.updateOne({}, {$set: update}, { upsert : true }))
                     .catch(err => console.error(err));
 
             for (let i = 0, n = choosen_projections.length; i < n; ++i) {
                 update = {}
                 update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
                 client.auth.loginWithCredential(new stitch.AnonymousCredential())
-                    .then(user => settings_collection.updateOne({}, {$set: update}))
+                    .then(user => settings_collection.updateOne({}, {$set: update}, { upsert : true }))
                     .catch(err => console.error(err));
                 
             }
+
+            client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                .then(user => settings_collection.findOne({}))
+                .catch(err => console.error(err))
+                .then(d => settings = d.settings);
+
             data.sort_time = $sort_time;
             data.color_time = $color_time;
             data.image_time = $image_time;
@@ -316,7 +322,7 @@
 </script>
 
 <nav>
-    <h2 style="display: inline-block;">DumbleDR</h2>
+    <h2 style="display: inline-block;"><img src="./images/favicon.png" height="24px" alt="" /> DumbleDR</h2>
     <div style="float:right; padding: .5rem;">
         <img src="./images/visus.png" height="48px" alt="visus" />
         <img src="./images/logo-precise.png" height="48px" alt="precise" />

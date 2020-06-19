@@ -44841,16 +44841,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 333, 8, 12639);
+    			add_location(img, file$4, 333, 8, 12733);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 332, 4, 12605);
+    			add_location(div0, file$4, 332, 4, 12699);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 326, 0, 12383);
+    			add_location(div1, file$4, 326, 0, 12477);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44913,7 +44913,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 358, 8, 13778);
+    			add_location(div, file$4, 358, 8, 13872);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44970,17 +44970,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 352, 12, 13310);
+    			add_location(iframe, file$4, 352, 12, 13404);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 352, 206, 13504);
-    			add_location(p, file$4, 352, 203, 13501);
+    			add_location(a, file$4, 352, 206, 13598);
+    			add_location(p, file$4, 352, 203, 13595);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 353, 16, 13607);
+    			add_location(span0, file$4, 353, 16, 13701);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 353, 79, 13670);
-    			add_location(h1, file$4, 353, 12, 13603);
+    			add_location(span1, file$4, 353, 79, 13764);
+    			add_location(h1, file$4, 353, 12, 13697);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 351, 8, 13260);
+    			add_location(div, file$4, 351, 8, 13354);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45034,7 +45034,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 339, 8, 12880);
+    			add_location(div, file$4, 339, 8, 12974);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45105,8 +45105,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 346, 12, 13124);
-    			add_location(center, file$4, 347, 12, 13163);
+    			add_location(div, file$4, 346, 12, 13218);
+    			add_location(center, file$4, 347, 12, 13257);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45149,7 +45149,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 341, 12, 12951);
+    			add_location(div, file$4, 341, 12, 13045);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45194,13 +45194,16 @@ var app = (function () {
     	let t0;
     	let nav;
     	let h2;
-    	let t2;
-    	let div;
     	let img0;
     	let img0_src_value;
-    	let t3;
+    	let t1;
+    	let t2;
+    	let div;
     	let img1;
     	let img1_src_value;
+    	let t3;
+    	let img2;
+    	let img2_src_value;
     	let t4;
     	let t5;
     	let main;
@@ -45230,12 +45233,13 @@ var app = (function () {
     			t0 = space();
     			nav = element("nav");
     			h2 = element("h2");
-    			h2.textContent = "DumbleDR";
+    			img0 = element("img");
+    			t1 = text(" DumbleDR");
     			t2 = space();
     			div = element("div");
-    			img0 = element("img");
-    			t3 = space();
     			img1 = element("img");
+    			t3 = space();
+    			img2 = element("img");
     			t4 = space();
     			if (if_block0) if_block0.c();
     			t5 = space();
@@ -45253,26 +45257,30 @@ var app = (function () {
     			attr_dev(link2, "rel", "stylesheet");
     			attr_dev(link2, "type", "text/css");
     			add_location(link2, file$4, 3, 4, 208);
+    			if (img0.src !== (img0_src_value = "./images/favicon.png")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "height", "24px");
+    			attr_dev(img0, "alt", "");
+    			add_location(img0, file$4, 318, 39, 12183);
     			set_style(h2, "display", "inline-block");
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 318, 4, 12110);
-    			if (img0.src !== (img0_src_value = "./images/visus.png")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "height", "48px");
-    			attr_dev(img0, "alt", "visus");
-    			add_location(img0, file$4, 320, 8, 12214);
-    			if (img1.src !== (img1_src_value = "./images/logo-precise.png")) attr_dev(img1, "src", img1_src_value);
+    			add_location(h2, file$4, 318, 4, 12148);
+    			if (img1.src !== (img1_src_value = "./images/visus.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "height", "48px");
-    			attr_dev(img1, "alt", "precise");
-    			add_location(img1, file$4, 321, 8, 12281);
+    			attr_dev(img1, "alt", "visus");
+    			add_location(img1, file$4, 320, 8, 12308);
+    			if (img2.src !== (img2_src_value = "./images/logo-precise.png")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "height", "48px");
+    			attr_dev(img2, "alt", "precise");
+    			add_location(img2, file$4, 321, 8, 12375);
     			set_style(div, "float", "right");
     			set_style(div, "padding", ".5rem");
-    			add_location(div, file$4, 319, 4, 12163);
+    			add_location(div, file$4, 319, 4, 12257);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 317, 0, 12100);
+    			add_location(nav, file$4, 317, 0, 12138);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 337, 0, 12774);
+    			add_location(main, file$4, 337, 0, 12868);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45284,11 +45292,13 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			insert_dev(target, nav, anchor);
     			append_dev(nav, h2);
+    			append_dev(h2, img0);
+    			append_dev(h2, t1);
     			append_dev(nav, t2);
     			append_dev(nav, div);
-    			append_dev(div, img0);
-    			append_dev(div, t3);
     			append_dev(div, img1);
+    			append_dev(div, t3);
+    			append_dev(div, img2);
     			insert_dev(target, t4, anchor);
     			if (if_block0) if_block0.m(target, anchor);
     			insert_dev(target, t5, anchor);
@@ -45570,12 +45580,12 @@ var app = (function () {
     		on_finish(data) {
     			let update = {};
     			update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
-    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update })).catch(err => console.error(err));
+    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update }, { upsert: true })).catch(err => console.error(err));
 
     			for (let i = 0, n = choosen_projections.length; i < n; ++i) {
     				update = {};
     				update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = choosen_dataset.data.path_weights[choosen_projections[i].key] + 1;
-    				client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update })).catch(err => console.error(err));
+    				client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update }, { upsert: true })).catch(err => console.error(err));
     			}
 
     			data.sort_time = $sort_time;
