@@ -1,301 +1,301 @@
 TSNE_1,TSNE_2,labels,filename
--51.80815,-48.114,right up,right up_679_679
-33.056904,71.49046,left up,left up_149_149
-40.29437,25.51143,left down,left down_96_96
-42.951115,-57.228333,right down,right down_594_594
-5.822597,-50.361176,right up,right up_640_640
-60.032536,27.433317,left down,left down_28_28
-58.265205,48.07797,left down,left down_41_41
-55.637905,30.46195800000001,left down,left down_9_9
--10.76339,-67.41252,right up,right up_688_688
--0.509087,-9.7733755,mid left up,mid left up_328_328
--6.894989,-49.814777,right up,right up_623_623
-61.4988,16.77344,mid left down,mid left down_288_288
-54.27130500000001,38.01953,left down,left down_44_44
--1.8748804,-55.242535,right up,right up_653_653
-26.06533,64.04575,left up,left up_110_110
-26.567106,-71.74077,right down,right down_602_602
-50.26399,52.432777,left up,left up_150_150
--10.055348,-68.439766,right up,right up_697_697
--16.189909,71.28364,left up,left up_134_134
--0.24957542,-14.290342,mid right up,mid right up_452_452
-18.225641,13.844624,mid left down,mid left down_209_209
--49.27425,24.701496,left down,left down_8_8
--61.71331800000001,-32.509605,right down,right down_551_551
--47.812614,-45.244747,right up,right up_649_649
--22.53476,17.333921,mid left up,mid left up_323_323
-16.842297,-2.8408902,mid right down,mid right down_422_422
-61.914375,16.713998999999998,mid left down,mid left down_224_224
--66.53679,39.935425,left down,left down_60_60
--1.601916,-5.20912,mid left up,mid left up_359_359
--29.988045,-39.46416,right down,right down_550_550
--6.450074,-25.051783,mid right up,mid right up_512_512
-7.653617,48.840664,left up,left up_146_146
--14.085239,72.75941999999998,left up,left up_141_141
-30.794655,4.367883,mid left down,mid left down_243_243
-17.845516,-55.27616,right down,right down_595_595
--28.17116,23.955334,mid left up,mid left up_294_294
-38.415787,23.14187,left down,left down_68_68
-13.868479,-73.816345,right down,right down_548_548
-1.5409267,-47.9838,mid right up,mid right up_489_489
-8.302595,53.10084000000001,left up,left up_114_114
--25.590044,-28.294678,mid right up,mid right up_470_470
--7.335628999999999,-37.001904,right up,right up_667_667
--20.14579,-14.809860999999998,mid right up,mid right up_468_468
--1.8179173,-54.212288,right up,right up_692_692
--19.577133,49.47805,left down,left down_47_47
-36.462048,-69.78457,right down,right down_598_598
--23.325443,36.092045,left up,left up_135_135
--13.334585999999998,-12.941436,mid right up,mid right up_509_509
--26.977636,-9.856702,mid right up,mid right up_510_510
-21.138449,-68.22135,right down,right down_554_554
-9.446554,38.707783,mid left up,mid left up_307_307
--25.407427,-31.837862,mid right down,mid right down_371_371
+-49.26975,25.53277000000001,left down,left down_74_74
+-26.260427000000004,-35.198597,mid right down,mid right down_374_374
 32.44293,72.12092,left up,left up_121_121
-39.36999,11.833343,mid left down,mid left down_280_280
-29.601078,73.20528,left up,left up_128_128
--52.70346,53.82483000000001,left down,left down_99_99
-36.48587,-68.400406,right down,right down_589_589
-7.479107400000001,-57.949955,right up,right up_675_675
-40.619846,-64.749344,right down,right down_530_530
+-18.76338,-1.0132705,mid left up,mid left up_306_306
+-44.167904,54.56936999999999,left down,left down_90_90
+26.518097,1.5559067,mid left down,mid left down_254_254
+39.641525,-31.64854,mid right down,mid right down_389_389
+8.100927,68.09246999999999,left up,left up_112_112
+7.7200494000000015,-43.55456,mid right up,mid right up_507_507
+62.57626,-22.087952,mid left down,mid left down_235_235
+-0.96902704,-25.043978,mid right up,mid right up_516_516
+34.762463000000004,20.732677,left down,left down_20_20
+14.521679,14.299758,mid left up,mid left up_354_354
+-19.406063,-17.524675,mid right up,mid right up_497_497
+8.226037,-70.89541,right down,right down_518_518
 50.669594,53.139133,left up,left up_151_151
-63.40339300000001,-3.1202846,mid left down,mid left down_256_256
--64.233086,-23.667007,right down,right down_570_570
--25.150179,26.43647,mid left up,mid left up_336_336
-66.15966999999999,16.139826,mid left down,mid left down_222_222
-51.8857,45.4151,left down,left down_81_81
-26.326946000000003,-58.962284,right down,right down_536_536
-31.036243,50.966248,left down,left down_50_50
--21.643927,63.27491,left up,left up_171_171
--10.58103,26.80058,mid left up,mid left up_370_370
-3.4532452000000005,8.951406500000003,mid left down,mid left down_218_218
-52.68867,49.544285,left down,left down_45_45
-24.403404,-19.881212,mid right down,mid right down_398_398
-15.580764000000002,38.800915,mid left up,mid left up_347_347
--5.5692935,38.141552,mid left up,mid left up_321_321
--25.614042,28.673916,left up,left up_180_180
--14.385963,39.926773,mid left up,mid left up_295_295
-6.328683,-53.317562,right up,right up_669_669
-52.082592,-15.486368,mid right down,mid right down_380_380
-64.48836,6.008197,mid left down,mid left down_251_251
--61.33345,-38.801975,right down,right down_546_546
--18.864506,70.01501999999999,left up,left up_115_115
--42.403976,15.88285,mid left up,mid left up_346_346
--45.273285,55.807022,left down,left down_85_85
-45.344105,-17.120707,mid right up,mid right up_480_480
--68.55399,-29.659645,right down,right down_542_542
-19.88613,62.34254,left up,left up_129_129
--64.5089,-23.10874,right down,right down_523_523
--24.867954,0.71828914,mid right up,mid right up_453_453
-25.480629,-26.917599,mid right down,mid right down_421_421
-52.7514,47.603416,left down,left down_35_35
-18.538248,-52.05611,mid right down,mid right down_433_433
-21.539404,-0.030244462000000007,mid left down,mid left down_244_244
-13.994532,12.060567,mid left down,mid left down_240_240
-25.40351,-61.59441,right down,right down_579_579
--5.474951,-31.566969,mid right up,mid right up_488_488
-9.043109,-74.9144,right up,right up_654_654
--6.8244905,-26.216927,mid right up,mid right up_459_459
--44.060986,-45.812145,right up,right up_672_672
--42.041092,-28.086416,right up,right up_644_644
-4.241702,-20.656534,mid right up,mid right up_511_511
-15.917204000000002,-68.245285,right down,right down_573_573
--26.672987,57.077698,left up,left up_192_192
-51.76946,-16.277601,mid right down,mid right down_405_405
-10.170864,41.84068,left up,left up_130_130
-45.462326,-54.087254,right down,right down_525_525
-18.166887,-70.41434,right down,right down_578_578
-58.46693000000001,47.319794,left down,left down_55_55
--4.6207379999999985,-32.478264,right up,right up_624_624
--18.862917000000003,67.093666,left up,left up_178_178
-9.926568,31.787975,mid left up,mid left up_309_309
-4.5143075,11.278389,mid left down,mid left down_291_291
--5.615239,38.113937,mid left down,mid left down_207_207
--46.726395,-50.94174,right up,right up_626_626
-59.56005,-24.935934,mid right down,mid right down_381_381
-31.734974,48.64595,left down,left down_1_1
-13.994572,-73.34156999999998,right down,right down_605_605
--58.50034300000001,47.12157,left down,left down_54_54
-4.706174400000001,11.8654785,mid left down,mid left down_263_263
-48.472004,40.357605,left down,left down_18_18
--49.71376,-49.23352,right up,right up_680_680
-66.01285,17.58323,mid left down,mid left down_257_257
-27.83015300000001,-34.577736,right down,right down_592_592
--40.003483,12.845832,mid left up,mid left up_329_329
-8.808266,52.79696,left up,left up_204_204
-48.74658,40.160538,left down,left down_65_65
-10.445315,40.584198,mid left up,mid left up_299_299
-59.86584000000001,12.303218,mid left down,mid left down_227_227
--19.732117,50.65927,left up,left up_170_170
-9.340415,28.47708900000001,mid left up,mid left up_304_304
-2.5881784,-48.269722,mid right up,mid right up_498_498
--13.909826999999998,40.462055,left up,left up_125_125
-31.435802,-8.000309,mid right down,mid right down_440_440
--44.186474,-45.004738,right up,right up_617_617
--45.947155,30.76754600000001,left down,left down_88_88
-44.938087,-53.59390300000001,right down,right down_534_534
-15.708445,1.1960127,mid right down,mid right down_431_431
--15.431464000000002,71.68999000000002,left up,left up_159_159
-3.3735359,9.797438,mid left down,mid left down_275_275
-17.242701999999998,-1.4117523,mid right down,mid right down_428_428
-40.638638,-30.97578,mid right down,mid right down_399_399
-25.41243,-15.947545000000002,mid right down,mid right down_390_390
-45.19203,-15.4494,mid right up,mid right up_513_513
-55.42698000000001,32.263065000000005,left down,left down_101_101
-51.487522,43.168213,left down,left down_22_22
 -1.9831562,-53.983025,right up,right up_683_683
--60.037148,48.004494,left down,left down_62_62
--12.415626,40.418163,mid left up,mid left up_298_298
-44.522575,24.973696,left down,left down_36_36
-35.087086,1.3169625,mid left down,mid left down_282_282
--54.795822,-63.858696,right up,right up_616_616
-10.309263,30.399666,mid left up,mid left up_303_303
-65.621635,21.553,mid left down,mid left down_273_273
--65.12373000000001,37.68027,left down,left down_19_19
--12.440405,2.6866894,mid left down,mid left down_278_278
-53.894794,37.528996,left down,left down_108_108
--41.816036,-49.027122,right up,right up_628_628
--0.42777848,-7.2872762999999985,mid left up,mid left up_333_333
--0.71697205,-11.081777,mid right up,mid right up_495_495
--35.4097,-14.821364,mid right up,mid right up_482_482
--49.591743,28.423346,left down,left down_80_80
--0.9745342,-12.764088,mid right up,mid right up_444_444
-10.911795,39.01822,mid left up,mid left up_314_314
-60.249348,27.16975,left down,left down_32_32
-63.48341800000001,-5.8485374000000006,mid left down,mid left down_229_229
--21.377575,-17.173489,mid right up,mid right up_447_447
-20.607813,56.017586,left up,left up_160_160
-64.2865,6.751769500000001,mid left down,mid left down_208_208
--45.4556,-55.168247,right up,right up_610_610
--10.599777,28.422428000000004,mid left up,mid left up_301_301
--63.56398000000001,32.13127,mid left down,mid left down_281_281
-37.652355,-69.88158,right down,right down_552_552
--49.36239000000001,-49.75891,right up,right up_665_665
-20.025078,-53.606075,right down,right down_522_522
-61.264908,10.209142,mid left down,mid left down_262_262
-43.89235,34.356213000000004,left down,left down_83_83
--22.324907,36.419014,left up,left up_202_202
--34.243958,-17.454076999999998,mid right up,mid right up_506_506
--73.90545999999998,-18.678122,right down,right down_533_533
-48.917534,-18.243782,mid right down,mid right down_435_435
-33.018359999999994,57.230442,left down,left down_79_79
-57.641964,47.61492,left down,left down_72_72
--18.690403,-54.50929,right up,right up_611_611
-12.627494,9.428099,mid left down,mid left down_205_205
--21.46116,-55.181194,right up,right up_622_622
--58.444008,30.81284500000001,left down,left down_42_42
--58.00105,-30.573254,right up,right up_673_673
-43.89104,32.339874,left down,left down_93_93
--39.746353000000006,13.31312,mid left up,mid left up_300_300
-33.696037,60.50716800000001,left up,left up_168_168
-64.15671,-10.690447,mid left down,mid left down_217_217
-30.956085,18.655767,mid left down,mid left down_271_271
--2.474827,-13.212444,mid right up,mid right up_455_455
-43.354633,33.207966,left down,left down_100_100
--48.75937,40.803665,left down,left down_49_49
--59.52682,-36.39294,right down,right down_559_559
--32.915363,12.64121,mid left up,mid left up_335_335
+62.81826,-21.767334,mid left down,mid left down_206_206
+-48.658997,37.760647,left down,left down_64_64
+38.915295,-32.291794,mid right down,mid right down_408_408
+-29.13384000000001,31.47223300000001,left up,left up_182_182
+6.5919423,-75.91509,right up,right up_650_650
+-62.01189,-30.682129,right up,right up_641_641
+-44.060986,-45.812145,right up,right up_672_672
+-32.95223,-17.075283,mid right up,mid right up_477_477
+32.184193,-8.826653,mid right down,mid right down_426_426
+20.770216,-68.3666,right down,right down_527_527
+20.649363,13.604084,mid right down,mid right down_385_385
+-61.293877,-36.76708,right down,right down_557_557
+-68.17734,-29.946802,right down,right down_603_603
+52.244053,50.71032,left down,left down_107_107
+-63.153576,36.563423,left down,left down_106_106
+-48.829613,38.057484,left down,left down_82_82
+37.429085,-70.6239,right down,right down_565_565
+27.287226,-59.19060500000001,right down,right down_574_574
+-28.613525,12.370283,mid left up,mid left up_338_338
+36.462048,-69.78457,right down,right down_598_598
+28.859,17.011460999999994,mid left down,mid left down_286_286
+26.567106,-71.74077,right down,right down_602_602
+36.48587,-68.400406,right down,right down_589_589
+47.43184,-17.326801,mid right down,mid right down_395_395
+-11.342689,-67.99173,right up,right up_662_662
+0.86958355,10.92647,mid left down,mid left down_238_238
+-1.601916,-5.20912,mid left up,mid left up_359_359
+22.455263,13.803999,mid right down,mid right down_414_414
+-1.8281075,-29.83639,mid right up,mid right up_445_445
+30.72168,52.60531999999999,left down,left down_92_92
+5.822597,-50.361176,right up,right up_640_640
+51.76946,-16.277601,mid right down,mid right down_405_405
+-12.792004,-13.656270999999998,mid right up,mid right up_454_454
+-55.46309,-46.2072,right up,right up_682_682
+-41.43208,-28.744028000000004,mid right up,mid right up_449_449
+-5.615239,38.113937,mid left down,mid left down_207_207
+-9.523959,-70.23236999999999,right up,right up_693_693
+52.68867,49.544285,left down,left down_45_45
+18.787952,55.120747,left down,left down_39_39
+64.60683399999999,5.322198,mid left down,mid left down_234_234
+-14.909461,72.05194,left up,left up_163_163
+-21.891792,17.190199,mid left up,mid left up_334_334
+42.951115,-57.228333,right down,right down_594_594
+-61.747124,57.20703,left down,left down_0_0
+21.539404,-0.030244462000000007,mid left down,mid left down_244_244
+48.20055,-13.676243,mid right down,mid right down_375_375
+-30.39302600000001,10.38414,mid left up,mid left up_316_316
+39.100758,23.943403,left down,left down_6_6
+66.6641,18.214676,mid left down,mid left down_277_277
+18.166887,-70.41434,right down,right down_578_578
+9.446554,38.707783,mid left up,mid left up_307_307
+6.443551,-50.28183,right down,right down_558_558
+-42.214325,16.877083,mid left up,mid left up_327_327
 -72.159874,-28.057205,right down,right down_587_587
-26.13106,-69.68986,right down,right down_590_590
-37.49813,-32.37928,mid right down,mid right down_427_427
-65.67562,16.993076000000002,mid left down,mid left down_225_225
-31.366076,73.090614,left up,left up_161_161
--40.459797,-25.203104,mid right up,mid right up_499_499
-11.652804,-53.260113,mid right down,mid right down_401_401
-2.4097402000000003,50.374367,left up,left up_172_172
-59.34524,-24.853575,mid right down,mid right down_411_411
+20.470509,62.69635400000001,left up,left up_133_133
+-18.473137,-0.2281261,mid left up,mid left up_305_305
+-0.3370296,8.972563000000003,mid left down,mid left down_264_264
+-47.85698,21.829979,left up,left up_122_122
+53.894794,37.528996,left down,left down_108_108
+-56.812347,47.870094,left down,left down_43_43
+-19.28442,49.64505,left up,left up_152_152
+-18.640547,-10.560567,mid right up,mid right up_515_515
+14.565919,12.943098,mid left up,mid left up_357_357
+42.751137,-48.735844,mid right down,mid right down_429_429
+33.280613,-33.96799,right down,right down_528_528
+-2.7837694,-23.444815,mid right up,mid right up_504_504
+-42.403976,15.88285,mid left up,mid left up_346_346
+-19.732117,50.65927,left up,left up_170_170
+25.233347,-16.901823,mid right down,mid right down_438_438
+-74.135765,-17.39207,right down,right down_524_524
+-61.493004000000006,33.350677000000005,left down,left down_70_70
+18.183361,-55.051716000000006,right down,right down_535_535
+44.11226,-29.527843,mid right down,mid right down_407_407
+-40.732243,-26.194122,mid right up,mid right up_456_456
+3.4532452000000005,8.951406500000003,mid left down,mid left down_218_218
+27.110243,-31.706335,mid right down,mid right down_416_416
+16.006532999999994,38.77084,mid left up,mid left up_368_368
+-21.377575,-17.173489,mid right up,mid right up_447_447
+18.225641,13.844624,mid left down,mid left down_209_209
+27.130054,77.46813,left up,left up_181_181
+66.63571,-4.7531834,mid left down,mid left down_268_268
+-19.067028,-54.61369300000001,right up,right up_632_632
+12.849685,38.61334,mid left up,mid left up_318_318
+-6.894989,-49.814777,right up,right up_623_623
+-66.66881,39.290833,left down,left down_58_58
+24.860992,-60.179264,right down,right down_600_600
+10.445315,40.584198,mid left up,mid left up_299_299
+-45.4556,-55.168247,right up,right up_610_610
+15.998561,-0.4038685,mid right down,mid right down_397_397
+63.401123,-20.974636,mid left down,mid left down_284_284
+41.453907,-61.086163,right down,right down_555_555
+19.008617,-70.12791,right down,right down_601_601
+-13.020881,2.2126005,mid left down,mid left down_285_285
+-27.559578,-38.31006,right down,right down_544_544
+5.0704556,-44.92325200000001,right up,right up_633_633
+-54.7995,53.51323000000001,left down,left down_7_7
+-9.286954,23.696962,mid left up,mid left up_308_308
+-28.24475300000001,-38.797638,right down,right down_566_566
+-15.449129999999998,1.1546874,mid left up,mid left up_319_319
+7.2447505,-42.490227,mid right up,mid right up_457_457
+-27.178858,13.1835,mid left up,mid left up_369_369
+64.2865,6.751769500000001,mid left down,mid left down_208_208
+31.47492,53.4077,left down,left down_15_15
+-23.170444,-59.27361,right up,right up_652_652
+24.450792,-21.950253,mid right down,mid right down_417_417
+-44.472862,54.860123,left down,left down_51_51
+-13.334585999999998,-12.941436,mid right up,mid right up_509_509
+-47.645,-41.12253,right up,right up_670_670
+50.91732800000001,51.842373,left down,left down_69_69
+17.242701999999998,-1.4117523,mid right down,mid right down_428_428
+55.28369,38.142982,left down,left down_26_26
+-35.10783,-19.337526,mid right up,mid right up_514_514
+-21.643927,63.27491,left up,left up_171_171
+-49.185474,30.384518,left down,left down_86_86
+-20.14579,-14.809860999999998,mid right up,mid right up_468_468
+15.580764000000002,38.800915,mid left up,mid left up_347_347
+-3.0540857000000003,51.33134,left up,left up_142_142
+-59.60752,-41.499035,right up,right up_690_690
+-3.623488,-50.54546,right up,right up_681_681
+9.340415,28.47708900000001,mid left up,mid left up_304_304
+-20.267906,64.72748,left up,left up_132_132
+57.65081,-26.794409,mid right down,mid right down_376_376
+40.14854,13.315745,mid left down,mid left down_274_274
+-21.483732,61.107246,left up,left up_123_123
+67.38248399999999,18.418951,mid left down,mid left down_247_247
+6.1853365999999985,-56.368805,right down,right down_586_586
+44.522575,24.973696,left down,left down_36_36
+63.40339300000001,-3.1202846,mid left down,mid left down_256_256
+40.29437,25.51143,left down,left down_96_96
+13.868479,-73.816345,right down,right down_548_548
+45.344105,-17.120707,mid right up,mid right up_480_480
+30.814074,74.00601999999998,left up,left up_199_199
+28.284616,16.389225,mid left down,mid left down_211_211
+5.5156918,-44.69849,right up,right up_694_694
+57.13971700000001,46.601574,left down,left down_56_56
+4.828878400000002,-48.120483,right up,right up_685_685
+6.328683,-53.317562,right up,right up_669_669
+-10.848683,31.484013,mid left up,mid left up_352_352
+-60.82852,56.33469,left down,left down_12_12
+21.87642,12.720661,mid left down,mid left down_233_233
+-26.977636,-9.856702,mid right up,mid right up_510_510
+-7.09122,-24.305744,right up,right up_678_678
+66.15966999999999,16.139826,mid left down,mid left down_222_222
+30.794655,4.367883,mid left down,mid left down_243_243
+-63.94915,-35.87269600000001,right down,right down_593_593
+-0.42777848,-7.2872762999999985,mid left up,mid left up_333_333
+-39.746353000000006,13.31312,mid left up,mid left up_300_300
+-26.62715,57.580643,left up,left up_136_136
+8.424412,-74.92366,right up,right up_637_637
+15.917204000000002,-68.245285,right down,right down_573_573
+39.425003,30.066202,left down,left down_31_31
+55.42698000000001,32.263065000000005,left down,left down_101_101
+-61.71331800000001,-32.509605,right down,right down_551_551
+-30.81445900000001,36.240273,left up,left up_118_118
+-11.389767,35.786716,mid left down,mid left down_290_290
+16.692566,-70.42197,right down,right down_540_540
+-39.306114,-22.045252,mid right up,mid right up_471_471
+-40.48077,-30.85986,mid right up,mid right up_460_460
+40.619846,-64.749344,right down,right down_530_530
+-44.05137,-55.481625,right up,right up_674_674
+48.99851,52.53345,left up,left up_195_195
+-24.867954,0.71828914,mid right up,mid right up_453_453
+26.66263,-14.277173,mid right down,mid right down_402_402
+-40.24351,-21.733814,mid right up,mid right up_442_442
+-30.874254,-38.289146,mid right down,mid right down_413_413
+23.426687,-21.195692,mid right down,mid right down_403_403
+-8.566664999999999,-70.34694,right up,right up_646_646
+57.48569000000001,35.78653,left down,left down_98_98
+6.372876,49.96419,left up,left up_194_194
+-0.24957542,-14.290342,mid right up,mid right up_452_452
+-54.195065,52.18798,left down,left down_38_38
+-2.374744,-30.276316,mid right up,mid right up_443_443
+-47.472427,-44.723316,right up,right up_664_664
+-18.427704,68.47675,left up,left up_169_169
+-25.590044,-28.294678,mid right up,mid right up_470_470
+7.479107400000001,-57.949955,right up,right up_675_675
+15.516914000000002,-51.251396,mid right down,mid right down_430_430
+-0.0006261923999999999,-14.575572,mid right up,mid right up_461_461
+-62.831833,-36.130775,right down,right down_604_604
+-29.988045,-39.46416,right down,right down_550_550
+23.11769,63.71199,left up,left up_119_119
+4.5143075,11.278389,mid left down,mid left down_291_291
+-73.55864,-29.240067,right down,right down_541_541
+31.435802,-8.000309,mid right down,mid right down_440_440
+39.36999,11.833343,mid left down,mid left down_280_280
+-46.09147,30.696821000000003,left down,left down_10_10
+19.0593,-52.38229000000001,right down,right down_572_572
+21.411394,-55.723404,right down,right down_563_563
+-17.246468,69.966965,left up,left up_137_137
+-10.599777,28.422428000000004,mid left up,mid left up_301_301
+30.956085,18.655767,mid left down,mid left down_271_271
+43.89235,34.356213000000004,left down,left down_83_83
+-22.53476,17.333921,mid left up,mid left up_323_323
+24.114597,4.7196116,mid left down,mid left down_242_242
+-29.223595,11.687283,mid left up,mid left up_353_353
+63.089493,9.20492,mid left down,mid left down_232_232
+7.021217,-54.72275,right up,right up_668_668
+6.2280626,66.22072,left up,left up_165_165
+43.89104,32.339874,left down,left down_93_93
+-51.80815,-48.114,right up,right up_679_679
+-44.169147,56.796597,left up,left up_198_198
+66.09040999999999,20.788815,mid left down,mid left down_210_210
+-48.826263,40.514626,left down,left down_77_77
+-20.968126,-2.008711,mid right up,mid right up_481_481
+-22.324907,36.419014,left up,left up_202_202
+7.131417999999999,48.26456,left up,left up_189_189
+24.94042,64.10779000000001,left up,left up_156_156
+-20.58145,-15.126195,mid right up,mid right up_490_490
+0.27837074,10.726578,mid left down,mid left down_221_221
+52.7514,47.603416,left down,left down_35_35
+27.061947,77.54324,left up,left up_176_176
+11.585146,38.582195,mid left up,mid left up_351_351
+45.19203,-15.4494,mid right up,mid right up_513_513
+-5.3093863,51.085472,left up,left up_200_200
+-10.070498,24.034864,mid left up,mid left up_362_362
+-25.914919,-10.756237,mid right up,mid right up_492_492
+-48.75937,40.803665,left down,left down_49_49
+3.3279622000000004,6.413053,mid left down,mid left down_212_212
+34.39933,57.035095,left down,left down_71_71
+-29.34385300000001,35.274715,left up,left up_145_145
+-18.29817,-11.219807,mid right up,mid right up_483_483
+-21.105711,-55.233826,right up,right up_648_648
+10.534525,35.389065,mid left up,mid left up_312_312
+-23.325443,36.092045,left up,left up_135_135
+-41.5075,-30.061178,right up,right up_638_638
+61.264908,10.209142,mid left down,mid left down_262_262
+10.309263,30.399666,mid left up,mid left up_303_303
+-32.621959999999994,12.552634,mid left up,mid left up_330_330
+46.562855,38.03432,left down,left down_25_25
+-45.273285,55.807022,left down,left down_85_85
+13.994532,12.060567,mid left down,mid left down_240_240
+52.082592,-15.486368,mid right down,mid right down_380_380
+56.104380000000006,28.663027000000003,left down,left down_52_52
+-54.795822,-63.858696,right up,right up_616_616
+-25.60284,-32.87428,mid right down,mid right down_391_391
+37.652355,-69.88158,right down,right down_552_552
+29.601078,73.20528,left up,left up_128_128
+38.43412,-71.11896,right down,right down_561_561
+-60.08289300000001,43.91763,left down,left down_16_16
+-64.233086,-23.667007,right down,right down_570_570
+26.00441,-28.725327000000004,mid right down,mid right down_410_410
+33.056904,71.49046,left up,left up_149_149
+-42.041092,-28.086416,right up,right up_644_644
+-7.9589543,-37.7426,right up,right up_677_677
+-73.90545999999998,-18.678122,right down,right down_533_533
+53.71582,-22.437222,mid right down,mid right down_432_432
+-58.444008,30.81284500000001,left down,left down_42_42
+-5.7135777,-14.832722,mid right up,mid right up_472_472
+-8.230315,-40.546978,right up,right up_676_676
+58.930775,35.493484,left down,left down_63_63
+-7.335628999999999,-37.001904,right up,right up_667_667
+16.842297,-2.8408902,mid right down,mid right down_422_422
+-21.728504,56.28027700000001,left up,left up_186_186
+59.19133000000001,28.538082,left down,left down_27_27
+-15.431464000000002,71.68999000000002,left up,left up_159_159
+9.043109,-74.9144,right up,right up_654_654
+42.83707,-48.49148,mid right down,mid right down_400_400
+-4.6207379999999985,-32.478264,right up,right up_624_624
+31.933765,48.300243,left down,left down_103_103
+-46.663704,21.49599,left up,left up_138_138
+56.63419,37.28081,left down,left down_97_97
+59.56005,-24.935934,mid right down,mid right down_381_381
+-44.186474,-45.004738,right up,right up_617_617
+25.41243,-15.947545000000002,mid right down,mid right down_390_390
+-64.698875,-22.60212000000001,right down,right down_591_591
+-8.047435,24.24572,mid left up,mid left up_331_331
+41.89782,-60.24891700000001,right down,right down_580_580
+14.895623,-2.1165032000000004,mid left down,mid left down_241_241
+-4.761699,51.522438,left up,left up_116_116
+15.162839000000002,-1.6667423,mid left down,mid left down_272_272
+-41.816036,-49.027122,right up,right up_628_628
+-16.812248,13.45977,mid left up,mid left up_302_302
+-16.189909,71.28364,left up,left up_134_134
+31.551632,56.960163,left up,left up_155_155
+12.117338,-73.99818,right up,right up_658_658
 -23.530415,3.8044355,mid left up,mid left up_363_363
 7.686858,51.775497,left up,left up_144_144
-46.752766,-16.68492,mid right down,mid right down_434_434
-17.186214,13.687403,mid left down,mid left down_266_266
--58.915,-30.953558,right up,right up_615_615
-36.765335,21.15687,mid left down,mid left down_231_231
--42.01878,15.151765,mid left up,mid left up_313_313
-29.91392,3.8681912000000014,mid left down,mid left down_216_216
--20.267906,64.72748,left up,left up_132_132
--19.091757,-18.668642,mid right up,mid right up_505_505
--40.732243,-26.194122,mid right up,mid right up_456_456
--0.96902704,-25.043978,mid right up,mid right up_516_516
--26.657501,-36.93012,right down,right down_560_560
--26.46814,-13.543031,mid right up,mid right up_451_451
--75.30593,-24.4916,right down,right down_521_521
-42.208923,-58.55141999999999,right down,right down_577_577
--12.144975,39.945312,mid left up,mid left up_365_365
--47.645,-41.12253,right up,right up_670_670
-52.88685200000001,49.0707,left down,left down_24_24
-66.63571,-4.7531834,mid left down,mid left down_268_268
--46.09147,30.696821000000003,left down,left down_10_10
-14.521679,14.299758,mid left up,mid left up_354_354
--16.944515,-11.005729,mid right up,mid right up_475_475
--59.42385,-31.425491,right up,right up_657_657
-32.08996,-8.369786999999999,mid right down,mid right down_409_409
--62.01189,-30.682129,right up,right up_641_641
-11.444171,-74.058685,right up,right up_621_621
-55.865723,-24.5365,mid right down,mid right down_436_436
-15.998561,-0.4038685,mid right down,mid right down_397_397
--13.884367,-13.025113,mid right up,mid right up_466_466
--23.981916,-59.308323,right up,right up_608_608
--68.17734,-29.946802,right down,right down_603_603
-28.88105,70.71943,left up,left up_179_179
-62.113052,10.235517,mid left down,mid left down_249_249
--27.26308400000001,27.7033,left up,left up_187_187
--2.8703983,-13.543093,mid right up,mid right up_496_496
--8.208821,-40.190617,right up,right up_642_642
--48.359604,-46.176064,right up,right up_684_684
--10.848683,31.484013,mid left up,mid left up_352_352
-36.0083,-69.96924,right down,right down_539_539
-4.456167,50.03229,left up,left up_203_203
-39.629948,24.502516,left down,left down_3_3
--61.558792,-33.15166,right down,right down_584_584
--18.76338,-1.0132705,mid left up,mid left up_306_306
--73.53023,-19.139334,right down,right down_532_532
-8.310350999999999,-54.77631,right up,right up_636_636
--22.745169,-13.710313,mid right up,mid right up_500_500
--0.3370296,8.972563000000003,mid left down,mid left down_264_264
-22.455263,13.803999,mid right down,mid right down_414_414
-25.60716,1.1522077,mid left down,mid left down_230_230
--66.14282,38.60799,left down,left down_95_95
--6.0150084,-31.760782,right up,right up_687_687
-37.486744,-0.8924620000000001,mid right down,mid right down_394_394
--35.64470700000001,-20.281433,mid right up,mid right up_450_450
--30.316544,-40.999023,right down,right down_596_596
-17.632710999999997,-51.643707,mid right down,mid right down_379_379
-5.39351,12.789988,mid left down,mid left down_259_259
--7.09122,-24.305744,right up,right up_678_678
--25.60284,-32.87428,mid right down,mid right down_391_391
--20.874287,17.789386999999994,mid left up,mid left up_356_356
-38.25628,-0.98861,mid left down,mid left down_237_237
-32.942364000000005,-9.325614,mid right down,mid right down_386_386
-50.91732800000001,51.842373,left down,left down_69_69
-8.521827,-44.04347,mid right up,mid right up_464_464
--46.663704,21.49599,left up,left up_138_138
--23.726004,35.86989600000001,left up,left up_143_143
-24.94042,64.10779000000001,left up,left up_156_156
--8.047435,24.24572,mid left up,mid left up_331_331
--50.438515,-42.046562,right up,right up_666_666
--2.374744,-30.276316,mid right up,mid right up_443_443
--27.178858,13.1835,mid left up,mid left up_369_369
-27.110243,-31.706335,mid right down,mid right down_416_416
--44.167904,54.56936999999999,left down,left down_90_90
--61.25800699999999,43.96009,left down,left down_40_40
--50.039795,38.5379,left down,left down_11_11
-33.4015,-33.834675,right down,right down_519_519
+-35.4097,-14.821364,mid right up,mid right up_482_482
+61.673714,24.204254,mid left down,mid left down_213_213
 53.407063,47.23881,left down,left down_14_14
--6.2614827,51.091232,left up,left up_113_113
--43.896496,57.266438,left up,left up_111_111
--47.85698,21.829979,left up,left up_122_122
--24.840855,-29.089445,mid right down,mid right down_388_388
-16.449460000000002,-2.751884,mid right down,mid right down_420_420
-6.1853365999999985,-56.368805,right down,right down_586_586
--28.613525,12.370283,mid left up,mid left up_338_338
-16.006532999999994,38.77084,mid left up,mid left up_368_368
-59.19133000000001,28.538082,left down,left down_27_27
--44.169147,56.796597,left up,left up_198_198
--21.105711,-55.233826,right up,right up_648_648
--17.246468,69.966965,left up,left up_137_137
--60.08289300000001,43.91763,left down,left down_16_16
-67.38248399999999,18.418951,mid left down,mid left down_247_247
--19.406063,-17.524675,mid right up,mid right up_497_497
-27.061947,77.54324,left up,left up_176_176
-39.641525,-31.64854,mid right down,mid right down_389_389
--61.293877,-36.76708,right down,right down_557_557
+-15.418601999999998,69.41974,left up,left up_166_166
+36.765335,21.15687,mid left down,mid left down_231_231
+-6.450074,-25.051783,mid right up,mid right up_512_512
