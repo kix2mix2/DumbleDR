@@ -2,6 +2,7 @@
 
     import { pos_count } from "./stores.js";
     export let count;
+    export let projection;
 
     export let max = 5;
     export let neg = true;
@@ -15,6 +16,8 @@
 
     function update(c) {
         values = values.map((_, i) => i < count)
+        projection.star_time.push({"time": performance.now(), 'rating': count})
+        console.log(projection.star_time);
     }
     $: update(count)
     

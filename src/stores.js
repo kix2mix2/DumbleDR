@@ -62,6 +62,7 @@ function createData(n) {
                 result.comment = "";
                 result.click_enlarge = [performance.now()];
                 result.position = i;
+                result.star_time = [];
                 return result
             })
             D.images = res[0].map((row) => {
