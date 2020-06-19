@@ -2,7 +2,7 @@ export const welcome = "<div class=\"text-block\">" +
                 "<h1>Call for participants</h1>\n" +
                 "<img src=\"./images/visus.png\" height = '100px'> <img src=\"./images/logo-precise.png\" height = '100px'>"+
                 "\t\t\t\t\t\t\t    <p>\n" +
-                "\t\t\t\t\t\t\t\t\tThe <b>Visualization Research Center (VISUS)</b> at the University of Stuttgart and <b>Research Center on Information Systems Engineering (PReCISE)</b> from the University of Namur are looking for participants for an\n" +
+                "\t\t\t\t\t\t\t\t\tThe <b>Visualization Research Center (VISUS)</b> at the University of Stuttgart and the <b>Research Center on Information Systems Engineering (PReCISE)</b> from the University of Namur are looking for participants for an\n" +
                 "\t\t\t\t\t\t\t\t\tonline study on visualization and visual analysis. </p>\n" +
                 "                                 <p>\n" +
                 "                                    Given a series of datasets, we apply algorithms that find similarities in images.\n" +
@@ -10,7 +10,7 @@ export const welcome = "<div class=\"text-block\">" +
                 "                                <p>\n" +
                 "                                    The study consists of:\n" +
                 "                                    <ul>\n" +
-                "                                        <li>Informed consent agreement</li>\n" +
+                "                                        <li>An informed consent agreement</li>\n" +
                 "                                        <li>Instructions for the task</li>\n" +
                 "                                        <li>A pre-participation survey that will assess your experience with this type of task</li>\n" +
                 "                                        <li>A series of trials where you are asked to analyse scatterplots depicting the results of some Machine Learning algorithms and choose the best result</li>\n" +

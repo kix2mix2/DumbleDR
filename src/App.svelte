@@ -149,7 +149,7 @@
         type: "html-button-response",
         stimulus: () => {
 
-            const wl1 = new WeightedList(settings.map((s, i) => [i, 1 / (2 ** s.dataset_weight), s]));
+            const wl1 = new WeightedList(settings.map((s, i) => [i, 1 / (4 ** s.dataset_weight), s]));
             choosen_dataset = wl1.peek()[0];
             const sample1 = choosen_dataset.data;
 
