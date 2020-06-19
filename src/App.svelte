@@ -232,6 +232,21 @@
         ]
     };
 
+    var trial_comment = {
+        type: 'survey-text',
+        questions: [
+            {
+                prompt: '<div class=\"text-block\">What criteria did you use for your ratings? (Answer only if the answer is different to before)</div>',
+                columns: 80,
+                rows: 5,
+                required: false,
+                name: 'Name'
+            },
+        ],
+        randomize_question_order: false,
+        prompt: "<br><br>"
+    };
+
     let cont = {
         type: "html-button-response",
         stimulus: "Another round? <br> *The experiment will end after 12 rounds, regardless of the choice. ",
@@ -242,10 +257,10 @@
 
     var counts = 0;
     var loop_node = {
-        timeline: [dr_grid, trial_feedback, cont],
+        timeline: [dr_grid, trial_feedback, trial_comment,  cont],
         loop_function: function (data) {
                 //console.log(data.values()[2].button_pressed);
-                if (data.values()[2].button_pressed === '0' && counts < 12) {
+                if (data.values()[3].button_pressed === '0' && counts < 12) {
                     counts++;
                     //console.log(counts);
                     return true;
