@@ -170,20 +170,35 @@
             update[`settings.${choosen_dataset.key}.dataset_weight`] = 1;
             client.auth.loginWithCredential(new stitch.AnonymousCredential())
                     .then(user => settings_collection.updateOne({}, {$inc: update}, { upsert : true }))
-                    .catch(err => console.error(err));
+                    .catch(err => console.error(err))
+                    .then(() => {
+                        let update = {};
+                        for (let i = 0, n = choosen_projections.length; i < n; ++i) {
+                            update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = 1;                
+                        }
+                        client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                            .then(user => settings_collection.updateOne({}, {$inc: update}, { upsert : true }))
+                            .catch(err => console.error(err))
+                            .then(() => {
+                                client.auth.loginWithCredential(new stitch.AnonymousCredential())
+                                    .then(user => settings_collection.findOne({}))
+                                    .catch(err => console.error(err))
+                                    .then(d => settings = d.settings);
+                            });
+                    });
 
-            update = {}
+            /* update = {}
             for (let i = 0, n = choosen_projections.length; i < n; ++i) {
                 update[`settings.${choosen_dataset.key}.path_weights.${choosen_projections[i].key}`] = 1;                
             }
             client.auth.loginWithCredential(new stitch.AnonymousCredential())
                 .then(user => settings_collection.updateOne({}, {$inc: update}, { upsert : true }))
-                .catch(err => console.error(err));
+                .catch(err => console.error(err)); */
 
-            client.auth.loginWithCredential(new stitch.AnonymousCredential())
+            /* client.auth.loginWithCredential(new stitch.AnonymousCredential())
                 .then(user => settings_collection.findOne({}))
                 .catch(err => console.error(err))
-                .then(d => settings = d.settings);
+                .then(d => settings = d.settings); */
 
             data.sort_time = $sort_time;
             data.color_time = $color_time;
