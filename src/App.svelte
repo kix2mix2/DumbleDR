@@ -141,7 +141,7 @@
     // console.log(settings);
     $: console.log(settings)
 
-    var counts = 0;
+    var counts = 1;
     let choosen_dataset;
     let choosen_projections;
 
@@ -244,15 +244,19 @@
             },
         ],
         randomize_question_order: false,
-        prompt: "<br><br>"
+        prompt: "<br><br>",
+        on_finish: function() {
+            step='progress';
+        }
     };
 
-    //You have done "+ counts+"/12. <br>
-    let cont = {
+    //
+    var cont = {
         type: "html-button-response",
-        stimulus: "Another round? <br>  *The experiment will end after 12 rounds, regardless of the choice. ",
+        stimulus: "Another round? <br> ",
         choices: ['Continue for more <img src="./images/beer.svg" alt="beer" height="15px"> & <img src="./images/candy.svg" alt="candy" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
+
     };
 
 
@@ -260,8 +264,10 @@
     var loop_node = {
         timeline: [dr_grid, trial_feedback, trial_comment,  cont],
         loop_function: function (data) {
-                //console.log(data.values()[2].button_pressed);
-                if (data.values()[3].button_pressed === '0' && counts < 12) {
+                console.log(cont);
+
+
+                if (data.values()[3].button_pressed === '0' && counts <= 12) {
                     counts++;
                     //console.log(counts);
                     return true;
@@ -395,6 +401,10 @@
     {:else if step == "debrief"}
         <div class='jspsych-display-element'>
 
+        </div>
+    {:else if step == "progress"}
+        <div class='jspsych-display-element'>
+        <p>You have done {counts} / 12 rounds.<br>*The experiment will end after 12 rounds, regardless of the choice.</p>
         </div>
     {/if}
 
