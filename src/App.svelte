@@ -212,6 +212,7 @@
                     "comment": p.comment,
                     "position": p.position,
                     "click_enlarge": p.click_enlarge,
+                    "star_time": p.star_time
                 }
             });
             step = 'debrief'
@@ -318,7 +319,7 @@
                 loop_node, debrief, comments],
             on_finish: function(D) {
                 // record proportion correct as unstructured data
-                console.log('yo yo', D);
+                // console.log('yo yo', D);
                 step = "finish";
                 client.auth.loginWithCredential(new stitch.AnonymousCredential())
                     .then(user =>

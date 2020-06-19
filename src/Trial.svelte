@@ -26,7 +26,6 @@
     <header>
         <span>show datapoints as: </span>
         <form on:change={() => {
-            console.log('yo', $vis_type);
             if($vis_type =='circle'){
                 $color_time.push(performance.now())
             }

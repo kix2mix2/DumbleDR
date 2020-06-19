@@ -197,7 +197,8 @@
     <div style="text-align: center;">
         <div style="text-align: left">  
             Rate:
-            <Star bind:count={data.pos_count} bind:bad={data.neg_count} max={4}></Star>
+            <Star bind:count={data.pos_count} bind:bad={data.neg_count} bind:projection={data} max={4}></Star>
+
         </div>
     </div>
 
