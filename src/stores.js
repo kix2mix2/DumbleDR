@@ -25,6 +25,7 @@ function createData(n) {
         load: (store, paths, dataset) => update(D => {
             pos_count.set(15);
             neg_count.set(10);
+            vis_type.set("image")
             D.ready = false;
             D.dataset = dataset;
             D.sort_time = [];
