@@ -141,7 +141,7 @@
     // console.log(settings);
     $: console.log(settings)
 
-
+    var counts = 0;
     let choosen_dataset;
     let choosen_projections;
 
@@ -247,15 +247,16 @@
         prompt: "<br><br>"
     };
 
+    //You have done "+ counts+"/12. <br>
     let cont = {
         type: "html-button-response",
-        stimulus: "Another round? <br> *The experiment will end after 12 rounds, regardless of the choice. ",
+        stimulus: "Another round? <br>  *The experiment will end after 12 rounds, regardless of the choice. ",
         choices: ['Continue for more <img src="./images/beer.svg" alt="beer" height="15px"> & <img src="./images/candy.svg" alt="candy" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
     };
 
 
-    var counts = 0;
+
     var loop_node = {
         timeline: [dr_grid, trial_feedback, trial_comment,  cont],
         loop_function: function (data) {
