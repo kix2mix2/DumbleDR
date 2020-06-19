@@ -167,9 +167,9 @@
         timing_post_trial: 400,
         on_finish: function(data) {
             let update = {}
-            update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
+            update[`settings.${choosen_dataset.key}.dataset_weight`] = 1;
             client.auth.loginWithCredential(new stitch.AnonymousCredential())
-                    .then(user => settings_collection.updateOne({}, {$set: update}, { upsert : true }))
+                    .then(user => settings_collection.updateOne({}, {$inc: update}, { upsert : true }))
                     .catch(err => console.error(err));
 
             update = {}

@@ -44841,16 +44841,16 @@ var app = (function () {
     			attr_dev(img, "width", "60px");
     			attr_dev(img, "height", "60px");
     			attr_dev(img, "class", "svelte-1u0cnvp");
-    			add_location(img, file$4, 338, 8, 12896);
+    			add_location(img, file$4, 338, 8, 12858);
     			attr_dev(div0, "class", "tooltiptext svelte-1u0cnvp");
-    			add_location(div0, file$4, 337, 4, 12862);
+    			add_location(div0, file$4, 337, 4, 12824);
     			attr_dev(div1, "id", "tooltip");
     			attr_dev(div1, "class", "tooltip svelte-1u0cnvp");
     			set_style(div1, "position", "absolute");
     			set_style(div1, "z-index", "10000");
     			set_style(div1, "visibility", /*$hover*/ ctx[2] ? null : "hidden");
     			set_style(div1, "pointer-events", "none");
-    			add_location(div1, file$4, 331, 0, 12640);
+    			add_location(div1, file$4, 331, 0, 12602);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -44913,7 +44913,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 363, 8, 14035);
+    			add_location(div, file$4, 363, 8, 13997);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44970,17 +44970,17 @@ var app = (function () {
     			iframe.allowFullscreen = true;
     			set_style(iframe, "margin", "auto");
     			attr_dev(iframe, "title", "Dumbledore is pleased!");
-    			add_location(iframe, file$4, 357, 12, 13567);
+    			add_location(iframe, file$4, 357, 12, 13529);
     			attr_dev(a, "href", "https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg");
-    			add_location(a, file$4, 357, 206, 13761);
-    			add_location(p, file$4, 357, 203, 13758);
+    			add_location(a, file$4, 357, 206, 13723);
+    			add_location(p, file$4, 357, 203, 13720);
     			attr_dev(span0, "class", "mdi mdi-spin mdi-arm-flex");
-    			add_location(span0, file$4, 358, 16, 13864);
+    			add_location(span0, file$4, 358, 16, 13826);
     			attr_dev(span1, "class", "mdi mdi-spin mdi-heart");
-    			add_location(span1, file$4, 358, 79, 13927);
-    			add_location(h1, file$4, 358, 12, 13860);
+    			add_location(span1, file$4, 358, 79, 13889);
+    			add_location(h1, file$4, 358, 12, 13822);
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 356, 8, 13517);
+    			add_location(div, file$4, 356, 8, 13479);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45034,7 +45034,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "jspsych-display-element svelte-1u0cnvp");
-    			add_location(div, file$4, 344, 8, 13137);
+    			add_location(div, file$4, 344, 8, 13099);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45105,8 +45105,8 @@ var app = (function () {
     			center = element("center");
     			center.textContent = "Loading...";
     			attr_dev(div, "class", "loader svelte-1u0cnvp");
-    			add_location(div, file$4, 351, 12, 13381);
-    			add_location(center, file$4, 352, 12, 13420);
+    			add_location(div, file$4, 351, 12, 13343);
+    			add_location(center, file$4, 352, 12, 13382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45149,7 +45149,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(trial.$$.fragment);
-    			add_location(div, file$4, 346, 12, 13208);
+    			add_location(div, file$4, 346, 12, 13170);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45260,27 +45260,27 @@ var app = (function () {
     			if (img0.src !== (img0_src_value = "./images/favicon.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "height", "24px");
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$4, 323, 39, 12346);
+    			add_location(img0, file$4, 323, 39, 12308);
     			set_style(h2, "display", "inline-block");
     			attr_dev(h2, "class", "svelte-1u0cnvp");
-    			add_location(h2, file$4, 323, 4, 12311);
+    			add_location(h2, file$4, 323, 4, 12273);
     			if (img1.src !== (img1_src_value = "./images/visus.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "height", "48px");
     			attr_dev(img1, "alt", "visus");
-    			add_location(img1, file$4, 325, 8, 12471);
+    			add_location(img1, file$4, 325, 8, 12433);
     			if (img2.src !== (img2_src_value = "./images/logo-precise.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "height", "48px");
     			attr_dev(img2, "alt", "precise");
-    			add_location(img2, file$4, 326, 8, 12538);
+    			add_location(img2, file$4, 326, 8, 12500);
     			set_style(div, "float", "right");
     			set_style(div, "padding", ".5rem");
-    			add_location(div, file$4, 324, 4, 12420);
+    			add_location(div, file$4, 324, 4, 12382);
     			attr_dev(nav, "class", "svelte-1u0cnvp");
-    			add_location(nav, file$4, 322, 0, 12301);
+    			add_location(nav, file$4, 322, 0, 12263);
     			attr_dev(main, "id", "task");
     			set_style(main, "max-width", cols * 250 + (cols + 1) * 10 + "px");
     			attr_dev(main, "class", "svelte-1u0cnvp");
-    			add_location(main, file$4, 342, 0, 13031);
+    			add_location(main, file$4, 342, 0, 12993);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45579,8 +45579,8 @@ var app = (function () {
     		timing_post_trial: 400,
     		on_finish(data) {
     			let update = {};
-    			update[`settings.${choosen_dataset.key}.dataset_weight`] = choosen_dataset.data.dataset_weight + 1;
-    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $set: update }, { upsert: true })).catch(err => console.error(err));
+    			update[`settings.${choosen_dataset.key}.dataset_weight`] = 1;
+    			client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => settings_collection.updateOne({}, { $inc: update }, { upsert: true })).catch(err => console.error(err));
     			update = {};
 
     			for (let i = 0, n = choosen_projections.length; i < n; ++i) {
