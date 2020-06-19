@@ -138,7 +138,7 @@
         .catch(err => console.error(err))
         .then(d => settings = d.settings);
 
-    console.log(settings);
+    // console.log(settings);
     $: console.log(settings)
 
 

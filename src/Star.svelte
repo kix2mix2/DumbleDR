@@ -17,7 +17,7 @@
     function update(c) {
         values = values.map((_, i) => i < count)
         projection.star_time.push({"time": performance.now(), 'rating': count})
-        console.log(projection.star_time);
+        // console.log(projection.star_time);
     }
     $: update(count)
     
