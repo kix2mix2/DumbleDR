@@ -93,14 +93,14 @@
             },
             {
                 prompt: "<div class='text-block'> <b>What is your experience with Machine Learning?</b></div>",
-                options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+                options: ["Never heard of this", "I know the basics", "I use it in my work", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
                 horizontal: true,
                 required: true,
                 name: 'ML'
             },
             {
                 prompt: "<div class='text-block'> <b>What is your experience with Information Visualization?</b></div>",
-                options: ["Never heard of this", "I know the basics", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
+                options: ["Never heard of this", "I know the basics", "I use it in my work", "I work in the field", "I'm an expert in the field", "Prefer not to say"],
                 horizontal: true,
                 required: true,
                 name: 'infovis'
