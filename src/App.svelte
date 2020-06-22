@@ -452,7 +452,7 @@
 
     .tooltip .tooltiptext {
         position: absolute;
-        background-color: #333;
+        background-color: #fff;
         color: #fff;
         text-align: center;
         padding: 0;
