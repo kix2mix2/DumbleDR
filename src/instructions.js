@@ -10,21 +10,21 @@ export const welcome = "<div class=\"text-block\">" +
                 "                                <p>\n" +
                 "                                    The study consists of:\n" +
                 "                                    <ul>\n" +
-                "                                        <li>An informed consent agreement</li>\n" +
-                "                                        <li>Instructions for the task</li>\n" +
-                "                                        <li>A pre-participation survey that will assess your experience with this type of task</li>\n" +
-                "                                        <li>A series of trials where you are asked to analyse scatterplots depicting the results of some Machine Learning algorithms and choose the best result</li>\n" +
-                "                                        <li>A post-trial survey, where we will ask you for feedback on the task</li>\n" +
+                "                                        <li>An informed consent agreement;</li>\n" +
+                "                                        <li>Instructions for the task;</li>\n" +
+                "                                        <li>A pre-participation survey that will assess your experience with this type of task;</li>\n" +
+                "                                        <li>A series of trials where you are asked to analyze scatterplots depicting the results of some machine learning algorithms and choose the best result;</li>\n" +
+                "                                        <li>A post-trial survey, where we will ask you for feedback on the task.</li>\n" +
                 "                                    </ul>\n" +
                 "                                </p>\n" +
                 "\n" +
                 "                                <p>\n" +
                 "                                    The requirements are:\n" +
                 "                                    <ul>\n" +
-                "                                        <li> You are at least 18 years old</li>\n" +
-                "                                        <li> You speak fluent English</li>\n" +
-                "                                        <li> Your screen-size is at least 700x400 pixels</li>\n" +
-                "                                        <li> You have some experience with data analysis tasks (e.g. analysing charts and extracting information from them)</li>\n" +
+                "                                        <li> You are at least 18 years old;</li>\n" +
+                "                                        <li> You speak fluent English;</li>\n" +
+                "                                        <li> Your screen-size is at least 700x400 pixels;</li>\n" +
+                "                                        <li> You have some experience with data analysis tasks (e.g. analyzing charts and extracting information from them).</li>\n" +
                 "                                    </ul>\n" +
                 "\n" +
                 "                                </p>\n" +
@@ -46,11 +46,11 @@ export const consent_form = "<div class=\"text-block\"><h1>We need your consent 
                 "                        We would like to invite you to participate in the following study within the scope of the\n" +
                 "                        research carried out at the Collaborative Research Center/Transregio 161 (SFB-TRR 161). </p>\n" +
                 "                     <p>\n" +
-                "                        In particular, we analyze the human perception of the results from various algorithms that seek to imitate human perception of similarity.\n" +
+                "                        In particular, we analyze the human perception of the results from various algorithms that seek to imitate human perception of visualizations.\n" +
                 "                    </p>\n" +
                 "                    <p>\n" +
                 "                        In the current study, „Evaluation of Dimensionality Reduction\n" +
-                "                        Techniques for Image-based Data“, you will be required to analyse and select preferences\n" +
+                "                        Techniques for Image-based Data“, you will be required to analyze and select preferences\n" +
                 "                        for a series of visualizations of algorithms applied on image data.\n" +
                 "                    </p>\n" +
                 "                    <p>\n" +
@@ -83,10 +83,10 @@ export const dr_explain  = "<div class=\"text-block\"> \n" +
             "</p>\n" +
             "<img class='instructions' src='./images/dr_example.png'>\n" +
             "<p>\n" +
-            "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plotted close to each other. Different DR algorithms define similarity differently and thereore produce different scatterplots. \n" +
+            "A good DR technique reduces data by maintaining similarity between items. This means that if two images are very similar they should be plotted close to each other, and far from each other if they are dissimilar. Different DR algorithms define similarity differently and thereore produce different scatterplots. \n" +
             "</p>\n" +
             "\n" +
-            "<p>In this study, we want you to analyse a group of scatterplots depicting these projections and decide which ones are good and which are bad. <b>You do not need to have any additional knowledge about DR!</b></p>\n" +
+            "<p>In this study, we want you to analyze a group of scatterplots depicting these projections and decide which ones are good and which are bad. <b>You do not need to have any additional knowledge about DR!</b></p>\n" +
             "\n" +
             "<p>On the next page we will explain the user interface of the study.</p>\n" +
             "\n" +
@@ -113,7 +113,7 @@ export const rule_1 = "<div class=\"text-block\"> \n" +
                 "\n" +
                 "<p>Your job is to distribute 15 hearts/points across the 8 projections. You do not need to distribute all the hearts. </p>\n" +
                  "<h3>Rule 2:</h3>\n" +
-                "<p>Some projections might be bad (i.e. where points can be randomly scattered), or misleading (i.e. clusters forming when there should be none), or they might have other issues that you identify.  If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment for any scatterplot, good or bad, by clicking the text box.</p>\n" +
+                "<p>Some projections might be bad (e.g. if points are randomly scattered), or misleading (e.g. clusters forming when there should be none), or they might have other issues that you identify. If this is the case, please mark the projections as bad by selecting the crossed heart symbol. You may leave a comment for any scatterplot, good or bad, by clicking the text box.</p>\n" +
                 "<video class = 'instructions' controls  autoplay loop>\n" +
                 "  <source src=\"./images/rule_12.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
@@ -138,7 +138,7 @@ export const sort = "<div class=\"text-block\"> \n" +
                 "<h1>User Interface</h1>\n" +
                 "<h3>Rule 4:</h3>\n" +
                 "\n" +
-               "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to avoid someone rating everything 4-stars or everything with one stars. </p>\n" +
+               "<p>After each rating, we recommend you to click the sort button, which will sort the scatterplots by your rating. We want you to really compare the projections and rate or re-rate so that the sorted list is arranged from best to worst. This is also the reason why you have a limited number of hearts to assign: we want to mostly avoid someone rating everything 4-stars. </p>\n" +
                  "<video class = 'instructions' controls autoplay loop>\n" +
                 "  <source src=\"./images/sort.webm\" type=\"video/webm\">\n" +
                 "Your browser does not support the video tag. \n" +
