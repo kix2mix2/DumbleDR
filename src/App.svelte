@@ -268,7 +268,7 @@
                 console.log(cont);
 
 
-                if (data.values()[3].button_pressed === '0' && counts <= 12) {
+                if (data.values()[3].button_pressed === '0' && counts < 12) {
                     counts++;
                     //console.log(counts);
                     return true;
