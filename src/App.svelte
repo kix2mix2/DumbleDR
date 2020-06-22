@@ -338,7 +338,7 @@
             auto_update_progress_bar: true,
             timeline: [welcome_block,
                 consent,
-                instructions, name, experience,
+                instructions,  experience,
                 loop_node, debrief, comments],
             on_finish: function(D) {
                 // record proportion correct as unstructured data
@@ -394,6 +394,11 @@
         </div>
     {:else if step == "finish"}
         <div class='jspsych-display-element'>
+            <p>Study had completed. Your participant ID is {subject_id}.</p>
+            <p>If you ever want the data you provided to be deleted you may contact: cristina.morariu@visus.uni-stuttgart.de or
+                datenschutz@uni-stuttgart.de by providing this ID. </p>
+            <p>If you lose this ID, the data will no longer be identifiable to you.</p>
+
             <iframe src="https://giphy.com/embed/AOrThUuuOoDCg" width="480" height="285" frameBorder="0" class="giphy-embed" allowFullScreen style="margin: auto;" title="Dumbledore is pleased!"></iframe><p><a href="https://giphy.com/gifs/harry-potter-applause-AOrThUuuOoDCg">via GIPHY</a></p>
             <h1><span class="mdi mdi-spin mdi-arm-flex"></span>Lots of thanks!!<span class="mdi mdi-spin mdi-heart"></span></h1>
         </div>
