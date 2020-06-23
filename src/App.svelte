@@ -154,7 +154,7 @@
             choosen_dataset = wl1.peek()[0];
             const sample1 = choosen_dataset.data;
 
-            const wl = new WeightedList(sample1.paths.map((s, i) => [i, 1 / (2 ** sample1.path_weights[i]), s]));
+            const wl = new WeightedList(sample1.paths.map((s, i) => [i, 1 / (1 ** sample1.path_weights[i]), s]));
             choosen_projections = wl.peek(rows * cols);
             const sample = choosen_projections.map(d => d.data);
 
@@ -255,7 +255,7 @@
     var cont = {
         type: "html-button-response",
         stimulus: "Another round? <br> ",
-        choices: ['Continue to advance <img src="./images/healthcare-and-medical.svg" alt="science" height="15px"> & <img src="./images/tech.svg" alt="engineering" height="15px"> ! <img src="./images/trophy.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
+        choices: ['Continue to advance <img src="./images/healthcare-and-medical.svg" alt="science" height="15px"> & <img src="./images/tech.svg" alt="technology" height="15px"> ! <img src="./images/trophy.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
 
     };
