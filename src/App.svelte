@@ -255,7 +255,7 @@
     var cont = {
         type: "html-button-response",
         stimulus: "Another round? <br> ",
-        choices: ['Continue for more <img src="./images/beer.svg" alt="beer" height="15px"> & <img src="./images/candy.svg" alt="candy" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
+        choices: ['Continue for more <img src="./images/reputation.svg" alt="fame" height="15px"> & <img src="./images/trophy.svg" alt="glory" height="15px"> ! <img src="./images/sun.svg" alt="" height="15px">', 'End experiment <img src="./images/emoji.svg" alt=":(" height="15px"> <img src="./images/smiley.svg" alt=":(" height="15px">'],
         prompt: "<br><br>"
 
     };

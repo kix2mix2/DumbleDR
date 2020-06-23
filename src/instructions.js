@@ -172,7 +172,7 @@ export const time_text = "<div class=\"text-block\"> \n" +
                 "<p> In total we have 12 datasets, consisting of collections of photos. " +
                 "After each trial, you will be asked if you want to look at <b>Another Dataset</b> or <b>Finish the Experiment</b>. If you choose the latter, you will be directed to the final debriefing questionnaire." +
     "The time it takes for the study will depend on how many trials you do. <b>It took us about 40 minutes to rate all datasets.</b></p> " +
-                "<p>It would be really nice if you solved at least 5! We promise beer and/or chocolate for your help! </p>" +
+                "<p>It would be really nice if you solved at least 5!  </p>" +
     "<p>You might receive the same dataset twice. In this case just re-do it. This is so we assess your consistency. </p>" +
 
 
