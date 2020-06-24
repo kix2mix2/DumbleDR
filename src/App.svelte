@@ -63,9 +63,9 @@
         type: 'survey-text',
         questions: [
             {
-                prompt: '<div class=\"text-block\">Type in here your name or email. <br> ' +
-                    'This is only so we can contact you in case we have questions about your answers. <br>' +
-                    'You may also leave the input field empty if you don\'t want to be contacted further.</div>', 
+                prompt: '<div class=\"text-block\">Do you want to share your email with us? <br> ' +
+                    'This is only so we can contact you in case we have questions about your user experience and will not be published anywhere. <br>' +
+                    'Leave the input field empty if you don\'t want to be contacted any further. </div>',
                 columns: 100,  
                 name: 'Name'
             },
@@ -310,7 +310,7 @@
         type: 'survey-text',
         questions: [
             {
-                prompt: '<div class=\"text-block\">Do you have any other comments or feedback?.</div>', 
+                prompt: '<div class=\"text-block\">Do you have any other comments or feedback? </div>',
                 columns: 80,
                 rows: 5, 
                 required: true, 
@@ -338,7 +338,7 @@
             auto_update_progress_bar: true,
             timeline: [welcome_block,
                 consent,
-                instructions,  experience,
+                instructions, name, experience,
                 loop_node, debrief, comments],
             on_finish: function(D) {
                 // record proportion correct as unstructured data
